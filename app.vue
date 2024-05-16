@@ -1,5 +1,6 @@
 <template>
-  <div class="top-header-ads">
+  <!-- https://demo.tmrwstudio.net/atlas/default/ -->
+  <div class="top-header-ads hidden">
     <a
       href=""
       rel="noopener noreferrer"
@@ -39,10 +40,10 @@
   </div>
 
   <header
-    class="bg-background/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50 lg:mb-0 lg:border-0"
+    class="bg-background/75 backdrop-blur border-b  dark:border-gray-800 -mb-px sticky top-0 z-50 lg:mb-0  border-gray-100"
   >
     <div
-      class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3 h-[4rem]"
+      class="mx-auto px-4 lg:px-0 max-w-7xl flex items-center justify-between gap-3 h-[4rem]"
     >
       <div class="lg:flex-1 flex items-center gap-1.5">
         <div class="relative inline-flex text-left rtl:text-right">
@@ -54,7 +55,7 @@
         </div>
       </div>
 
-      <div class="items-center gap-x-8 hidden lg:flex">
+      <div class="items-center gap-x-4 hidden lg:flex">
         <Menu as="div" class="relative inline-block text-left">
           <div>
             <MenuButton
@@ -489,6 +490,25 @@
           </button>
         </div>
 
+        <div class="relative inline-flex">
+          <button
+            type="button"
+            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 lg:inline-flex items-center border border-gray-100 px-4 md:hidden"
+            aria-label="Switch to dark mode"
+          >
+            <div class="current-date whitespace-nowrap leading-normal">
+              <div class="cur-date flex items-center">
+                <span class="d text-[24px] m-0 ml-[5px]">16</span
+                ><span
+                  class="my flex flex-col font-normal text-[13px] leading-[1.1]"
+                  ><span class="m">اردیبهشت</span
+                  ><span class="y pt-0.5">1403</span></span
+                >
+              </div>
+            </div>
+          </button>
+        </div>
+
         <button
           type="button"
           class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center lg:hidden"
@@ -502,9 +522,58 @@
     </div>
   </header>
 
-  <main class="px-4">
+  <div
+    class="mx-auto px-4 lg:px-0 max-w-7xl"
+  >
+        <div class="block-tickerwrap bg-gray-100 w-full max-w-lg p-2 rounded-b-md">
+          <div class="th90-ticker block-newsticker">
+            <div class="posts">
+              <div class="itemWrap active" style="">
+                <div class="post-item flex items-center gap-4">
+                  <div class="entry-cats">
+                    <a
+                      class="text-sm text-orange-500"
+                      href=""
+                      >سگ ها</a
+                    >
+                  </div>
+                  <div class="ticker-thumb thumbnail-circle">
+                    <div class="entry-thumbnail">
+                      <a
+                        class="src-1_1"
+                        href=""
+                        title="Winter Dressing Tips When It’s Really Cold Out"
+                        ><div class="thumb-container thumb-100">
+                          <img
+                            src="@/assets/images/1.jpg"
+                            class="w-[20px] h-[20px] rounded-full"
+                            alt=""
+                          /></div
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="entry-header">
+                    <div class="entry-title head6">
+                      <a
+                        class="title-text"
+                        href="https://demo.tmrwstudio.net/atlas/default/2023/09/06/winter-dressing-tips-when-its-really-cold-out/"
+                        >اضطراب تنهایی در سگ ها و گربه ها</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+         
+            </div>
+          </div>
+        </div>
+  </div>
+
+  <main class="mx-4">
     <section>
-      <div class="Top-Article w-full max-w-7xl mx-auto grid grid-cols-3"></div>
+  <div class="top-slider">
+
+  </div>
     </section>
 
     <TopCategories />
