@@ -5,9 +5,9 @@ export default defineNuxtConfig({
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-splide',
-    '@nuxtjs/i18n',
-    "@nuxtjs/sitemap",
-    "@nuxtjs/seo"
+    // '@nuxtjs/i18n',
+    // "@nuxtjs/sitemap",
+    // "@nuxtjs/seo"
   ],
   splide: {
     theme: 'default'
