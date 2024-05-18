@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-neutral-900 dark:bg-black dark:bg-opacity-20 text-neutral-100"
+    class="bg-[#111827] dark:bg-black dark:bg-opacity-20 text-neutral-100"
   >
     <div class="relative max-w-7xl mx-auto">
       <div class="nc-SectionGridPosts relative py-16 lg:py-28">
@@ -8,7 +8,7 @@
           class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
         >
           <div class="text-center w-full max-w-2xl mx-auto">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-50">
               Explore latest video articles
             </h2>
             <span
@@ -119,7 +119,7 @@
                     /><span class="wil-avatar__name">B</span>
                   </div>
                   <div>
-                    <h2 class="block font-semibold text-base">
+                    <h2 class="block font-semibold text-base text-gray-50">
                       <a
                         class="line-clamp-1"
                         href="/single-video/this-is-single-slug"
@@ -244,7 +244,7 @@
                     /><span class="wil-avatar__name">F</span>
                   </div>
                   <div>
-                    <h2 class="block font-semibold text-base">
+                    <h2 class="block font-semibold text-base text-gray-50">
                       <a
                         class="line-clamp-1"
                         href="/single-video/this-is-single-slug"
@@ -369,7 +369,7 @@
                     /><span class="wil-avatar__name">P</span>
                   </div>
                   <div>
-                    <h2 class="block font-semibold text-base">
+                    <h2 class="block font-semibold text-base text-gray-50">
                       <a
                         class="line-clamp-1"
                         href="/single-video/this-is-single-slug"
@@ -494,7 +494,7 @@
                     /><span class="wil-avatar__name">P</span>
                   </div>
                   <div>
-                    <h2 class="block font-semibold text-base">
+                    <h2 class="block font-semibold text-base text-gray-50">
                       <a
                         class="line-clamp-1"
                         href="/single-video/this-is-single-slug"
@@ -619,7 +619,7 @@
                     /><span class="wil-avatar__name">F</span>
                   </div>
                   <div>
-                    <h2 class="block font-semibold text-base">
+                    <h2 class="block font-semibold text-base text-gray-50">
                       <a
                         class="line-clamp-1"
                         href="/single-video/this-is-single-slug"
@@ -744,7 +744,7 @@
                     /><span class="wil-avatar__name">P</span>
                   </div>
                   <div>
-                    <h2 class="block font-semibold text-base">
+                    <h2 class="block font-semibold text-base text-gray-50">
                       <a
                         class="line-clamp-1"
                         href="/single-video/this-is-single-slug"
