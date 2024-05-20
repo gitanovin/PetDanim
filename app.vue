@@ -570,10 +570,9 @@
 
     <TopCategories />
 
-<TopPosts/>
+    <TopPosts />
 
-<Videos/>
-
+    <Videos />
 
     <section class="max-w-7xl pt-6 mb-20 mx-auto">
       <header class="flex items-end">
@@ -734,11 +733,8 @@
       </div>
     </section>
 
-    <Footer/>
-
+    <Footer />
   </main>
-
-
 </template>
 
 <script setup>
