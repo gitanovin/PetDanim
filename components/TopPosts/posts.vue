@@ -1,20 +1,20 @@
 <template>
   <section>
-    <div class="relative py-6">
-      <div
-        class="SliderPosts mx-auto max-w-7xl  py-6 rounded-2xl"
-      >
+    <div class="relative py-16 lg:py-28 bg-gray-50 lg:px-0 ">
+      <div class="SliderPosts mx-auto max-w-7xl py-6 rounded-2xl">
         <div
-          class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
+          class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50 lg:px-0 px-6"
         >
-          <div class="max-w-2xl">
-            <h2 class="text-xl md:text-3xl lg:text-xl font-semibold">
-              محبوبترین مقالات
-            </h2>
-            <span
-              class="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400"
-              >Top article</span
+          <div class="w-full flex items-center justify-between">
+            <h2
+              class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
             >
+              <TopIcon
+                class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"
+              />
+              <span> برترین ها </span>
+            </h2>
+            <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
           </div>
         </div>
         <div class="expolor-Slider">
@@ -40,6 +40,17 @@
                         padding: '4rem',
                         gap: '1rem',
                       },
+
+                       1080: {
+                        perPage: 3,
+                        padding: '4rem',
+                        gap: '1rem',
+                      },
+                          1280: {
+                        perPage: 3,
+                        padding: '4rem',
+                        gap: '1rem',
+                      },
                     },
                   }"
                 >
@@ -58,8 +69,8 @@
                               class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
                               title="Liked"
                             >
-                             <Heart/>
-                            <span
+                              <Heart />
+                              <span
                                 class="ml-1 text-neutral-900 dark:text-neutral-200"
                                 >34</span
                               ></button
@@ -67,7 +78,7 @@
                               class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
                               title="Comments"
                               href="/single/demo-slug#comments"
-                              ><Comment/><span
+                              ><Comment /><span
                                 class="ml-1 text-neutral-900 dark:text-neutral-200"
                                 >110</span
                               ></a
@@ -80,7 +91,7 @@
                               class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
                               title="Save to reading list"
                             >
-                              <Bookmark/>
+                              <Bookmark />
                             </button>
                           </div>
                         </div>
@@ -100,9 +111,9 @@
                               >
                                 <span
                                   class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                                  >
-                               <Music/>
-                            </span>
+                                >
+                                  <Music />
+                                </span>
                               </div>
                             </div>
                             <a
@@ -165,8 +176,7 @@
                     </li>
                   </SplideSlide>
 
-
-                    <SplideSlide class="splide__slide rounded-lg">
+                  <SplideSlide class="splide__slide rounded-lg">
                     <li class="inline-block whitespace-normal h-full">
                       <div
                         class="flex flex-col group rounded-3xl overflow-hidden z-0 h-full w-full relative"
@@ -181,8 +191,8 @@
                               class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
                               title="Liked"
                             >
-                             <Heart/>
-                            <span
+                              <Heart />
+                              <span
                                 class="ml-1 text-neutral-900 dark:text-neutral-200"
                                 >34</span
                               ></button
@@ -190,7 +200,7 @@
                               class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
                               title="Comments"
                               href="/single/demo-slug#comments"
-                              ><Comment/><span
+                              ><Comment /><span
                                 class="ml-1 text-neutral-900 dark:text-neutral-200"
                                 >110</span
                               ></a
@@ -203,7 +213,7 @@
                               class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
                               title="Save to reading list"
                             >
-                              <Bookmark/>
+                              <Bookmark />
                             </button>
                           </div>
                         </div>
@@ -223,9 +233,9 @@
                               >
                                 <span
                                   class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                                  >
-                               <Video/>
-                            </span>
+                                >
+                                  <Video />
+                                </span>
                               </div>
                             </div>
                             <a
@@ -288,8 +298,7 @@
                     </li>
                   </SplideSlide>
 
-
-                       <SplideSlide class="splide__slide rounded-lg">
+                  <SplideSlide class="splide__slide rounded-lg">
                     <li class="inline-block whitespace-normal h-full">
                       <div
                         class="flex flex-col group rounded-3xl overflow-hidden z-0 h-full w-full relative"
@@ -304,8 +313,8 @@
                               class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
                               title="Liked"
                             >
-                             <Heart/>
-                            <span
+                              <Heart />
+                              <span
                                 class="ml-1 text-neutral-900 dark:text-neutral-200"
                                 >34</span
                               ></button
@@ -313,7 +322,7 @@
                               class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
                               title="Comments"
                               href="/single/demo-slug#comments"
-                              ><Comment/><span
+                              ><Comment /><span
                                 class="ml-1 text-neutral-900 dark:text-neutral-200"
                                 >110</span
                               ></a
@@ -326,7 +335,7 @@
                               class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
                               title="Save to reading list"
                             >
-                              <Bookmark/>
+                              <Bookmark />
                             </button>
                           </div>
                         </div>
@@ -346,9 +355,9 @@
                               >
                                 <span
                                   class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                                  >
-                               <Post/>
-                            </span>
+                                >
+                                  <Post />
+                                </span>
                               </div>
                             </div>
                             <a
@@ -425,6 +434,7 @@ import Bookmark from "@/components/icons/Bookmark.vue";
 import Heart from "@/components/icons/Heart.vue";
 import Comment from "@/components/icons/Comment.vue";
 import Music from "@/components/icons/Music.vue";
+import TopIcon from "@/components/icons/TopIcon.vue";
 import Video from "@/components/icons/Video.vue";
 import Post from "@/components/icons/Post.vue";
 </script>

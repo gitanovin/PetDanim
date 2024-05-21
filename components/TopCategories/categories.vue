@@ -4,15 +4,18 @@
       <div
         class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
       >
-        <div class="max-w-2xl">
-          <h2 class="text-xl md:text-3xl lg:text-xl font-semibold">
-            موضوعات پرطرفدار
-          </h2>
-          <span
-            class="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400"
-            >Top categories</span
-          >
-        </div>
+          <div class="w-full flex items-center justify-between lg:px-0 px-6">
+            <h2
+              class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+            >
+              <TopIcon
+                class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"
+              />
+              <span> برترین ها </span>
+            </h2>
+            <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
+          </div>
+
       </div>
       <div class="nc-MySlider">
         <div class="relative flow-root">

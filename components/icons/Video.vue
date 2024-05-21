@@ -1,21 +1,17 @@
 <template>
   <svg
-    fill="#ffffff"
-    viewBox="-4 -3 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    preserveAspectRatio="xMinYMin"
     class="w-6 h-6"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g
-      id="SVGRepo_tracerCarrier"
+    <path
+      d="M17.13 7.9799C20.96 10.1899 20.96 13.8099 17.13 16.0199L14.04 17.7999L10.95 19.5799C7.13 21.7899 4 19.9799 4 15.5599V11.9999V8.43989C4 4.01989 7.13 2.2099 10.96 4.4199L13.21 5.7199"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-miterlimit="10"
       stroke-linecap="round"
       stroke-linejoin="round"
-    ></g>
-    <g id="SVGRepo_iconCarrier">
-      <path
-        d="M13.82 9.523a.976.976 0 0 0-.324-1.363L3.574 2.128a1.031 1.031 0 0 0-.535-.149c-.56 0-1.013.443-1.013.99V15.03c0 .185.053.366.153.523.296.464.92.606 1.395.317l9.922-6.031c.131-.08.243-.189.325-.317zm.746 1.997l-9.921 6.031c-1.425.867-3.3.44-4.186-.951A2.918 2.918 0 0 1 0 15.03V2.97C0 1.329 1.36 0 3.04 0c.567 0 1.123.155 1.605.448l9.921 6.032c1.425.866 1.862 2.696.975 4.088-.246.386-.58.712-.975.952z"
-      ></path>
-    </g>
+    ></path>
   </svg>
 </template>
