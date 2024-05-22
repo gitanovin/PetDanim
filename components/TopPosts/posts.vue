@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="relative py-16 lg:py-28 bg-gray-50 lg:px-0 ">
+    <div class="relative py-16 lg:py-28 bg-gray-50 lg:px-0">
       <div class="SliderPosts mx-auto max-w-7xl py-6 rounded-2xl">
         <div
           class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50 lg:px-0 px-6"
@@ -9,9 +9,7 @@
             <h2
               class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
             >
-              <TopIcon
-                class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"
-              />
+              <TopIcon class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" />
               <span> برترین ها </span>
             </h2>
             <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
@@ -23,10 +21,10 @@
               <ul>
                 <Splide
                   :options="{
-                    perPage: 5,
+                    perPage: 4,
                     type: 'loop',
                     direction: 'rtl',
-                    gap: '10px',
+                    gap: '20px',
                     //   padding: '0',
                     //   focus: 'center',
                     breakpoints: {
@@ -40,13 +38,18 @@
                         padding: '4rem',
                         gap: '1rem',
                       },
+                      768: {
+                        perPage: 2,
+                        padding: '4rem',
+                        gap: '1rem',
+                      },
 
-                       1080: {
+                      1080: {
                         perPage: 3,
                         padding: '4rem',
                         gap: '1rem',
                       },
-                          1280: {
+                      1280: {
                         perPage: 3,
                         padding: '4rem',
                         gap: '1rem',

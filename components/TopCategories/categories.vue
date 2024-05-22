@@ -4,27 +4,24 @@
       <div
         class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
       >
-          <div class="w-full flex items-center justify-between lg:px-0 px-6">
-            <h2
-              class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
-            >
-              <TopIcon
-                class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"
-              />
-              <span> برترین ها </span>
-            </h2>
-            <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
-          </div>
-
+        <div class="w-full flex items-center justify-between lg:px-0 px-6">
+          <h2
+            class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+          >
+            <TopIcon class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" />
+            <span> برترین ها </span>
+          </h2>
+          <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
+        </div>
       </div>
-      <div class="nc-MySlider">
+      <div class="nc-MySlider px-0">
         <div class="relative flow-root">
-          <div class="flow-root overflow-hidden rounded-xl">
-            <ul class="relative"  id="advertising" >
+          <div class="flow-root overflow-hidden">
+            <ul class="relative" id="advertising">
               <Splide
                 :options="{
                   perPage: 5,
-                   type: 'loop',
+                  type: 'loop',
                   direction: 'rtl',
                   gap: '10px',
                   //   padding: '0',
@@ -37,6 +34,16 @@
                     },
                     640: {
                       perPage: 1,
+                      padding: '4rem',
+                      gap: '1rem',
+                    },
+                    768: {
+                      perPage: 3,
+                      padding: '4rem',
+                      gap: '1rem',
+                    },
+                    1080: {
+                      perPage: 4,
                       padding: '4rem',
                       gap: '1rem',
                     },
@@ -195,23 +202,3 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      colorCache: {},
-    };
-  },
-  methods: {
-    randomColor(id) {
-      const r = () => Math.floor(256 * Math.random());
-
-      return (
-        this.colorCache[id] ||
-        (this.colorCache[id] = `rgb(${r()}, ${r()}, ${r()})`)
-      );
-    },
-  },
-};
-</script>

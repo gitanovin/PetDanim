@@ -87,7 +87,7 @@
             <img
               alt=""
               data-nimg="fill"
-              class="object-cover rounded-t-3xl h-full"
+              class="object-cover rounded-t-3xl h-full w-full"
               src="@/assets/images/6.jpg"
             />
             <div
@@ -766,11 +766,5 @@
   </section>
 </template>
 <script setup>
-import Bookmark from "@/components/icons/Bookmark.vue";
-import Heart from "@/components/icons/Heart.vue";
-import Comment from "@/components/icons/Comment.vue";
-import Music from "@/components/icons/Music.vue";
-import Video from "@/components/icons/Video.vue";
-import Post from "@/components/icons/Post.vue";
 import BlogIcon from "@/components/icons/BlogIcon.vue";
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <footer class="relative">
-    <div class="border-t border-gray-200 dark:border-gray-800">
+  <footer class="relative overflow-hidden">
+    <div class=" border-gray-200 dark:border-gray-800 before:bg-gray-50 before:w-[90%] before:absolute before:h-full before:rotate-180 before:-z-10  before:rounded-full before:right-96  after:bg-orange-50 after:w-[70%] after:absolute after:h-full after:rotate-180 after:-z-10  after:rounded-full  after:bottom-48 after:inset-x-0">
       <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 lg:py-12">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div
@@ -90,84 +90,7 @@
               <h3 class="text-sm/6 font-semibold text-gray-900 dark:text-white">
                 سرویس های پتومن
               </h3>
-              <ul role="list" class="mt-6 space-y-4">
-                <li>
-                  <a
-                    class="text-sm relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    حامیان پت
-                    <span
-                      class="w-3 h-3 absolute top-0.5 -left-3.5 text-gray-400 dark:text-gray-500"
-                    >
-                      <ArrowUpRight
-                        class="!fill:gray-300 dark:fill-gray-50 stroke-slate-100 dark:stroke-slate-100"
-                      /> </span
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    class="text-sm relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >پت مارکت
-                    <span
-                      class="w-3 h-3 absolute top-0.5 -left-3.5 text-gray-400 dark:text-gray-500"
-                    >
-                      <ArrowUpRight
-                        class="!fill:gray-300 dark:fill-gray-50 stroke-slate-100 dark:stroke-slate-100" /></span
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    class="text-sm relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >دامپزشکی
-                    <span
-                      class="i-ph-arrow-up-right w-3 h-3 absolute top-0.5 -left-3.5 text-gray-400 dark:text-gray-500"
-                    >
-                      <ArrowUpRight
-                        class="!fill:gray-300 dark:fill-gray-50 stroke-slate-100 dark:stroke-slate-100" /></span
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    class="text-sm relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >پت فیلم
-                    <span
-                      class="w-3 h-3 absolute top-0.5 -left-3.5 text-gray-400 dark:text-gray-500"
-                    >
-                      <ArrowUpRight
-                        class="!fill:gray-300 dark:fill-gray-50 stroke-slate-100 dark:stroke-slate-100" /></span
-                  ></a>
-                </li>
-
-                <li>
-                  <a
-                    class="text-sm relative text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                    href=""
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <span
-                      class="w-3 h-3 absolute top-0.5 -left-3.5 text-gray-400 dark:text-gray-500"
-                    >
-                      <ArrowUpRight
-                        class="!fill:gray-300 dark:fill-gray-50 stroke-slate-100 dark:stroke-slate-100"
-                    /></span>
-
-                    پت چت
-                  </a>
-                </li>
-              </ul>
+          
             </div>
           </div>
           <div class="mt-10 xl:mt-0">
@@ -228,7 +151,7 @@
             rel="noopener noreferrer"
             target="_blank"
             ><span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
-              <Instagram /> </span
+              <Instagram class="fill-orange-500" /> </span
           ></a>
         </div>
         <div
@@ -238,10 +161,15 @@
           class="flex items-center justify-center lg:justify-start lg:flex-1 gap-x-1.5 mt-3 lg:mt-0 lg:order-1"
         >
           <p class="text-gray-500 dark:text-gray-400 text-sm">
-            ©کپی رایت تمامی حقوق مادی و معنوی این سرویس متعلق به پتومن است.
+            1403 - کپی بخش یا کل هر کدام از مطالب پت دانیم تنها با کسب مجوز
+            مکتوب امکان پذیر است
           </p>
         </div>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+import Instagram from "@/components/icons/social/instagram.vue";
+</script>

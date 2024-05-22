@@ -56,6 +56,8 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
 
+
+
     fontFamily: {
       en: [
         "Segoe UI",
@@ -68,6 +70,8 @@ module.exports = {
       ],
 
       fa: ["Vazirmatn"],
+      fd: ["Sahel FD"],
+      sahel:["Sahel"]
       
     },
     colors: {
@@ -380,7 +384,7 @@ module.exports = {
   plugins: [
     require("@tailwindcss/forms"),
     require("tailwind-scrollbar"),
-
+  require('@tailwindcss/aspect-ratio'),
   ],
 };
 

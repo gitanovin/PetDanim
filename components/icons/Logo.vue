@@ -1,5 +1,6 @@
 <template>
-  <svg
+  <div>
+      <svg
     class="text-black dark:text-white block w-auto h-6"
     width="800"
     height="200"
@@ -28,4 +29,6 @@
       fill="#00DC82"
     ></path>
   </svg>
+  </div>
+
 </template>

@@ -5,7 +5,7 @@
         <h2
           class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
         >
-          <BlogIcon class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" />
+          <div class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"></div>
           <span> برچسب ها</span>
         </h2>
         <div class="bg-orange-500 w-4 h-4 rounded-full mr-4"></div>
@@ -166,9 +166,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import LeftArrow from "@/components/icons/LeftArrow.vue";
-import Events from "@/components/icons/Events.vue";
-import Times from "@/components/icons/Times.vue";
-</script>
