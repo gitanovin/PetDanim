@@ -510,12 +510,12 @@
                   class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
                   type="submit"
                 >
-                  Submit</button
+                  ثبت</button
                 ><button
                   class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
                   type="button"
                 >
-                  Cancel
+                  انصراف
                 </button>
               </div>
             </form>
@@ -622,7 +622,7 @@
                         ></path></svg
                       ><span
                         class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >Reply</span
+                        >پاسخ</span
                       >
                     </button>
                   </div>
@@ -731,7 +731,7 @@
                         ></path></svg
                       ><span
                         class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >Reply</span
+                        >پاسخ</span
                       >
                     </button>
                   </div>
@@ -840,7 +840,7 @@
                         ></path></svg
                       ><span
                         class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >Reply</span
+                        >پاسخ</span
                       >
                     </button>
                   </div>
@@ -949,7 +949,7 @@
                         ></path></svg
                       ><span
                         class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >Reply</span
+                        >پاسخ</span
                       >
                     </button>
                   </div>
@@ -961,7 +961,7 @@
               <button
                 class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 dark:bg-primary-700 w-full"
               >
-                View full comments (+117 comments)
+               مشاهده همه نظرات (+117 نظر)
               </button>
             </ul>
             <div></div>

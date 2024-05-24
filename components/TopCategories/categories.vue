@@ -8,8 +8,8 @@
           <h2
             class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
           >
-            <TopIcon class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" />
-            <span> برترین ها </span>
+            <div class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" ></div>
+            <span>  دسته بندی ها </span>
           </h2>
           <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
         </div>

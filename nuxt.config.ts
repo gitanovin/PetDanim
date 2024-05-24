@@ -1,6 +1,13 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
+
+  // vue: {  
+  //   compilerOptions: {
+  //     isCustomElement: (tag) => ['LeftArrow','Events','Like','Comment','Bookmark','TopIcon','Times'].includes(tag),
+  //   },
+  // },
+
   css: ['~/assets/css/app.css'],
   modules: [
     '@vite-pwa/nuxt',
