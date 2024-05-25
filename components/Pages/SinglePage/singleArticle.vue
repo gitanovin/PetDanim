@@ -242,7 +242,6 @@
                                     کپی لینک مقاله
                                   </button>
                                 </MenuItem>
-                              
 
                                 <MenuItem v-slot="{ active }">
                                   <button
@@ -309,27 +308,29 @@
             class="prose lg:prose-lg !max-w-screen-md mx-auto dark:prose-invert text-justify"
           >
             <p>
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
             </p>
 
             <ol>
               <li>این تست است</li>
-              <li>
-                این تست دو است
-              </li>
-              <li>
-                این تست 3 است
-              </li>
+              <li>این تست دو است</li>
+              <li>این تست 3 است</li>
             </ol>
             <h3>عنوان اچ 3</h3>
-            <p>
-          این متن تستی است
-            </p>
+            <p>این متن تستی است</p>
             <p>نقل قول:</p>
             <blockquote>
-              <p>
-              این یک نقل و قول تستی است
-              </p>
+              <p>این یک نقل و قول تستی است</p>
             </blockquote>
 
             <figure>
@@ -338,17 +339,15 @@
                 class="rounded-2xl"
                 src="@/assets/images/5.jpg"
               />
-              <figcaption>
-               کپشن عکس
-              </figcaption>
+              <figcaption>کپشن عکس</figcaption>
             </figure>
-           
+
             <ul>
               <li>ایت تست ال ای است</li>
-             <li>ایت تست ال ای است</li>
-             <li>ایت تست ال ای است</li>
+              <li>ایت تست ال ای است</li>
+              <li>ایت تست ال ای است</li>
             </ul>
-          
+
             <h2>تست عنوان اچ 2</h2>
             <p>
               <a href="https://highlightjs.org/">این تست لینک است</a>
@@ -365,11 +364,8 @@
   );
   ReactDOM.render(element, document.getElementById('root'));
 } </code></pre>
-  
-            <h4>
-            تست اچ 4
-            </h4>
 
+            <h4>تست اچ 4</h4>
           </div>
           <div class="max-w-screen-md mx-auto flex flex-wrap">
             <a
@@ -413,9 +409,9 @@
                 </h2>
                 <span
                   class="block mt-1 text-sm text-neutral-500 sm:text-base dark:text-neutral-300"
-                  >محبوب حسین زاده متولد 1369 در شهرستان خوی می باشد این متن تست بیوگرافی است
-                 </span
-                >
+                  >محبوب حسین زاده متولد 1369 در شهرستان خوی می باشد این متن تست
+                  بیوگرافی است
+                </span>
               </div>
             </div>
           </div>
@@ -463,13 +459,8 @@
                 >
                   <div class="relative flex items-center pe-6">
                     <div class="absolute -end-3 -top-3">
-                      <div
-                        class="relative inline-block text-left"
-                      >
-
-
-
-     <Menu as="div" class="relative inline-block text-left">
+                      <div class="relative inline-block text-left">
+                        <Menu as="div" class="relative inline-block text-left">
                           <div>
                             <MenuButton
                               class="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
@@ -507,8 +498,8 @@
                                     ویرایش
                                   </button>
                                 </MenuItem>
-                              
-                                     <MenuItem v-slot="{ active }">
+
+                                <MenuItem v-slot="{ active }">
                                   <button
                                     :class="[
                                       active
@@ -557,15 +548,13 @@
                                       class="ml-2 h-5 w-5 fill-gray-800"
                                       aria-hidden="true"
                                     />
-                                    گزارش 
+                                    گزارش
                                   </button>
                                 </MenuItem>
                               </div>
                             </MenuItems>
                           </transition>
                         </Menu>
-
-
                       </div>
                     </div>
                     <a
@@ -628,22 +617,427 @@
                   </div>
                 </div>
               </div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
+              <div class="nc-NcModal hidden">
+                <form action="#" class="nc-SingleCommentForm flex-grow">
+                  <textarea
+                    class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900"
+                    rows="4"
+                    placeholder="Add to discussion"
+                    required=""
+                  ></textarea>
+                  <div class="mt-2 space-x-3">
+                    <button
+                      class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                      type="submit"
+                    >
+                      Submit</button
+                    ><button
+                      class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                      type="button"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="nc-NcModal hidden">
+                <div
+                  class="fixed inset-0 z-50 overflow-y-auto"
+                  id="headlessui-dialog-:r8g:"
+                  role="dialog"
+                  aria-modal="true"
+                  data-headlessui-state="open"
+                  aria-labelledby="headlessui-dialog-title-:r8i:"
+                >
+                  <div class="min-h-screen px-1 text-center md:px-4">
+                    <div
+                      class="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80 opacity-100"
+                      id="headlessui-dialog-overlay-:r8h:"
+                      aria-hidden="true"
+                      data-headlessui-state="open"
+                    ></div>
+                    <span
+                      class="inline-block h-screen align-middle"
+                      aria-hidden="true"
+                      >&ZeroWidthSpace;</span
+                    >
+                    <div
+                      class="inline-block w-full my-5 overflow-hidden text-left align-middle transition-all transform bg-white border border-black border-opacity-5 shadow-xl rounded-2xl sm:my-8 dark:bg-neutral-800 dark:border-neutral-700 text-neutral-900 dark:text-neutral-300 max-w-screen-md opacity-100 scale-100"
+                    >
+                      <div
+                        class="py-4 px-6 text-center relative border-b border-neutral-100 dark:border-neutral-700 md:py-5"
+                      >
+                        <button
+                          class="w-8 h-8 flex items-center justify-center rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 absolute left-2 top-1/2 transform -translate-y-1/2 sm:left-4 focus:outline-none"
+                        >
+                          <span class="sr-only">Close</span
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                        <h3
+                          class="text-base font-semibold text-neutral-900 lg:text-xl dark:text-neutral-200 mx-10"
+                          id="headlessui-dialog-title-:r8i:"
+                          data-headlessui-state="open"
+                        >
+                          Editing comment
+                        </h3>
+                      </div>
+                      <div class="py-4 px-6 md:py-5">
+                        <form action="#" class="nc-SingleCommentForm mt-0">
+                          <textarea
+                            class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900"
+                            rows="8"
+                            placeholder="Add to discussion"
+                            required=""
+                          >
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi consequuntur perferendis maxime quia, quisquam eveniet asperiores fuga laudantium necessitatibus assumenda!</textarea
+                          >
+                          <div class="mt-2 space-x-3">
+                            <button
+                              class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                              type="submit"
+                            >
+                              Submit</button
+                            ><button
+                              class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                              type="button"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nc-NcModal hidden">
+                <div
+                  class="fixed inset-0 z-50 overflow-y-auto"
+                  id="headlessui-dialog-:r8o:"
+                  role="dialog"
+                  aria-modal="true"
+                  data-headlessui-state="open"
+                  aria-labelledby="headlessui-dialog-title-:r8q:"
+                >
+                  <div class="min-h-screen px-1 text-center md:px-4">
+                    <div
+                      class="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80 opacity-100"
+                      id="headlessui-dialog-overlay-:r8p:"
+                      aria-hidden="true"
+                      data-headlessui-state="open"
+                    ></div>
+                    <span
+                      class="inline-block h-screen align-middle"
+                      aria-hidden="true"
+                      >&ZeroWidthSpace;</span
+                    >
+                    <div
+                      class="inline-block w-full my-5 overflow-hidden text-left align-middle transition-all transform bg-white border border-black border-opacity-5 shadow-xl rounded-2xl sm:my-8 dark:bg-neutral-800 dark:border-neutral-700 text-neutral-900 dark:text-neutral-300 max-w-screen-md opacity-100 scale-100"
+                    >
+                      <div
+                        class="py-4 px-6 text-center relative border-b border-neutral-100 dark:border-neutral-700 md:py-5"
+                      >
+                        <button
+                          class="w-8 h-8 flex items-center justify-center rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 absolute left-2 top-1/2 transform -translate-y-1/2 sm:left-4 focus:outline-none"
+                        >
+                          <span class="sr-only">Close</span
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                        <h3
+                          class="text-base font-semibold text-neutral-900 lg:text-xl dark:text-neutral-200 mx-10"
+                          id="headlessui-dialog-title-:r8q:"
+                          data-headlessui-state="open"
+                        >
+                          Report Abuse
+                        </h3>
+                      </div>
+                      <div class="py-4 px-6 md:py-5">
+                        <form action="#">
+                          <div
+                            id="headlessui-radiogroup-:r8r:"
+                            role="radiogroup"
+                            aria-labelledby="headlessui-label-:r8s:"
+                          >
+                            <label
+                              class="sr-only"
+                              id="headlessui-label-:r8s:"
+                              role="none"
+                              >Problem Plans</label
+                            >
+                            <div
+                              class="grid grid-cols-2 lg:grid-cols-4 gap-2"
+                              role="none"
+                            >
+                              <div
+                                class="bg-primary-6000 text-white dark:bg-primary-700 relative shadow-lg rounded-lg px-3 py-3 cursor-pointer flex sm:px-5 sm:py-4 focus:outline-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                                id="headlessui-radiogroup-option-:r8t:"
+                                role="radio"
+                                aria-checked="true"
+                                tabindex="0"
+                                data-headlessui-state="checked"
+                                aria-labelledby="headlessui-label-:r8u:"
+                              >
+                                <div
+                                  class="flex items-center justify-between w-full"
+                                >
+                                  <div class="flex items-center">
+                                    <div class="text-sm">
+                                      <p
+                                        class="font-medium line-clamp-1 text-white"
+                                        id="headlessui-label-:r8u:"
+                                      >
+                                        Violence
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="flex-shrink-0 text-white">
+                                    <svg
+                                      class="w-6 h-6"
+                                      viewBox="0 0 24 24"
+                                      fill="none"
+                                    >
+                                      <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="12"
+                                        fill="#fff"
+                                        opacity="0.2"
+                                      ></circle>
+                                      <path
+                                        d="M7 13l3 3 7-7"
+                                        stroke="#fff"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="bg-white border-t border-neutral-50 relative shadow-lg rounded-lg px-3 py-3 cursor-pointer flex sm:px-5 sm:py-4 focus:outline-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                                id="headlessui-radiogroup-option-:r8v:"
+                                role="radio"
+                                aria-checked="false"
+                                tabindex="-1"
+                                data-headlessui-state=""
+                                aria-labelledby="headlessui-label-:r90:"
+                              >
+                                <div
+                                  class="flex items-center justify-between w-full"
+                                >
+                                  <div class="flex items-center">
+                                    <div class="text-sm">
+                                      <p
+                                        class="font-medium line-clamp-1 text-neutral-900"
+                                        id="headlessui-label-:r90:"
+                                      >
+                                        Trouble
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="bg-white border-t border-neutral-50 relative shadow-lg rounded-lg px-3 py-3 cursor-pointer flex sm:px-5 sm:py-4 focus:outline-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                                id="headlessui-radiogroup-option-:r91:"
+                                role="radio"
+                                aria-checked="false"
+                                tabindex="-1"
+                                data-headlessui-state=""
+                                aria-labelledby="headlessui-label-:r92:"
+                              >
+                                <div
+                                  class="flex items-center justify-between w-full"
+                                >
+                                  <div class="flex items-center">
+                                    <div class="text-sm">
+                                      <p
+                                        class="font-medium line-clamp-1 text-neutral-900"
+                                        id="headlessui-label-:r92:"
+                                      >
+                                        Spam
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="bg-white border-t border-neutral-50 relative shadow-lg rounded-lg px-3 py-3 cursor-pointer flex sm:px-5 sm:py-4 focus:outline-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
+                                id="headlessui-radiogroup-option-:r93:"
+                                role="radio"
+                                aria-checked="false"
+                                tabindex="-1"
+                                data-headlessui-state=""
+                                aria-labelledby="headlessui-label-:r94:"
+                              >
+                                <div
+                                  class="flex items-center justify-between w-full"
+                                >
+                                  <div class="flex items-center">
+                                    <div class="text-sm">
+                                      <p
+                                        class="font-medium line-clamp-1 text-neutral-900"
+                                        id="headlessui-label-:r94:"
+                                      >
+                                        Other
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-4">
+                            <h4
+                              class="text-lg font-semibold text-neutral-700 dark:text-neutral-200"
+                            >
+                              Message
+                            </h4>
+                            <span
+                              class="text-sm text-neutral-6000 dark:text-neutral-400"
+                              >Please provide any additional information or
+                              context that will help us understand and handle
+                              the situation.</span
+                            ><textarea
+                              class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 mt-3"
+                              rows="4"
+                              placeholder="..."
+                              required=""
+                              id="report-message"
+                            ></textarea>
+                          </div>
+                          <div class="mt-4 space-x-3 rtl:space-x-reverse">
+                            <button
+                              class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                              type="submit"
+                            >
+                              Submit</button
+                            ><button
+                              class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 ring-1 ring-neutral-300 hover:ring-neutral-400 dark:ring-neutral-700 dark:hover:ring-neutral-500 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                              type="button"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="Delete hidden">
+                <div
+                  class="fixed inset-0 z-50 overflow-y-auto"
+                  id="headlessui-dialog-:r9a:"
+                  role="dialog"
+                  aria-modal="true"
+                  data-headlessui-state="open"
+                >
+                  <div class="min-h-screen px-1 text-center md:px-4">
+                    <div
+                      class="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80 opacity-100"
+                      id="headlessui-dialog-overlay-:r9b:"
+                      aria-hidden="true"
+                      data-headlessui-state="open"
+                    ></div>
+                    <span
+                      class="inline-block h-screen align-middle"
+                      aria-hidden="true"
+                      >&ZeroWidthSpace;</span
+                    >
+                    <div
+                      class="inline-block w-full my-5 overflow-hidden text-left align-middle transition-all transform bg-white border border-black border-opacity-5 shadow-xl rounded-2xl sm:my-8 dark:bg-neutral-800 dark:border-neutral-700 text-neutral-900 dark:text-neutral-300 max-w-screen-sm opacity-100 scale-100"
+                    >
+                      <div
+                        class="py-4 px-6 text-center relative border-b border-neutral-100 dark:border-neutral-700 md:py-5"
+                      >
+                        <button
+                          class="w-8 h-8 flex items-center justify-center rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 absolute left-2 top-1/2 transform -translate-y-1/2 sm:left-4 focus:outline-none"
+                        >
+                          <span class="sr-only">Close</span
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="py-4 px-6 md:py-5">
+                        <form action="#">
+                          <h3
+                            class="text-lg font-semibold text-neutral-900 dark:text-neutral-200"
+                          >
+                            Delete comment
+                          </h3>
+                          <span class="text-sm"
+                            >Are you sure you want to delete this comment? You
+                            cannot undo this action.</span
+                          >
+                          <div class="mt-4 space-x-3 rtl:space-x-reverse">
+                            <button
+                              class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 !bg-red-500"
+                              type="submit"
+                            >
+                              Delete</button
+                            ><button
+                              class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 ring-1 ring-neutral-300 hover:ring-neutral-400 dark:ring-neutral-700 dark:hover:ring-neutral-500 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                              type="button"
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <button
                 class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-orange-700 hover:bg-orange-600 text-orange-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 dark:bg-primary-700 w-full"
               >
-               مشاهده همه نظرات (+117 نظر)
+                مشاهده همه نظرات (+117 نظر)
               </button>
             </ul>
             <div></div>
           </div>
         </div>
-        <div class="sticky mt-8 bottom-8 z-40 justify-center">
-       
-              <div
+        <div class="sticky mt-8 bottom-8 z-40 justify-center hidden">
+          <div
             class="bg-white dark:bg-neutral-800 shadow-lg rounded-full ring-1 ring-offset-1 ring-neutral-900/5 p-1.5 flex items-center justify-center space-x-2 rtl:space-x-reverse text-xs"
           >
             <button
@@ -719,21 +1113,19 @@
                   d="M11.47 2.47a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06l-6.22-6.22V21a.75.75 0 01-1.5 0V4.81l-6.22 6.22a.75.75 0 11-1.06-1.06l7.5-7.5z"
                   clip-rule="evenodd"
                 ></path>
-              </svg></button
-            ><button
+              </svg>
+            </button>
+            <button
               class="w-9 h-9 items-center justify-center hidden"
               title="Go to top"
             >
               216%
             </button>
           </div>
-        
-        
         </div>
       </div>
     </div>
- <div class="bg-gray-100"> <RelatedPosts/></div>
-   
+    <div class="bg-gray-100"><RelatedPosts /></div>
   </section>
 </template>
 
@@ -757,5 +1149,3 @@ import CopyIcon from "@/components/icons/Copy.vue";
 import CommentIcon from "@/components/icons/Cm.vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 </script>
-
-
