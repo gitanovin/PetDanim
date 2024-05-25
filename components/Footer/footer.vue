@@ -1,6 +1,6 @@
 <template>
   <footer class="relative overflow-hidden">
-    <div class=" border-gray-200 dark:border-gray-800 before:bg-gray-50 before:w-[90%] before:absolute before:h-full before:rotate-180 before:-z-10  before:rounded-full before:right-96  after:bg-orange-50 after:w-[70%] after:absolute after:h-full after:rotate-180 after:-z-10  after:rounded-full  after:bottom-48 after:inset-x-0">
+    <div class=" border-gray-200">
       <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 lg:py-12">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div

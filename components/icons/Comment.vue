@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <svg  viewBox="0 0 24 24">
       <path
         stroke="currentColor"
         stroke-linecap="round"

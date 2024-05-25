@@ -306,50 +306,32 @@
         <div class="nc-SingleContent space-y-10">
           <div
             id="single-entry-content"
-            class="prose lg:prose-lg !max-w-screen-md mx-auto dark:prose-invert"
+            class="prose lg:prose-lg !max-w-screen-md mx-auto dark:prose-invert text-justify"
           >
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure vel
-              officiis ipsum placeat itaque neque dolorem modi perspiciatis
-              dolor distinctio veritatis sapiente, minima corrupti dolores
-              necessitatibus suscipit accusantium dignissimos culpa cumque.
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
             </p>
-            <p>
-              It is a long established fact that a <strong>reader</strong> will
-              be distracted by the readable content of a page when looking at
-              its <strong>layout</strong>. The point of using Lorem Ipsum is
-              that it has a more-or-less normal
-              <a href="/#" target="_blank" rel="noopener noreferrer"
-                >distribution of letters.</a
-              >
-            </p>
+
             <ol>
-              <li>We want everything to look good out of the box.</li>
+              <li>این تست است</li>
               <li>
-                Really just the first reason, that's the whole point of the
-                plugin.
+                این تست دو است
               </li>
               <li>
-                Here's a third pretend reason though a list with three items
-                looks more realistic than a list with two items.
+                این تست 3 است
               </li>
             </ol>
-            <h3>Typography should be easy</h3>
+            <h3>عنوان اچ 3</h3>
             <p>
-              So that's a header for you — with any luck if we've done our job
-              correctly that will look pretty reasonable.
+          این متن تستی است
             </p>
-            <p>Something a wise person once told me about typography is:</p>
+            <p>نقل قول:</p>
             <blockquote>
               <p>
-                Typography is pretty important if you don't want your stuff to
-                look like trash. Make it good then it won't be bad.
+              این یک نقل و قول تستی است
               </p>
             </blockquote>
-            <p>
-              It's probably important that images look okay here by default as
-              well:
-            </p>
+
             <figure>
               <img
                 alt="nc blog"
@@ -357,33 +339,21 @@
                 src="@/assets/images/5.jpg"
               />
               <figcaption>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure
-                vel officiis ipsum placeat itaque neque dolorem modi
-                perspiciatis dolor distinctio veritatis sapiente
+               کپشن عکس
               </figcaption>
             </figure>
-            <p>
-              Now I'm going to show you an example of an unordered list to make
-              sure that looks good, too:
-            </p>
+           
             <ul>
-              <li>So here is the first item in this list.</li>
-              <li>In this example we're keeping the items short.</li>
-              <li>Later, we'll use longer, more complex list items.</li>
+              <li>ایت تست ال ای است</li>
+             <li>ایت تست ال ای است</li>
+             <li>ایت تست ال ای است</li>
             </ul>
-            <p>And that's the end of this section.</p>
-            <h2>Code should look okay by default.</h2>
+          
+            <h2>تست عنوان اچ 2</h2>
             <p>
-              I think most people are going to use
-              <a href="https://highlightjs.org/">highlight.js</a> or
-              <a href="https://prismjs.com/">Prism</a> or something if they want
-              to style their code blocks but it wouldn't hurt to make them look
-              <em>okay</em> out of the box, even with no syntax highlighting.
+              <a href="https://highlightjs.org/">این تست لینک است</a>
             </p>
-            <p>
-              What I've written here is probably long enough, but adding this
-              final sentence can't hurt.
-            </p>
+
             <pre
               class="!rounded-2xl"
             ><code class="language-js">function tick() {
@@ -395,65 +365,25 @@
   );
   ReactDOM.render(element, document.getElementById('root'));
 } </code></pre>
-            <p>Hopefully that looks good enough to you.</p>
-            <h3>We still need to think about stacked headings though.</h3>
+  
             <h4>
-              Let's make sure we don't screw that up with
-              &lt;code&gt;h4&lt;/code&gt; elements, either.
+            تست اچ 4
             </h4>
-            <p>
-              Phew, with any luck we have styled the headings above this text
-              and they look pretty good.
-            </p>
-            <p>
-              Let's add a closing paragraph here so things end with a decently
-              sized block of text. I can't explain why I want things to end that
-              way but I have to assume it's because I think things will look
-              weird or unbalanced if there is a heading too close to the end of
-              the document.
-            </p>
-            <p>
-              What I've written here is probably long enough, but adding this
-              final sentence can't hurt.
-            </p>
+
           </div>
           <div class="max-w-screen-md mx-auto flex flex-wrap">
             <a
               class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
               href="/archive/the-demo-archive-slug"
-              >Garden</a
+              >حیوان</a
             ><a
               class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
               href="/archive/the-demo-archive-slug"
-              >Jewelry</a
+              >سگ</a
             ><a
               class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
               href="/archive/the-demo-archive-slug"
-              >Industrial</a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >Tools</a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >Automotive</a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >Toys</a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >Outdoors</a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >Health</a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >Electronics</a
+              >گربه</a
             >
           </div>
           <div
@@ -472,23 +402,19 @@
                   /><span class="wil-avatar__name">B</span>
                 </div></a
               >
-              <div class="flex flex-col ml-3 max-w-lg sm:ml-5">
+              <div class="flex flex-col mr-3 max-w-lg sm:ml-5">
                 <span class="text-xs text-neutral-400 uppercase tracking-wider"
-                  >WRITTEN BY</span
+                  >نویسنده</span
                 >
                 <h2
                   class="text-lg font-semibold text-neutral-900 dark:text-neutral-200"
                 >
-                  <a href="/author/the-demo-author-slug">Birrell Chariot</a>
+                  <a href="/author/the-demo-author-slug">محبوب حسین زاده</a>
                 </h2>
                 <span
                   class="block mt-1 text-sm text-neutral-500 sm:text-base dark:text-neutral-300"
-                  >There’s no stopping the tech giant. Apple now opens its 100th
-                  store in China.There’s no stopping the tech giant.<a
-                    class="text-primary-6000 font-medium ml-1"
-                    href="/author/the-demo-author-slug"
-                    >Read more</a
-                  ></span
+                  >محبوب حسین زاده متولد 1369 در شهرستان خوی می باشد این متن تست بیوگرافی است
+                 </span
                 >
               </div>
             </div>
@@ -497,22 +423,22 @@
             <h3
               class="text-xl font-semibold text-neutral-800 dark:text-neutral-200"
             >
-              Responses (10)
+              پاسخ ها (10)
             </h3>
             <form action="#" class="nc-SingleCommentForm mt-5">
               <textarea
-                class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900"
+                class="block w-full text-sm rounded-xl border-neutral-200 focus:border-orange-300 focus:ring focus:ring-orange-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900"
                 rows="4"
-                placeholder="Add to discussion"
+                placeholder="دیدگاه خود را بنویسید"
               ></textarea>
-              <div class="mt-2 space-x-3">
+              <div class="mt-2 gap-2 flex">
                 <button
-                  class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                  class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-orange-700 hover:bg-orange-600 text-orange-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
                   type="submit"
                 >
                   ثبت</button
                 ><button
-                  class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                  class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
                   type="button"
                 >
                   انصراف
@@ -520,12 +446,11 @@
               </div>
             </form>
           </div>
-          <div class="max-w-screen-md mx-auto">
+          <div class="max-w-screen-md mx-auto pb-16">
             <ul class="nc-SingleCommentLists space-y-5">
               <div class="nc-CommentCard flex">
                 <div
                   class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full h-6 w-6 text-base sm:text-lg sm:h-8 sm:w-8 mt-4"
-                  style=""
                 >
                   <img
                     alt="John Doe"
@@ -540,47 +465,122 @@
                     <div class="absolute -end-3 -top-3">
                       <div
                         class="relative inline-block text-left"
-                        data-headlessui-state=""
                       >
-                        <button
-                          class="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
-                          title="More"
-                          id="headlessui-menu-button-:rpo:"
-                          type="button"
-                          aria-haspopup="menu"
-                          aria-expanded="false"
-                          data-headlessui-state=""
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            aria-hidden="true"
-                            class="h-6 w-6"
+
+
+
+     <Menu as="div" class="relative inline-block text-left">
+                          <div>
+                            <MenuButton
+                              class="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
+                            >
+                              <MenuMoreIcon />
+                            </MenuButton>
+                          </div>
+
+                          <transition
+                            enter-active-class="transition duration-100 ease-out"
+                            enter-from-class="transform scale-95 opacity-0"
+                            enter-to-class="transform scale-100 opacity-100"
+                            leave-active-class="transition duration-75 ease-in"
+                            leave-from-class="transform scale-100 opacity-100"
+                            leave-to-class="transform scale-95 opacity-0"
                           >
-                            <path
-                              fill-rule="evenodd"
-                              d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
+                            <MenuItems
+                              class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none z-10"
+                            >
+                              <div class="px-2 py-4 space-y-2">
+                                <MenuItem v-slot="{ active }">
+                                  <button
+                                    :class="[
+                                      active
+                                        ? 'bg-gray-50 text-gray-700'
+                                        : ' fill-gray-500',
+                                      'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                                    ]"
+                                  >
+                                    <EditIcon
+                                      :active="active"
+                                      class="ml-2 h-5 w-5 fill-gray-800"
+                                      aria-hidden="true"
+                                    />
+                                    ویرایش
+                                  </button>
+                                </MenuItem>
+                              
+                                     <MenuItem v-slot="{ active }">
+                                  <button
+                                    :class="[
+                                      active
+                                        ? 'bg-gray-50 text-gray-700'
+                                        : ' fill-gray-500',
+                                      'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                                    ]"
+                                  >
+                                    <DeleteIcon
+                                      :active="active"
+                                      class="ml-2 h-5 w-5 fill-gray-800"
+                                      aria-hidden="true"
+                                    />
+                                    حذف
+                                  </button>
+                                </MenuItem>
+
+                                <MenuItem v-slot="{ active }">
+                                  <button
+                                    :class="[
+                                      active
+                                        ? 'bg-gray-50 text-gray-700'
+                                        : ' fill-gray-500',
+                                      'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                                    ]"
+                                  >
+                                    <ReplayIcon
+                                      :active="active"
+                                      class="ml-2 h-5 w-5 fill-gray-800"
+                                      aria-hidden="true"
+                                    />
+                                    پاسخ
+                                  </button>
+                                </MenuItem>
+                                <MenuItem v-slot="{ active }">
+                                  <button
+                                    :class="[
+                                      active
+                                        ? 'bg-gray-50 text-gray-700'
+                                        : ' fill-gray-500',
+                                      'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                                    ]"
+                                  >
+                                    <ReportIcon
+                                      :active="active"
+                                      class="ml-2 h-5 w-5 fill-gray-800"
+                                      aria-hidden="true"
+                                    />
+                                    گزارش 
+                                  </button>
+                                </MenuItem>
+                              </div>
+                            </MenuItems>
+                          </transition>
+                        </Menu>
+
+
                       </div>
                     </div>
                     <a
                       class="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
                       href="/author/the-demo-author-slug"
-                      >Truelock Alric</a
+                      >محبوب حسین زاده</a
                     ><span class="mx-2">·</span
                     ><span
                       class="text-neutral-500 dark:text-neutral-400 text-xs line-clamp-1 sm:text-sm"
-                      >May 20, 2021</span
+                      >28 اردیبهست 1403</span
                     >
                   </div>
                   <span
                     class="block text-neutral-700 mt-2 mb-3 sm:mt-3 sm:mb-4 dark:text-neutral-300"
-                    >Praesent id massa id nisl venenatis lacinia. Aenean sit
-                    amet justo. Morbi ut odio.</span
+                    >این یک متن تستی است برای تست نظر</span
                   >
                   <div
                     class="nc-CommentCardLikeReply flex items-center space-x-2 rtl:space-x-reverse"
@@ -631,335 +631,9 @@
               <div class="nc-NcModal"></div>
               <div class="nc-NcModal"></div>
               <div class="nc-NcModal"></div>
-              <div class="nc-CommentCard flex">
-                <div
-                  class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full h-6 w-6 text-base sm:text-lg sm:h-8 sm:w-8 mt-4"
-                  style=""
-                >
-                  <img
-                    alt="John Doe"
-                    class="absolute inset-0 w-full h-full object-cover"
-                    src="@/assets/images/3.jpg"
-                  /><span class="wil-avatar__name">J</span>
-                </div>
-                <div
-                  class="flex-grow flex flex-col p-4 ms-2 text-sm border border-neutral-200 rounded-xl sm:ms-3 sm:text-base dark:border-neutral-700"
-                >
-                  <div class="relative flex items-center pe-6">
-                    <div class="absolute -end-3 -top-3">
-                      <div
-                        class="relative inline-block text-left"
-                        data-headlessui-state=""
-                      >
-                        <button
-                          class="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
-                          title="More"
-                          id="headlessui-menu-button-:rpp:"
-                          type="button"
-                          aria-haspopup="menu"
-                          aria-expanded="false"
-                          data-headlessui-state=""
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            aria-hidden="true"
-                            class="h-6 w-6"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <a
-                      class="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
-                      href="/author/the-demo-author-slug"
-                      >Truelock Alric</a
-                    ><span class="mx-2">·</span
-                    ><span
-                      class="text-neutral-500 dark:text-neutral-400 text-xs line-clamp-1 sm:text-sm"
-                      >May 20, 2021</span
-                    >
-                  </div>
-                  <span
-                    class="block text-neutral-700 mt-2 mb-3 sm:mt-3 sm:mb-4 dark:text-neutral-300"
-                    >Praesent id massa id nisl venenatis lacinia. Aenean sit
-                    amet justo. Morbi ut odio.</span
-                  >
-                  <div
-                    class="nc-CommentCardLikeReply flex items-center space-x-2 rtl:space-x-reverse"
-                    data-nc-id="CommentCardLikeReply"
-                  >
-                    <button
-                      class="min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs focus:outline-none text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
-                      title="Liked"
-                    >
-                      <svg class="h-5 w-5 me-1" fill="none" viewBox="0 0 24 24">
-                        <path
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z"
-                          clip-rule="evenodd"
-                        ></path></svg
-                      ><span class="text-neutral-900 dark:text-neutral-200"
-                        >96</span
-                      ></button
-                    ><button
-                      class="flex items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 px-3 h-8 hover:bg-teal-50 hover:text-teal-600 dark:hover:text-teal-500 focus:outline-none"
-                      title="Reply"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-[18px] w-[18px] me-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
-                        ></path></svg
-                      ><span
-                        class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >پاسخ</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-CommentCard flex">
-                <div
-                  class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full h-6 w-6 text-base sm:text-lg sm:h-8 sm:w-8 mt-4"
-                  style=""
-                >
-                  <img
-                    alt="John Doe"
-                    class="absolute inset-0 w-full h-full object-cover"
-                    src="@/assets/images/7.jpg"
-                  /><span class="wil-avatar__name">J</span>
-                </div>
-                <div
-                  class="flex-grow flex flex-col p-4 ms-2 text-sm border border-neutral-200 rounded-xl sm:ms-3 sm:text-base dark:border-neutral-700"
-                >
-                  <div class="relative flex items-center pe-6">
-                    <div class="absolute -end-3 -top-3">
-                      <div
-                        class="relative inline-block text-left"
-                        data-headlessui-state=""
-                      >
-                        <button
-                          class="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
-                          title="More"
-                          id="headlessui-menu-button-:rpq:"
-                          type="button"
-                          aria-haspopup="menu"
-                          aria-expanded="false"
-                          data-headlessui-state=""
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            aria-hidden="true"
-                            class="h-6 w-6"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <a
-                      class="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
-                      href="/author/the-demo-author-slug"
-                      >Truelock Alric</a
-                    ><span class="mx-2">·</span
-                    ><span
-                      class="text-neutral-500 dark:text-neutral-400 text-xs line-clamp-1 sm:text-sm"
-                      >May 20, 2021</span
-                    >
-                  </div>
-                  <span
-                    class="block text-neutral-700 mt-2 mb-3 sm:mt-3 sm:mb-4 dark:text-neutral-300"
-                    >Praesent id massa id nisl venenatis lacinia. Aenean sit
-                    amet justo. Morbi ut odio.</span
-                  >
-                  <div
-                    class="nc-CommentCardLikeReply flex items-center space-x-2 rtl:space-x-reverse"
-                    data-nc-id="CommentCardLikeReply"
-                  >
-                    <button
-                      class="min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs focus:outline-none text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
-                      title="Liked"
-                    >
-                      <svg class="h-5 w-5 me-1" fill="none" viewBox="0 0 24 24">
-                        <path
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z"
-                          clip-rule="evenodd"
-                        ></path></svg
-                      ><span class="text-neutral-900 dark:text-neutral-200"
-                        >96</span
-                      ></button
-                    ><button
-                      class="flex items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 px-3 h-8 hover:bg-teal-50 hover:text-teal-600 dark:hover:text-teal-500 focus:outline-none"
-                      title="Reply"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-[18px] w-[18px] me-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
-                        ></path></svg
-                      ><span
-                        class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >پاسخ</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-CommentCard flex">
-                <div
-                  class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full h-6 w-6 text-base sm:text-lg sm:h-8 sm:w-8 mt-4"
-                  style=""
-                >
-                  <img
-                    alt="John Doe"
-                    class="absolute inset-0 w-full h-full object-cover"
-                    src="@/assets/images/7.jpg"
-                  /><span class="wil-avatar__name">J</span>
-                </div>
-                <div
-                  class="flex-grow flex flex-col p-4 ms-2 text-sm border border-neutral-200 rounded-xl sm:ms-3 sm:text-base dark:border-neutral-700"
-                >
-                  <div class="relative flex items-center pe-6">
-                    <div class="absolute -end-3 -top-3">
-                      <div
-                        class="relative inline-block text-left"
-                        data-headlessui-state=""
-                      >
-                        <button
-                          class="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 dark:hover:text-neutral-200 sm:hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none"
-                          title="More"
-                          id="headlessui-menu-button-:rpr:"
-                          type="button"
-                          aria-haspopup="menu"
-                          aria-expanded="false"
-                          data-headlessui-state=""
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            aria-hidden="true"
-                            class="h-6 w-6"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <a
-                      class="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
-                      href="/author/the-demo-author-slug"
-                      >Truelock Alric</a
-                    ><span class="mx-2">·</span
-                    ><span
-                      class="text-neutral-500 dark:text-neutral-400 text-xs line-clamp-1 sm:text-sm"
-                      >May 20, 2021</span
-                    >
-                  </div>
-                  <span
-                    class="block text-neutral-700 mt-2 mb-3 sm:mt-3 sm:mb-4 dark:text-neutral-300"
-                    >Praesent id massa id nisl venenatis lacinia. Aenean sit
-                    amet justo. Morbi ut odio.</span
-                  >
-                  <div
-                    class="nc-CommentCardLikeReply flex items-center space-x-2 rtl:space-x-reverse"
-                    data-nc-id="CommentCardLikeReply"
-                  >
-                    <button
-                      class="min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs focus:outline-none text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
-                      title="Liked"
-                    >
-                      <svg class="h-5 w-5 me-1" fill="none" viewBox="0 0 24 24">
-                        <path
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z"
-                          clip-rule="evenodd"
-                        ></path></svg
-                      ><span class="text-neutral-900 dark:text-neutral-200"
-                        >96</span
-                      ></button
-                    ><button
-                      class="flex items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 px-3 h-8 hover:bg-teal-50 hover:text-teal-600 dark:hover:text-teal-500 focus:outline-none"
-                      title="Reply"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-[18px] w-[18px] me-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
-                        ></path></svg
-                      ><span
-                        class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
-                        >پاسخ</span
-                      >
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
-              <div class="nc-NcModal"></div>
+
               <button
-                class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 dark:bg-primary-700 w-full"
+                class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-orange-700 hover:bg-orange-600 text-orange-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 dark:bg-primary-700 w-full"
               >
                مشاهده همه نظرات (+117 نظر)
               </button>
@@ -967,8 +641,9 @@
             <div></div>
           </div>
         </div>
-        <div class="sticky mt-8 bottom-8 z-40 justify-center hidden">
-          <div
+        <div class="sticky mt-8 bottom-8 z-40 justify-center">
+       
+              <div
             class="bg-white dark:bg-neutral-800 shadow-lg rounded-full ring-1 ring-offset-1 ring-neutral-900/5 p-1.5 flex items-center justify-center space-x-2 rtl:space-x-reverse text-xs"
           >
             <button
@@ -1052,15 +727,18 @@
               216%
             </button>
           </div>
+        
+        
         </div>
       </div>
     </div>
-
-    <Mostanad />
+ <div class="bg-gray-100"> <RelatedPosts/></div>
+   
   </section>
 </template>
 
 <script setup>
+import RelatedPosts from "@/components/Pages/SinglePage/Relatedposts/Related.vue";
 import Bookmark from "@/components/icons/Bookmark.vue";
 import Like from "@/components/icons/Heart.vue";
 import Comment from "@/components/icons/Comment.vue";
@@ -1071,6 +749,9 @@ import LinkedinIcon from "@/components/icons/social/linkedin.vue";
 import FacebookIcon from "@/components/icons/social/facebook.vue";
 import MenuMoreIcon from "@/components/icons/MenuMoreIcon.vue";
 
+import ReplayIcon from "@/components/icons/Replay.vue";
+import DeleteIcon from "@/components/icons/Delete.vue";
+import EditIcon from "@/components/icons/Edit.vue";
 import ReportIcon from "@/components/icons/ReportIcon.vue";
 import CopyIcon from "@/components/icons/Copy.vue";
 import CommentIcon from "@/components/icons/Cm.vue";

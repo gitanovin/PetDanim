@@ -3,9 +3,11 @@
 
   <Header />
 
-  <main class="bg-gray-100">
+  <main class="bg-gray-100/50">
+
+     <singleArticle />
+
  
-    <singleArticle />
 
 
 
