@@ -1033,3 +1033,7 @@ h6 {
 .splide__arrow {
     background: #fff !important;
 }
+
+.Gallery .splide__pagination {
+    bottom: 1em;
+}

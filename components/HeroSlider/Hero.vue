@@ -59,7 +59,7 @@
                           >
                             <Heart />
                             <span
-                              class="ml-1 text-neutral-900 dark:text-neutral-200"
+                              class="ml-1 text-neutral-900 dark:text-neutral-200 font-fd"
                               >34</span
                             ></button
                           ><a
@@ -67,7 +67,7 @@
                             title="Comments"
                             href="/single/demo-slug#comments"
                             ><Comment /><span
-                              class="ml-1 text-neutral-900 dark:text-neutral-200"
+                              class="ml-1 text-neutral-900 dark:text-neutral-200 font-fd"
                               >110</span
                             ></a
                           >
@@ -153,7 +153,7 @@
                                 class="block text-neutral-200 hover:text-white font-medium truncate"
                                 >حدیث شادی</span
                               ><span class="mx-[6px] font-medium">·</span
-                              ><span class="font-normal truncate"
+                              ><span class="font-normal truncate font-fd"
                                 >28 اردیبهشت 1403</span
                               ></a
                             >

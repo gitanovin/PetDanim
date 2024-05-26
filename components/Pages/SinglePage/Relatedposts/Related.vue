@@ -264,9 +264,10 @@
             class="border relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 h-full"
           >
             <div
-              class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10"
+              class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10  aspect-w-5 aspect-h-3"
             >
-             <Splide
+            <div class="Gallery">
+                            <Splide
                 :options="{
                   perPage: 1,
                   type: 'slide',
@@ -318,9 +319,12 @@
               </div>
                 </SplideSlide>
                 </Splide>
+            </div>
+ 
 
 
             </div>
+            
             <a
               class="absolute inset-0"
               href="/single-video/this-is-single-slug"

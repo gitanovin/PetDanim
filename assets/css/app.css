@@ -1914,6 +1914,10 @@ select {
   margin-top: auto;
 }
 
+.ml-\[8px\] {
+  margin-left: 8px;
+}
+
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -2044,6 +2048,22 @@ select {
   height: 100vh;
 }
 
+.h-\[280px\] {
+  height: 280px;
+}
+
+.h-\[380px\] {
+  height: 380px;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[450px\] {
+  height: 450px;
+}
+
 .min-h-\[350px\] {
   min-height: 350px;
 }
@@ -2122,6 +2142,10 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[24px\] {
+  width: 24px;
 }
 
 .min-w-\[68px\] {
@@ -2848,6 +2872,10 @@ select {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -2862,6 +2890,10 @@ select {
 
 .font-fa {
   font-family: Vazirmatn;
+}
+
+.font-fd {
+  font-family: Sahel FD;
 }
 
 .text-2xl {
@@ -3501,6 +3533,10 @@ h6 {
   background: #fff !important;
 }
 
+.Gallery .splide__pagination {
+  bottom: 1em;
+}
+
 @media (min-width: 640px) {
   .sm\:aspect-h-9 {
     --tw-aspect-h: 9;
@@ -3894,6 +3930,10 @@ h6 {
     gap: 2rem;
   }
 
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -4098,6 +4138,10 @@ h6 {
 
   .xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .xl\:gap-8 {
