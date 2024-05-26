@@ -1024,3 +1024,12 @@ h6 {
     url("../fonts/sahel/Sahel-Black-FD.ttf") format("truetype");
   font-weight: 900;
 }
+
+
+.splide__arrow:disabled {
+    opacity: 0 !important;
+}
+
+.splide__arrow {
+    background: #fff !important;
+}

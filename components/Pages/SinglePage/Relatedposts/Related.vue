@@ -32,7 +32,7 @@
                 <div class="nc-PostFeaturedMedia relative w-full h-full">
                   <img
                     alt="featured"
-                    class="object-cover"
+                     class="object-cover h-48  w-full"
                     src="@/assets/images/7.jpg"
                   /><span
                     class="absolute inset-0 flex items-center justify-center"
@@ -42,7 +42,7 @@
                     >
                       <span
                         class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                        ><RelatedIcon
+                        ><VideoIcon
                           class="text-white fill-white bg-gray-900/20 rounded-full"
                         />
                       </span></div></span
@@ -151,7 +151,7 @@
                 <div class="nc-PostFeaturedMedia relative w-full h-full">
                   <img
                     alt="featured"
-                    class="object-cover"
+                     class="object-cover h-48  w-full"
                     src="@/assets/images/5.jpg"
                   /><span
                     class="absolute inset-0 flex items-center justify-center"
@@ -161,7 +161,7 @@
                     >
                       <span
                         class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                        ><RelatedIcon
+                        ><MusicIcon
                           class="text-white fill-white bg-gray-900/20 rounded-full"
                         />
                       </span></div></span
@@ -264,32 +264,62 @@
             class="border relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 h-full"
           >
             <div
-              class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3"
+              class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10"
             >
+             <Splide
+                :options="{
+                  perPage: 1,
+                  type: 'slide',
+                  direction: 'rtl',
+                }"
+              >
+                <SplideSlide class="splide__slide rounded-lg ">
               <div>
-                <div class="nc-PostFeaturedMedia relative w-full h-full">
+                <div class="relative w-full ">
                   <img
                     alt="featured"
-                    class="object-cover"
+                    class="object-cover h-48  w-full"
                     src="@/assets/images/1.jpg"
-                  /><span
-                    class="absolute inset-0 flex items-center justify-center"
-                    ><div
-                      class="hover:scale-105 transform cursor-pointer transition-transform"
-                      data-nc-id="PostTypeFeaturedIcon"
-                    >
-                      <span
-                        class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                        ><RelatedIcon
-                          class="text-white fill-white bg-gray-900/20 rounded-full"
-                        />
-                      </span></div></span
-                  ><a
+                  /><a
                     class="block absolute inset-0"
                     href="/single-video/this-is-single-slug"
                   ></a>
                 </div>
               </div>
+                </SplideSlide>
+
+                          <SplideSlide class="splide__slide rounded-lg">
+              <div>
+                <div class="nc-PostFeaturedMedia relative w-full">
+                  <img
+                    alt="featured"
+                     class="object-cover h-48  w-full"
+                    src="@/assets/images/3.jpg"
+                  /><a
+                    class="block absolute inset-0"
+                    href="/single-video/this-is-single-slug"
+                  ></a>
+                </div>
+              </div>
+                </SplideSlide>
+
+                          <SplideSlide class="splide__slide rounded-lg">
+              <div>
+                <div class="nc-PostFeaturedMedia relative w-full">
+                  <img
+                    alt="featured"
+                     class="object-cover h-48  w-full"
+                    src="@/assets/images/5.jpg"
+                  /><a
+                    class="block absolute inset-0"
+                    href="/single-video/this-is-single-slug"
+                  ></a>
+                </div>
+              </div>
+                </SplideSlide>
+                </Splide>
+
+
             </div>
             <a
               class="absolute inset-0"
@@ -389,7 +419,7 @@
                 <div class="nc-PostFeaturedMedia relative w-full h-full">
                   <img
                     alt="featured"
-                    class="object-cover"
+                     class="object-cover h-48  w-full"
                     src="@/assets/images/3.jpg"
                   /><span
                     class="absolute inset-0 flex items-center justify-center"
@@ -399,7 +429,7 @@
                     >
                       <span
                         class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
-                        ><RelatedIcon
+                        ><MusicIcon
                           class="text-white fill-white bg-gray-900/20 rounded-full"
                         />
                       </span></div></span
@@ -506,4 +536,6 @@ import Bookmark from "@/components/icons/Bookmark.vue";
 import Like from "@/components/icons/Heart.vue";
 import Comment from "@/components/icons/Comment.vue";
 import RelatedIcon from "@/components/icons/Related.vue";
+import VideoIcon from "@/components/icons/VideoIcon.vue";
+import MusicIcon from "@/components/icons/Music.vue";
 </script>

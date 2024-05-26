@@ -17,7 +17,7 @@
       <div class="nc-MySlider px-0">
         <div class="relative flow-root">
           <div class="flow-root overflow-hidden">
-            <ul class="relative" id="advertising">
+            <div class="relative" id="advertising">
               <Splide
                 :options="{
                   perPage: 5,
@@ -51,7 +51,7 @@
                 }"
               >
                 <SplideSlide class="splide__slide rounded-lg">
-                  <li>
+                  <div>
                     <div class="h-36 w-full relative group overflow-hidden">
                       <a
                         href="/tag/fintech/"
@@ -76,11 +76,11 @@
                         alt=""
                       />
                     </div>
-                  </li>
+                  </div>
                 </SplideSlide>
 
                 <SplideSlide class="splide__slide rounded-lg">
-                  <li>
+                  <div>
                     <div class="h-36 w-full relative group overflow-hidden">
                       <a
                         href="/tag/fintech/"
@@ -105,11 +105,11 @@
                         alt=""
                       />
                     </div>
-                  </li>
+                  </div>
                 </SplideSlide>
 
                 <SplideSlide class="splide__slide rounded-lg">
-                  <li>
+                  <div>
                     <div class="h-36 w-full relative group overflow-hidden">
                       <a
                         href="/tag/fintech/"
@@ -134,11 +134,11 @@
                         alt=""
                       />
                     </div>
-                  </li>
+                  </div>
                 </SplideSlide>
 
                 <SplideSlide class="splide__slide rounded-lg">
-                  <li>
+                  <div>
                     <div class="h-36 w-full relative group overflow-hidden">
                       <a
                         href="/tag/fintech/"
@@ -163,11 +163,11 @@
                         alt=""
                       />
                     </div>
-                  </li>
+                  </div>
                 </SplideSlide>
 
                 <SplideSlide class="splide__slide rounded-lg">
-                  <li>
+                  <div>
                     <div class="h-36 w-full relative group overflow-hidden">
                       <a
                         href="/tag/fintech/"
@@ -192,10 +192,10 @@
                         alt=""
                       />
                     </div>
-                  </li>
+                  </div>
                 </SplideSlide>
               </Splide>
-            </ul>
+            </div>
           </div>
         </div>
       </div>

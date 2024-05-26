@@ -571,9 +571,34 @@
                     class="block text-neutral-700 mt-2 mb-3 sm:mt-3 sm:mb-4 dark:text-neutral-300"
                     >این یک متن تستی است برای تست نظر</span
                   >
+                  <!-- هنگام زدن دکمه پاسخ این قسمت نمایش داده میشود و دکمه های لایک و پاسخ حذف می شود -->
+                  <div class="Comment-Replay hidden">
+                    <form action="#" class="nc-SingleCommentForm flex-grow">
+                      <textarea
+                        class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900"
+                        rows="4"
+                        placeholder="پاسخ خود را بنویسید"
+                        required=""
+                      ></textarea>
+                      <div class="mt-2 space-x-3">
+                        <button
+                          class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                          type="submit"
+                        >
+                          ثبت</button
+                        ><button
+                          class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
+                          type="button"
+                        >
+                          انصراف
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- هنگام زدن دکمه پاسخ این قسمت نمایش داده میشود و دکمه های لایک و پاسخ حذف می شود -->
+
                   <div
-                    class="nc-CommentCardLikeReply flex items-center space-x-2 rtl:space-x-reverse"
-                    data-nc-id="CommentCardLikeReply"
+                    class="flex items-center space-x-2 rtl:space-x-reverse"
                   >
                     <button
                       class="min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs focus:outline-none text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
@@ -617,29 +642,7 @@
                   </div>
                 </div>
               </div>
-              <div class="nc-NcModal hidden">
-                <form action="#" class="nc-SingleCommentForm flex-grow">
-                  <textarea
-                    class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900"
-                    rows="4"
-                    placeholder="Add to discussion"
-                    required=""
-                  ></textarea>
-                  <div class="mt-2 space-x-3">
-                    <button
-                      class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
-                      type="submit"
-                    >
-                      Submit</button
-                    ><button
-                      class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
-                      type="button"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </form>
-              </div>
+
               <div class="nc-NcModal hidden">
                 <div
                   class="fixed inset-0 z-50 overflow-y-auto"
