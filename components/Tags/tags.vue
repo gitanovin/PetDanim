@@ -3,9 +3,9 @@
     <header class="flex items-end py-8">
       <div class="w-full flex items-center justify-between">
         <h2
-          class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+          class="text-2xl md:text-3xl lg:text-xl font-bold flex items-center"
         >
-          <div class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"></div>
+          <div class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white"></div>
           <span> برچسب ها</span>
         </h2>
         <div class="bg-orange-500 w-4 h-4 rounded-full mr-4"></div>

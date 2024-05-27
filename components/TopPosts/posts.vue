@@ -7,9 +7,9 @@
         >
           <div class="w-full flex items-center justify-between">
             <h2
-              class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+              class="text-2xl md:text-3xl lg:text-xl font-bold flex items-center"
             >
-              <TopIcon class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" />
+              <TopIcon class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white" />
               <span> برترین ها </span>
             </h2>
             <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
@@ -58,7 +58,7 @@
                   }"
                 >
                   <SplideSlide class="splide__slide rounded-lg">
-                    <article class="inline-block whitespace-normal h-[450px]">
+                    <article class="inline-block whitespace-normal lg:h-[450px] h-[350px]">
                       <div
                         class="flex flex-col group rounded-3xl overflow-hidden z-0 h-full w-full relative"
                       >

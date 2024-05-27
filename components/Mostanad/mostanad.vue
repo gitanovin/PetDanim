@@ -7,10 +7,10 @@
         >
           <div class="w-full flex items-center justify-between">
             <h2
-              class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+              class="text-xl md:text-3xl lg:text-xl font-bold flex items-center"
             >
               <Mostanad
-                class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white"
+                class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white"
               />
               <span>مستندات پت ها</span>
             </h2>

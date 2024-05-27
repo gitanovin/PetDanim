@@ -4,8 +4,8 @@
       <div
         class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50">
         <div class="w-full flex items-center justify-between  lg:px-0 px-6">
-          <h2 class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center">
-            <BlogIcon class="w-16 rounded-lg ml-2 p-2 bg-primary fill-white" />
+          <h2 class="text-2xl md:text-3xl lg:text-xl font-bold flex items-center">
+            <NewsIcon class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white" />
             <span> اخبار پتو من </span>
           </h2>
           <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
@@ -128,7 +128,7 @@
 </template>
 
 <script setup>
-import BlogIcon from "@/components/icons/BlogIcon.vue";
+import NewsIcon from "@/components/icons/NewsIcon.vue";
 import Post from "@/components/icons/Post.vue";
 import Bookmark from "@/components/icons/Bookmark.vue";
 import Like from "@/components/icons/Heart.vue";
