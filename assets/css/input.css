@@ -5,7 +5,7 @@
 @layer base {
   .prose {
     color: var(--tw-prose-body);
-    max-width: 65ch;
+    /* max-width: 65ch; */
   }
 
   .prose :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
@@ -59,7 +59,8 @@
     list-style-type: decimal;
     margin-top: 1.25em;
     margin-bottom: 1.25em;
-    padding-left: 1.625em;
+    padding-right: 1.625em;
+    font-family: 'Sahel FD';
   }
 
   .prose
@@ -129,7 +130,8 @@
     list-style-type: disc;
     margin-top: 1.25em;
     margin-bottom: 1.25em;
-    padding-left: 1.625em;
+    padding-right: 1.625em;
+
   }
 
   .prose
@@ -167,12 +169,12 @@
     font-weight: 500;
     font-style: italic;
     color: var(--tw-prose-quotes);
-    border-left-width: 0.25rem;
-    border-left-color: var(--tw-prose-quote-borders);
+    border-right-width: 0.25rem;
+    border-right-color: var(--tw-prose-quote-borders);
     quotes: "\201C""\201D""\2018""\2019";
     margin-top: 1.6em;
     margin-bottom: 1.6em;
-    padding-left: 1em;
+    padding-right: 1em;
   }
 
   .prose
@@ -385,7 +387,7 @@
     :where(table):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
     width: 100%;
     table-layout: auto;
-    text-align: left;
+    text-align: right;
     margin-top: 2em;
     margin-bottom: 2em;
     font-size: 0.875em;
@@ -405,7 +407,7 @@
     vertical-align: bottom;
     padding-right: 0.5714286em;
     padding-bottom: 0.5714286em;
-    padding-left: 0.5714286em;
+    padding-right: 0.5714286em;
   }
 
   .prose
@@ -517,12 +519,12 @@
 
   .prose
     :where(ol > li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    padding-left: 0.375em;
+    padding-right: 0.375em;
   }
 
   .prose
     :where(ul > li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    padding-left: 0.375em;
+    padding-right: 0.375em;
   }
 
   .prose
@@ -576,7 +578,7 @@
 
   .prose :where(dd):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
     margin-top: 0.5em;
-    padding-left: 1.625em;
+    padding-right: 1.625em;
   }
 
   .prose
@@ -603,7 +605,7 @@
     :where(thead th:first-child):not(
       :where([class~="not-prose"], [class~="not-prose"] *)
     ) {
-    padding-left: 0;
+    padding-right: 0;
   }
 
   .prose
@@ -624,7 +626,7 @@
     :where(tbody td:first-child, tfoot td:first-child):not(
       :where([class~="not-prose"], [class~="not-prose"] *)
     ) {
-    padding-left: 0;
+    padding-right: 0;
   }
 
   .prose
@@ -707,7 +709,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-16 {
@@ -723,7 +725,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-3 {
@@ -739,7 +741,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-4 {
@@ -755,7 +757,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-5 {
@@ -771,7 +773,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-6 {
@@ -787,7 +789,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-7 {
@@ -803,7 +805,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-8 {
@@ -819,7 +821,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 
   .aspect-w-9 {
@@ -835,7 +837,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
   }
 }
 

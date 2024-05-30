@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div class="mx-auto max-w-7xl pt-8 lg:pt-16">
-      <header class="container rounded-xl">
+    <div class="mx-auto max-w-7xl pt-8 lg:pt-16 px-6">
+      <header class=" rounded-xl">
         <div class="max-w-screen-md mx-auto">
           <div class="nc-SingleHeader">
             <div class="space-y-5">
@@ -282,8 +282,6 @@
                           </transition>
                         </Menu>
                       </div>
-                      <div class="nc-NcModal"></div>
-                      <div class="nc-NcModal"></div>
                     </div>
                   </div>
                 </div>
@@ -292,7 +290,7 @@
           </div>
         </div>
       </header>
-      <div class="container my-10 sm:my-12">
+      <div class=" my-10 sm:my-12">
         <img
           alt="single"
           class="w-full rounded-xl"
@@ -300,7 +298,7 @@
         />
       </div>
     </div>
-    <div class="container mt-10">
+    <div class=" mt-10 px-6">
       <div class="relative">
         <div class="nc-SingleContent space-y-10">
           <div
@@ -604,37 +602,14 @@
                       class="min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs focus:outline-none text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
                       title="Liked"
                     >
-                      <svg class="h-5 w-5 me-1" fill="none" viewBox="0 0 24 24">
-                        <path
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403 10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z"
-                          clip-rule="evenodd"
-                        ></path></svg
-                      ><span class="text-neutral-900 dark:text-neutral-200"
+                      <Like/><span class="text-neutral-900 dark:text-neutral-200"
                         >96</span
                       ></button
                     ><button
                       class="flex items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 px-3 h-8 hover:bg-teal-50 hover:text-teal-600 dark:hover:text-teal-500 focus:outline-none"
                       title="Reply"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-[18px] w-[18px] me-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
-                        ></path></svg
-                      ><span
+                      <ReplayIcon/><span
                         class="text-xs leading-none text-neutral-900 dark:text-neutral-200"
                         >پاسخ</span
                       >
@@ -646,18 +621,10 @@
               <div class="nc-NcModal hidden">
                 <div
                   class="fixed inset-0 z-50 overflow-y-auto"
-                  id="headlessui-dialog-:r8g:"
-                  role="dialog"
-                  aria-modal="true"
-                  data-headlessui-state="open"
-                  aria-labelledby="headlessui-dialog-title-:r8i:"
                 >
                   <div class="min-h-screen px-1 text-center md:px-4">
                     <div
                       class="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80 opacity-100"
-                      id="headlessui-dialog-overlay-:r8h:"
-                      aria-hidden="true"
-                      data-headlessui-state="open"
                     ></div>
                     <span
                       class="inline-block h-screen align-middle"
