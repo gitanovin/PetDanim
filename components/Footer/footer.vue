@@ -1,7 +1,7 @@
 <template>
-  <footer class="relative overflow-hidden">
-    <div class=" border-gray-200 ">
-      <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 lg:py-12">
+  <footer class="relative overflow-hidden bg-white">
+    <div class=" border-gray-200">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 w-screen xl:max-w-screen-2xl py-8 lg:py-12">
         <div class="xl:grid xl:grid-cols-2 xl:gap-8">
           <div
             class="flex flex-col lg:grid grid-flow-col auto-cols-fr gap-8 xl:col-span-2"
@@ -97,9 +97,9 @@
         </div>
       </div>
     </div>
-    <div class="border-t border-gray-200 dark:border-gray-800">
+    <div class="border-t border-gray-100 dark:border-gray-800 bg-gray-50">
       <div
-        class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 lg:py-4 lg:flex lg:items-center lg:justify-between lg:gap-x-3 !py-6"
+        class="mx-auto px-4 sm:px-6 lg:px-8 w-screen xl:max-w-screen-2xl py-8 lg:py-4 lg:flex lg:items-center lg:justify-between lg:gap-x-3 !py-6"
       >
         <div
           class="lg:flex-1 flex items-center justify-center lg:justify-end gap-x-1.5 lg:order-3"

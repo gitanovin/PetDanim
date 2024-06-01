@@ -36,7 +36,19 @@
                       gap: '1rem',
                     },
                     1080: {
-                      perPage: 1,
+                      perPage: 2,
+                      padding: '4rem',
+                      gap: '1rem',
+                    },  1920: {
+                      perPage: 3,
+                      padding: '4rem',
+                      gap: '1rem',
+                    },  3000: {
+                      perPage: 3,
+                      padding: '4rem',
+                      gap: '1rem',
+                    },  4000: {
+                      perPage: 3,
                       padding: '4rem',
                       gap: '1rem',
                     },

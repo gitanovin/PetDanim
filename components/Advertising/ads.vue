@@ -5,7 +5,7 @@
       rel="noopener noreferrer"
       target="_blank"
       class="block relative bg-primary hover:bg-primary/90 transition-[background] backdrop-blur z-50 app-banner"
-      ><div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-2">
+      ><div class="mx-auto px-4 sm:px-6 lg:px-8 w-screen xl:max-w-screen-2xl py-2">
         <div class="flex items-center justify-between gap-2">
           <div class="lg:flex-1 hidden lg:flex items-center"></div>
           <div class="text-sm font-medium text-white dark:text-gray-900">

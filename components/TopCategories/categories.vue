@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="max-w-7xl mx-auto py-6 lg:py-6">
+    <div class="w-screen xl:max-w-screen-2xl mx-auto py-6 lg:py-6">
       <div
         class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
       >

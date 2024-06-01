@@ -1,6 +1,6 @@
 <template>
     <section class=" py-16">
-        <div class="mx-auto max-w-7xl px-6">
+        <div class="mx-auto w-screen xl:max-w-screen-2xl px-6">
             <header class="container rounded-xl">
                 <div class="nc-SingleHeader ">
                     <div class="space-y-5">

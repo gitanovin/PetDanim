@@ -1,6 +1,6 @@
 <template>
   <section class="Latest-News">
-    <div class="max-w-7xl py-16 lg:py-16 mx-auto lg:px-0 px-6">
+    <div class="w-screen xl:max-w-screen-2xl py-16 lg:py-16 mx-auto lg:px-0 px-6">
       <div class="flex flex-col mb-8 relative">
         <div
           class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
@@ -101,7 +101,7 @@
               >
             </div>
           </div>
-          <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+          <a class="absolute inset-0" href="//single"></a>
           <div class="flex flex-col border rounded-b-3xl">
             <div class="space-y-3">
               <div
@@ -137,7 +137,7 @@
                 <a
                   class="line-clamp-2"
                   title="Microsoft announces a five-year commitment to create bigger opportunities for people with disabilities"
-                  href="/single/this-is-single-slug"
+                  href="//single"
                   >بهترین حیوان خانگی برای نگهداری در آپارتمان چیست؟</a
                 >
               </h2>
@@ -196,7 +196,7 @@
           >
             <a
               class="absolute inset-0 z-0"
-              href="/single/this-is-single-slug"
+              href="//single"
             ></a>
             <div class="flex flex-col flex-grow">
               <div class="space-y-3 mb-4">
@@ -214,7 +214,7 @@
                   <a
                     class="line-clamp-2"
                     title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
-                    href="/single/this-is-single-slug"
+                    href="//single"
                     >بازی مورد علاقه گربه ها</a
                   >
                 </h2>
@@ -285,7 +285,7 @@
             </div>
             <a
               class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ms-3 sm:ms-5 rounded-2xl overflow-hidden z-0"
-              href="/single/this-is-single-slug"
+              href="//single"
               ><img
                 alt="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
                 class="object-cover w-full h-full"
@@ -302,7 +302,7 @@
           >
             <a
               class="absolute inset-0 z-0"
-              href="/single/this-is-single-slug"
+              href="//single"
             ></a>
             <div class="flex flex-col flex-grow">
               <div class="space-y-3 mb-4">
@@ -320,7 +320,7 @@
                   <a
                     class="line-clamp-2"
                     title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
-                    href="/single/this-is-single-slug"
+                    href="//single"
                     >بازی مورد علاقه گربه ها</a
                   >
                 </h2>
@@ -391,7 +391,7 @@
             </div>
             <a
               class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ms-3 sm:ms-5 rounded-2xl overflow-hidden z-0"
-              href="/single/this-is-single-slug"
+              href="//single"
               ><img
                 alt="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
                 class="object-cover w-full h-full"
@@ -408,7 +408,7 @@
           >
             <a
               class="absolute inset-0 z-0"
-              href="/single/this-is-single-slug"
+              href="//single"
             ></a>
             <div class="flex flex-col flex-grow">
               <div class="space-y-3 mb-4">
@@ -426,7 +426,7 @@
                   <a
                     class="line-clamp-2"
                     title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
-                    href="/single/this-is-single-slug"
+                    href="//single"
                     >بازی مورد علاقه گربه ها</a
                   >
                 </h2>
@@ -497,7 +497,7 @@
             </div>
             <a
               class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ms-3 sm:ms-5 rounded-2xl overflow-hidden z-0"
-              href="/single/this-is-single-slug"
+              href="//single"
               ><img
                 alt="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
                 class="object-cover w-full h-full"

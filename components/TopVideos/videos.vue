@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="bg-gray-100 dark:bg-black dark:bg-opacity-20 text-neutral-100">
-      <div class="relative max-w-7xl mx-auto lg:px-0 px-6">
+      <div class="relative w-screen xl:max-w-screen-2xl mx-auto lg:px-0 px-6">
         <div class="nc-SectionGridPosts relative py-16">
           <div class="relative">
             <div

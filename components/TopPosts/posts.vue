@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="relative py-16 lg:py-16 bg-gray-50 lg:px-0">
-      <div class="SliderPosts mx-auto max-w-7xl py-6 rounded-2xl">
+      <div class="SliderPosts mx-auto w-screen xl:max-w-screen-2xl py-6 rounded-2xl">
         <div
           class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50 lg:px-0 px-6"
         >

@@ -3,7 +3,7 @@
     class="bg-background/75 backdrop-blur border-b dark:border-gray-800 -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100"
   >
     <div
-      class="mx-auto px-4 lg:px-0 max-w-7xl flex items-center justify-between gap-3 h-[4rem]"
+      class="mx-auto px-4 lg:px-0 w-screen xl:max-w-screen-2xl flex items-center justify-between gap-3 h-[4rem]"
     >
       <div class="lg:flex-1 flex items-center gap-1.5">
         <div class="relative inline-flex text-left rtl:text-right">

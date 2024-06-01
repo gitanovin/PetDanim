@@ -1,6 +1,6 @@
 <template>
-  <div class="nc-PageArchive mx-auto w-full max-w-7xl py-8 lg:px-0 px-4">
-    <div class="w-full">
+  <div class="nc-PageArchivepy-8 lg:px-0 px-4 py-8">
+    <div class="mx-auto  w-screen xl:max-w-screen-2xl">
       <div
         class="relative aspect-w-16 aspect-h-13 sm:aspect-h-9 lg:aspect-h-8 xl:aspect-h-5 rounded-3xl md:rounded-[40px] overflow-hidden z-0"
       >
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="pt-10 pb-16 lg:pb-28 lg:pt-20 space-y-16 lg:space-y-28">
-      <div>
+      <div class="mx-auto w-full w-screen xl:max-w-screen-2xl">
         <div class="flex flex-col sm:justify-between sm:flex-row">
           <div class="flex space-x-2.5 rtl:space-x-reverse">
             <div class="nc-ModalCategories">
@@ -34,42 +34,24 @@
                   <div>
                     <span class="hidden sm:inline">دیکر</span> دسته بندی ها
                   </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    class="w-4 h-4 ms-2 -me-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
+                  <ChevronDownIcon
+                            class="h-5 w-5 text-gray-400"
+                            aria-hidden="true"
+                          />
                 </button>
               </div>
             </div>
             <div class="nc-ModalTags">
               <div class="nc-NcModal">
                 <button
-                 @click="OpenTagsModal = true"
+                  @click="OpenTagsModal = true"
                   class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-white dark:bg-neutral-900 ring-1 ring-neutral-300 hover:ring-neutral-400 dark:ring-neutral-700 dark:hover:ring-neutral-500 text-sm font-medium py-3 px-4 sm:py-3.5 sm:px-6"
                 >
                   <div><span class="hidden sm:inline">دیگر</span> برچسب ها</div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    class="w-4 h-4 ms-2 -me-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
+                   <ChevronDownIcon
+                            class="h-5 w-5 text-gray-400"
+                            aria-hidden="true"
+                          />
                 </button>
               </div>
             </div>
@@ -336,180 +318,434 @@
           </button>
         </div>
       </div>
-      <div class="relative py-16 bg-gray-100 px-4 rounded-lg">
-  
-        <div class="nc-SectionGridCategoryBox relative">
+
+      <section>
+        <div class="relative py-16 bg-gray-100 px-4 rounded-lg">
+          <div class="mx-auto  w-screen xl:max-w-screen-2xl relative">
+            <div
+              class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
+            >
+              <div class="w-full flex items-center justify-between">
+                <h2
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+                >
+                  <CategoryIcon
+                    class="w-12 rounded-lg ml-2 p-2 bg-orange-500"
+                  />
+                  <span>برترین دسته ها</span>
+                </h2>
+                <button
+                  class="flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent text-sm sm:text-base font-medium !hidden md:!flex"
+                >
+                  <span>مشاهده همه </span>
+                  <IconsLeftArrow />
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-4 md:gap-4"
+            >
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto  w-screen xl:max-w-screen-2xl">
           <div
             class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
           >
-            <div class="text-center w-full max-w-2xl mx-auto">
-              <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold">
-                داغترین موضوعات
-              </h2>
-          
-            </div>
-          </div>
-          <div
-            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8"
-          >
-            <a
-              class="nc-CardCategory2 relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-3xl transition-colors"
-              href="/archive/the-demo-archive-slug"
-              ><span
-                class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
-                >#1</span
+            <div class="w-full flex items-center justify-between">
+              <h2
+                class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
               >
-              <div
-                class="relative flex-shrink-0 w-20 h-20 rounded-full shadow-lg overflow-hidden z-0"
-              >
-                <img
-                  alt="categories"
-                  class="object-cover"
-                  src="@/assets/images/3.jpg"
+                <UserIcon
+                  class="w-12 rounded-lg ml-2 p-2 bg-orange-500 text-white"
                 />
-              </div>
-              <div class="mt-3">
-                <h2 class="text-base font-semibold">Garden</h2>
-                <span
-                  class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400"
-                  >13 Articles</span
-                >
-              </div>
-            </a>
+                <span>نویسندگان برتر</span>
+              </h2>
+              <button
+                class="flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent text-sm sm:text-base font-medium !hidden md:!flex"
+              >
+                <span>مشاهده همه </span>
+                <IconsLeftArrow />
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="text-center mx-auto mt-10 md:mt-16">
-          <button
-            class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-secondary-500 hover:bg-secondary-6000 text-secondary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6"
-          >
-            <svg
-              class="animate-spin -ms-1 me-3 h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                class="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="3"
-              ></circle>
-              <path
-                class="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path></svg
-            >مشاهده بیشتر
-          </button>
-        </div>
-      </div>
-      <div class="nc-SectionSliderNewAuthors">
-        <div
-          class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
-        >
-          <div class="text-center w-full max-w-2xl mx-auto">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              نویسندگان برتر
-            </h2>
-          </div>
-        </div>
-        <div class="nc-MySlider">
-          <div class="relative flow-root">
-            <div class="flow-root overflow-hidden rounded-xl">
-              <ul class="relative whitespace-nowrap -mx-2 xl:-mx-4">
-                <li
-                  class="relative inline-block px-2 xl:px-4 whitespace-normal"
-                >
-                  <a
-                    class="nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-neutral-800 rounded-3xl"
-                    href="/author/the-demo-author-slug"
+          <div class="nc-MySlider">
+            <div class="relative flow-root">
+              <div class="flow-root overflow-hidden rounded-xl">
+                <div class="relative whitespace-nowrap rounded-xl">
+                  <Splide
+                    :options="{
+                      perPage: 5,
+                      type: 'loop',
+                      direction: 'rtl',
+                      gap: '20px',
+                      breakpoints: {
+                        400: {
+                          perPage: 1,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                        640: {
+                          perPage: 1,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                        768: {
+                          perPage: 3,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                        1080: {
+                          perPage: 4,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                      },
+                    }"
                   >
-                    <div class="relative flex-shrink-0">
-                      <div>
-                        <div class="flex aspect-w-7 aspect-h-5 w-full h-0">
-                          <img
-                            alt="author"
-                            class="object-cover w-full h-full"
-                            src="@/assets/images/1.jpg"
-                          />
-                        </div>
-                      </div>
-                      <div class="absolute top-3 inset-x-3 flex">
-                        <div
-                          class="py-1 px-4 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center leading-none text-xs font-medium"
+                    <SplideSlide class="splide__slide rounded-lg">
+                      <div class="relative inline-block whitespace-normal w-full">
+                        <a
+                          class="nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-neutral-800 rounded-3xl"
+                          href="/author/the-demo-author-slug"
                         >
-                          40
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                            class="w-5 h-5 text-yellow-600 ms-3 rtl:rotate-180"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                            ></path>
-                          </svg>
-                        </div>
+                          <div class="relative flex-shrink-0">
+                            <div>
+                              <div
+                                class="flex aspect-w-7 aspect-h-5 w-full h-0"
+                              >
+                                <img
+                                  alt="author"
+                                  class="object-cover w-full h-full"
+                                  src="@/assets/images/1.jpg"
+                                />
+                              </div>
+                            </div>
+                            <div class="absolute top-3 inset-x-3 flex">
+                              <div
+                                class="py-1 px-4 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center leading-none text-xs font-medium font-fd"
+                              >
+                                40
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  aria-hidden="true"
+                                  class="w-5 h-5 text-yellow-600 ms-3 rtl:rotate-180"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="-mt-8 m-8 text-center">
+                            <div
+                              class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-16 h-16 text-2xl ring-2 ring-white"
+                            >
+                              <img
+                                alt="Truelock Alric"
+                                class="absolute inset-0 w-full h-full object-cover"
+                                src="@/assets/images/7.jpg"
+                              /><span class="wil-avatar__name">T</span>
+                            </div>
+                            <div class="mt-3">
+                              <h2 class="text-base font-medium">
+                                <span class="line-clamp-1">حدیث شادی</span>
+                              </h2>
+                              <span
+                                class="block mt-1 text-sm text-orange-500 dark:text-neutral-400 ltr"
+                                >@hadisshadi</span
+                              >
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                    </div>
-                    <div class="-mt-8 m-8 text-center">
-                      <div
-                        class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-16 h-16 text-2xl ring-2 ring-white"
-                      >
-                        <img
-                          alt="Truelock Alric"
-                          class="absolute inset-0 w-full h-full object-cover"
-                          src="@/assets/images/7.jpg"
-                        /><span class="wil-avatar__name">T</span>
-                      </div>
-                      <div class="mt-3">
-                        <h2 class="text-base font-medium">
-                          <span class="line-clamp-1">Truelock Alric</span>
-                        </h2>
-                        <span
-                          class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400"
-                          >@Author Job</span
-                        >
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+                    </SplideSlide>
+                  </Splide>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 
   <transition-group name="modal">
-
-      <CategoryModal
-       v-if="OpenCategoryModal"
-        @closeModal="OpenCategoryModal = false"
-      />
-
+    <CategoryModal
+      v-if="OpenCategoryModal"
+      @closeModal="OpenCategoryModal = false"
+    />
   </transition-group>
 
-   <transition-group name="modal">
-
-      <TagsModal
-       v-if="OpenTagsModal"
-        @closeTagsModal="OpenTagsModal = false"
-      />
-
+  <transition-group name="modal">
+    <TagsModal v-if="OpenTagsModal" @closeTagsModal="OpenTagsModal = false" />
   </transition-group>
 </template>
 
 <script setup>
 import ChevronDownIcon from "@/components/icons/ChevronDownIcon.vue";
+import IconsLeftArrow from "@/components/icons/LeftArrow.vue";
+import CategoryIcon from "@/components/icons/CategoryIcon.vue";
+import UserIcon from "@/components/icons/UserIcon.vue";
 import CategoryModal from "@/components/Pages/Archive/Modal/CategoryModal.vue";
 import TagsModal from "@/components/Pages/Archive/Modal/TagsModal.vue";
 import { ref } from "vue";

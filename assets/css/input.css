@@ -1068,3 +1068,6 @@ h6 {
   .fade-leave-to {
     opacity: 0;
   }
+
+  .ltr{direction: ltr;}
+    .rtl{direction: rtl;}
