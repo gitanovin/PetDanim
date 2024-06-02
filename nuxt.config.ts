@@ -50,17 +50,6 @@ export default defineNuxtConfig({
         { name: 'application-name"', content: 'Pet Store Website' },
       ],
 
-      // script: [
-      //   {
-      //     children: `
-      // const theme = localStorage.getItem('theme');
-      // const darkModeMQ = window.matchMedia("not all and (prefers-color-scheme: light)");
-      // if (theme || darkModeMQ.matches) {
-      //   document.documentElement.classList.add('dark')
-      // }`,
-      //   },
-      // ],
-      
       link: [
         // { hid: 'icon', rel: 'icon', type: 'image/png', href: '/logo192.png' },
         // { hid: 'apple-touch-icon', rel: 'apple-touch-icon', href: '/logo192.png' },
