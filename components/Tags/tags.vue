@@ -3,7 +3,7 @@
     <header class="flex items-end py-8">
       <div class="w-full flex items-center justify-between">
         <h2
-          class="text-2xl md:text-3xl lg:text-xl font-bold flex items-center"
+          class="text-2xl md:text-3xl lg:text-xl font-bold flex items-center dark:!text-neutral-50"
         >
           <div class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white"></div>
           <span> برچسب ها</span>
