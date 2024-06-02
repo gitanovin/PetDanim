@@ -1,6 +1,6 @@
 <template>
   <section class="Latest-News">
-    <div class="w-screen xl:max-w-screen-2xl py-16 lg:py-16 mx-auto lg:px-0 px-6">
+    <div class="w-full xl:max-w-7xl py-16 lg:py-16 mx-auto lg:px-0 px-6">
       <div class="flex flex-col mb-8 relative">
         <div
           class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"

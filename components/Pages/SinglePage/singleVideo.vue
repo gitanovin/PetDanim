@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="mx-auto w-screen xl:max-w-screen-2xl px-6">
+        <div class="mx-auto w-full xl:max-w-7xl px-6">
             <header class=" relative pt-14 lg:py-20 flex flex-col lg:flex-row lg:items-center">
                 <div
                     class="absolute inset-y-0 transform translate-x-1/2 end-1/2 w-screen lg:translate-x-0 lg:w-[calc(100vw/2)] bg-orange-600 lg:rounded-e-[40px]">

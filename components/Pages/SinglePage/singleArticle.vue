@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="mx-auto w-screen xl:max-w-screen-2xl pt-8 lg:pt-16 px-6">
+    <div class="mx-auto w-full xl:max-w-7xl pt-8 lg:pt-16 px-6">
       <header class=" rounded-xl">
         <div class="max-w-screen-md mx-auto">
           <div class="nc-SingleHeader">

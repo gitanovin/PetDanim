@@ -1,5 +1,5 @@
 <template>
-  <section class="w-screen xl:max-w-screen-2xl pt-6 mb-20 mx-auto lg:px-0 px-6">
+  <section class="w-full xl:max-w-7xl pt-6 mb-20 mx-auto lg:px-0 px-6">
     <header class="flex items-end py-8">
       <div class="w-full flex items-center justify-between">
         <h2

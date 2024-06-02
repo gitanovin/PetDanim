@@ -8,7 +8,7 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    darkMode: ["class", '[data-mode=""]'],
+    darkMode: ["class"],
     screens: {
       xs: "240px",
       // => @media (min-width: 640px) { ... }

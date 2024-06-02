@@ -1,6 +1,6 @@
 <template>
   <div class="nc-PageArchivepy-8 lg:px-0 px-4 py-8">
-    <div class="mx-auto  w-screen xl:max-w-screen-2xl">
+    <div class="mx-auto  w-full xl:max-w-7xl">
       <div
         class="relative aspect-w-16 aspect-h-13 sm:aspect-h-9 lg:aspect-h-8 xl:aspect-h-5 rounded-3xl md:rounded-[40px] overflow-hidden z-0"
       >
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="pt-10 pb-16 lg:pb-28 lg:pt-20 space-y-16 lg:space-y-28">
-      <div class="mx-auto w-full w-screen xl:max-w-screen-2xl">
+      <div class="mx-auto w-full w-full xl:max-w-7xl">
         <div class="flex flex-col sm:justify-between sm:flex-row">
           <div class="flex space-x-2.5 rtl:space-x-reverse">
             <div class="nc-ModalCategories">
@@ -321,7 +321,7 @@
 
       <section>
         <div class="relative py-16 bg-gray-100 px-4 rounded-lg">
-          <div class="mx-auto  w-screen xl:max-w-screen-2xl relative">
+          <div class="mx-auto  w-full xl:max-w-7xl relative">
             <div
               class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
             >
@@ -600,7 +600,7 @@
       </section>
 
       <section>
-        <div class="mx-auto  w-screen xl:max-w-screen-2xl">
+        <div class="mx-auto  w-full xl:max-w-7xl">
           <div
             class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
           >

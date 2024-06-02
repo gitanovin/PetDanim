@@ -1,12 +1,13 @@
 <template>
+
   <header
-    class="bg-background/75 backdrop-blur border-b dark:border-gray-800 -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100"
+    class="bg-white/75 backdrop-blur dark:!text-gray-200border-b  -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100 dark:!border-gray-300 dark:!bg-neutral-900/95 text-neutral-900 dark:text-neutral-200"
   >
     <div
-      class="mx-auto px-4 lg:px-0 w-screen xl:max-w-screen-2xl flex items-center justify-between gap-3 h-[4rem]"
+      class="mx-auto px-4 lg:px-0 w-full max-w-7xl flex items-center justify-between gap-3 h-[4rem]"
     >
       <div class="lg:flex-1 flex items-center gap-1.5">
-        <div class="relative inline-flex text-left rtl:text-right">
+        <div class="relative inline-flex text-right rtl:text-right">
           <div class="inline-flex w-full">
             <a href="/" class="flex gap-2 items-end" aria-current="page">
               <Logo />
@@ -15,14 +16,14 @@
         </div>
       </div>
 
-      <div class="items-center gap-x-4 hidden lg:flex">
-        <Menu as="div" class="relative inline-block text-left">
+      <div class="items-center gap-x-4 hidden lg:flex dark:!text-gray-200">
+        <Menu as="div" class="relative inline-block text-right">
           <div>
             <MenuButton
-              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75"
+              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200 dark:!text-gray-200"
             >
               حیوانات
-              <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+              <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5 dark:!stroke-gray-200" aria-hidden="true" />
             </MenuButton>
           </div>
 
@@ -35,13 +36,12 @@
             leave-to-class="transform scale-95 opacity-0"
           >
             <MenuItems
-              class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none"
+              class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-neutral-900 dark:!text-gray-200 dark:!divide-gray-800"
             >
               <div class="px-1 py-1">
                 <MenuItem v-slot="{ active }">
                   <button
                     :class="[
-                      active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
                       'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                     ]"
                   >
@@ -51,19 +51,16 @@
                 <MenuItem v-slot="{ active }">
                   <button
                     :class="[
-                      active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
                       'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                     ]"
                   >
                     گربه
                   </button>
                 </MenuItem>
-              </div>
-              <div class="px-1 py-1">
+
                 <MenuItem v-slot="{ active }">
                   <button
                     :class="[
-                      active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
                       'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                     ]"
                   >
@@ -73,20 +70,16 @@
                 <MenuItem v-slot="{ active }">
                   <button
                     :class="[
-                      active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
                       'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                     ]"
                   >
                     خزنده
                   </button>
                 </MenuItem>
-              </div>
 
-              <div class="px-1 py-1">
                 <MenuItem v-slot="{ active }">
                   <button
                     :class="[
-                      active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
                       'group flex w-full items-center rounded-md px-2 py-2 text-sm',
                     ]"
                   >
@@ -98,10 +91,10 @@
           </transition>
         </Menu>
 
-        <Menu as="div" class="relative inline-block text-left">
+        <Menu as="div" class="relative inline-block text-right dark:!text-gray-200">
           <div>
             <MenuButton
-              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75"
+              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
             >
               سبک زندگی
               <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
@@ -180,10 +173,10 @@
           </transition>
         </Menu>
 
-        <Menu as="div" class="relative inline-block text-left">
+        <Menu as="div" class="relative inline-block text-right">
           <div>
             <MenuButton
-              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75"
+              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
             >
               سفر و گردشگری
               <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
@@ -262,10 +255,10 @@
           </transition>
         </Menu>
 
-        <Menu as="div" class="relative inline-block text-left">
+        <Menu as="div" class="relative inline-block text-right">
           <div>
             <MenuButton
-              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75"
+              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
             >
               اخبار
               <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
@@ -344,10 +337,10 @@
           </transition>
         </Menu>
 
-        <Menu as="div" class="relative inline-block text-left">
+        <Menu as="div" class="relative inline-block text-right">
           <div>
             <MenuButton
-              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75"
+              class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
             >
               مسئولیت اجتماعی
               <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
@@ -427,9 +420,10 @@
         </Menu>
       </div>
 
-      <div class="flex items-center justify-end lg:flex-1 gap-1.5">
+      <div class="flex items-center justify-end lg:flex-1 gap-3">
         <div class="relative inline-flex">
           <button
+           @click="OpenSearchModal = true"
             type="button"
             class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center"
           >
@@ -439,17 +433,32 @@
           </button>
         </div>
         <div class="relative inline-flex">
-          <button
-            type="button"
-            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center"
-            aria-label="Switch to dark mode"
-          >
-            <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
-              <Sun />
-            </span>
-          </button>
+
+
+              <!-- <button aria-label="Color Mode" class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-orange-400 inline-flex items-center"
+                            @click="changeColor">
+                     
+                           <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
+                            <Night v-if="colorMode.value === 'dark'" name="heroicons-outline:moon" class="text-xl text-black" />
+                            <Sun v-else name="heroicons-outline:sun" class="text-xl h-5 w-5  stroke-white" />
+                           </span>
+                    </button> -->
+                    <ThemeToggle/>
+
         </div>
 
+                <div class="relative inline-flex bg-orange-500 hover:bg-orange-600 transition-all duration-300 rounded-lg py-1 px-2">
+          <nuxt-link to="/auth/login"
+            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5  inline-flex items-center text-white border-0"
+          >
+            <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
+              <UserIcon />
+            
+            </span>
+              ورود یا ثبت نام
+          </nuxt-link>
+        </div>
+<!-- 
         <div class="relative inline-flex">
           <button
             type="button"
@@ -467,7 +476,7 @@
               </div>
             </div>
           </button>
-        </div>
+        </div> -->
 
         <button
           type="button"
@@ -482,15 +491,28 @@
     </div>
   </header>
 
-
+ <transition-group name="modal">
+    <SearchModal
+      v-if="OpenSearchModal"
+      @closeModal="OpenSearchModal = false"
+    />
+  </transition-group>
 </template>
 
 <script setup>
-import Sun from "@/components/icons/Sun.vue";
+import SearchModal from "@/components/Pages/Archive/Modal/Search/searchModal.vue";
+import ThemeToggle from "@/components/Header/ThemeToggle.vue";
+
 import Search from "@/components/icons/Search.vue";
 import Logo from "@/components/icons/Logo.vue";
 import MenuList from "@/components/icons/MenuList.vue";
 import ChevronDownIcon from "@/components/icons/ChevronDownIcon.vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+import UserIcon from "../icons/UserIcon.vue";
+const OpenSearchModal = ref(false);
+
+
+
+
 
 </script>

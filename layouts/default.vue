@@ -2,8 +2,8 @@
   <ClientOnly>
     <AdvertisingBanner />
     <Header />
-    <!-- <TrackTitle /> -->
-    <main class="">
+    <TrackTitle />
+    <main class="dark:bg-gray-900">
       <HeroSlider />
       <TopCategories />
       <TopPosts />
@@ -30,6 +30,9 @@ import LatestNews from "@/components/LatestNews/latestnews.vue";
 import BannerAds from "@/components/Banner/banner.vue";
 import Tags from "@/components/Tags/tags.vue";
 import Header from "@/components/Header/Header.vue";
-// import TrackTitle from "@/components/Header/TrackTitle.vue";
+import TrackTitle from "@/components/Header/TrackTitle.vue";
 import Footer from "@/components/Footer/footer.vue";
+definePageMeta({
+  colorMode: 'light',
+})
 </script>

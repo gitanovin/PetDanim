@@ -4,7 +4,7 @@
             <div
                 class="absolute top-0 inset-x-0 bg-neutral-900 dark:bg-black/30 h-[480px] md:h-[600px] lg:h-[700px] xl:h-[95vh]">
             </div>
-            <header class=" pt-10 lg:pt-16 rounded-xl relative z-10 mx-auto w-screen xl:max-w-screen-2xl px-6">
+            <header class=" pt-10 lg:pt-16 rounded-xl relative z-10 mx-auto w-full xl:max-w-7xl px-6">
                 <div class="nc-SingleHeader4 ">
                     <div class="max-w-5xl mx-auto space-y-5 dark">
                         <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList"><a
@@ -212,7 +212,7 @@
                 </div>
             </header>
         </div>
-        <div class="mx-auto w-screen xl:max-w-screen-2xl my-8">
+        <div class="mx-auto w-full xl:max-w-7xl my-8">
             <div class="grid grid-cols-12 gap-4">
                 <div class="w-full lg:col-span-8 col-span-12  relative rounded-lg bg-white shadow-sm">
                     <div class="relative">

@@ -2,23 +2,31 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
 
-  // vue: {  
-  //   compilerOptions: {
-  //     isCustomElement: (tag) => ['LeftArrow','Events','Like','Comment','Bookmark','TopIcon','Times'].includes(tag),
-  //   },
-  // },
-
   css: ['~/assets/css/app.css'],
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-splide',
-    // '@nuxtjs/i18n',
-    // "@nuxtjs/sitemap",
-    // "@nuxtjs/seo"
+    '@nuxtjs/color-mode',
+    "@nuxtjs/tailwindcss"
   ],
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'petdanim-color-mode-script',
+    globalName: 'dark-light-mode',
+    componentName: 'ColorScheme',
+    classPrefix: '_mode',
+    classSuffix: '_mode',
+    storageKey: 'petdanim-color-mode'
+  },
+
+
+
+
   splide: {
     theme: 'default'
   },
+  
   pwa: {
 
   },
@@ -42,6 +50,17 @@ export default defineNuxtConfig({
         { name: 'application-name"', content: 'Pet Store Website' },
       ],
 
+      // script: [
+      //   {
+      //     children: `
+      // const theme = localStorage.getItem('theme');
+      // const darkModeMQ = window.matchMedia("not all and (prefers-color-scheme: light)");
+      // if (theme || darkModeMQ.matches) {
+      //   document.documentElement.classList.add('dark')
+      // }`,
+      //   },
+      // ],
+      
       link: [
         // { hid: 'icon', rel: 'icon', type: 'image/png', href: '/logo192.png' },
         // { hid: 'apple-touch-icon', rel: 'apple-touch-icon', href: '/logo192.png' },
@@ -49,7 +68,7 @@ export default defineNuxtConfig({
       ],
 
       bodyAttrs: {
-        class: 'font-fa'
+        class: 'font-fa dark:bg-gray-900'
       },
     }
   },

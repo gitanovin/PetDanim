@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="Banner-Ads">
-    <div class="w-screen xl:max-w-screen-2xl pb-16  mx-auto">
+    <div class="w-full max-w-7xl pb-16  mx-auto">
       <a href="/#" class="nc-SectionAds block text-center mx-auto"
         ><span class="text-xs text-neutral-500">- تبلیغات -</span
         >

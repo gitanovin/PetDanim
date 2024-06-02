@@ -3,6 +3,32 @@
 @tailwind utilities;
 
 @layer base {
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #dbdbdb;
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #7a7a7a;
+    border-radius: 5px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3e3e;
+}
+
+
+
   .prose {
     color: var(--tw-prose-body);
     /* max-width: 65ch; */
@@ -1027,6 +1053,22 @@ h6 {
   font-weight: 900;
 }
 
+
+.Hero::before {
+    content: "";
+    z-index: 0;
+    background-image: url(@/assets/images/bgv.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center -63px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: -20px;
+}
 
 .splide__arrow:disabled {
     opacity: 0 !important;

@@ -1,11 +1,11 @@
 <template>
   <section>
-    <div class="bg-gray-100 dark:bg-black dark:bg-opacity-20 text-neutral-100">
-      <div class="relative w-screen xl:max-w-screen-2xl mx-auto lg:px-0 px-6">
+    <div class="bg-gray-100 dark:!bg-gray-800 dark:bg-opacity-20 text-neutral-100">
+      <div class="relative w-full xl:max-w-7xl mx-auto lg:px-0 px-6">
         <div class="nc-SectionGridPosts relative py-16">
           <div class="relative">
             <div
-              class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50">
+              class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:!text-neutral-50">
               <div class="w-full flex items-center justify-between">
                 <h2 class="text-2xl md:text-3xl lg:text-xl font-bold flex items-center">
                   <VideoIcon class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white stroke-white" />
@@ -87,7 +87,7 @@
                             src="@/assets/images/1.jpg" /><span class="wil-avatar__name">B</span>
                         </div>
                         <div>
-                          <h2 class="block font-semibold text-base text-gray-900">
+                          <h2 class="block font-semibold text-base text-gray-900 dark:!text-neutral-50">
                             <a class="line-clamp-1" href="/single-video/this-is-single-slug">سگ ها حیوانات باهوشی هستند
                             </a>
                           </h2>

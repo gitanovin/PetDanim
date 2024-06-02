@@ -7,7 +7,7 @@
 
         </div>
       </div>
-      <div class="w-full mx-auto w-screen xl:max-w-screen-2xl -mt-10 lg:-mt-16">
+      <div class="w-full mx-auto w-full xl:max-w-7xl -mt-10 lg:-mt-16">
         <div
           class="relative bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 p-5 lg:p-8 rounded-lg  flex flex-col md:flex-row border border-gray-100"
         >
@@ -319,7 +319,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full mx-auto w-screen xl:max-w-screen-2xl  py-6 lg:pb-28 lg:pt-10 space-y-16 lg:space-y-28">
+    <div class="w-full mx-auto w-full xl:max-w-7xl  py-6 lg:pb-28 lg:pt-10 space-y-16 lg:space-y-28">
       <main>
         <div
           class="flex flex-col sm:items-center sm:justify-between sm:flex-row bg-white p-3 rounded-lg"

@@ -1,10 +1,10 @@
 <template>
-  <div class="lg:px-0 px-4">
+  <div class="">
 
 
 
-<section class="bg-white">
-      <div class="mx-auto w-screen xl:max-w-screen-2xl py-16">
+<section class="bg-white lg:px-0 px-4">
+      <div class="mx-auto w-full xl:max-w-7xl pb-16">
         <div class="header py-6"><h2 class=" text-3xl font-semibold">ویدیوها</h2>
         <span class="pt-3 block font-fd">120 ویدیو</span>
         </div>
@@ -450,7 +450,7 @@
 
       <section>
         <div class="relative py-16 bg-gray-100 px-4 rounded-lg">
-          <div class="mx-auto w-full w-screen xl:max-w-screen-2xl relative">
+          <div class="mx-auto w-full w-full xl:max-w-7xl relative">
             <div
               class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
             >
@@ -729,7 +729,7 @@
       </section>
 
       <section>
-        <div class="mx-auto w-full w-screen xl:max-w-screen-2xl py-16">
+        <div class="mx-auto w-full  xl:max-w-7xl py-16 lg:px-0 px-4">
           <div
             class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
           >

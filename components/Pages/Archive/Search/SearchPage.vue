@@ -1,9 +1,9 @@
 <template>
-  <div class="nc-PageAuthor py-8">
+  <div class="nc-PageAuthor lg:py-8">
     <div class="w-full ">
-      <div class="w-screen px-2 xl:max-w-screen-2xl mx-auto">
+      <div class="w-full max-w-7xl mx-auto">
         <div
-          class="rounded-3xl md:rounded-[40px] relative aspect-w-16 aspect-h-9 lg:aspect-h-5 overflow-hidden z-0"
+          class="rounded-0 lg:rounded-[40px] relative aspect-w-16 aspect-h-9 lg:aspect-h-5 overflow-hidden z-0"
         >
           <div class="absolute inset-0">
             <img
@@ -13,9 +13,9 @@
             />
           </div>
         </div>
-        <div class="relative  -mt-20 lg:-mt-48 mx-auto max-w-7xl">
+        <div class="relative  -mt-20 lg:-mt-48 mx-auto max-w-5xl">
           <div
-            class="bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 p-5 lg:p-16 rounded-[40px] shadow-2xl flex items-center"
+            class="bg-white dark:bg-neutral-900 dark:border dark:border-neutral-700 p-5 lg:p-16 rounded-[20px]  flex items-center"
           >
             <header
               class="w-full max-w-3xl mx-auto text-center flex flex-col items-center"
@@ -41,29 +41,18 @@
                 <label
                   for="search-input"
                   class="text-neutral-500 dark:text-neutral-300"
-                  ><span class="sr-only">Search all icons</span
+                  ><span class="sr-only">جستجوی همه</span
                   ><input
-                    class="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white dark:border-neutral-500 dark:focus:ring-primary-500/30 dark:bg-neutral-900 rounded-full text-sm font-normal pl-14 py-5 pe-5 md:ps-16"
+                    class="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white dark:border-neutral-500 dark:focus:ring-primary-500/30 dark:bg-neutral-900 rounded-full text-sm font-normal pr-14 py-5 pe-5 md:ps-16 "
                     id="search-input"
-                    placeholder="Type and press enter"
+                    placeholder="متن مورد نظر برای جستجو را بنویسید"
                     type="search"
-                    value="Technology" /><button
+                    value="سگ" /><button
                     class="ttnc-ButtonCircle flex items-center justify-center rounded-full !leading-none disabled:bg-opacity-70 bg-slate-900 hover:bg-slate-800 text-slate-50 absolute end-2.5 top-1/2 transform -translate-y-1/2 w-11 h-11 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0"
                     type="submit"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      class="w-5 h-5 rtl:rotate-180"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg></button
+                  <SearchIcon class="w-8"/>
+                    </button
                   ><span
                     class="absolute start-5 top-1/2 transform -translate-y-1/2 text-2xl md:start-6"
                     ><svg
@@ -87,23 +76,23 @@
                 <div
                   class="inline-block space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse"
                 >
-                  <span class="">Related:</span
+                  <span class="">جستجوهای اخیر:</span
                   ><a
-                    class="nc-NcLink text-primary-6000 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-6000 inline-block font-normal"
+                    class="nc-NcLink text-primary hover:text-primary-800 dark:text-primary-500 dark:hover:text-orange-600 inline-block font-normal"
                     href="/search"
-                    >Design</a
+                    >سگ</a
                   ><a
-                    class="nc-NcLink text-primary-6000 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-6000 inline-block font-normal"
+                    class="nc-NcLink text-primary hover:text-primary-800 dark:text-primary-500 dark:hover:text-orange-600 inline-block font-normal"
                     href="/search"
-                    >Photo</a
+                    >گربه</a
                   ><a
-                    class="nc-NcLink text-primary-6000 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-6000 inline-block font-normal"
+                    class="nc-NcLink text-primary hover:text-primary-800 dark:text-primary-500 dark:hover:text-orange-600 inline-block font-normal"
                     href="/search"
-                    >Vector</a
+                    >خزنده</a
                   ><a
-                    class="nc-NcLink text-primary-6000 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-6000 inline-block font-normal"
+                    class="nc-NcLink text-primary hover:text-primary-800 dark:text-primary-500 dark:hover:text-orange-600 inline-block font-normal"
                     href="/search"
-                    >Frontend</a
+                    >حیوان خانگی</a
                   >
                 </div>
               </div>
@@ -120,7 +109,7 @@
         <div
           class="flex flex-col sm:items-center sm:justify-between sm:flex-row "
         >
-          <nav class="nc-Nav" data-nc-id="Nav">
+          <nav class="nc-Nav px-4">
             <ul class="flex sm:space-x-2 rtl:space-x-reverse">
               <li class="nc-NavItem relative flex-shrink-0">
                 <button
@@ -133,14 +122,21 @@
                 <button
                   class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 >
-                  علاقه مندی ها
+                دسته بندی ها
                 </button>
               </li>
               <li class="nc-NavItem relative flex-shrink-0">
                 <button
                   class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 >
-                  ذخیره شده ها
+                برچسب ها
+                </button>
+              </li>
+                 <li class="nc-NavItem relative flex-shrink-0">
+                <button
+                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                >
+                نویسنده ها
                 </button>
               </li>
             </ul>
@@ -148,7 +144,7 @@
           <div
             class="block my-4 border-b w-full border-neutral-300 dark:border-neutral-500 sm:hidden"
           ></div>
-          <div class="flex justify-end">
+          <div class="flex justify-start px-4">
             <div class="nc-ArchiveFilterListBox flex-shrink-0">
               <div class="relative">
                 <Listbox v-model="selectedPerson">
@@ -176,7 +172,7 @@
                       leave-to-class="opacity-0"
                     >
                       <ListboxOptions
-                        class="absolute mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm w-40"
+                        class="absolute mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm w-40 z-50"
                       >
                         <ListboxOption
                           v-slot="{ active, selected }"
@@ -227,7 +223,7 @@
                 class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3"
               >
                 <div>
-                  <div class="nc-PostFeaturedMedia relative w-full h-full">
+                  <div class="relative w-full h-full">
                     <img
                       alt="featured"
                       class="object-cover"
@@ -248,7 +244,7 @@
                         </span>
                       </div> </span
                     ><a
-                      class="block absolute inset-0"
+                      class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100"
                       href="/single-video/this-is-single-slug"
                     ></a>
                   </div>
@@ -331,7 +327,7 @@
                     </a>
                   </div>
                   <div
-                    class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
+                    class="flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
                   >
                     <button
                       class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
@@ -374,7 +370,7 @@
                         </span>
                       </div> </span
                     ><a
-                      class="block absolute inset-0"
+                      class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100"
                       href="/single-video/this-is-single-slug"
                     ></a>
                   </div>
@@ -445,7 +441,7 @@
                         >34</span
                       ></button
                     ><a
-                      class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
+                      class="relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
                       title="Comments"
                       href="/single/demo-slug#comments"
                     >
@@ -457,10 +453,10 @@
                     </a>
                   </div>
                   <div
-                    class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
+                    class="flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
                   >
                     <button
-                      class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                      class="relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
                       title="Save to reading list"
                     >
                       <Bookmark />
@@ -472,10 +468,10 @@
           </article>
         </div>
         <div
-          class="flex flex-col mt-12 lg:mt-16 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row sm:justify-between sm:items-center font-fd"
+          class="flex flex-col mt-12 lg:mt-16 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row sm:justify-between sm:items-center font-fd px-4"
         >
           <nav
-            class="nc-Pagination inline-flex space-x-1 rtl:space-x-reverse text-base font-medium"
+            class="inline-flex space-x-1 rtl:space-x-reverse text-base font-medium font-fd"
           >
             <span
               class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-orange-500 text-white focus:outline-none"
@@ -502,7 +498,419 @@
         </div>
       </main>
 
-      <!-- Related--------------- -->
+   
+      
+
+      <section>
+        <div class="relative py-16 bg-gray-100 px-4 rounded-lg">
+          <div class="mx-auto  w-full xl:max-w-7xl relative">
+            <div
+              class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
+            >
+              <div class="w-full flex items-center justify-between">
+                <h2
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+                >
+                  <CategoryIcon
+                    class="w-12 rounded-lg ml-2 p-2 bg-orange-500"
+                  />
+                  <span>برترین دسته ها</span>
+                </h2>
+                <button
+                  class="flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent text-sm sm:text-base font-medium !hidden md:!flex"
+                >
+                  <span>مشاهده همه </span>
+                  <IconsLeftArrow />
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-4 md:gap-4"
+            >
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+
+              <a
+                class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-white dark:bg-neutral-900 rounded-lg transition-colors"
+                href="/archive/the-demo-archive-slug"
+                ><span
+                  class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100"
+                  >#1</span
+                >
+                <div
+                  class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0"
+                >
+                  <img
+                    alt="categories"
+                    class="object-cover w-full h-full"
+                    src="@/assets/images/3.jpg"
+                  />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-base font-semibold">پرندگان</h2>
+                  <span
+                    class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd"
+                    >13 مقاله</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto  w-full xl:max-w-7xl">
+          <div
+            class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
+          >
+            <div class="w-full flex items-center justify-between">
+              <h2
+                class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
+              >
+                <UserIcon
+                  class="w-12 rounded-lg ml-2 p-2 bg-orange-500 text-white"
+                />
+                <span>نویسندگان برتر</span>
+              </h2>
+              <button
+                class="flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent text-sm sm:text-base font-medium !hidden md:!flex"
+              >
+                <span>مشاهده همه </span>
+                <IconsLeftArrow />
+              </button>
+            </div>
+          </div>
+          <div class="nc-MySlider">
+            <div class="relative flow-root">
+              <div class="flow-root overflow-hidden rounded-xl">
+                <div class="relative whitespace-nowrap rounded-xl">
+                  <Splide
+                    :options="{
+                      perPage: 5,
+                      type: 'loop',
+                      direction: 'rtl',
+                      gap: '20px',
+                      breakpoints: {
+                        400: {
+                          perPage: 1,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                        640: {
+                          perPage: 1,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                        768: {
+                          perPage: 3,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                        1080: {
+                          perPage: 4,
+                          padding: '4rem',
+                          gap: '1rem',
+                        },
+                      },
+                    }"
+                  >
+                    <SplideSlide class="splide__slide rounded-lg">
+                      <div class="relative inline-block whitespace-normal w-full">
+                        <a
+                          class="nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-neutral-800 rounded-3xl"
+                          href="/author/the-demo-author-slug"
+                        >
+                          <div class="relative flex-shrink-0">
+                            <div>
+                              <div
+                                class="flex aspect-w-7 aspect-h-5 w-full h-0"
+                              >
+                                <img
+                                  alt="author"
+                                  class="object-cover w-full h-full"
+                                  src="@/assets/images/1.jpg"
+                                />
+                              </div>
+                            </div>
+                            <div class="absolute top-3 inset-x-3 flex">
+                              <div
+                                class="py-1 px-4 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center leading-none text-xs font-medium font-fd"
+                              >
+                                40
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  aria-hidden="true"
+                                  class="w-5 h-5 text-yellow-600 ms-3 rtl:rotate-180"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="-mt-8 m-8 text-center">
+                            <div
+                              class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-16 h-16 text-2xl ring-2 ring-white"
+                            >
+                              <img
+                                alt="Truelock Alric"
+                                class="absolute inset-0 w-full h-full object-cover"
+                                src="@/assets/images/7.jpg"
+                              /><span class="wil-avatar__name">T</span>
+                            </div>
+                            <div class="mt-3">
+                              <h2 class="text-base font-medium">
+                                <span class="line-clamp-1">حدیث شادی</span>
+                              </h2>
+                              <span
+                                class="block mt-1 text-sm text-orange-500 dark:text-neutral-400 ltr"
+                                >@hadisshadi</span
+                              >
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </SplideSlide>
+                  </Splide>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
     </div>
   </div>
 </template>
@@ -516,16 +924,7 @@ import Like from "@/components/icons/Heart.vue";
 import ChevronDownIcon from "@/components/icons/ChevronDownIcon.vue";
 
 import Comment from "@/components/icons/Comment.vue";
-import Share from "@/components/icons/Share.vue";
-import InstagramIcon from "@/components/icons/social/instagram.vue";
-import TwitterIcon from "@/components/icons/social/twitter.vue";
-import LinkedinIcon from "@/components/icons/social/linkedin.vue";
-import FacebookIcon from "@/components/icons/social/facebook.vue";
-import MenuMoreIcon from "@/components/icons/MenuMoreIcon.vue";
-import PlusIcon from "@/components/icons/PlusIcon.vue";
-
-import EyeSlashIcon from "@/components/icons/EyeSlashIcon.vue";
-import ReportIcon from "@/components/icons/ReportIcon.vue";
+import SearchIcon from "@/components/icons/SearchIcon.vue";
 import CopyIcon from "@/components/icons/Copy.vue";
 import Verify from "@/components/icons/Verify.vue";
 import WebIcon from "@/components/icons/WebIcon.vue";

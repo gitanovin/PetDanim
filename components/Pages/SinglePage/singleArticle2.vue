@@ -2,7 +2,7 @@
     <section>
         <div class="pt-0">
             <header class="relative  pt-16 z-10 md:py-20 lg:py-28 bg-neutral-900 dark:bg-black">
-                <div class=" mx-auto w-screen xl:max-w-screen-2xl  relative z-10">
+                <div class=" mx-auto w-full xl:max-w-7xl  relative z-10">
                     <div class="max-w-screen-md">
                         <div class="nc-SingleHeader px-4">
                             <div class="space-y-5">
@@ -217,7 +217,7 @@
                 </div>
             </header>
         </div>
-<div class="mx-auto w-screen xl:max-w-screen-2xl my-8 lg:px-0 px-6">
+<div class="mx-auto w-full xl:max-w-7xl my-8 lg:px-0 px-6">
             <div class="grid grid-cols-12 gap-4">
             <div class="w-full lg:col-span-8 col-span-12  relative rounded-lg bg-white shadow-sm">
                 <div class="relative">
