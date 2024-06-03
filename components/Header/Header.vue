@@ -1,7 +1,6 @@
 <template>
-
   <header
-    class="bg-white/75 backdrop-blur dark:!text-gray-200border-b  -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100 dark:!border-gray-300 dark:!bg-neutral-900/95 text-neutral-900 dark:text-neutral-200"
+    class="bg-white/75 backdrop-blur dark:!text-gray-200 border-b -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100 dark:!border-gray-300 dark:!bg-neutral-900/95 text-neutral-900 dark:text-neutral-200"
   >
     <div
       class="mx-auto px-4 lg:px-0 w-full max-w-7xl flex items-center justify-between gap-3 h-[4rem]"
@@ -23,7 +22,10 @@
               class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200 dark:!text-gray-200"
             >
               حیوانات
-              <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5 dark:!stroke-gray-200" aria-hidden="true" />
+              <ChevronDownIcon
+                class="-ml-1 mr-2 h-5 w-5 dark:!stroke-gray-200"
+                aria-hidden="true"
+              />
             </MenuButton>
           </div>
 
@@ -91,7 +93,10 @@
           </transition>
         </Menu>
 
-        <Menu as="div" class="relative inline-block text-right dark:!text-gray-200">
+        <Menu
+          as="div"
+          class="relative inline-block text-right dark:!text-gray-200"
+        >
           <div>
             <MenuButton
               class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
@@ -423,42 +428,33 @@
       <div class="flex items-center justify-end lg:flex-1 gap-3">
         <div class="relative inline-flex">
           <button
-           @click="OpenSearchModal = true"
+            @click="OpenSearchModal = true"
             type="button"
-            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center"
+            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:!text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:!bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-orange-500 dark:!focus-visible:ring-orange-400 inline-flex items-center"
           >
-            <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
-              <Search />
+            <span class="flex-shrink-0 h-5 w-5 flex items-center justify-center" aria-hidden="true">
+              <Search class="dark:!fill-gray-50 dark:!text-gray-50 dark:!stroke-gray-50 w-4 stroke-nightbg" />
             </span>
           </button>
         </div>
         <div class="relative inline-flex">
-
-
-              <!-- <button aria-label="Color Mode" class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-orange-400 inline-flex items-center"
-                            @click="changeColor">
-                     
-                           <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
-                            <Night v-if="colorMode.value === 'dark'" name="heroicons-outline:moon" class="text-xl text-black" />
-                            <Sun v-else name="heroicons-outline:sun" class="text-xl h-5 w-5  stroke-white" />
-                           </span>
-                    </button> -->
-                    <ThemeToggle/>
-
+          <ThemeToggle />
         </div>
 
-                <div class="relative inline-flex bg-orange-500 hover:bg-orange-600 transition-all duration-300 rounded-lg py-1 px-2">
-          <nuxt-link to="/auth/login"
-            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5  inline-flex items-center text-white border-0"
+        <div
+          class="relative inline-flex bg-orange-500 hover:bg-orange-600 transition-all duration-300 rounded-lg py-1 px-2"
+        >
+          <nuxt-link
+            to="/auth/login"
+            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center text-white border-0"
           >
             <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
               <UserIcon />
-            
             </span>
-              ورود یا ثبت نام
+            ورود یا ثبت نام
           </nuxt-link>
         </div>
-<!-- 
+        <!-- 
         <div class="relative inline-flex">
           <button
             type="button"
@@ -491,11 +487,8 @@
     </div>
   </header>
 
- <transition-group name="modal">
-    <SearchModal
-      v-if="OpenSearchModal"
-      @closeModal="OpenSearchModal = false"
-    />
+  <transition-group name="modal">
+    <SearchModal v-if="OpenSearchModal" @closeModal="OpenSearchModal = false" />
   </transition-group>
 </template>
 
@@ -510,9 +503,4 @@ import ChevronDownIcon from "@/components/icons/ChevronDownIcon.vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import UserIcon from "../icons/UserIcon.vue";
 const OpenSearchModal = ref(false);
-
-
-
-
-
 </script>

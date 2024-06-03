@@ -5,4 +5,8 @@
 </template>
 <script setup>
 import Login from "@/components/Auth/Login.vue";
+
+definePageMeta({
+  layout: 'login'
+})
 </script>

@@ -5,4 +5,7 @@
 </template>
 <script setup>
 import SignUp from "@/components/Auth/SignUp.vue";
+definePageMeta({
+  layout: 'login'
+})
 </script>

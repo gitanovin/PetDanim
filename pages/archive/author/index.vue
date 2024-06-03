@@ -1,19 +1,9 @@
 <template>
-  <AdvertisingBanner />
-
-  <Header />
-
-  <main class="bg-gray-100/50">
-
+<main class="bg-gray-100/50">
     <Author />
-
-    <Footer />
   </main>
 </template>
 
 <script setup>
-import AdvertisingBanner from "@/components/Advertising/ads.vue";
 import Author from "@/components/Pages/Archive/Author/author.vue";
-import Header from "@/components/Header/Header.vue";
-import Footer from "@/components/Footer/footer.vue";
 </script>

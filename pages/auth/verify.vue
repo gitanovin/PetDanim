@@ -5,4 +5,7 @@
 </template>
 <script setup>
 import Verify from "@/components/Auth/Verify.vue";
+definePageMeta({
+  layout: 'login'
+})
 </script>
