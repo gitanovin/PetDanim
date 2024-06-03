@@ -11,12 +11,12 @@ export default defineNuxtConfig({
   ],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
-    fallback: 'light', // fallback value if not system preference found
+    // fallback: 'light', // fallback value if not system preference found
     hid: 'petdanim-color-mode-script',
     globalName: 'dark-light-mode',
     componentName: 'ColorScheme',
-    classPrefix: '_mode',
-    classSuffix: '_mode',
+    classPrefix: '',
+    classSuffix: '',
     storageKey: 'petdanim-color-mode'
   },
 

@@ -3,7 +3,7 @@
     <div class="relative w-full xl:max-w-7xl mx-auto lg:px-0 px-6 py-16 lg:py-24">
       <div class="flex flex-col mb-8 relative">
         <div
-          class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50"
+          class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:!text-neutral-50"
         >
           <div class="w-full flex items-center justify-between">
             <h2
@@ -32,28 +32,28 @@
               </li>
               <li class="nc-NavItem relative flex-shrink-0">
                 <button
-                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:!text-neutral-400 dark:hover:!text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 >
                   پرندگان
                 </button>
               </li>
               <li class="nc-NavItem relative flex-shrink-0">
                 <button
-                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:!text-neutral-400 dark:hover:!text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 >
                   سگ ها
                 </button>
               </li>
               <li class="nc-NavItem relative flex-shrink-0">
                 <button
-                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:!text-neutral-400 dark:hover:!text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 >
                   گربه ها
                 </button>
               </li>
               <li class="nc-NavItem relative flex-shrink-0">
                 <button
-                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  class="flex items-center justify-center font-medium px-5 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:!text-neutral-400 dark:hover:!text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 >
                   خزندگان
                 </button>
@@ -61,7 +61,7 @@
             </ul>
           </nav>
           <button
-            class="nc-Button flex-shrink-0 relative h-auto items-center justify-center rounded-full transition-colors border-transparent bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 text-sm sm:text-base font-medium !hidden md:!flex"
+            class="nc-Button flex-shrink-0 relative h-auto items-center justify-center rounded-full transition-colors border-transparent   text-neutral-900 dark:!text-neutral-200 text-sm sm:text-base font-medium !hidden md:!flex"
           >
             <span>مشاهده همه</span>
             <ReadMore />
@@ -73,7 +73,7 @@
       >
         <article>
           <div
-            class="border relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 h-full"
+            class="border relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:!bg-neutral-900 h-full"
           >
             <div
               class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3"
@@ -90,7 +90,7 @@
                       class="hover:scale-105 transform cursor-pointer transition-transform"
                     >
                       <span
-                        class=" bg-gray-900/20  rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
+                        class=" bg-gray-900/20  rounded-full flex items-center justify-center text-xl text-white border border-white dark:!border-none w-11 h-11"
                         ><Mostanad
                           class="text-white fill-white rounded-full w-[24px]"
                         />
@@ -132,19 +132,19 @@
                     /><span class="wil-avatar__name">F</span>
                   </div>
                   <span
-                    class="block text-neutral-700 hover:text-black dark:text-neutral-300 dark:hover:text-white font-medium"
+                    class="block text-neutral-700 hover:text-black dark:!text-neutral-300 dark:hover:!text-white font-medium"
                     >محبوب حسین زاده</span
                   ></a
                 ><span
-                  class="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium"
+                  class="text-neutral-500 dark:!text-neutral-400 mx-[6px] font-medium"
                   >·</span
                 ><span
-                  class="text-neutral-500 dark:text-neutral-400 font-normal font-fd"
+                  class="text-neutral-500 dark:!text-neutral-400 font-normal font-fd"
                   >21 اردیبهشت 1403</span
                 >
               </div>
               <h3
-                class="nc-card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100"
+                class="nc-card-title block text-base font-semibold text-neutral-900 dark:!text-neutral-100"
               >
                 <span
                   class="line-clamp-2"
@@ -157,7 +157,7 @@
                   class="nc-PostCardLikeAndComment flex items-center space-x-2 rtl:space-x-reverse relative"
                 >
                   <button
-                    class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
+                    class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:!bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
                     title="Liked"
                   >
                     <Like />
@@ -165,7 +165,7 @@
                       >34</span
                     ></button
                   ><a
-                    class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
+                    class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:!bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
                     title="Comments"
                     href="/single/demo-slug#comments"
                     ><Comment />
@@ -175,10 +175,10 @@
                   >
                 </div>
                 <div
-                  class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
+                  class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
                 >
                   <button
-                    class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                    class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:!bg-neutral-800 dark:hover:bg-neutral-700"
                     title="Save to reading list"
                   >
                     <Bookmark />

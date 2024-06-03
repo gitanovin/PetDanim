@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-16 z-20">
+  <div class="sticky top-16 z-20 hidden">
       <section>
     <div class="mx-auto px-4 lg:px-0 w-screen max-w-7xl">
       <div

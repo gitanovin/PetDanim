@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-
+.dark .border,.dark .border-b,.dark .border-t,.dark .border-r,.dark .border-l{
+    border-color: rgb(51, 49, 53) !important;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 8px;

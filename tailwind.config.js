@@ -56,7 +56,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
 
-
+  prefix: 'petdanim-',
 
     fontFamily: {
       en: [
