@@ -6043,6 +6043,16 @@ h6 {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
+  .dark\:text-dark-700 {
+    --tw-text-opacity: 1;
+    color: rgb(121 128 150 / var(--tw-text-opacity));
+  }
+
+  .dark\:\!text-gray-300 {
+    --tw-text-opacity: 1 !important;
+    color: rgb(226 232 240 / var(--tw-text-opacity)) !important;
+  }
+
   .dark\:ring-0 {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -6171,6 +6181,21 @@ h6 {
     .sm\:dark\:bg-neutral-900 {
       --tw-bg-opacity: 1;
       background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+    }
+
+    .sm\:dark\:\!bg-neutral-900 {
+      --tw-bg-opacity: 1 !important;
+      background-color: rgb(17 24 39 / var(--tw-bg-opacity)) !important;
+    }
+
+    .sm\:dark\:\!bg-dark-900 {
+      --tw-bg-opacity: 1 !important;
+      background-color: rgb(38 40 52 / var(--tw-bg-opacity)) !important;
+    }
+
+    .sm\:dark\:\!bg-dark-800 {
+      --tw-bg-opacity: 1 !important;
+      background-color: rgb(45 48 63 / var(--tw-bg-opacity)) !important;
     }
   }
 }
