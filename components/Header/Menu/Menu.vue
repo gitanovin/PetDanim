@@ -1,13 +1,13 @@
 <template>
-  <div class="items-center gap-x-4 hidden lg:flex dark:!text-gray-200">
+  <div class="items-center gap-x-4 hidden lg:flex dark:!text-dark-700">
     <Menu as="div" class="relative inline-block text-right">
       <div>
         <MenuButton
-          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200 dark:!text-gray-200"
+          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-dark-700"
         >
-          حیوانات
+         سگ
           <ChevronDownIcon
-            class="-ml-1 mr-2 h-5 w-5 dark:!stroke-gray-200"
+            class="mr-2 h-5 w-5 dark:!stroke-dark-700 fill-dark-700"
             aria-hidden="true"
           />
         </MenuButton>
@@ -22,13 +22,13 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-neutral-900 dark:!text-gray-200 dark:!divide-gray-800"
+          class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 سگ
@@ -37,7 +37,7 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 گربه
@@ -47,7 +47,7 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 پرنده
@@ -56,7 +56,7 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 خزنده
@@ -66,24 +66,27 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 دیگر
               </button>
             </MenuItem>
           </div>
-        </MenuItems>
+        </MenuItems>  
       </transition>
     </Menu>
 
-    <Menu as="div" class="relative inline-block text-right dark:!text-gray-200">
+       <Menu as="div" class="relative inline-block text-right">
       <div>
         <MenuButton
-          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
+          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-dark-700"
         >
-          سبک زندگی
-          <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+        گربه
+          <ChevronDownIcon
+            class="mr-2 h-5 w-5 dark:!stroke-dark-700 fill-dark-700"
+            aria-hidden="true"
+          />
         </MenuButton>
       </div>
 
@@ -96,14 +99,13 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none"
+          class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 سگ
@@ -112,20 +114,17 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 گربه
               </button>
             </MenuItem>
-          </div>
-          <div class="px-1 py-1">
+
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 پرنده
@@ -134,38 +133,37 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 خزنده
               </button>
             </MenuItem>
-          </div>
 
-          <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 دیگر
               </button>
             </MenuItem>
           </div>
-        </MenuItems>
+        </MenuItems>  
       </transition>
     </Menu>
 
-    <Menu as="div" class="relative inline-block text-right">
+       <Menu as="div" class="relative inline-block text-right">
       <div>
         <MenuButton
-          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
+          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-dark-700"
         >
-          سفر و گردشگری
-          <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+        خزندگان
+          <ChevronDownIcon
+            class="mr-2 h-5 w-5 dark:!stroke-dark-700 fill-dark-700"
+            aria-hidden="true"
+          />
         </MenuButton>
       </div>
 
@@ -178,14 +176,13 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none"
+          class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 سگ
@@ -194,20 +191,17 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 گربه
               </button>
             </MenuItem>
-          </div>
-          <div class="px-1 py-1">
+
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 پرنده
@@ -216,38 +210,37 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 خزنده
               </button>
             </MenuItem>
-          </div>
 
-          <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 دیگر
               </button>
             </MenuItem>
           </div>
-        </MenuItems>
+        </MenuItems>  
       </transition>
     </Menu>
 
-    <Menu as="div" class="relative inline-block text-right">
+       <Menu as="div" class="relative inline-block text-right">
       <div>
         <MenuButton
-          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
+          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-dark-700"
         >
-          اخبار
-          <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+         پرندگان
+          <ChevronDownIcon
+            class="mr-2 h-5 w-5 dark:!stroke-dark-700 fill-dark-700"
+            aria-hidden="true"
+          />
         </MenuButton>
       </div>
 
@@ -260,14 +253,13 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none"
+          class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 سگ
@@ -276,20 +268,17 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 گربه
               </button>
             </MenuItem>
-          </div>
-          <div class="px-1 py-1">
+
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 پرنده
@@ -298,38 +287,37 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 خزنده
               </button>
             </MenuItem>
-          </div>
 
-          <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 دیگر
               </button>
             </MenuItem>
           </div>
-        </MenuItems>
+        </MenuItems>  
       </transition>
     </Menu>
 
-    <Menu as="div" class="relative inline-block text-right">
+       <Menu as="div" class="relative inline-block text-right">
       <div>
         <MenuButton
-          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-gray-200"
+          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-dark-700"
         >
-          مسئولیت اجتماعی
-          <ChevronDownIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
+         مسئولیت اجتماعی
+          <ChevronDownIcon
+            class="mr-2 h-5 w-5 dark:!stroke-dark-700 fill-dark-700"
+            aria-hidden="true"
+          />
         </MenuButton>
       </div>
 
@@ -342,36 +330,32 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute right-0 mt-6 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none"
+          class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
         >
           <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
-                سگ
+               درباره ما
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 گربه
               </button>
             </MenuItem>
-          </div>
-          <div class="px-1 py-1">
+
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 پرنده
@@ -380,30 +364,106 @@
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 خزنده
               </button>
             </MenuItem>
-          </div>
 
-          <div class="px-1 py-1">
             <MenuItem v-slot="{ active }">
               <button
                 :class="[
-                  active ? 'bg-gray-50 text-gray-800' : 'text-gray-900',
-                  'group flex w-full items-center rounded-md px-2 py-2 text-sm',
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
                 ]"
               >
                 دیگر
               </button>
             </MenuItem>
           </div>
-        </MenuItems>
+        </MenuItems>  
       </transition>
     </Menu>
+
+       <Menu as="div" class="relative inline-block text-right">
+      <div>
+        <MenuButton
+          class="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-0 focus-visible:ring-white/75 dark:!text-dark-700"
+        >
+          سرویس های ما
+          <ChevronDownIcon
+            class="mr-2 h-5 w-5 dark:!stroke-dark-700 fill-dark-700"
+            aria-hidden="true"
+          />
+        </MenuButton>
+      </div>
+
+      <transition
+        enter-active-class="transition duration-100 ease-out"
+        enter-from-class="transform scale-95 opacity-0"
+        enter-to-class="transform scale-100 opacity-100"
+        leave-active-class="transition duration-75 ease-in"
+        leave-from-class="transform scale-100 opacity-100"
+        leave-to-class="transform scale-95 opacity-0"
+      >
+        <MenuItems
+          class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
+        >
+          <div class="px-1 py-1">
+            <MenuItem v-slot="{ active }">
+              <button
+                :class="[
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
+                ]"
+              >
+                سگ
+              </button>
+            </MenuItem>
+            <MenuItem v-slot="{ active }">
+              <button
+                :class="[
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
+                ]"
+              >
+                گربه
+              </button>
+            </MenuItem>
+
+            <MenuItem v-slot="{ active }">
+              <button
+                :class="[
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
+                ]"
+              >
+                پرنده
+              </button>
+            </MenuItem>
+            <MenuItem v-slot="{ active }">
+              <button
+                :class="[
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
+                ]"
+              >
+                خزنده
+              </button>
+            </MenuItem>
+
+            <MenuItem v-slot="{ active }">
+              <button
+                :class="[
+                  'group flex w-full items-center rounded-md px-2 py-2 text-sm dark:hover:!bg-dark-900 hover:bg-gray-50 duration-300 transition-colors',
+                ]"
+              >
+                دیگر
+              </button>
+            </MenuItem>
+          </div>
+        </MenuItems>  
+      </transition>
+    </Menu>
+
+  
+
   </div>
 </template>
 

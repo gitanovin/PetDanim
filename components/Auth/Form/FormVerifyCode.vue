@@ -7,7 +7,7 @@
         >
           <div class="w-16 h-16">
             <input
-              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700"
+              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700 dark:!bg-dark-800 dark:!border-dark-700/20"
               type="text"
               name=""
               id=""
@@ -16,7 +16,7 @@
           -
           <div class="w-16 h-16">
             <input
-              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700"
+              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700  dark:!bg-dark-800 dark:!border-dark-700/20"
               type="text"
               name=""
               id=""
@@ -25,7 +25,7 @@
           -
           <div class="w-16 h-16">
             <input
-              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700"
+              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700  dark:!bg-dark-800 dark:!border-dark-700/20"
               type="text"
               name=""
               id=""
@@ -34,7 +34,7 @@
           -
           <div class="w-16 h-16">
             <input
-              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700"
+              class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-orange-700  dark:!bg-dark-800 dark:!border-dark-700/20"
               type="text"
               name=""
               id=""

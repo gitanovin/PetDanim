@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="pt-10 pb-16 lg:pb-28 lg:pt-20 space-y-16 lg:space-y-28">
-      <div class="mx-auto w-full w-full xl:max-w-7xl">
+      <div class="mx-auto w-full  xl:max-w-7xl">
         <div class="flex flex-col sm:justify-between sm:flex-row">
           <div class="flex space-x-2.5 rtl:space-x-reverse">
             <div class="nc-ModalCategories">

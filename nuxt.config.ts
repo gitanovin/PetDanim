@@ -57,7 +57,7 @@ export default defineNuxtConfig({
       ],
 
       bodyAttrs: {
-        class: 'font-fa dark:bg-gray-900'
+        class: 'font-fa bg-white text-gray-900 dark:!text-dark-700 dark:!bg-dark-900'
       },
     }
   },

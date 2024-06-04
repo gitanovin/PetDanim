@@ -1,7 +1,7 @@
 <template>
-  <div class="Hero isolate -z-20 opacity-50 hidden lg:flex"></div>
+  <div class="Hero !bg-cover bg-no-repeat isolate -z-20 opacity-50 hidden lg:flex dark:!hidden"></div>
   <div
-    class="lg:relative lg:flex  lg:flex-col lg:items-center lg:justify-center w-full lg:h-screen bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400 lg:rounded-tl-[300px] rounded-b-lg"
+    class="lg:relative lg:flex  lg:flex-col lg:items-center lg:justify-center w-full lg:h-screen bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400  dark:!from-dark-800 dark:!via-dark-800 dark:!to-dark-700/30 lg:rounded-tl-[300px] rounded-b-lg"
   >
     <section class="splash-inner lg:h-screen lg:py-48">
       <div class="splash-header lg:py-0 py-6">

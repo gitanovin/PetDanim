@@ -1,66 +1,66 @@
 <template>
-  <footer class="relative z-0 mx-auto w-full max-w-7xl dark:!text-neutral-200">
-    <div class="footer lg:px-0 px-4">
+  <footer class="relative z-0 dark:!text-dark-700 dark:!bg-dark-800">
+    <div class="footer lg:px-0 px-4  mx-auto w-full max-w-7xl">
       <div class="content pb-10 pt-10">
         <div class="mb-12 relative">
           <span
-            class="absolute border-t border-1 sm:top-2/4 top-5 trasform sm:translate-y-2/4 dark:border-orange-980 border-chambray-100 w-full z-0 right-0"
+            class="absolute border-t border-1 sm:top-2/4 top-5 trasform sm:translate-y-2/4 dark:border-dark-700/20 border-chambray-100 w-full z-0 right-0"
           ></span>
           <div
             class="flex items-center justify-between sm:flex-row flex-col relative z-10"
           >
             <div
-              class="logo w-fit-content dark:bg-dark-890 sm:px-0 bg-background-main-rgb px-5 sm:pl-8 sm:mb-0 mb-6 text-3xl text-orange-500 font-extrabold"
+              class="logo w-fit-content dark:!bg-dark-800 sm:px-0 bg-white px-5 sm:pl-8 sm:mb-0 mb-6 text-3xl text-orange-500 font-extrabold"
             >
             پتومن
             </div>
 
             <ul
-              class="flex dark:bg-dark-890 bg-background-main-rgb sm:pr-8 self-center"
+              class="flex dark:!bg-dark-800 bg-white sm:pr-8 self-center"
             >
               <li>
                 <a
-                  href="https://www.youtube.com/channel/UCXAJ3-8bZkSwqt9zGSvBF3w"
+                  href="https://www.youtube.com/channel/"
                   rel="nofollow"
-                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:bg-orange-800 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
+                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                 >
-                <YoutubeIcon  class="w-6 fill-primary"/>
+                <YoutubeIcon  class="w-6 fill-primary dark:!fill-dark-700 "/>
                 </a>
               </li>
               <li class="mr-2">
                 <a
-                  href="https://www.facebook.com/roocketi"
-                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:bg-orange-800 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
+                  href="https://www.facebook.com/"
+                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                   rel="nofollow"
                 >
-                 <FacebookIcon  class="w-6 fill-primary stroke-primary text-primary"/>
+                 <FacebookIcon  class="w-6 fill-primary stroke-primary text-primary dark:!fill-dark-700 "/>
                 </a>
               </li>
               <li class="mr-2">
                 <a
-                  href="https://twitter.com/roocketir"
-                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:bg-orange-800 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
+                  href="https://twitter.com/"
+                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                   rel="nofollow"
                 >
-                 <TwitterIcon  class="w-6 fill-primary "/>
+                 <TwitterIcon  class="w-6 fill-primary dark:!fill-dark-700  "/>
                 </a>
               </li>
               <li class="mr-2">
                 <a
-                  href="https://www.instagram.com/roocketir/"
-                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:bg-orange-800 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
+                  href="https://www.instagram.com/"
+                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                   rel="nofollow"
                 >
-                <Instagram class="w-6 stroke-primary fill-none "/>
+                <Instagram class="w-6 stroke-primary dark:!stroke-dark-700  fill-none "/>
                 </a>
               </li>
               <li class="mr-2">
                 <a
                   href="https://t.me/roocketir"
-                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:bg-orange-800 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear  hover:fill-white hover:text-white"
+                  class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear  hover:fill-white hover:text-white"
                   rel="nofollow"
                 >
-                 <TelegramIcon class="w-6 fill-primary  "/>
+                 <TelegramIcon class="w-6 fill-primary dark:!fill-dark-700  "/>
                 </a>
               </li>
             </ul>
@@ -78,7 +78,7 @@
                 درباره پت دانیم
               </h3>
               <span
-                class="z-0 w-40 h-8 flex absolute bg-orange-500 opacity-20 top-0 rounded-full -right-2"
+                class="z-0 w-8 h-8 flex absolute bg-orange-500 opacity-20 top-0 rounded-full -right-2 dark:!bg-dark-700"
               ></span>
             </div>
 
@@ -99,7 +99,7 @@
 
                 <a
                   href="/skills"
-                  class="inline-flex items-center group dark:hover:text-orange-60 dark:text-orange-950 text-orange-700 text-13 font-medium transition transform duration dark:hover:text-gray-210-20 hover:text-dark-700 md:mx-0 mx-auto"
+                  class="inline-flex items-center group dark:hover:text-orange-60 dark:!text-dark-700 text-orange-700 text-13 font-medium transition transform duration dark:hover:text-gray-210-20 hover:text-dark-700 md:mx-0 mx-auto"
                 >
                   مشاهده بیشتر
                   <svg
@@ -138,7 +138,7 @@
              خانواده ما
               </h3>
               <span
-                class="z-0 w-4 h-4 flex absolute bg-orange-700 opacity-20 top-0 rounded-full -right-2"
+                class="z-0 w-4 h-4 flex absolute bg-orange-700 opacity-20 top-0 rounded-full -right-2 dark:!bg-dark-700 dark:!bg-dark-700"
               ></span>
             </div>
             <ul class="flex flex-col md:items-start items-center">
@@ -205,7 +205,7 @@
                 ارتباط با ما
               </h3>
               <span
-                class="z-0 w-4 h-4 flex absolute bg-orange-700 opacity-20 top-0 rounded-full -right-2"
+                class="z-0 w-4 h-4 flex absolute bg-orange-700 opacity-20 top-0 rounded-full -right-2 dark:!bg-dark-700 dark:!bg-dark-700"
               ></span>
             </div>
 
@@ -214,7 +214,7 @@
                 <span class="flex items-center">
                   <span class="relative ml-3">
                     <i
-                      class="flex w-5 h-5 bg-orange-700 opacity-20 rounded-full"
+                      class="flex w-5 h-5 bg-orange-700 opacity-20 rounded-full dark:!bg-dark-700"
                     ></i>
 
                     <svg
@@ -254,7 +254,7 @@
                 <span class="flex items-center">
                   <span class="relative ml-3">
                     <i
-                      class="flex w-5 h-5 bg-orange-700 opacity-20 rounded-full"
+                      class="flex w-5 h-5 bg-orange-700 opacity-20 rounded-full dark:!bg-dark-700"
                     ></i>
                     <svg
                       class="dark:text-orange-950 text-orange-980 absolute -top-1 -left-2"
@@ -282,7 +282,7 @@
                 </span>
                 <a
                   class="dark:text-white text-biscay-650 dark:hover:text-orange-450 font-medium text-sm transition ltr transform hover:text-dark-700 duration-200 ease-linear"
-                  href="https://t.me/roocketir"
+                  href="https://t.me/"
                   >@petoman_support</a
                 >
               </li>
@@ -300,16 +300,16 @@
           </div>
         </div>
 
-        <div class="relative mt-2 flex md:justify-start justify-center mt-8">
+        <div class="relative flex md:justify-start justify-center mt-8">
           <p
-            class="dark:bg-dark-890 dark:text-gray-970 bg-background-main-rgb pl-3 text-center relative z-10 inline-block text-xs text-chambray-400"
+            class="dark:!bg-dark-800 dark:text-gray-970 bg-white pl-3 text-center relative z-10 inline-block text-xs text-dark-700"
           >
             1403 - کپی بخش یا کل هر کدام از مطالب پت دانیم تنها با کسب مجوز
             مکتوب امکان پذیر است
           </p>
 
           <span
-            class="absolute border-t border-1 top-2/4 trasform translate-y-2/4 dark:border-orange-980 border-chambray-100 w-full z-0 right-0"
+            class="absolute border-t border-1 top-2/4 trasform translate-y-2/4 dark:border-orange-980 border-dark-700/20 w-full z-0 right-0"
           ></span>
         </div>
       </div>

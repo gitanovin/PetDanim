@@ -3,7 +3,7 @@
       <section>
     <div class="mx-auto px-4 lg:px-0 w-screen max-w-7xl">
       <div
-        class="block-tickerwrap bg-gray-100 w-full max-w-lg p-2 rounded-b-md"
+        class="block-tickerwrap bg-gray-100 dark:!bg-dark-800/70 dark:!text-dark-700 w-full max-w-lg p-2 rounded-b-md"
       >
         <div class="th90-ticker block-newsticker">
           <div class="posts">

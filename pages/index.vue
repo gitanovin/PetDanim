@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <main class="dark:bg-gray-900">
+    <main class="dark:bg-dark-900">
       <HeroSlider />
       <TopCategories />
       <TopPosts />

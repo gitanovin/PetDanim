@@ -3,10 +3,35 @@
 @tailwind utilities;
 
 @layer base {
-.dark .border,.dark .border-b,.dark .border-t,.dark .border-r,.dark .border-l{
+/* .dark .border,.dark .border-b,.dark .border-t,.dark .border-r,.dark .border-l{
     border-color: rgb(51, 49, 53) !important;
-}
+} */
 /* width */
+
+
+.dark::-webkit-scrollbar {
+    width: 5px !important;
+
+}
+ 
+/* Track */
+.dark::-webkit-scrollbar-track {
+    background: hsla(231, 16%, 18%, 0.445);
+    border-radius: 5px !important;
+}
+ 
+/* Handle */
+.dark::-webkit-scrollbar-thumb {
+    background: #353535;
+    border-radius: 5px !important;
+}
+ 
+/* Handle on hover */
+.dark::-webkit-scrollbar-thumb:hover {
+    background: #3f3e3e !important;
+}
+
+
 ::-webkit-scrollbar {
     width: 8px;
 
@@ -14,19 +39,19 @@
  
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #dbdbdb;
+    background: hsla(231, 15%, 38%, 0.473);
     border-radius: 5px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #7a7a7a;
+    background: #262834;
     border-radius: 5px;
 }
  
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #3f3e3e;
+    background: #1a1c29;
 }
 
 

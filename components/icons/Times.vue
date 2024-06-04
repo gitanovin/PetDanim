@@ -1,15 +1,9 @@
 <template>
   <div>
     <svg
-      viewBox="0 0 64 64"
-      version="1.1"
+      viewBox="0 0 24 24"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style="
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        stroke-linejoin: round;
-        stroke-miterlimit: 2;
-      "
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
@@ -18,74 +12,9 @@
         stroke-linejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        <rect
-          id="Icons"
-          x="-448"
-          y="-64"
-          width="1280"
-          height="800"
-          style="fill: none"
-        ></rect>
-        <g id="Icons1" serif:id="Icons">
-          <g id="Strike"></g>
-          <g id="H1"></g>
-          <g id="H2"></g>
-          <g id="H3"></g>
-          <g id="list-ul"></g>
-          <g id="hamburger-1"></g>
-          <g id="hamburger-2"></g>
-          <g id="list-ol"></g>
-          <g id="list-task"></g>
-          <g id="trash"></g>
-          <g id="vertical-menu"></g>
-          <g id="horizontal-menu"></g>
-          <g id="sidebar-2"></g>
-          <g id="Pen"></g>
-          <g id="Pen1" serif:id="Pen"></g>
-          <g id="clock"></g>
-          <g id="external-link"></g>
-          <g id="hr"></g>
-          <g id="info"></g>
-          <g id="warning"></g>
-          <g id="plus-circle"></g>
-          <g id="minus-circle"></g>
-          <g id="vue"></g>
-          <g id="cog"></g>
-          <g id="logo"></g>
-          <path
-            id="times"
-            d="M32.033,29.19l15.55,-15.55l2.863,2.863l-15.55,15.55l15.55,15.55l-2.863,2.863l-15.55,-15.55l-15.55,15.55l-2.863,-2.863l15.55,-15.55l-15.55,-15.55l2.863,-2.863l15.55,15.55Z"
-          ></path>
-          <path
-            d="M32.033,29.19l15.55,-15.55l2.863,2.863l-15.55,15.55l15.55,15.55l-2.863,2.863l-15.55,-15.55l-15.55,15.55l-2.863,-2.863l15.55,-15.55l-15.55,-15.55l2.863,-2.863l15.55,15.55Z"
-          ></path>
-          <g id="radio-check"></g>
-          <g id="eye-slash"></g>
-          <g id="eye"></g>
-          <g id="toggle-off"></g>
-          <g id="shredder"></g>
-          <g
-            id="spinner--loading--dots-"
-            serif:id="spinner [loading, dots]"
-          ></g>
-          <g id="react"></g>
-          <g id="check-selected"></g>
-          <g id="turn-off"></g>
-          <g id="code-block"></g>
-          <g id="user"></g>
-          <g id="coffee-bean"></g>
-          <g id="coffee-beans">
-            <g id="coffee-bean1" serif:id="coffee-bean"></g>
-          </g>
-          <g id="coffee-bean-filled"></g>
-          <g id="coffee-beans-filled">
-            <g id="coffee-bean2" serif:id="coffee-bean"></g>
-          </g>
-          <g id="clipboard"></g>
-          <g id="clipboard-paste"></g>
-          <g id="clipboard-copy"></g>
-          <g id="Layer1"></g>
-        </g>
+        <path
+          d="M13.06 12L17.48 7.57996C17.5537 7.5113 17.6128 7.4285 17.6538 7.3365C17.6948 7.2445 17.7168 7.14518 17.7186 7.04448C17.7204 6.94378 17.7018 6.84375 17.6641 6.75036C17.6264 6.65697 17.5703 6.57214 17.499 6.50092C17.4278 6.4297 17.343 6.37356 17.2496 6.33584C17.1562 6.29811 17.0562 6.27959 16.9555 6.28137C16.8548 6.28314 16.7555 6.30519 16.6635 6.34618C16.5715 6.38717 16.4887 6.44627 16.42 6.51996L12 10.94L7.58 6.51996C7.43782 6.38748 7.24978 6.31535 7.05548 6.31878C6.86118 6.32221 6.67579 6.40092 6.53838 6.53834C6.40096 6.67575 6.32225 6.86113 6.31882 7.05544C6.3154 7.24974 6.38752 7.43778 6.52 7.57996L10.94 12L6.52 16.42C6.37955 16.5606 6.30066 16.7512 6.30066 16.95C6.30066 17.1487 6.37955 17.3393 6.52 17.48C6.66062 17.6204 6.85125 17.6993 7.05 17.6993C7.24875 17.6993 7.43937 17.6204 7.58 17.48L12 13.06L16.42 17.48C16.5606 17.6204 16.7512 17.6993 16.95 17.6993C17.1488 17.6993 17.3394 17.6204 17.48 17.48C17.6204 17.3393 17.6993 17.1487 17.6993 16.95C17.6993 16.7512 17.6204 16.5606 17.48 16.42L13.06 12Z"
+        ></path>
       </g>
     </svg>
   </div>

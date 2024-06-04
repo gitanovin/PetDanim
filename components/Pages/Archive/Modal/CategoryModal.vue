@@ -4,20 +4,20 @@
       <div class="min-h-screen px-1 text-center md:px-4">
         <div
           @click="closeModal()"
-          class="fixed inset-0 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80 opacity-100"
+          class="fixed inset-0 bg-dark-900 bg-opacity-50 dark:!bg-opacity-80 opacity-100"
         ></div>
         <span class="inline-block h-screen align-middle" aria-hidden="true"
           >&ZeroWidthSpace;</span
         >
         <div
-          class="inline-block w-full my-5 overflow-hidden text-left align-middle transition-all transform bg-white border border-black border-opacity-5 shadow-xl rounded-2xl sm:my-8 dark:bg-neutral-800 dark:border-neutral-700 text-neutral-900 dark:text-neutral-300 max-w-screen-xl opacity-100 scale-100"
+          class="inline-block w-full my-5 overflow-hidden text-left align-middle transition-all transform bg-white border border-black border-opacity-5 shadow-xl rounded-2xl sm:my-8 dark:!bg-dark-800 dark:!border-dark-700/20 text-neutral-900 dark:!text-dark-700 max-w-screen-xl opacity-100 scale-100"
         >
           <div
-            class="py-4 px-6 text-center relative border-b border-neutral-100 dark:border-neutral-700 md:py-5"
+            class="py-4 px-6 text-center relative border-b border-neutral-100 dark:!border-dark-700/20 md:py-5"
           >
             <button
               @click="closeModal()"
-              class="w-8 h-8 flex items-center justify-center rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 absolute left-2 top-1/2 transform -translate-y-1/2 sm:left-4 focus:outline-none"
+              class="w-8 h-8 flex items-center justify-center rounded-full text-neutral-700 dark:!text-dark-700 hover:bg-neutral-100 dark:hover:!bg-dark-900 absolute left-2 top-1/2 transform -translate-y-1/2 sm:left-4 focus:outline-none"
             >
               <span class="sr-only">Close</span
               ><svg
@@ -35,9 +35,7 @@
               </svg>
             </button>
             <h3
-              class="text-base font-semibold text-neutral-900 lg:text-xl dark:text-neutral-200 mx-10"
-              id="headlessui-dialog-title-:r68:"
-              data-headlessui-state="open"
+              class="text-base font-semibold text-neutral-900 lg:text-xl dark:!text-dark-700 mx-10"
             >
               مشاهده دسته های دیگر
             </h3>
@@ -60,12 +58,12 @@
                 </div>
                 <div>
                   <h2
-                    class="nc-card-title text-neutral-900 dark:text-neutral-100 text-sm sm:text-base font-medium sm:font-semibold"
+                    class="nc-card-title text-neutral-900 dark:!text-neutral-100 text-sm sm:text-base font-medium sm:font-semibold"
                   >
                     سگ ها
                   </h2>
                   <span
-                    class="text-xs block mt-[2px] text-neutral-500 dark:text-neutral-400 font-fd"
+                    class="text-xs block mt-[2px] text-neutral-500 dark:!text-dar-400 font-fd"
                     >13 پست</span
                   >
                 </div></a
