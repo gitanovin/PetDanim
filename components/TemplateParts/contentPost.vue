@@ -1,7 +1,7 @@
 <template>
   <article>
     <div
-      class="relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 h-full"
+      class="relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:!bg-dark-700/10 h-full"
     >
       <div
         class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3"
@@ -18,7 +18,7 @@
                 data-nc-id="PostTypeFeaturedIcon"
               >
                 <span
-                  class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
+                  class="bg-dark-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11"
                 >
                   <Post
                     class="text-white fill-white bg-gray-900/20 rounded-full"
@@ -44,7 +44,7 @@
       </span>
       <div class="p-4 flex flex-col space-y-3">
         <div
-          class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 leading-none text-xs"
+          class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 leading-none text-xs"
         >
           <a
             class="relative flex items-center space-x-2 rtl:space-x-reverse"
@@ -60,19 +60,19 @@
               /><span class="wil-avatar__name">F</span>
             </div>
             <span
-              class="block text-neutral-700 hover:text-black dark:text-neutral-300 dark:hover:text-white font-medium"
+              class="block text-neutral-700 hover:text-black dark:!text-neutral-300 dark:hover:text-white font-medium"
               >محبوب حسین زاده</span
             > </a
           ><span
             class="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium"
             >·</span
           ><span
-            class="text-neutral-500 dark:text-neutral-400 font-normal font-fd"
+            class="text-neutral-500 dark:!text-neutral-400 font-normal font-fd"
             >21 اردیبهشت 1403</span
           >
         </div>
         <h3
-          class="nc-card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100"
+          class="nc-card-title block text-base font-semibold text-neutral-900 dark:!text-neutral-100"
         >
           <span
             class="line-clamp-2"
@@ -82,32 +82,32 @@
         </h3>
         <div class="flex items-end justify-between mt-auto">
           <div
-            class="nc-PostCardLikeAndComment flex items-center space-x-2 rtl:space-x-reverse relative"
+            class="flex items-center space-x-2 rtl:space-x-reverse relative"
           >
             <button
-              class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
+              class="relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:!text-neutral-200 dark:!bg-dark-900 hover:bg-rose-50 dark:hover:!bg-rose-100 hover:text-rose-600 dark:hover:!text-rose-500"
               title="Liked"
             >
               <Like />
-              <span class="ml-1 text-neutral-900 dark:text-neutral-200 font-fd"
+              <span class="ml-1font-fd"
                 >34</span
               ></button
             ><a
-              class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
+              class="relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:!text-neutral-200 dark:!bg-dark-900 hover:bg-teal-50 dark:hover:!bg-teal-100 hover:text-teal-600 dark:hover:!text-teal-500 hidden sm:flex px-3 h-8 text-xs"
               title="Comments"
               href="/single/demo-slug#comments"
             >
               <Comment />
-              <span class="ml-1 text-neutral-900 dark:text-neutral-200 font-fd"
+              <span class="ml-1font-fd"
                 >110</span
               >
             </a>
           </div>
           <div
-            class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
+            class="flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
           >
             <button
-              class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+              class="relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:!bg-dark-900 dark:hover:!bg-dark-900/50"
               title="Save to reading list"
             >
               <Bookmark />
@@ -120,7 +120,6 @@
 </template>
 
 <script setup>
-import NewsIcon from "@/components/icons/NewsIcon.vue";
 import Post from "@/components/icons/Post.vue";
 import Bookmark from "@/components/icons/Bookmark.vue";
 import Like from "@/components/icons/Heart.vue";

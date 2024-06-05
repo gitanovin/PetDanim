@@ -1,6 +1,6 @@
 <template>
   <footer class="relative z-0 dark:!text-dark-700 dark:!bg-dark-800">
-    <div class="footer lg:px-0 px-4  mx-auto w-full max-w-7xl">
+    <div class="footer lg:px-0 px-8  mx-auto w-full max-w-7xl">
       <div class="content pb-10 pt-10">
         <div class="mb-12 relative">
           <span
@@ -300,7 +300,7 @@
           </div>
         </div>
 
-        <div class="relative flex md:justify-start justify-center mt-8">
+        <div class="relative flex md:justify-start justify-center mt-8   px-2 lg:px-0">
           <p
             class="dark:!bg-dark-800 dark:text-gray-970 bg-white pl-3 text-center relative z-10 inline-block text-xs text-dark-700"
           >

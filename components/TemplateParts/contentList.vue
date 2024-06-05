@@ -16,7 +16,9 @@
               >گربه ها</a
             >
           </div>
-          <h2 class="block font-semibold text-sm sm:text-base dark:!text-dark-700">
+          <h2
+            class="block font-semibold text-sm sm:text-base dark:!text-dark-700"
+          >
             <a
               class="line-clamp-2 dark:!text-gray-300"
               title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
@@ -60,29 +62,23 @@
             class="nc-PostCardLikeAndComment flex items-center space-x-2 rtl:space-x-reverse relative"
           >
             <button
-              class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 dark:hover:bg-rose-100 hover:text-rose-600 dark:hover:text-rose-500"
+              class="nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors px-3 h-8 text-xs text-neutral-700 bg-neutral-50 dark:!text-neutral-200 dark:!bg-dark-900 hover:bg-rose-50 dark:hover:!bg-rose-100 hover:text-rose-600 dark:hover:!text-rose-500"
               title="Liked"
             >
-              <Like /><span
-                class="ml-1 text-neutral-900 dark:text-neutral-200 font-fd"
-                >34</span
-              ></button
+              <Like /><span class="ml-1 font-fd">34</span></button
             ><a
-              class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:text-neutral-200 dark:bg-neutral-800 hover:bg-teal-50 dark:hover:bg-teal-100 hover:text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
+              class="nc-PostCardCommentBtn relative items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-50 transition-colors dark:!text-neutral-200 dark:!bg-dark-900 hover:bg-teal-50 dark:hover:!bg-teal-100 hover:!text-teal-600 dark:hover:text-teal-500 hidden sm:flex px-3 h-8 text-xs"
               title="Comments"
               href="/single/demo-slug#comments"
             >
-              <Comment /><span
-                class="ml-1 text-neutral-900 dark:text-neutral-200 font-fd"
-                >58</span
-              >
+              <Comment /><span class="ml-1 font-fd">58</span>
             </a>
           </div>
           <div
-            class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative"
+            class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
           >
             <button
-              class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+              class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 dark:!bg-dark-900 dark:hover:!bg-neutral-700"
               title="Save to reading list"
             >
               <Bookmark />
@@ -95,10 +91,16 @@
         href="//single"
         ><img
           alt="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
-          class="object-cover w-full h-full "
+          class="object-cover w-full h-full"
           src="@/assets/images/3.jpg" /><span class="absolute bottom-1 start-1"
           ><div class="nc-PostTypeFeaturedIcon"></div></span
       ></a>
     </div>
   </article>
 </template>
+
+<script setup>
+import Bookmark from "@/components/icons/Bookmark.vue";
+import Like from "@/components/icons/Heart.vue";
+import Comment from "@/components/icons/Comment.vue";
+</script>
