@@ -10,7 +10,7 @@
               class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center"
             >
               <RelatedIcon
-                class="w-12 rounded-lg ml-2 p-1 bg-orange-50 fill-primary"
+                class="w-12 rounded-lg ml-2 p-1 bg-orange-50 fill-primary "
               />
               <span>پست های مرتبط</span>
             </h2>
