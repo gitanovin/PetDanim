@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="flex flex-col mb-8 relative px-6 lg:px-0">
+    <div class="flex flex-col relative px-6 lg:px-0">
       <div
         class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:!text-neutral-50"
       >
@@ -9,11 +9,13 @@
             class="text-xl md:text-3xl lg:text-xl font-bold flex items-center"
           >
             <MostanadIcon
-              class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white"
+              class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white dark:!bg-dark-700/20"
             />
             <span> مستندات پت ها </span>
           </h2>
-          <div class="bg-orange-500 w-4 h-4 rounded-full"></div>
+          <div
+            class="bg-orange-500 w-4 h-4 rounded-full dark:!bg-dark-700"
+          ></div>
         </div>
       </div>
 

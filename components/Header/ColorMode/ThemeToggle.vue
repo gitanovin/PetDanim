@@ -18,7 +18,7 @@ const setColorTheme = (newTheme: Theme) => {
       <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
         <Night
           v-if="$colorMode.value == 'dark'"
-          class="text-xl h-5 w-5 dark:!fill-gray-50 dark:!text-dark-700 dark:!stroke-dark-700 stroke-dark-800"
+          class="text-xl h-5 w-5 dark:!fill-dark-700 dark:!text-dark-700 dark:!stroke-dark-700 stroke-dark-800"
         />
         <Sun
           v-else

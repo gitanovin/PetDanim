@@ -14,13 +14,16 @@
         />
       </span>
     </button>
+    <transition-group name="modal">
+      <SearchModal 
+      v-if="OpenSearchModal"
+      @closeModal="OpenSearchModal = false" />
+    </transition-group>
   </div>
-   
-
-
 </template>
 
 <script setup>
 import Search from "@/components/icons/Search.vue";
+import SearchModal from "@/components/Pages/Archive/Modal/Search/searchModal.vue";
 const OpenSearchModal = ref(false);
 </script>

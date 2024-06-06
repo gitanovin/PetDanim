@@ -3,8 +3,8 @@
     class="relative z-[99] "
    @click="closeModal()"
   >
-    <div class="fixed inset-0 bg-black/40 transition-opacity opacity-100"></div>
-    <div class="fixed inset-0 z-10 overflow-y-auto scrollbar-track-mahak p-4 sm:p-6 md:p-20 ">
+    <div class="fixed inset-0 bg-black/40 transition-opacity opacity-100  h-screen w-screen"></div>
+    <div class="fixed inset-0 z-50  scrollbar-track-mahak p-4 sm:p-6 md:p-20 ">
       <form
         class="block mx-auto max-w-2xl transform overflow-hidden rounded-xl bg-white dark:!bg-dark-800 shadow-2xl ring-1 ring-black ring-opacity-5 transition-all opacity-100 scale-100"
       >

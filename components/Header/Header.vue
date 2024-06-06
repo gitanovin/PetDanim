@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-white/75 backdrop-blur border-b -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100 text-neutral-900 dark:!border-gray-700/20 dark:!bg-dark-800  dark:!text-dark-700"
+    class="bg-white/75 backdrop-blur border-b -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100 text-neutral-900 dark:!border-gray-700/20 dark:!bg-dark-800 dark:!text-dark-700"
   >
     <div
       class="mx-auto px-4 lg:px-0 w-full max-w-7xl flex items-center justify-between gap-3 h-[4rem]"
@@ -19,11 +19,12 @@
         <UserLogeded />
         <!-- BAfter User Login -->
 
-        <MenuMobile/>
+        <MenuMobile />
 
         <DataHeader />
       </div>
     </div>
+
   </header>
 </template>
 

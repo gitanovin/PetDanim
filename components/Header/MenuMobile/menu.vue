@@ -5,7 +5,7 @@
     aria-label="Open Menu"
   >
     <span class="flex-shrink-0" aria-hidden="true">
-      <MenuList class="w-6 dark:!stroke-dark-700" />
+      <MenuList class="w-6 dark:!stroke-dark-700 stroke-dark-900" />
     </span>
   </button>
 </template>

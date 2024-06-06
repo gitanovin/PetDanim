@@ -1,8 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-
-  css: ['~/assets/css/app.css'],
+  css: ['~/assets/css/app.css','~/assets/styles/__theme_colors.scss'],
+  
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-splide',
