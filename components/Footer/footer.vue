@@ -117,7 +117,7 @@
                     ></path>
                     <path
                       fill="currentColor"
-                      class="fill-current duration-200 transition dark:group-hover:text-orange-60 dark:text-orange-950 text-orange dark:hover:text-gray-210-700 grou-hover:text-dark-700"
+                      class="fill-current duration-200 transition dark:group-hover:text-orange-60 dark:text-orange-600 text-orange-500 dark:hover:text-gray-210-700 grou-hover:text-dark-700"
                       d="M0.660621 4.20689C0.706196 4.16087 0.87646 3.96637 1.0364 3.80487C1.96941 2.79331 4.40555 1.13921 5.67995 0.632993C5.87343 0.552242 6.36272 0.38032 6.62499 0.368164C6.87523 0.368164 7.11429 0.42634 7.34216 0.540954C7.6268 0.701589 7.85381 0.95513 7.97936 1.25382C8.05933 1.46048 8.18488 2.08131 8.18488 2.09259C8.30957 2.77073 8.3775 3.87346 8.3775 5.09255C8.3775 6.25259 8.30957 7.31017 8.20724 7.99959C8.19606 8.01175 8.07051 8.78192 7.93379 9.04589C7.68355 9.52866 7.19426 9.82735 6.67057 9.82735H6.62499C6.28361 9.81606 5.56644 9.5165 5.56644 9.50608C4.35998 8.99987 1.98145 7.42565 1.02522 6.37936C1.02522 6.37936 0.755212 6.11019 0.638263 5.94261C0.455961 5.70122 0.36481 5.40253 0.36481 5.10383C0.36481 4.77041 0.46714 4.46043 0.660621 4.20689"
                     ></path>
                   </svg>
@@ -218,7 +218,7 @@
                     ></i>
 
                     <svg
-                      class="dark:text-orange-950 text-orange-980 absolute -top-1 -left-2"
+                      class="dark:text-orange-600 text-orange-500 absolute -top-1 -left-2"
                       width="17"
                       height="15"
                       viewBox="0 0 17 15"
@@ -257,7 +257,7 @@
                       class="flex w-5 h-5 bg-orange-700 opacity-20 rounded-full dark:!bg-dark-700"
                     ></i>
                     <svg
-                      class="dark:text-orange-950 text-orange-980 absolute -top-1 -left-2"
+                      class="dark:text-orange-600 text-orange-500 absolute -top-1 -left-2"
                       width="17"
                       height="17"
                       viewBox="0 0 17 17"
