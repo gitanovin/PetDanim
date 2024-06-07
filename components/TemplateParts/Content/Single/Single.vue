@@ -1,4 +1,5 @@
 <template>
+    <HeaderArticleOne/>
     <div class="mt-10 px-6">
         <div class="relative">
             <div class="nc-SingleContent space-y-10 dark:!text-gray-300">
@@ -538,6 +539,7 @@
 </template>
 
 <script setup>
+import HeaderArticleOne from "@/components/TemplateParts/Content/Single/header/HeaderArticleOne.vue";
 import Bookmark from "@/components/icons/Bookmark.vue";
 import Like from "@/components/icons/Heart.vue";
 import Comment from "@/components/icons/Comment.vue";
