@@ -49,7 +49,7 @@
   }
 
   .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    color: var(--tw-prose-links);
+    /* color: var(--tw-prose-links); */
     text-decoration: underline;
     font-weight: 500;
   }
@@ -192,7 +192,7 @@
     ) {
     font-weight: 500;
     font-style: italic;
-    color: var(--tw-prose-quotes);
+    /* color: var(--tw-prose-quotes); */
     border-right-width: 0.25rem;
     border-right-color: var(--tw-prose-quote-borders);
     quotes: "\201C""\201D""\2018""\2019";
@@ -233,7 +233,7 @@
   }
 
   .prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    color: var(--tw-prose-headings);
+    /* color: var(--tw-prose-headings); */
     font-weight: 700;
     font-size: 1.5em;
     margin-top: 2em;
@@ -250,7 +250,7 @@
   }
 
   .prose :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    color: var(--tw-prose-headings);
+    /* color: var(--tw-prose-headings); */
     font-weight: 600;
     font-size: 1.25em;
     margin-top: 1.6em;
@@ -267,7 +267,7 @@
   }
 
   .prose :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-    color: var(--tw-prose-headings);
+    /* color: var(--tw-prose-headings); */
     font-weight: 600;
     margin-top: 1.5em;
     margin-bottom: 0.5em;

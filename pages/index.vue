@@ -1,8 +1,7 @@
 <template>
   <main class="dark:bg-dark-900">
     <TopSliderSection class="dark:!bg-dark-900/30 bg-gray-50 py-4 lg:py-16">
-      <Splide
-        :options="{
+      <Splide :options="{
           perPage: 3,
           perMove: 1,
           type: 'loop',
@@ -52,8 +51,7 @@
               gap: '1rem',
             },
           },
-        }"
-      >
+        }">
         <SplideSlide class="splide__slide rounded-lg">
           <contentSlider />
         </SplideSlide>
@@ -71,8 +69,7 @@
     <BlogSection class="dark:!bg-dark-700/25 bg-gray-50 py-16 lg:py-16">
       <HeaderSection />
       <ContentPost>
-        <Splide
-          :options="{
+        <Splide :options="{
             perPage: 4,
             type: 'loop',
             direction: 'rtl',
@@ -111,8 +108,7 @@
                 gap: '1rem',
               },
             },
-          }"
-        >
+          }">
           <SplideSlide class="splide__slide rounded-lg SliderPost">
             <content2 />
           </SplideSlide>
@@ -128,9 +124,10 @@
       </HeaderSection>
 
       <ContentPost
-        class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 lg:px-0"
-      >
+        class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 lg:px-0">
         <content />
+
+        <contentGallerySlide />
       </ContentPost>
     </BlogSection>
     <!-- <=======END BLOG SECTION POST-V-1==========> -->
@@ -207,6 +204,7 @@ import contentList from "@/components/TemplateParts/contentList.vue";
 import contentVideo from "@/components/TemplateParts/contentVideo.vue";
 import contentSlider from "@/components/TemplateParts/contentSlider.vue";
 import contentTag from "@/components/TemplateParts/contentTag.vue";
+import contentGallerySlide from "@/components/TemplateParts/contentGallerySlide.vue";
 import contentCategory from "@/components/TemplateParts/contentCategory.vue";
 import BannerAds from "@/components/Banner/banner.vue";
 const postSliderOptions = ref(sliderConfig[0]);

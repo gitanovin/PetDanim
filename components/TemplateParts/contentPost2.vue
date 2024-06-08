@@ -42,7 +42,10 @@
               </span>
             </h2>
             <div class="flex mt-2.5 relative items-center">
-              <Author />
+              <Author>
+                <AuthorImage/>
+                <AuthorName/>
+                </Author>
 
 
               <span class="mx-[6px] font-medium">·</span>
@@ -60,11 +63,11 @@
 import PostCover from "@/components/TemplateParts/Media/Cover.vue";
 import PostCategory from "@/components/TemplateParts/Badge/PostCategory.vue";
 import Author from "@/components/TemplateParts/MetaAction/Author/Author.vue";
+import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.vue";
+import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImage.vue";
 import LikeButton from "@/components/TemplateParts/MetaAction/Like.vue";
 import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
-import PostBigTitle from "@/components/TemplateParts/Title/PostBigTitle.vue";
-import PostCardCaption from "@/components/TemplateParts/Caption/PostCardCaption.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
 </script>

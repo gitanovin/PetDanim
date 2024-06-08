@@ -13,7 +13,10 @@
         <div
           class="PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 leading-none text-xs"
         >
-          <Author />
+          <Author>
+<AuthorImage/>
+<AuthorName/>
+            </Author>
           <span
             class="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium"
             >·</span
@@ -42,6 +45,8 @@
 import PostCover from "@/components/TemplateParts/Media/PostCardCover.vue";
 import PostCategory from "@/components/TemplateParts/Badge/PostCategory.vue";
 import Author from "@/components/TemplateParts/MetaAction/Author/Author.vue";
+import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.vue";
+import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImage.vue";
 import LikeButton from "@/components/TemplateParts/MetaAction/Like.vue";
 import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";

@@ -33,10 +33,7 @@
       <div class="absolute bottom-0 inset-x-0 p-4 flex flex-col flex-grow">
         <a class="absolute inset-0" href="/single-audio/this-is-single-slug"></a>
         <div class="mb-3">
-          <div class="nc-CategoryBadgeList flex flex-wrap space-x-2">
-            <a class="transition-colors hover:text-white duration-300 nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800"
-              href="/archive/the-demo-archive-slug">سگ ها</a>
-          </div>
+          <PostCategory/>
         </div>
         <div class="inline-flex items-center text-xs text-neutral-300">
           <div class="block">
@@ -45,7 +42,10 @@
               </span>
             </h2>
             <div class="flex mt-2.5 relative items-center">
-              <Author />
+              <Author>
+                <AuthorImage />
+                <AuthorName />
+              </Author>
 
 
               <span class="mx-[6px] font-medium">·</span>
@@ -63,11 +63,11 @@
 import PostCover from "@/components/TemplateParts/Media/Cover.vue";
 import PostCategory from "@/components/TemplateParts/Badge/PostCategory.vue";
 import Author from "@/components/TemplateParts/MetaAction/Author/Author.vue";
+import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.vue";
+import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImage.vue";
 import LikeButton from "@/components/TemplateParts/MetaAction/Like.vue";
 import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
-import PostBigTitle from "@/components/TemplateParts/Title/PostBigTitle.vue";
-import PostCardCaption from "@/components/TemplateParts/Caption/PostCardCaption.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
 </script>
