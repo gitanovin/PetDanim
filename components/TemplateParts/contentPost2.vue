@@ -44,12 +44,12 @@
             <div class="flex mt-2.5 relative items-center">
               <Author>
                 <AuthorImage/>
-                <AuthorName/>
+                <AuthorName class="text-white"/>
                 </Author>
 
 
               <span class="mx-[6px] font-medium">·</span>
-              <Data />
+              <Data class="text-white" />
             </div>
 
           </div>

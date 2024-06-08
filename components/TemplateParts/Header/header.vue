@@ -9,7 +9,7 @@
             class="text-xl md:text-3xl lg:text-xl font-bold flex items-center"
           >
             <MostanadIcon
-              class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white dark:!bg-dark-700/20"
+              class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white dark:!bg-dark-700/20 bg-orange-500"
             />
             <span> مستندات پت ها </span>
           </h2>

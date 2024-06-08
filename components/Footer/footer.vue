@@ -24,7 +24,7 @@
                   rel="nofollow"
                   class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                 >
-                <YoutubeIcon  class="w-6 fill-primary dark:!fill-dark-700 "/>
+                <YoutubeIcon  class="w-6 fill-primary-500 dark:!fill-dark-700 "/>
                 </a>
               </li>
               <li class="mr-2">
@@ -33,7 +33,7 @@
                   class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                   rel="nofollow"
                 >
-                 <FacebookIcon  class="w-6 fill-primary stroke-primary text-primary dark:!fill-dark-700 "/>
+                 <FacebookIcon  class="w-6 fill-primary-500 stroke-primary text-primary dark:!fill-dark-700 "/>
                 </a>
               </li>
               <li class="mr-2">
@@ -42,7 +42,7 @@
                   class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                   rel="nofollow"
                 >
-                 <TwitterIcon  class="w-6 fill-primary dark:!fill-dark-700  "/>
+                 <TwitterIcon  class="w-6 fill-primary-500 dark:!fill-dark-700  "/>
                 </a>
               </li>
               <li class="mr-2">
@@ -51,7 +51,7 @@
                   class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear"
                   rel="nofollow"
                 >
-                <Instagram class="w-6 stroke-primary dark:!stroke-dark-700  fill-none "/>
+                <Instagram class="w-6 stroke-primary dark:!stroke-dark-700 stroke-orange-500  fill-none "/>
                 </a>
               </li>
               <li class="mr-2">
@@ -60,7 +60,7 @@
                   class="group flex items-center rounded justify-center w-10 h-10 dark:hover:bg-orange-970 dark:!bg-dark-900/50 dark:bg-opacity-25 bg-orange-50 group hover:bg-orange-200 transition duration-300 ease-linear  hover:fill-white hover:text-white"
                   rel="nofollow"
                 >
-                 <TelegramIcon class="w-6 fill-primary dark:!fill-dark-700  "/>
+                 <TelegramIcon class="w-6 fill-primary-500 dark:!fill-dark-700  "/>
                 </a>
               </li>
             </ul>
