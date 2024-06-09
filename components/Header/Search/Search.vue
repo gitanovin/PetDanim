@@ -24,6 +24,6 @@
 
 <script setup>
 import Search from "@/components/icons/Search.vue";
-import SearchModal from "@/components/Pages/Archive/Modal/Search/searchModal.vue";
+import SearchModal from "@/components/TemplateParts/Modal/Search/searchModal.vue";
 const OpenSearchModal = ref(false);
 </script>

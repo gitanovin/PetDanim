@@ -1,9 +1,10 @@
 <template>
-<main class="bg-gray-100/50">
+  <section>
     <Author />
-  </main>
+  </section>
+
 </template>
 
 <script setup>
-import Author from "@/components/Pages/Archive/Author/author.vue";
+import Author from "~/components/TemplateParts/Author/author.vue";
 </script>

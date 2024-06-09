@@ -1,9 +1,12 @@
 <template>
-    <page />
+    <section>
+        <page />
+    </section>
+
 </template>
 
 <script setup>
-import page from "@/components/TemplateParts/Content/Single/page.vue";
+import page from "@/components/TemplateParts/Content/Single/Page.vue";
 definePageMeta({
     layout: 'page'
 })
