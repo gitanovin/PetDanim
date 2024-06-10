@@ -59,7 +59,7 @@
     </TopSliderSection>
 
     <BlogSection class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-      <HeaderSection></HeaderSection>
+      <HeaderSection/>
       <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         <contentCategory />
       </Grid>
@@ -134,7 +134,7 @@
 
     <!-- <=======START BLOG SECTION POST-V-1==========> -->
     <BlogSection class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-      <HeaderSection> </HeaderSection>
+      <HeaderSection/>
 
       <ContentPost>
         <Splide :options="postSliderOptions">
@@ -153,7 +153,7 @@
       </Header-Section>
 
       <Grid class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4">
-        <content-Big-Post />
+        <contentBigPost />
         <Content-List-Slot>
           <content-List />
         </Content-List-Slot>

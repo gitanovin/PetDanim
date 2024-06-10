@@ -5,8 +5,6 @@
       rel="noopener noreferrer"
       target="_blank"
       class="block relative bg-primary-500 hover:bg-primary-500/90 transition-[background] backdrop-blur z-50 app-banner"
-      ><div
-        class="mx-auto px-4 sm:px-6 lg:px-8 w-screen xl:max-w-screen-2xl py-2"
       >
         <div class="flex items-center justify-between gap-2">
           <div class="lg:flex-1 hidden lg:flex items-center"></div>
@@ -36,8 +34,9 @@
               </span>
             </button>
           </div>
-        </div></div
-    ></a>
+        </div>
+
+  </a>
   </div>
 </template>
 

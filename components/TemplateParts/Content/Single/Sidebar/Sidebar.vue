@@ -2,7 +2,7 @@
     <aside class="sidebar">
         <div class="w-full lg:col-span-4 col-span-12">
             <div class="SingleSidebar space-y-6 ">
-                <div class="lg:sticky relative top-20 z-20">
+                <div class="relative  z-20">
                                     <widgetTopPosts />
                 </div>
 

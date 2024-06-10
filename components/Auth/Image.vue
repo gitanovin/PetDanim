@@ -1,9 +1,9 @@
 <template>
-  <div class="Hero !bg-cover bg-no-repeat isolate -z-20 opacity-50 hidden lg:flex dark:!hidden"></div>
+  <div class="Hero !bg-cover bg-no-repeat isolate -z-20 opacity-50 hidden lg:flex dark:!hidden h-screen"></div>
   <div
     class="lg:relative lg:flex  lg:flex-col lg:items-center lg:justify-center w-full lg:h-screen bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400  dark:!from-dark-800 dark:!via-dark-800 dark:!to-dark-700/30 lg:rounded-tl-[300px] rounded-b-lg"
   >
-    <section class="splash-inner lg:h-screen lg:py-48">
+    <section class="splash-inner lg:h-screen xl:py-8 lg:py-16">
       <div class="splash-header lg:py-0 py-6">
         <div class="splash--logo lg:w-80 lg:max-w-full max-w-36 w-full mx-auto">
           <a href="/" title=""><img src="@/assets/images/login-pet.svg" /></a>
@@ -38,7 +38,7 @@
       </div>
     </section>
 
-       <div class="footer w-full py-8 hidden lg:block">
+       <div class="footer w-full py-4 hidden lg:block">
     <footer class="splash-footer flex justify-between items-center px-8 text-orange-100">
       <div class="copyright block-start text-orange-100">
         © تمام حقوق برای پت دانیم محفوظ است.
