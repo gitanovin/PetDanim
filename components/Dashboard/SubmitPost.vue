@@ -1,59 +1,255 @@
 <template>
-    <div class="flex-1">
-        <div class="rounded-xl md:border md:border-neutral-100 dark:border-neutral-800 md:p-6">
-            <form class="grid md:grid-cols-2 gap-6" action="#" method="post"><label class="block md:col-span-2"><span
-                        class="nc-Label  text-neutral-800 font-medium text-sm dark:text-neutral-300"
-                        data-nc-id="Label">عنوان پست *</span><input
-                        class="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white dark:border-neutral-500 dark:focus:ring-primary-500/30 dark:bg-neutral-900 rounded-full text-sm font-normal h-11 px-4 py-3 mt-1"
-                        type="text"></label><label class="block md:col-span-2"><span
-                        class="nc-Label  text-neutral-800 font-medium text-sm dark:text-neutral-300"
-                        data-nc-id="Label">خلاصه مطلب</span><textarea
-                        class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 mt-1"
-                        rows="4"></textarea>
-                    <p class="mt-1 text-sm text-neutral-500">Brief description for your article. URLs
-                        are hyperlinked.</p>
-                </label><label class="block"><span
-                        class="nc-Label  text-neutral-800 font-medium text-sm dark:text-neutral-300"
-                        data-nc-id="Label">Category</span><select
-                        class="nc-Select h-11 mt-1 block w-full text-sm rounded-lg border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900">
-                        <option value="-1">– select –</option>
-                        <option value="ha'apai">Category 1</option>
-                        <option value="tongatapu">Category 2</option>
-                        <option value="vava'u">Category 3</option>
-                    </select></label><label class="block"><span
-                        class="nc-Label  text-neutral-800 font-medium text-sm dark:text-neutral-300"
-                        data-nc-id="Label">Tags</span><input
-                        class="block w-full border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white dark:border-neutral-500 dark:focus:ring-primary-500/30 dark:bg-neutral-900 rounded-full text-sm font-normal h-11 px-4 py-3 mt-1"
-                        type="text"></label>
-                <div class="block md:col-span-2"><span
-                        class="nc-Label  text-neutral-800 font-medium text-sm dark:text-neutral-300"
-                        data-nc-id="Label">Featured Image</span>
-                    <div
-                        class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-neutral-300 dark:border-neutral-700 border-dashed rounded-md">
-                        <div class="space-y-1 text-center"><svg class="mx-auto h-12 w-12 text-neutral-400"
-                                stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                <path
-                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                            </svg>
-                            <div class="flex flex-col sm:flex-row text-sm text-neutral-6000"><label for="file-upload"
-                                    class="relative cursor-pointer rounded-md font-medium text-primary-6000 hover:text-primary-800 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary-500"><span>Upload
-                                        a file</span><input id="file-upload" class="sr-only" type="file"
-                                        name="file-upload"></label>
-                                <p class="pl-1">or drag and drop</p>
+    <div class="w-full">
+        <div
+            class="border border-gray-200 dark:border-dark-700/20 rounded-lg card  dark:bg-dark-800">
+            <div
+                class="relative pb-4 m-0 overflow-hidden dark:text-gray-300 text-gray-700 dark:border-dark-700/20  bg-transparent border-b shadow-none bg-clip-border border-b-gray-200 px-6 py-6">
+                <h6
+                    class="flex items-center gap-1 dark:text-gray-300 antialiased font-semibold leading-normal text-gray-600 font-fa">
+
+                    افزودن نوشته
+                </h6>
+                <p
+                    class="flex items-center gap-1 pt-2 text-xs antialiased font-normal leading-normal dark:text-white text-gray-600 font-fa">
+                    از این بخش می توانید نوشته را اضافه کنید
+                </p>
+            </div>
+
+            <div class="flex flex-col tabs">
+                <div class="p-4 tab-content sm:p-5">
+                    <div class="space-y-5">
+                        <div class="relative col-span-4 sm:col-span-2 mt-4">
+                            <label for="last-name"
+                                class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <span>عنوان نوشته</span>
+                            </label>
+                            <div class="mt-1 rounded-md">
+                                <div class="relative flex items-stretch flex-grow focus-within:z-10">
+
+                                    <input type="text"
+                                        class="block w-full pr-4 py-4 border-gray-300 rounded-md focus:border-hamian focus:ring-hamian sm:text-sm dark:text-gray-300 dark:bg-dark-900 dark:border-dark-700/20"
+                                        placeholder="حداکثر 60 کاراکتر بنویسید" />
+                                </div>
                             </div>
-                            <p class="text-xs text-neutral-500">PNG, JPG, GIF up to 2MB</p>
+                        </div>
+
+                        <div class="grid lg:grid-cols-2 gap-4">
+                            <div class="relative mt-4">
+                                <label for="last-name"
+                                    class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                    <span>تاریخ </span>
+                                </label>
+                                <div class="mt-1 rounded-md">
+                                    <div class="relative flex items-stretch flex-grow focus-within:z-10">
+
+                                        <input type="text"
+                                            class="block w-full pr-4 py-4 border-gray-300 dark:border-dark-700/20 dark:bg-dark-800 rounded-md focus:border-hamian focus:ring-hamian sm:text-sm dark:text-gray-300 dark:bg-dark-900"
+                                            placeholder="انتخاب تاریخ" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="relative mt-4">
+                                <div class="dropdown">
+                                    <label class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                        <span>دسته بندی</span>
+                                    </label>
+                                    <select :name="name" :id="id" ref="input" v-model="value" class="hidden">
+                                        <option value="" :disabled="true">{{ placeholder }}</option>
+                                        <option v-for="category in categories" :value="category.value">
+                                            {{ category.text }}
+                                        </option>
+                                    </select>
+
+                                    <button type="button"
+                                        class="text-gray-500 border border-gray-300 dark:bg-dark-900 focus:ring-1 focus:outline-none focus:ring-hamian font-medium rounded-lg text-sm px-4 py-4 text-center inline-flex items-center w-full justify-between mt-1 dark:border-dark-700/20"
+                                        @click="toggleFocus">
+
+                                        <span class="w-full pr-2 text-right text-normal font-normal">
+                                            {{
+                                            [null, ""].includes(value)
+                                            ? placeholder
+                                            : findText(value)
+                                            }}</span>
+
+                                    </button>
+                                    <div class="categories absolute top-18 z-10 mt-2 bg-white dark:bg-dark-900 border rounded-lg w-full p-3"
+                                        v-if="focused">
+                                        <ul>
+                                            <li class="disabled text-sm font-semibold text-gray-400">
+                                                {{ placeholder }}
+                                            </li>
+                                            <li class="disabled text-sm font-normal">
+                                                <input type="search"
+                                                    class="border border-gray-200 w-full my-2 rounded-lg placeholder:text-sm text-gray-400 placeholder:text-gray-400/70"
+                                                    placeholder="جستجو در لیست" />
+                                            </li>
+                                            <li class="py-1 text-gray-500 mt-2 cursor-pointer hover:bg-gray-50 px-2 rounded-md"
+                                                v-for="category in categories" @click="selectCategory(category.value)"
+                                                :data-value="category.value"
+                                                :class="{ selected: value === category.value }">
+                                                {{ category.text }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative col-span-4 sm:col-span-2 mt-2">
+                            <label for="last-name"
+                                class="flex py-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <span> توضیحات</span>
+                            </label>
+                            <div class="w-full mt-1">
+                                محل جایگیری ویرایشگر
+                            </div>
+                        </div>
+
+                        <div class="relative col-span-4 sm:col-span-2 mt-2">
+                            <label for="last-name"
+                                class="flex py-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <span> خلاصه نوشته</span>
+                            </label>
+                            <div class="w-full mt-1">
+                                محل جایگیری ویرایشگر
+                            </div>
+                        </div>
+
+                        <div class="">
+
+                            <div class="w-full py-10">
+                                <div class="w-full">
+                                    <div class="grid grid-cols-6 gap-6">
+                                        <div class="col-span-6">
+                                            <div class="relative lg:w-full justify-start flex">
+                                                <div
+                                                    class="flex items-center justify-center w-full max-w-[150px] px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md dark:border-dark-700">
+                                                    <div class="space-y-1 text-center">
+                                                        <div
+                                                            class="w-12 h-12 mx-auto mb-4 text-4xl text-gray-400 dark:text-gray-300">
+                                                            <ImageIcon
+                                                                class="dark:stroke-dark-700 stroke-gray-700 w-14 h-14" />
+                                                        </div>
+                                                        <div class="flex text-sm text-gray-600 dark:text-gray-300">
+                                                            <label for="page-file-upload"
+                                                                class="relative mx-auto font-medium text-hamian bg-white rounded-md cursor-pointer focus-widuotone:outline-none focus-widuotone:ring-2 focus-widuotone:ring-hamian focus-widuotone:ring-offset-2 hover:text-hamian dark:bg-dark-900 p-2"><span>تصویر
+                                                                    شاخص </span><input id="page-file-upload" type="file"
+                                                                    class="sr-only" /></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="relative col-span-6 mt-4">
+                                            <label for="last-name"
+                                                class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                                <span> کلمات کلیدی</span>
+                                            </label>
+                                            <div class="mt-1 rounded-md">
+                                                <div class="relative flex items-stretch flex-grow focus-within:z-10">
+
+                                                    <TagInput v-model="value"
+                                                        class="dark:!text-gray-300 dark:!bg-dark-900 dark:border-dark-700/20">
+                                                    </TagInput>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="buttons mt-8 md:flex gap-4">
+
+                                        <button type="button"
+                                            class="box-border relative z-0 inline-flex items-center justify-center w-full p-3 px-8 py-3 my-2 overflow-hidden font-medium text-white transition-all duration-300 bg-orange-500 rounded-md cursor-pointer group ease focus:outline-none">
+                                            <span
+                                                class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span><span
+                                                class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span><span
+                                                class="relative z-20 flex items-center justify-center w-full text-center"><i
+                                                    class="pl-2 text-2xl text-white fa-duotone fa-arrow-up-from-bracket"></i><span
+                                                    class="w-full">افزودن نوشته</span></span>
+                                        </button>
+                                        <button type="button"
+                                            class="box-border relative z-0 inline-flex items-center justify-center w-full p-3 px-8 py-3 my-2 overflow-hidden font-medium text-hamian transition-all duration-300 bg-green-500 text-white rounded-md cursor-pointer group ease focus:outline-none">
+                                            <span
+                                                class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span><span
+                                                class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span><span
+                                                class="relative z-20 flex items-center justify-center w-full text-center"><i
+                                                    class="pl-2 text-2xl text-hamaian fa-duotone fa-eye"></i><span
+                                                    class="w-full">افزودن به پیش نویس ها</span></span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div><label class="block md:col-span-2"><span
-                        class="nc-Label  text-neutral-800 font-medium text-sm dark:text-neutral-300" data-nc-id="Label">
-                        Post Content</span><textarea
-                        class="block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 bg-white dark:border-neutral-700 dark:focus:ring-primary-6000 dark:focus:ring-opacity-25 dark:bg-neutral-900 mt-1"
-                        rows="16"></textarea></label><button
-                    class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-primary-700 hover:bg-primary-6000 text-primary-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6 md:col-span-2 "
-                    type="submit">Submit post</button>
-            </form>
+                </div>
+            </div>
         </div>
     </div>
 </template>
+
+<script>
+import TagInput from "./TagInput.vue";
+import ImageIcon from "@/components/icons/ImageIcon.vue";
+export default {
+    components: {
+        TagInput, ImageIcon
+    },
+    data() {
+        return {
+            placeholder: "دسته مورد نظر را انتخاب کنید",
+            useRealInput: false,
+            value: "",
+            focused: false,
+            category: false,
+            categories: [
+                { value: 1, text: "سگ ها" },
+                { value: 2, text: "گربه ها" },
+                { value: 3, text: "پرندگان" },
+                { value: 4, text: "دیگر" },
+            ],
+            options: {
+                debug: "info",
+                modules: {
+                    toolbar: ["bold", "italic", "underline"],
+                    BlotFormatter: {},
+                },
+                placeholder: "نوشتن را شروع کنید...",
+                readOnly: false,
+                theme: "snow",
+            },
+        };
+    },
+
+    methods: {
+        toggleFocus() {
+            if (this.useRealInput) {
+                this.$refs.input.focus();
+            } else {
+                this.focused = !this.focused;
+            }
+        },
+        selectCategory(value) {
+            if (value !== this.value) {
+                this.value = value;
+                this.$refs.input.value = value;
+                this.toggleFocus();
+            }
+        },
+        findText(value) {
+            const category = this.categories.filter((category) => {
+                if (category.value === value) return true;
+            })[0];
+            return category === undefined ? "" : category.text;
+        },
+    },
+};
+</script>

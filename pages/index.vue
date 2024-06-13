@@ -193,7 +193,7 @@ import sliderConfig from "@/configs/sliderConfig";
 import BlogSection from "@/components/TemplateParts/Section/BlogSection.vue";
 import TopSliderSection from "@/components/TemplateParts/Section/TopSliderSection.vue";
 import ContentListSlot from "@/components/TemplateParts/Content/ContentListSlot.vue";
-import ContentPost from "@/components/TemplateParts/Content/ContentPost.vue";
+import ContentPost from "~/components/TemplateParts/Content/ContentPostSlot.vue";
 import HeaderSection from "@/components/TemplateParts/Header/header.vue";
 import TabsSection from "@/components/TemplateParts/Header/Tabs/tabs.vue";
 import Grid from "@/components/TemplateParts/Grid/Grid.vue";

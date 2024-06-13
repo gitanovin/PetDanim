@@ -1,17 +1,18 @@
 import { defineNuxtConfig } from 'nuxt/config'
-
 export default defineNuxtConfig({
-  css: ['~/assets/css/app.css','~/assets/styles/__theme_colors.scss'],
+  css: ['~/assets/css/app.css', '~/assets/webfonts/icons.css', '~/assets/styles/__theme_colors.scss'],
   
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-splide',
     '@nuxtjs/color-mode',
-    "@nuxtjs/tailwindcss"
+    "@nuxtjs/tailwindcss",
   ],
+
+
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
-    // fallback: 'light', // fallback value if not system preference found
+    fallback: 'dark', // fallback value if not system preference found
     hid: 'petdanim-color-mode-script',
     globalName: 'dark-light-mode',
     componentName: 'ColorScheme',
@@ -19,7 +20,6 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'petdanim-color-mode'
   },
-
 
 
 
