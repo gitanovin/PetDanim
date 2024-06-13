@@ -11,10 +11,23 @@
                 </a>
                 <div class="flex flex-col mr-3 max-w-lg sm:ml-5">
                     <span class="text-xs text-neutral-400 uppercase tracking-wider">نویسنده</span>
-                    <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
-                        <a href="/author/the-demo-author-slug">محبوب حسین زاده</a>
-                    </h2>
-                    <span class="block mt-1 text-sm text-neutral-500 sm:text-base dark:text-neutral-300 font-fd">محبوب
+                    <div class="flex items-center">
+                        <h2 class="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
+                            <a href="/author/the-demo-author-slug">محبوب حسین زاده</a>
+                        </h2>
+                        <button
+                            class="mr-2 nc-Button flex-shrink-0 relative inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-orange-500 hover:bg-orange-600 text-orange-50 text-xs font-medium px-4 py-1">
+                            <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    aria-hidden="true" class="w-5 h-5 sm:-ms-2.5">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z"
+                                        clip-rule="evenodd"></path>
+                                </svg></div><span class="ms-2">دنبال کردن</span>
+                        </button>
+                    </div>
+
+
+                    <span class="block mt-3 text-sm text-neutral-500 sm:text-base dark:text-neutral-300 font-fd">محبوب
                         حسین زاده متولد 1369 در شهرستان خوی می باشد این متن تست
                         بیوگرافی است
                     </span>
