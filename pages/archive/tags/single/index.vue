@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import TagPage from "@/components/TemplateParts/Category/categoryPage.vue";
+import TagPage from "@/components/TemplateParts/Tags/tagPage.vue";
 </script>
