@@ -5,12 +5,16 @@
                 <div class="flex flex-col space-y-8 xl:space-y-0 xl:flex-row">
                     <Tabs />
                     <div class="border-t border-neutral-200 dark:border-dark-700/20 md:hidden"></div>
-                    <!-- <Home/> -->
+                    <div class="w-full">
+                        <Followers />
+                        <!-- <following /> -->
+                    <!-- <Home /> -->
                     <!-- <SubmitPost /> -->
                     <!-- <EditProfile/> -->
                     <!-- <Posts/> -->
-                    <Bookmarks />
+                    <!-- <Bookmarks /> -->
                     <!-- <Saved /> -->
+                     </div>
                 </div>
             </div>
         </div>
@@ -25,4 +29,6 @@ import Posts from "./Posts.vue";
 import Home from "./Home.vue";
 import Bookmarks from "./Bookmarks.vue";
 import Saved from "./Saved.vue";
+import Followers from "./Followers.vue";
+import Following from "./Followers.vue";
 </script>

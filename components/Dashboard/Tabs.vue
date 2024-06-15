@@ -25,6 +25,20 @@
                                                 ها
 
                                         </span></a></li>
+
+                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
+                                                        class="fa-solid fa-user-check"></i></span><span>دنبال می کنید
+                                        </span></a></li>
+
+                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
+                                                        class="fa-solid fa-user"></i></span><span>دنبال می کنند
+                                                
+
+                                        </span></a></li>
+
+
                         <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
                                         href="/dashboard/edit-profile"><span class="w-8 me-2 text-lg"><i
                                                         class="fa fa-user-edit"></i></span><span>
