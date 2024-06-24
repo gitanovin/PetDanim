@@ -4,7 +4,7 @@
       href=""
       rel="noopener noreferrer"
       target="_blank"
-      class="block relative bg-primary-500 hover:bg-primary-500/90 transition-[background] backdrop-blur z-50 app-banner"
+      class="block relative bg-primary-500 hover:bg-primary-500/90 transition-[background] backdrop-blur  app-banner z-0"
       >
         <div class="flex items-center justify-between gap-2">
           <div class="lg:flex-1 hidden lg:flex items-center"></div>
