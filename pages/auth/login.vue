@@ -7,6 +7,7 @@
 import Login from "@/components/Auth/Login.vue";
 
 definePageMeta({
-  layout: 'login'
+  layout: 'login',
+  middleware: 'user-guest'
 })
 </script>

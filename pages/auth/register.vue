@@ -6,6 +6,7 @@
 <script setup>
 import SignUp from "@/components/Auth/SignUp.vue";
 definePageMeta({
-  layout: 'login'
+  layout: 'login',
+  middleware: 'user-guest'
 })
 </script>

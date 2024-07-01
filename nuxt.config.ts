@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     'nuxt-splide',
     '@nuxtjs/color-mode',
     "@nuxtjs/tailwindcss",
+    '@pinia/nuxt'
   ],
 
 
@@ -60,6 +61,12 @@ export default defineNuxtConfig({
         class: 'font-fa bg-white text-gray-900 dark:!text-dark-700 dark:!bg-dark-900'
       },
     }
+  },
+
+  pinia: {
+    autoImports: [
+      'defineStore',
+    ],
   },
 
 

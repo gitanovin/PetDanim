@@ -2,17 +2,26 @@
   <div
     class="relative inline-flex border dark:!border dark:!border-dark-700/20 transition-all duration-300 rounded-lg"
   >
-    <Menu as="div" class="relative inline-block text-right">
-      <div>
+    <nuxt-link to="/auth/login"
+      v-if="authUser == null"
+      class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center dark:!text-dark-700 transition-all duration-300 border-0 px-4"
+    >
+      <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
+        <UserIcon />
+      </span>
+      ورود / ثبت نام
+    </nuxt-link>
+    <Menu as="div" class="relative inline-block text-right" v-else>
+      <a href="javascript:void(0)">
         <MenuButton
-          class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center dark:!text-dark-700 transition-all duration-300 border-0 px-4"
+          class="w-[160px] focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center dark:!text-dark-700 transition-all duration-300 border-0 px-4"
         >
           <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
             <UserIcon />
           </span>
-          پنل کاربری
+          <span class="w-full break-words truncate">{{ authUser.name }}</span>
         </MenuButton>
-      </div>
+      </a>
 
       <transition
         enter-active-class="transition duration-100 ease-out"
@@ -107,8 +116,8 @@
               </MenuItem>
             </div>
 
-            <div class="border-t dark:!border-dark-700/20 px-2">
-              <MenuItem v-slot="{ active }">
+            <div @click="doSignOut()" class="border-t dark:!border-dark-700/20 px-2">
+              <MenuItem>
                 <button
                   :class="[
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm',
@@ -138,4 +147,50 @@ import Bookmark from "@/components/icons/Bookmark.vue";
 import BookmarkIcon from "@/components/icons/BookmarkIcon.vue";
 import Heart from "@/components/icons/Heart.vue";
 import HeartIcon from "@/components/icons/HeartIcon.vue";
+const { $swal } = useNuxtApp()
+const {$toast} = useNuxtApp()
+
+import { usePetdanimStore } from '~/store/petdanimStore.js'
+import {storeToRefs} from 'pinia'
+
+const petdanimStore = usePetdanimStore()
+const {authUser} = storeToRefs(petdanimStore)
+
+const doSignOut = async () => {
+    $swal.fire({
+        title: "هشدار",
+        text: "آیا از خروج حساب کاربری خود مطمعنید؟",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#9d2c48",
+        cancelButtonColor: "#555",
+        cancelButtonText: "خیر",
+        confirmButtonText: "بله",
+    }).then(async (result) => {
+        if (result.isConfirmed) {
+            const result = await petdanimStore.logoutUser()
+            if(result.status == 200){
+              $toast(result.message , {
+                "theme": "colored",
+                "type": "success"
+              });
+            }else{
+                $toast(result.message , {
+                  "theme": "colored",
+                  "type": "error"
+                });
+            }
+        }
+    });
+}
+
+
+const showSwal = (title , text , icon) => {
+  $swal.fire({
+      title: title,
+      text: text,
+      icon: icon
+  });
+}
+
 </script>

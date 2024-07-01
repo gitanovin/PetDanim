@@ -211,3 +211,5 @@ const postSliderOptions = ref(sliderConfig[0]);
 
 const postSliderNews = ref(sliderConfig[1]);
 </script>
+
+

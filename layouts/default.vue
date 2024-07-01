@@ -3,7 +3,7 @@
   <AdvertisingBanner />
   <Header />
   <TrackTitle />
-  <slot />
+    <slot />
   <Footer />
   </div>
 

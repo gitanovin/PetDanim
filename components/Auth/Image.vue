@@ -45,8 +45,8 @@
       </div>
       <nav class="menu block-end">
         <ul class="inline-flex gap-4 items-center">
-          <li><a href="/">صفحه اصلی </a></li>
-          <li><a href="/contact-us">تماس با ما</a></li>
+          <li><nuxt-link to="/">صفحه اصلی </nuxt-link></li>
+          <li><nuxt-link to="/">تماس با ما</nuxt-link></li>
           <li>
             <a
               href="https://www.instagram.com/"
