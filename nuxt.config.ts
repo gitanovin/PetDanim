@@ -1,4 +1,11 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import ckeditor5 from "@ckeditor/vite-plugin-ckeditor5";
+import svgLoader from "vite-svg-loader";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+
+const larkTheme = require.resolve("@ckeditor/ckeditor5-theme-lark");
+
 export default defineNuxtConfig({
   css: ['~/assets/css/app.css', '~/assets/webfonts/icons.css', '~/assets/styles/__theme_colors.scss'],
   
@@ -9,8 +16,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     '@pinia/nuxt'
   ],
-
-
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found
@@ -21,17 +26,21 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'petdanim-color-mode'
   },
-
-
-
   splide: {
     theme: 'default'
   },
-  
   pwa: {
 
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
+  vite: {
+    plugins: [
+      ckeditor5({
+        theme: larkTheme,
+      }),
+      svgLoader(),
+    ],
+  },
   app: {
     head: {
       charset: 'utf-8',
@@ -60,9 +69,9 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: 'font-fa bg-white text-gray-900 dark:!text-dark-700 dark:!bg-dark-900'
       },
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
-
   pinia: {
     autoImports: [
       'defineStore',

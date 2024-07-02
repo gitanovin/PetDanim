@@ -36,7 +36,7 @@
         >
           <div class="pb-1 space-y-2">
             <nuxt-link
-              to="/archive/author"
+              to="/profile"
               class="profile flex gap-3 items-center py-4 px-4  bg-dark-700/10 rounded-t-md"
             >
               <div class="avatar w-10 h-10 object-cover border-3 rounded-full">
@@ -45,12 +45,13 @@
                   class="h-full w-full object-cover rounded-full"
                 />
               </div>
-              <div class="nama text-dark-900 dark:!text-dark-700">محبوب حسین زاده</div>
+              <div class="nama text-dark-900 dark:!text-dark-700">{{ authUser.name }}</div>
             </nuxt-link>
 
             <div class="px-2 space-y-3">
               <MenuItem v-slot="{ active }">
-                <button
+                <nuxt-link
+                  to="/profile/create-post"
                   :class="[
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-dark-700/10',
                   ]"
@@ -59,11 +60,12 @@
                     class="w-6 ml-2 dark:!stroke-dark-700 stroke-gray-800"
                   />
                   نوشتن پست جدید
-                </button>
+                </nuxt-link>
               </MenuItem>
 
               <MenuItem v-slot="{ active }">
-                <button
+                <nuxt-link
+                  to="/profile/edit-profile"
                   :class="[
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-dark-700/10',
                   ]"
@@ -72,11 +74,12 @@
                     class="w-6 ml-2 dark:!stroke-dark-700 stroke-gray-800"
                   />
                   تنظیمات حساب کاربری
-                </button>
+                </nuxt-link>
               </MenuItem>
 
               <MenuItem v-slot="{ active }">
-                <button
+                <nuxt-link
+                  to="/profile/posts"
                   :class="[
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-dark-700/10',
                   ]"
@@ -86,11 +89,12 @@
                   />
 
                   پست ها و پیش نویس ها
-                </button>
+                </nuxt-link>
               </MenuItem>
 
               <MenuItem v-slot="{ active }">
-                <button
+                <nuxt-link
+                  to="/profile/bookmarks"
                   :class="[
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-dark-700/10',
                   ]"
@@ -99,11 +103,12 @@
                     class="w-6 ml-2 dark:!stroke-dark-700 stroke-gray-800"
                   />
                   ذخیره شده ها
-                </button>
+                </nuxt-link>
               </MenuItem>
 
               <MenuItem v-slot="{ active }">
-                <button
+                <nuxt-link
+                  to="/profile/favorites"
                   :class="[
                     'group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-dark-700/10',
                   ]"
@@ -112,7 +117,7 @@
                     class="w-6 ml-2 dark:!stroke-dark-700 stroke-gray-800"
                   />
                   پست های مورد علاقه
-                </button>
+                </nuxt-link>
               </MenuItem>
             </div>
 
@@ -148,7 +153,7 @@ import BookmarkIcon from "@/components/icons/BookmarkIcon.vue";
 import Heart from "@/components/icons/Heart.vue";
 import HeartIcon from "@/components/icons/HeartIcon.vue";
 const { $swal } = useNuxtApp()
-const {$toast} = useNuxtApp()
+const { $toast } = useNuxtApp()
 
 import { usePetdanimStore } from '~/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
@@ -174,6 +179,7 @@ const doSignOut = async () => {
                 "theme": "colored",
                 "type": "success"
               });
+              location.replace("http://localhost:3000");
             }else{
                 $toast(result.message , {
                   "theme": "colored",

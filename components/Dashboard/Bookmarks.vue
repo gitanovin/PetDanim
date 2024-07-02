@@ -64,11 +64,11 @@
                                                                     name="fade" is="transition-group">
                                                                     <template #default="{ row, rowIndex }">
                                                                         <li>
-                                                                       
-                                                                                <content />
 
-                                                                         
-                                                                    
+                                                                            <content />
+
+
+
                                                                         </li>
 
                                                                     </template>

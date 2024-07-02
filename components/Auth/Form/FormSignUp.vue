@@ -18,6 +18,22 @@
         </div>
       </div>
 
+      <div class="relative mb-3">
+        <input
+          type="text"
+          class="block px-2.5 py-3 w-full text-sm text-gray-900  rounded-lg border-1 appearance-none dark:!text-white dark:!border-dark-700/20 border-gray-100 dark:!focus:!border-dark-700/20 focus:outline-none focus:ring-0 focus:border-red-600 peer bg-white dark:!bg-dark-800"
+          placeholder="نام کاربری"
+          v-model="data.username"
+        />
+        <div
+          class="absolute inset-y-0 left-2 flex items-center pl-3 pointer-events-none"
+        >
+          <i
+            class="fa-duotone fa-user-check text-orange-500 h-5 w-5 flex leading-[1px] pr-1"
+          ></i>
+        </div>
+      </div>
+
       <div class="relative">
         <input
           type="text"
@@ -86,16 +102,17 @@
   const data = reactive({
     authAction: "register",
     otp: "",
-    fullName: "",
+    fullName:  "",
     userInput: "",
-    inputType: ""
+    inputType: "",
+    username:  ""
   })
   const {$toast} = useNuxtApp()
 
 
 
   const doSendCode = async () => {
-    if(data.userInput != "" && data.fullName != ""){
+    if(data.userInput != "" && data.fullName != "" && data.username != ""){
       const userInputType = checkDataType(data.userInput)
       if(userInputType != 'invalid') {
         isLoading.value = true
@@ -152,7 +169,7 @@
   }
 
   const resendCode = async () => {
-    if(data.userInput != "" && data.fullName != ""){
+    if(data.userInput != "" && data.fullName != "" && data.username != ""){
       const userInputType = checkDataType(data.userInput)
       if(userInputType != 'invalid') {
         resendLoading.value = true
@@ -188,7 +205,7 @@
   }
 
   const doSignUp = async (otp) => {
-    if(data.userInput != "" && data.fullName != ""){
+    if(data.userInput != "" && data.fullName != "" && data.username != ""){
       const userInputType = checkDataType(data.userInput)
       if(userInputType != 'invalid') {
         validateOtpLoading.value = true

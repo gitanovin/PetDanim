@@ -7,7 +7,7 @@
                     <div class="content-left">
                         <span class="text-sm text-gray-500 dark:text-gray-300">دنبال می کنند</span>
                         <div class="flex items-center my-1">
-                            <h4 class="mb-0 ml-2 font-bold">215</h4>
+                            <h4 class="mb-0 ml-2 font-bold">{{ statistics.followerCount }}</h4>
                         </div>
                         <span class="text-xs text-gray-500">مجموع کاربرانی که شما را دنبال می کنند</span>
                     </div>
@@ -22,7 +22,7 @@
                     <div class="content-left">
                         <span class="text-sm text-gray-500 dark:text-gray-300">دنبال می کنم</span>
                         <div class="flex items-center my-1">
-                            <h4 class="mb-0 ml-2 font-bold">15</h4>
+                            <h4 class="mb-0 ml-2 font-bold">{{ statistics.followingCount }}</h4>
                         </div>
                         <span class="text-xs text-gray-500"> مجموع کاربرانی که شما دنبال می کنید </span>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="content-left">
                         <span class="text-sm text-gray-500 dark:text-gray-300">آمار</span>
                         <div class="flex items-center my-1">
-                            <h4 class="mb-0 ml-2 font-bold">78</h4>
+                            <h4 class="mb-0 ml-2 font-bold">{{ statistics.postViewCount }}</h4>
                         </div>
                         <span class="text-xs text-gray-500">مجموع بازدیدها از پست های شما</span>
                     </div>
@@ -49,3 +49,12 @@
         </div>
     </div>
 </template>
+
+<script setup>
+const props = defineProps({
+    statistics: {
+        required: true,
+        type: [Array , Object]
+    }
+})
+</script>

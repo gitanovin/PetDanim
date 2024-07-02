@@ -103,8 +103,8 @@
                                 class="flex py-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
                                 <span> توضیحات</span>
                             </label>
-                            <div class="w-full mt-1">
-                                محل جایگیری ویرایشگر
+                            <div class="w-full mt-1" v-if="customEditor != null">
+                                <ckeditor  :editor="customEditor" v-model="data.descriptionContent" />
                             </div>
                         </div>
 
@@ -113,8 +113,8 @@
                                 class="flex py-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
                                 <span> خلاصه نوشته</span>
                             </label>
-                            <div class="w-full mt-1">
-                                محل جایگیری ویرایشگر
+                            <div class="w-full mt-1" v-if="customEditor != null">
+                                <ckeditor  :editor="customEditor" v-model="data.summaryDescription" />
                             </div>
                         </div>
 
@@ -196,60 +196,70 @@
     </div>
 </template>
 
-<script>
+<script setup>
+
 import TagInput from "./TagInput.vue";
 import ImageIcon from "@/components/icons/ImageIcon.vue";
-export default {
-    components: {
-        TagInput, ImageIcon
-    },
-    data() {
-        return {
-            placeholder: "دسته مورد نظر را انتخاب کنید",
-            useRealInput: false,
-            value: "",
-            focused: false,
-            category: false,
-            categories: [
-                { value: 1, text: "سگ ها" },
-                { value: 2, text: "گربه ها" },
-                { value: 3, text: "پرندگان" },
-                { value: 4, text: "دیگر" },
-            ],
-            options: {
-                debug: "info",
-                modules: {
-                    toolbar: ["bold", "italic", "underline"],
-                    BlotFormatter: {},
-                },
-                placeholder: "نوشتن را شروع کنید...",
-                readOnly: false,
-                theme: "snow",
-            },
-        };
-    },
+const placeholder = ref("دسته مورد نظر را انتخاب کنید")
+const useRealInput = ref(false)
+const value = ref("")
+const focused = ref(false)
+const category = ref(false)
+const categories = ref([
+    { value: 1, text: "سگ ها" },
+    { value: 2, text: "گربه ها" },
+    { value: 3, text: "پرندگان" },
+    { value: 4, text: "دیگر" },
+])
 
-    methods: {
-        toggleFocus() {
-            if (this.useRealInput) {
-                this.$refs.input.focus();
-            } else {
-                this.focused = !this.focused;
-            }
-        },
-        selectCategory(value) {
-            if (value !== this.value) {
-                this.value = value;
-                this.$refs.input.value = value;
-                this.toggleFocus();
-            }
-        },
-        findText(value) {
-            const category = this.categories.filter((category) => {
-                if (category.value === value) return true;
-            })[0];
-            return category === undefined ? "" : category.text;
-        },
-    },
-};
+const data = reactive({
+    descriptionContent: "<p>test</p>",
+    summaryDescription: "<p>test2</p>"
+})
+
+const { $ckeditor } = useNuxtApp()
+const customEditor = ref(null)
+
+
+onMounted(() => {
+    customEditor.value = $ckeditor.customEditor
+})
+
+const toggleFocus = () => {
+    if (useRealInput.value) {
+        input.value.focus();
+    } else {
+        focused.value = !focused.value;
+    }
+}
+
+const selectCategory = (value) => {
+    if (value !== value.value) {
+        value.value = value;
+        input.value.value = value;
+        toggleFocus();
+    }
+}
+
+const findText = (value) => {
+    const category = categories.value.filter((category) => {
+        if (category.value === value) return true;
+    })[0];
+    return category === undefined ? "" : category.text;
+}
+
+const onInputEditor = (event) => {
+    console.log(event)
+}
 </script>
+<style>
+.ck.ck-editor__editable_inline {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+
+.ck.ck-editor__main , .ck.ck-editor__main > .ck-content {
+    height:200px !important;
+}
+</style>

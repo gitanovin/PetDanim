@@ -103,6 +103,32 @@ const actions = {
             this.authUser = null
         }
     },
+
+    // profile Section
+
+    async getUserStatistics() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/users/profile/statistics" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    }
+
+    // profile Section
 }
 
 const getters = {}

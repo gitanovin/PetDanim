@@ -1,53 +1,157 @@
 <template>
-        <div class="flex-shrink-0  dark:bg-dark-800 py-8 lg:ml-3 rounded-lg border dark:border-dark-700/20">
-                <ul class="text-base space-y-2 text-neutral-700 dark:text-neutral-400 px-4">
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard"><span class="w-8 me-2 text-lg "><i
-                                                        class="fa-solid fa-gauge"></i></span><span>
-                                                پیشخوان</span></a></li>
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center  dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/submit-post"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa fa-edit"></i></span><span>
-                                                ایجاد نوشته جدید</span></a>
-                        </li>
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa-solid fa-newspaper"></i></span><span> نوشته های
-                                                من</span></a></li>
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa-solid fa-heart"></i></span><span> پست های مورد علاقه
+  <div
+    class="flex-shrink-0 dark:bg-dark-800 py-8 lg:ml-3 rounded-lg border dark:border-dark-700/20"
+  >
+    <ul class="text-base space-y-2 text-neutral-700 dark:text-neutral-400 px-4">
+      <li>
+        <nuxt-link
+          to="/profile"
+          :class="$route.path == '/profile' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"
+            ><i class="fa-solid fa-gauge"></i></span
+          ><span> پیشخوان</span></nuxt-link
+        >
+      </li>
+      <li>
+        <nuxt-link
+          to="/profile/create-post"
+          :class="$route.path == '/profile/create-post' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"><i class="fa fa-edit"></i></span
+          ><span> ایجاد نوشته جدید</span></nuxt-link
+        >
+      </li>
+      <li>
+        <nuxt-link
+          to="/profile/posts"
+          :class="$route.path == '/profile/posts' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"
+            ><i class="fa-solid fa-newspaper"></i></span
+          ><span> نوشته های من</span></nuxt-link
+        >
+      </li>
+      <li>
+        <nuxt-link
+          to="/profile/favorites"
+          :class="$route.path == '/profile/favorites' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"
+            ><i class="fa-solid fa-heart"></i></span
+          ><span> پست های مورد علاقه </span></nuxt-link
+        >
+      </li>
+      <li>
+        <nuxt-link
+          to="/profile/bookmarks"
+          :class="$route.path == '/profile/bookmarks' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"
+            ><i class="fa-solid fa-bookmark"></i></span
+          ><span> ذخیره شده ها </span></nuxt-link
+        >
+      </li>
 
-                                        </span></a></li>
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa-solid fa-bookmark"></i></span><span> ذخیره شده
-                                                ها
+      <li>
+        <nuxt-link
+          to="/profile/followings"
+          :class="$route.path == '/profile/followings' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"
+            ><i class="fa-solid fa-user-check"></i></span
+          ><span>دنبال می کنید </span></nuxt-link
+        >
+      </li>
 
-                                        </span></a></li>
+      <li>
+        <nuxt-link
+          to="/profile/followers"
+          :class="$route.path == '/profile/followers' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"><i class="fa-solid fa-user"></i></span
+          ><span>دنبال می کنند </span></nuxt-link
+        >
+      </li>
 
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa-solid fa-user-check"></i></span><span>دنبال می کنید
-                                        </span></a></li>
+      <li>
+        <nuxt-link
+          to="/profile/edit-profile"
+          :class="$route.path == '/profile/edit-profile' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"><i class="fa fa-user-edit"></i></span
+          ><span> ویرایش حساب</span></nuxt-link
+        >
+      </li>
 
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/posts"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa-solid fa-user"></i></span><span>دنبال می کنند
-                                                
-
-                                        </span></a></li>
-
-
-                        <li><a class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-                                        href="/dashboard/edit-profile"><span class="w-8 me-2 text-lg"><i
-                                                        class="fa fa-user-edit"></i></span><span>
-                                                ویرایش حساب</span></a></li>
-
-                        <li class=" border-t border-neutral-200 dark:border-dark-700/20 my-4"></li>
-                        <li><a class="flex items-center px-6 py-3 font-medium text-red-500" href="/"><span
-                                                class="w-8 me-2 text-lg"><i
-                                                        class="fa-solid fa-right-from-bracket"></i></span>خروج</a></li>
-                </ul>
-        </div>
+      <li class="border-t border-neutral-200 dark:border-dark-700/20 my-4"></li>
+      <li @click="doSignOut()">
+        <a class="flex items-center px-6 py-3 font-medium text-red-500" href="javascript:void(0)"
+          ><span class="w-8 me-2 text-lg"
+            ><i class="fa-solid fa-right-from-bracket"></i></span
+          >خروج</a
+        >
+      </li>
+    </ul>
+  </div>
 </template>
+
+<script setup>
+import { usePetdanimStore } from '~/store/petdanimStore.js'
+import {useRouter , useRoute} from 'vue-router'
+const { $swal } = useNuxtApp()
+const { $toast } = useNuxtApp()
+const petdanimStore = usePetdanimStore()
+const router = useRouter()
+const route = useRoute()
+const doSignOut = async () => {
+    $swal.fire({
+        title: "هشدار",
+        text: "آیا از خروج حساب کاربری خود مطمعنید؟",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#9d2c48",
+        cancelButtonColor: "#555",
+        cancelButtonText: "خیر",
+        confirmButtonText: "بله",
+    }).then(async (result) => {
+        if (result.isConfirmed) {
+            const result = await petdanimStore.logoutUser()
+            if(result.status == 200){
+              $toast(result.message , {
+                "theme": "colored",
+                "type": "success"
+              });
+              
+              location.replace("http://localhost:3000");
+            }else{
+                $toast(result.message , {
+                  "theme": "colored",
+                  "type": "error"
+                });
+            }
+        }
+    });
+}
+
+onMounted(() => {
+        console.log(route)
+})
+
+const showSwal = (title , text , icon) => {
+  $swal.fire({
+      title: title,
+      text: text,
+      icon: icon
+  });
+}
+
+</script>
