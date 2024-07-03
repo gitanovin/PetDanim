@@ -102,14 +102,15 @@ class Editor extends ClassicEditor {
             ]
         },
         language: 'fa',
-        placeholder: "نوشتن را شروع کنید ...",
+        placeholder: "نوشتن را شروع کنید  ...",
         image: {
             toolbar: [
                 'imageTextAlternative',
                 'toggleImageCaption',
                 'imageStyle:inline',
                 'imageStyle:block',
-                'imageStyle:side'
+                'imageStyle:side',
+                'ckboxImageEdit' 
             ]
         },
         table: {

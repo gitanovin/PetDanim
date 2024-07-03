@@ -125,6 +125,35 @@ const actions = {
         }else {
             return false
         }
+    },
+
+    async userAddPost(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const formData = new FormData()
+                formData.append("title" , data.title)
+                formData.append("date"  , data.date)
+                formData.append("descriptionContent" , data.descriptionContent)
+                formData.append("indexPic" , data.indexPic)
+                formData.append("tags" , data.tags)
+
+                const result = await api.post("/mag/users/posts/add" , formData , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
     }
 
     // profile Section

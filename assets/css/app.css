@@ -2003,6 +2003,10 @@ h6 {
   right: 1rem;
 }
 
+.right-\[-10px\] {
+  right: -10px;
+}
+
 .start-0 {
   inset-inline-start: 0px;
 }
@@ -2057,6 +2061,10 @@ h6 {
 
 .top-6 {
   top: 1.5rem;
+}
+
+.top-\[-5px\] {
+  top: -5px;
 }
 
 .isolate {
@@ -2728,6 +2736,10 @@ h6 {
   width: 10px;
 }
 
+.w-\[160px\] {
+  width: 160px;
+}
+
 .w-\[18px\] {
   width: 18px;
 }
@@ -2750,14 +2762,6 @@ h6 {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[200px\] {
-  width: 200px;
-}
-
-.w-\[160px\] {
-  width: 160px;
 }
 
 .min-w-\[68px\] {
@@ -3298,6 +3302,10 @@ h6 {
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.text-wrap {
+  text-wrap: wrap;
 }
 
 .break-words {
@@ -4283,10 +4291,6 @@ h6 {
   text-transform: capitalize;
 }
 
-.italic {
-  font-style: italic;
-}
-
 .\!leading-none {
   line-height: 1 !important;
 }
@@ -4711,6 +4715,11 @@ h6 {
   --tw-ring-offset-width: 1px;
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .blur-lg {
   --tw-blur: blur(16px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -4844,16 +4853,6 @@ h6 {
   padding-right: 2.5rem;
 }
 
-.placeholder\:text-sm::-moz-placeholder {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.placeholder\:text-sm::placeholder {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -4862,14 +4861,6 @@ h6 {
 .placeholder\:text-gray-400::placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-gray-400\/70::-moz-placeholder {
-  color: rgb(156 163 175 / 0.7);
-}
-
-.placeholder\:text-gray-400\/70::placeholder {
-  color: rgb(156 163 175 / 0.7);
 }
 
 .after\:pointer-events-none::after {
@@ -5521,10 +5512,6 @@ h6 {
 
 .dark\:\!fill-dark-700:is(.dark *) {
   fill: #798096 !important;
-}
-
-.dark\:fill-gray-900:is(.dark *) {
-  fill: #111827;
 }
 
 .dark\:\!stroke-dark-700:is(.dark *) {

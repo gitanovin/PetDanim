@@ -23,7 +23,7 @@
                             
                             <label for="last-name"
                                 class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
-                                <span>عنوان نوشته</span>
+                                <span>عنوان نوشته <span class="text-xs text-gray-500">({{ data.title.length }} کاراکتر)</span></span>
                             </label>
                             <div class="mt-1 rounded-md">
                                 <div class="relative flex items-stretch flex-grow focus-within:z-10">
@@ -31,7 +31,7 @@
                                     <input type="text"
                                         v-model="data.title"
                                         class="block w-full pr-4 py-4 border-gray-300 rounded-md focus:border-hamian focus:ring-hamian sm:text-sm dark:text-gray-300 dark:bg-dark-900 dark:border-dark-700/20"
-                                        placeholder="حداکثر 60 کاراکتر بنویسید" />
+                                        placeholder="حداکثر 40 کاراکتر بنویسید" />
                                 </div>
                             </div>
                         </div>
@@ -41,10 +41,10 @@
                         <div class="relative col-span-4 sm:col-span-2 mt-2">
                             <label for="last-name"
                                 class="flex py-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
-                                <span> توضیحات</span>
+                                <span> توضیحات (حداقل 300 کاراکتر)</span>
                             </label>
                             <div class="w-full mt-1" v-if="customEditor != null">
-                                <ckeditor :config="customEditor.editoConfig" :editor="customEditor" v-model="data.descriptionContent" />
+                                <ckeditor :config="customEditor.editoConfig" :editor="customEditor" v-model="data.descriptionContent" class="text-wrap" />
                             </div>
                         </div>
 
@@ -63,10 +63,13 @@
                                                             <ImageIcon
                                                                 v-if="indexPicLocalSrc == ''"
                                                                 class="dark:stroke-dark-700 stroke-gray-700 w-14 h-14" />
-                                                            <img 
-                                                                :src="indexPicLocalSrc"
-                                                                v-if="indexPicLocalSrc != ''" 
-                                                            />
+                                                            <div class="relative" v-if="indexPicLocalSrc != ''" >
+                                                                <i @click="removeIndexPic()" class="fa fa-close absolute top-[-5px] right-[-10px] cursor-pointer text-sm bg-red-500 p-1 rounded-lg text-white"></i>
+                                                                <img 
+                                                                    :src="indexPicLocalSrc"
+                                                                    
+                                                                />
+                                                            </div>
                                                         </div>
                                                         <div class="flex text-sm text-gray-600 dark:text-gray-300">
                                                             <label for="indexPic"
@@ -90,12 +93,12 @@
                                         <div class="relative col-span-6 mt-4">
                                             <label for="last-name"
                                                 class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300">
-                                                <span> کلمات کلیدی</span>
+                                                <span> کلمات کلیدی ( حداقل تعداد 5 تگ اضافه کنید ) </span>
                                             </label>
                                             <div class="mt-1 rounded-md">
                                                 <div class="relative flex items-stretch flex-grow focus-within:z-10">
 
-                                                    <TagInput v-model="data.tags"
+                                                    <TagInput ref="tagInputRef" v-model="data.tags" :modelValue="data.tags"
                                                         class="dark:!text-gray-300 dark:!bg-dark-900 dark:border-dark-700/20">
                                                     </TagInput>
                                                 </div>
@@ -105,9 +108,9 @@
 
                                     </div>
 
-                                    <div class="buttons mt-8 md:flex gap-4">
+                                    <div class="buttons mt-4 md:flex gap-4">
 
-                                        <button type="button"
+                                        <!-- <button type="button"
                                             @click="addPost()"
                                             class="box-border relative z-0 inline-flex items-center justify-center w-full p-3 px-8 py-3 my-2 overflow-hidden font-medium text-white transition-all duration-300 bg-orange-500 rounded-md cursor-pointer group ease focus:outline-none">
                                             <span
@@ -116,7 +119,12 @@
                                                 class="relative z-20 flex items-center justify-center w-full text-center"><i
                                                     class="pl-2 text-2xl text-white fa-duotone fa-arrow-up-from-bracket"></i><span
                                                     class="w-full">افزودن نوشته</span></span>
-                                        </button>
+                                        </button> -->
+                                        <AuthButton 
+                                            text="افزودن نوشته"
+                                            :isLoading="postIsLoading"
+                                            @doClick="doAddPost()"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -129,13 +137,19 @@
 </template>
 
 <script setup>
+import AuthButton from '@/components/Buttons/AuthButton.vue'
 import TagInput from "./TagInput.vue";
 import ImageIcon from "@/components/icons/ImageIcon.vue";
+import { usePetdanimStore } from '~/store/petdanimStore';
+
+const tagInputRef = ref(null)
+const petdanimStore = usePetdanimStore()
 
 
 const {$toast , $ckeditor} = useNuxtApp()
 const indexPic = ref("")
 const indexPicLocalSrc = ref("")
+const postIsLoading = ref(false)
 
 const data = reactive({
     title: "",
@@ -154,10 +168,26 @@ onMounted(() => {
     customEditor.value = $ckeditor.customEditor
 })
 
-const addPost = async () => {
+const doAddPost = async () => {
     const resultValidate = validatePostData();
     if(resultValidate == true) {
-        console.log("ok")
+        postIsLoading.value = true
+        const result = await petdanimStore.userAddPost(data)
+        if(result.status == 200) {
+            postIsLoading.value = false
+            console.log(result)
+            $toast(result.message , {
+                "theme": "colored",
+                "type": "success"
+            });
+            clearData()
+        }else {
+            postIsLoading.value = false
+            $toast(result.message , {
+                "theme": "colored",
+                "type": "error"
+            });
+        }
     } else {
         $toast(resultValidate , {
             "theme": "colored",
@@ -226,6 +256,14 @@ const removeIndexPic = () => {
     indexPicLocalSrc.value = '';
 }
 
+const clearData = () => {
+    data.title = ""
+    data.descriptionContent = ""
+    removeIndexPic()
+    data.tags = []
+    tagInputRef.value.clearInput()
+}
+
 </script>
 <style>
 .ck.ck-editor__editable_inline {
@@ -236,5 +274,12 @@ const removeIndexPic = () => {
 
 .ck.ck-editor__main , .ck.ck-editor__main > .ck-content {
     height:200px !important;
+    
 }
+
+.ck.ck-content {
+    overflow-wrap: anywhere !important;
+}
+
+
 </style>

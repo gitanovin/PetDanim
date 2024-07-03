@@ -18,7 +18,7 @@
         <nuxt-link
           to="/profile/create-post"
           :class="$route.path == '/profile/create-post' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
-          class="px-6 py-3 font-medium rounded-lg flex items-center dark:hover:bg-dark-900 dark:hover:text-neutral-100"
+          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
           
           ><span class="w-8 me-2 text-lg"><i class="fa fa-edit"></i></span
           ><span> ایجاد نوشته جدید</span></nuxt-link
