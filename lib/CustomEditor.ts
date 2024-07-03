@@ -35,6 +35,7 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { Undo } from '@ckeditor/ckeditor5-undo';
 import { Base64UploadAdapter } from '@ckeditor/ckeditor5-upload';
 import FullScreen from '@pikulinpw/ckeditor5-fullscreen';
+import {Font} from '@ckeditor/ckeditor5-font'
 
 
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
@@ -72,7 +73,8 @@ class Editor extends ClassicEditor {
         TableProperties,
         TableToolbar,
         TextTransformation,
-        Undo
+        Undo,
+        Font
     ];
 
     public static override defaultConfig: EditorConfig = {
@@ -87,15 +89,20 @@ class Editor extends ClassicEditor {
                 'bulletedList',
                 'numberedList',
                 '|',
+                'fontSize',
+                'fontFamily',
+                'fontColor',
+                'fontBackgroundColor',
+                '|',
                 'imageUpload',
                 'insertTable',
                 'blockQuote',
-                'lineHeight',
                 'undo',
                 'redo'
             ]
         },
         language: 'fa',
+        placeholder: "نوشتن را شروع کنید ...",
         image: {
             toolbar: [
                 'imageTextAlternative',

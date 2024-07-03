@@ -12,7 +12,6 @@ const actions = {
     async isAuthUser() {
         
         let token = cookies.get("_uToken") || "";
-        console.log(token)
         if(token != ""){
             let config = {
                 headers: {

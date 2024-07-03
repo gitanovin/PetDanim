@@ -10,9 +10,7 @@
           <div class="lg:flex-1 hidden lg:flex items-center"></div>
           <div class="text-sm font-medium text-white dark:text-gray-900">
             <div class="flex items-center gap-2">
-              <span class="w-5 h-5 flex-shrink-0 pointer-events-none">
-                <Events class="fill-white dark:fill-gray-900" /> </span
-              ><span class="sm:hidden"
+              <span class="sm:hidden"
                 >قرار حمایت از حیوانات بی سرپرست شمیرانات</span
               ><span class="hidden sm:inline-block"
                 >قرار حمایت از حیوانات بی سرپرست شمیرانات</span

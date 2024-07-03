@@ -17,6 +17,6 @@
 <script setup>
 import HeaderTag from "@/components/TemplateParts/Tags/HeaderTag.vue";
 import ButtonTags from "@/components/TemplateParts/Tags/ButtonTags.vue";
-import TagsPosts from "@/components/TemplateParts/Tags/TagPosts.vue";
+import TagsPosts from "@/components/TemplateParts/Tags/TagsPosts.vue";
 import Pagination from "@/components/TemplateParts/Pagination/pageination.vue";
 </script>

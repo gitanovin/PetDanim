@@ -7,8 +7,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   return {
     provide: {
       ckeditor: {
-        customEditor: Editor,
-        // classicEditor: Editor,
+        customEditor: Editor
       },
     },
   };

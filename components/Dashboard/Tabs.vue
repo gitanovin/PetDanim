@@ -8,7 +8,7 @@
           to="/profile"
           :class="$route.path == '/profile' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-gauge"></i></span
           ><span> پیشخوان</span></nuxt-link
@@ -19,7 +19,7 @@
           to="/profile/create-post"
           :class="$route.path == '/profile/create-post' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"><i class="fa fa-edit"></i></span
           ><span> ایجاد نوشته جدید</span></nuxt-link
         >
@@ -29,7 +29,7 @@
           to="/profile/posts"
           :class="$route.path == '/profile/posts' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-newspaper"></i></span
           ><span> نوشته های من</span></nuxt-link
@@ -40,7 +40,7 @@
           to="/profile/favorites"
           :class="$route.path == '/profile/favorites' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-heart"></i></span
           ><span> پست های مورد علاقه </span></nuxt-link
@@ -51,7 +51,7 @@
           to="/profile/bookmarks"
           :class="$route.path == '/profile/bookmarks' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-bookmark"></i></span
           ><span> ذخیره شده ها </span></nuxt-link
@@ -63,7 +63,7 @@
           to="/profile/followings"
           :class="$route.path == '/profile/followings' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-user-check"></i></span
           ><span>دنبال می کنید </span></nuxt-link
@@ -75,7 +75,7 @@
           to="/profile/followers"
           :class="$route.path == '/profile/followers' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"><i class="fa-solid fa-user"></i></span
           ><span>دنبال می کنند </span></nuxt-link
         >
@@ -86,7 +86,7 @@
           to="/profile/edit-profile"
           :class="$route.path == '/profile/edit-profile' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          href="javascript:void(0)"
+          
           ><span class="w-8 me-2 text-lg"><i class="fa fa-user-edit"></i></span
           ><span> ویرایش حساب</span></nuxt-link
         >
@@ -94,7 +94,7 @@
 
       <li class="border-t border-neutral-200 dark:border-dark-700/20 my-4"></li>
       <li @click="doSignOut()">
-        <a class="flex items-center px-6 py-3 font-medium text-red-500" href="javascript:void(0)"
+        <a href="javascript:void(0)" class="flex items-center px-6 py-3 font-medium text-red-500" 
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-right-from-bracket"></i></span
           >خروج</a
@@ -142,9 +142,7 @@ const doSignOut = async () => {
     });
 }
 
-onMounted(() => {
-        console.log(route)
-})
+
 
 const showSwal = (title , text , icon) => {
   $swal.fire({
