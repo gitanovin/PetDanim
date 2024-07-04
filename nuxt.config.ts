@@ -8,7 +8,11 @@ const larkTheme = require.resolve("@ckeditor/ckeditor5-theme-lark");
 
 export default defineNuxtConfig({
   css: ['~/assets/css/app.css', '~/assets/webfonts/icons.css', '~/assets/styles/__theme_colors.scss'],
-  
+  runtimeConfig: {
+    public: {
+      appBaseUrl: 'https://apiblog.petoman.com'
+    }
+  },
   modules: [
     '@vite-pwa/nuxt',
     'nuxt-splide',

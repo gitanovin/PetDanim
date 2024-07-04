@@ -50,8 +50,8 @@
         <div class="w-full pb-6">
             <div class="overflow-hidden">
                 <div class="gap-4 lg:grid lg:grid-cols-12">
-                    <dataset v-slot="{ ds }" :ds-data="blogsList" :ds-sortby="sortBy" :ds-sort-as="{}"
-                        :ds-search-in="['blogId', 'blogName', 'blogValue']" :ds-search-as="{}">
+                    <dataset v-slot="{ ds }" :ds-data="postsList" :ds-sortby="sortBy" :ds-sort-as="{}"
+                        :ds-search-in="['id', 'title']" :ds-search-as="{}">
                         <div class="col-span-12 font-fa">
                             <div
                                 class="mt-2 mb-6 bg-white border border-gray-200 blog-info rounded-xl dark:text-gray-300 dark:bg-dark-800 dark:border-dark-700/20">
@@ -71,7 +71,7 @@
                                 <div class="py-8 border-b px-7 card-header dark:border-dark-700/20">
                                     <div class="grid lg:grid-cols-2 gap-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1">
                                         <div class="w-full">
-                                            <RouterLink to="/add-news">
+                                            <RouterLink to="/profile/create-post">
                                                 <button
                                                     class="box-border relative z-0 inline-flex items-center justify-end w-full p-2.5 overflow-hidden font-medium text-white transition-all duration-300 bg-orange-500 rounded-md cursor-pointer group ease focus:outline-none">
                                                     <span
@@ -132,12 +132,10 @@
                                                                     name="fade" is="transition-group">
                                                                     <template #default="{ row, rowIndex }">
                                                                         <li class="flex border-t border-gray-200 divide-gray-200 cursor-pointer items-center justify-between relative dark:bg-dark-900 dark:border-dark-700/20 dark:text-gray-300 dark:hover:bg-dark-700/20 dark:divide-dark-700/20"
-                                                                            v-on:click.prevent="
-                                                                                openSubMobileTable(row.id)
-                                                                                ">
+                                                                            v-on:click.prevent="openSubMobileTable(row.id)">
                                                                             <div class="flex px-6 py-2 text-right">
                                                                                 <div class="flex items-center">
-                                                                                    <img :src="row.blogIcon"
+                                                                                    <img :src="`${runtimeConfig.public.appBaseUrl}/storage/posts/${row.image}`"
                                                                                         class="w-10 h-10 rounded-lg mx-auto ml-2" />
 
                                                                                     <p
@@ -456,6 +454,7 @@ import DatasetSearch from "@/components/DataTable/DatasetSearch.vue";
 import DatasetShow from "@/components/DataTable/DatasetShow.vue";
 import DataAction from "@/components/DataTable/DataAction.vue";
 import DatasetStatus from "@/components/DataTable/DatasetStatus.vue";
+
 export default {
     components: {
         Dataset,
@@ -468,7 +467,12 @@ export default {
         DataAction,
         CollapseTransition
     },
-
+    props: {
+        postsList: {
+            required: true,
+            type: [Array , Object]
+        }
+    },
     data() {
         return {
             showModal: false,

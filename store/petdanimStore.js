@@ -154,6 +154,28 @@ const actions = {
         }else {
             return false
         }
+    },
+
+    async getUserPosts() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/users/posts/get" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
     }
 
     // profile Section
