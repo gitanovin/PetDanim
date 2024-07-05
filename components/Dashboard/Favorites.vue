@@ -5,7 +5,7 @@
             <div class="overflow-hidden">
                 <div class="gap-4 lg:grid lg:grid-cols-12">
                     <dataset v-slot="{ ds }" :ds-data="favoriteList" :ds-sortby="sortBy" :ds-sort-as="{}"
-                        :ds-search-in="['blogId', 'blogName', 'blogValue']" :ds-search-as="{}">
+                        :ds-search-in="['id']" :ds-search-as="{}">
                         <div class="col-span-12 font-fa">
                             <div
                                 class="mt-2 mb-6 bg-white border border-gray-200 blog-info rounded-xl dark:text-gray-300 dark:bg-dark-800 dark:border-dark-700/20">
@@ -62,7 +62,10 @@
                                                                         <li>
                                                                        
 
-                                                                                <content :postItem="row" />
+                                                                                <content 
+                                                                                    :postItem="row" 
+                                                                                    @updatePostsContent="(posts) => updatePostsContent(posts)" 
+                                                                                />
 
                                                                          
                                                                     
@@ -121,7 +124,7 @@ export default {
         CollapseTransition,
         content
     },
-
+    emit: ['updatePostsContent'],
     props: {
         favoriteList: {
             required: true,
@@ -150,6 +153,9 @@ export default {
         };
     },
     methods: {
+        updatePostsContent(posts) {
+            this.$emit('updatePostsContent', posts)
+        },
         openSubMobileTable(stateId) {
             if (stateId == this.mobileSubmenuIndex) this.mobileSubmenuIndex = null;
             else this.mobileSubmenuIndex = stateId;

@@ -4,8 +4,8 @@
         <div class="w-full pb-6">
             <div class="overflow-hidden">
                 <div class="gap-4 lg:grid lg:grid-cols-12">
-                    <dataset v-slot="{ ds }" :ds-data="blogsList" :ds-sortby="sortBy" :ds-sort-as="{}"
-                        :ds-search-in="['blogId', 'blogName', 'blogValue']" :ds-search-as="{}">
+                    <dataset v-slot="{ ds }" :ds-data="bookmarksList" :ds-sortby="sortBy" :ds-sort-as="{}"
+                        :ds-search-in="['id']" :ds-search-as="{}">
                         <div class="col-span-12 font-fa">
                             <div
                                 class="mt-2 mb-6 bg-white border border-gray-200 blog-info rounded-xl dark:text-gray-300 dark:bg-dark-800 dark:border-dark-700/20">
@@ -39,14 +39,9 @@
                                 </div>
 
                                 <div
-                                    class="grid gap-4 px-6 py-6 bg-stripes-purple xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-5 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1">
-                                    <div class="relative flex w-full gap-4">
-
-
-                                        <data-action />
-                                    </div>
+                                    class="hidden gap-4 px-6 py-6 bg-stripes-purple xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-5 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1">
                                     <div class="lg:justify-end lg:flex w-full relative text-right">
-                                        <dataset-show />
+                                        <dataset-show :dsShowEntries="3" />
                                     </div>
                                 </div>
 
@@ -65,7 +60,10 @@
                                                                     <template #default="{ row, rowIndex }">
                                                                         <li>
 
-                                                                            <content />
+                                                                            <content 
+                                                                                :postItem="row" 
+                                                                                @updatePostsContent="(posts) => updatePostsContent(posts)" 
+                                                                            />
 
 
 
@@ -100,7 +98,7 @@
 </template>
 
 <script>
-import content from "@/components/TemplateParts/contentPost.vue";
+import content from "@/components/TemplateParts/contentPostBookmark.vue";
 import CollapseTransition from "@/components/DataTable/CollapseTransition.vue";
 import blogs from "@/assets/blogs.json";
 import Dataset from "@/components/DataTable/Dataset.vue";
@@ -192,7 +190,17 @@ export default {
             ],
         };
     },
+    emit: ['updatePostsContent'],
+    props: {
+        bookmarksList: {
+            required: true,
+            type: [Array , Object]
+        }
+    },
     methods: {
+        updatePostsContent(posts) {
+            this.$emit('updatePostsContent', posts)
+        },
         openSubMobileTable(stateId) {
             if (stateId == this.mobileSubmenuIndex) this.mobileSubmenuIndex = null;
             else this.mobileSubmenuIndex = stateId;

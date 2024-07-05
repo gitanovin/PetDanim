@@ -53,17 +53,21 @@
 
         <div class="flex items-end justify-between mt-auto">
           <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
-            <LikeButton :count="postItem.post.likes_count" />
+            <LikeButton @click="showPromptLikeModal = true" :isRed="true" :count="postItem.post.likes_count" />
             <CommentButton :count="postItem.post.comments.length" />
-          </div>
-          <div
-            class="flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
-          >
-            <BookmarkButton />
           </div>
         </div>
       </div>
     </div>
+
+    <promptModal
+      :show="showPromptLikeModal"
+      title="هشدار"
+      message="آیا میخواهید این پست را از لیست علاقه مندیها پاک کنید ؟"
+      @confirm="handleConfirm"
+      @cancel="handleCancel"
+      :isLoading="isLoading"
+    />
   </article>
 </template>
 
@@ -72,15 +76,54 @@ import LikeButton from "@/components/TemplateParts/MetaAction/Like.vue";
 import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
+import promptModal from '@/components/TemplateParts/Modal/promptModal.vue'
+import {usePetdanimStore} from '@/store/petdanimStore.js'
+const {$toast} = useNuxtApp()
 
+const petdanimStore = usePetdanimStore()
+
+const isLoading = ref(false)
+const showPromptLikeModal = ref(false)
 const props = defineProps({
   postItem: {
     required: true,
     type: [Array , Object]
   }
 })
+const emit = defineEmits([
+  'updatePostsContent'
+])
 
-onMounted(() => {
-  console.log(props.postItem)
-})
+const handleConfirm = async () => {
+  isLoading.value = true
+
+  const result = await petdanimStore.removeFavoritePost({post_id: props.postItem.post_id})
+  if(result.status == 200) {
+    isLoading.value = false
+    showPromptLikeModal.value = false
+
+    emit('updatePostsContent' , result.result)
+    
+    $toast(result.message , {
+        "theme": "colored",
+        "type": "success"
+    });
+  }else {
+    isLoading.value = false
+    showPromptLikeModal.value = false
+
+    $toast(result.message , {
+        "theme": "colored",
+        "type": "error"
+    });
+  }
+}
+
+const handleCancel = () => {
+  showPromptLikeModal.value = false
+}
+
+// onMounted(() => {
+//   console.log(props.postItem)
+// })
 </script>

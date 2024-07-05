@@ -573,9 +573,9 @@
         :tagsList="tagsList"
       />
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
   import { mapStores } from 'pinia';
   import { usePetdanimStore } from "@/store/petdanimStore";
   import CollapseTransition from "@/components/DataTable/CollapseTransition.vue";

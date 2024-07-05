@@ -318,6 +318,138 @@ const actions = {
         }else {
             return false
         }
+    },
+
+    async removeFavoritePost(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/favorites/delete" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async removeBookmarkPost(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/saveds/delete" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async getUserFollowings() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/users/followings/get" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async getUserFollowers() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/users/followers/get" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async removeUserFollowing(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/followings/remove" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async removeUserFollowers(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/followers/remove" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
     }
 
     // profile Section

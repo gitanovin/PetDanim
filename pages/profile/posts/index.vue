@@ -2,7 +2,8 @@
     <section>
         <Posts
          @removePost="(postIndex) => removePost(postIndex)"
-         :postsList="postsList" />
+         :postsList="postsList"
+        />
     </section>
 </template>
 
@@ -37,4 +38,6 @@ const removePost = (postIdArray) => {
   })
   postsList.value = filteredPost
 }
+
+
 </script>
