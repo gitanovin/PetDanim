@@ -18,6 +18,7 @@
       </button>
 
       <button type="button"
+        @click="collectionRemove()"
         class="mr-2 text-white bg-orange-500 font-medium rounded-lg text-sm px-4 py-4 block text-center items-center">
         پذیرش
       </button>
@@ -39,6 +40,7 @@
 
 <script>
 export default {
+  emits: ['removePosts'],
   data() {
     return {
       placeholder: "اقدام دسته جمعی",
@@ -48,7 +50,6 @@ export default {
       category: false,
       categories: [
         { value: 1, text: "حذف" },
-        { value: 2, text: "ویرایش" },
       ],
     };
   },
@@ -74,6 +75,9 @@ export default {
       })[0];
       return category === undefined ? "" : category.text;
     },
+    collectionRemove() {
+      this.$emit("removePosts" , this.value)
+    }
   },
 };
 </script>

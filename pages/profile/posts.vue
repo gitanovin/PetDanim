@@ -1,6 +1,8 @@
 <template>
     <section>
-        <Posts :postsList="postsList" />
+        <Posts
+         @removePost="(postIndex) => removePost(postIndex)"
+         :postsList="postsList" />
     </section>
 </template>
 
@@ -10,6 +12,7 @@ import Posts from "@/components/Dashboard/Posts.vue";
 import { usePetdanimStore } from "~/store/petdanimStore";
 
 const petdanimStore = usePetdanimStore()
+
 definePageMeta({
   layout: 'user-profile',  
   middleware: 'user-auth'
@@ -25,7 +28,13 @@ const getPosts = async () => {
   const result = await petdanimStore.getUserPosts()
   if(result.status == 200) {
     postsList.value = result.result
-    console.log(postsList.value)
   }
+}
+
+const removePost = (postIdArray) => {
+  const filteredPost = postsList.value.filter((val , index) => {
+    return !postIdArray.includes(val.id)
+  })
+  postsList.value = filteredPost
 }
 </script>

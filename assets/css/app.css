@@ -2764,6 +2764,10 @@ h6 {
   width: 100vw;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .min-w-\[68px\] {
   min-width: 68px;
 }
@@ -4197,11 +4201,6 @@ h6 {
   line-height: 1;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
 .text-\[13px\] {
   font-size: 13px;
 }
@@ -4376,11 +4375,6 @@ h6 {
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {

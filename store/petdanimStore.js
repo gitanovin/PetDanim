@@ -176,6 +176,50 @@ const actions = {
         }else {
             return false
         }
+    },
+
+    async deleteUserPost(postId) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/posts/remove" , {post_id: postId} , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async deleteUserPosts(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/posts/g-remove" , {ids: data.ids} , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
     }
 
     // profile Section
@@ -183,7 +227,7 @@ const actions = {
 
 const getters = {}
 
-export const usePetdanimStore = defineStore({
+export const usePetdanimStore = defineStore('petdanim',{
     id: "petdanim-store",
     state: state,
     actions: actions,

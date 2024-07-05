@@ -31,7 +31,7 @@
                                     <input type="text"
                                         v-model="data.title"
                                         class="block w-full pr-4 py-4 border-gray-300 rounded-md focus:border-hamian focus:ring-hamian sm:text-sm dark:text-gray-300 dark:bg-dark-900 dark:border-dark-700/20"
-                                        placeholder="حداکثر 40 کاراکتر بنویسید" />
+                                        placeholder="حداقل 20 کاراکتر بنویسید" />
                                 </div>
                             </div>
                         </div>
@@ -199,12 +199,12 @@ const doAddPost = async () => {
 const validatePostData = () => {
     if (data.title == '') {
         return "عنوان نوشته را وارد کنید"
-    }else if(data.title.length < 40) {
-        return "عنوان نوشته باید حداقل 40 کاراکتر باشد"
+    }else if(data.title.length < 20) {
+        return "عنوان نوشته باید حداقل 20 کاراکتر باشد"
     }else if(data.descriptionContent == "") {
         return "توضیحات نوشته را وارد کنید"
-    }else if(data.descriptionContent.length < 300) {
-        return "توضیحات نوشته باید حداقل 300 کاراکتر باشد"
+    }else if(data.descriptionContent.length < 200) {
+        return "توضیحات نوشته باید حداقل 200 کاراکتر باشد"
     }else if(data.indexPic == "") {
         return "تصویر شاخص را وارد کنید"
     }else if(data.tags.length == 0) {
