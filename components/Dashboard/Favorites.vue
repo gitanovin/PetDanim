@@ -4,7 +4,7 @@
         <div class="w-full pb-6">
             <div class="overflow-hidden">
                 <div class="gap-4 lg:grid lg:grid-cols-12">
-                    <dataset v-slot="{ ds }" :ds-data="blogsList" :ds-sortby="sortBy" :ds-sort-as="{}"
+                    <dataset v-slot="{ ds }" :ds-data="favoriteList" :ds-sortby="sortBy" :ds-sort-as="{}"
                         :ds-search-in="['blogId', 'blogName', 'blogValue']" :ds-search-as="{}">
                         <div class="col-span-12 font-fa">
                             <div
@@ -38,15 +38,11 @@
                                     </div>
                                 </div>
 
+     
                                 <div
-                                    class="grid gap-4 px-6 py-6 bg-stripes-purple xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-5 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1">
-                                    <div class="relative flex w-full gap-4">
-
-
-                                        <data-action />
-                                    </div>
+                                    class="hidden gap-4 px-6 py-6 bg-stripes-purple xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 4xl:grid-cols-5 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1">
                                     <div class="lg:justify-end lg:flex w-full relative text-right">
-                                        <dataset-show />
+                                        <dataset-show :dsShowEntries="3" />
                                     </div>
                                 </div>
 
@@ -65,7 +61,8 @@
                                                                     <template #default="{ row, rowIndex }">
                                                                         <li>
                                                                        
-                                                                                <content />
+
+                                                                                <content :postItem="row" />
 
                                                                          
                                                                     
@@ -125,6 +122,13 @@ export default {
         content
     },
 
+    props: {
+        favoriteList: {
+            required: true,
+            type: [Array , Object]
+        }
+    },
+
     data() {
         return {
             showModal: false,
@@ -143,53 +147,6 @@ export default {
             Discount: false,
             blogsList: blogs,
             filteredContainer: [],
-            cols: [
-                {
-                    name: "شناسه",
-                    field: "blogId",
-                    size: "w-10",
-                    center: "justify-center",
-                },
-                {
-                    name: "تصویر",
-                    field: "blogImage",
-                    size: "w-auto",
-                    center: "justify-center",
-                },
-                {
-                    name: "عنوان",
-                    field: "blogName",
-                    size: "w-auto",
-                    center: "justify-start",
-                },
-                {
-                    name: "وضعیت",
-                    field: "blogStatus",
-                    size: "w-auto",
-                    center: "justify-center",
-                },
-
-                {
-                    name: "دسته ها",
-                    field: "blogLevel",
-                    size: "w-auto",
-                    center: "justify-center",
-                },
-                {
-                    name: "تاریخ",
-                    field: "blogFeatured",
-                    size: "w-auto",
-                    center: "justify-center",
-                },
-
-
-                {
-                    name: "عملیات",
-                    field: "blogAction",
-                    size: "w-auto",
-                    center: "justify-center",
-                },
-            ],
         };
     },
     methods: {
@@ -222,15 +179,6 @@ export default {
         },
     },
     computed: {
-        sortBy() {
-            return this.cols.reduce((acc, o) => {
-                if (o.sort) {
-                    o.sort === "asc" ? acc.push(o.field) : acc.push("-" + o.field);
-                }
-
-                return acc;
-            }, []);
-        },
     },
 };
 </script>

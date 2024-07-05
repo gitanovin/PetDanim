@@ -220,6 +220,104 @@ const actions = {
         }else {
             return false
         }
+    },
+
+    async getUserPost(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/posts/get-detail" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+    
+    async userEditPost(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const formData = new FormData()
+                formData.append("id" , data.id)
+                formData.append("title" , data.title)
+                formData.append("date"  , data.date)
+                formData.append("descriptionContent" , data.descriptionContent)
+                if(data.indexPic != "" ) {
+                    formData.append("indexPic" , data.indexPic)
+                }
+                formData.append("tags" , data.tags)
+
+                const result = await api.post("/mag/users/posts/edit" , formData , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async getUserFavorites() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/users/favorites/get" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async getUserSaveds() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/users/saveds/get" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
     }
 
     // profile Section

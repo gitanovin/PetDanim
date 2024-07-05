@@ -1,39 +1,56 @@
 <template>
     <section>
-        <div class="loading-box" v-if="favoriteList == null">
+        <div class="loading-box" v-if="postDetail == null">
             <div class="loader" ></div>
         </div>
-        <div v-else-if="favoriteList.length == 0" class="flex items-center justify-center h-[400px] bg-gray-100">
-          <p>هیچ پستی به عنوان علاقه مندی یافت نشد</p>
-        </div>
-        <Favorites v-else :favoriteList="favoriteList" />
+        <EditPost 
+            v-if="postDetail!= null" 
+            :postDetail="postDetail"
+            :postTags="postTags"
+        />
     </section>
 </template>
 
 
 <script setup>
-import Favorites from "@/components/Dashboard/Favorites.vue";
+import EditPost from "@/components/Dashboard/EditPost.client.vue";
 import {usePetdanimStore} from '@/store/petdanimStore.js'
+import {useRoute , useRouter} from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+const postDetail = ref(null)
+const postTags =ref([]);
 
 const petdanimStore = usePetdanimStore()
-const favoriteList = ref(null)
-
-onMounted(() => {
-  getFavorites()
-})
-
-const getFavorites = async () => {
-  const result = await petdanimStore.getUserFavorites()
-  if(result.status == 200) {
-    favoriteList.value = result.result
-  }
-}
 
 definePageMeta({
   layout: 'user-profile',  
   middleware: 'user-auth'
 })
+
+onMounted(async () => {
+    var reg = new RegExp('^[0-9]');
+    if(reg.test(route.params.id) == false) {
+        router.push("/profile/posts")
+    }else {
+        const result = await petdanimStore.getUserPost({post_id: route.params.id})
+        if(result.status == 200) {
+            if(result.result.tags.length != 0) {
+                result.result.tags.forEach(tag => {
+                    postTags.value.push(tag.name)
+                });
+            }
+
+            postDetail.value = result.result
+        }
+    }
+})
+
+
+
 </script>
+
 
 <style scoped>
 /* HTML: <div class="loader"></div> */

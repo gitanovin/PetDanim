@@ -5,10 +5,17 @@
     href="/single/demo-slug#comments"
   >
     <Comment />
-    <span class="ml-1 font-fd">110</span>
+    <span class="ml-1 font-fd">{{count}}</span>
   </a>
 </template>
 
 <script setup>
 import Comment from "@/components/icons/Comment.vue";
+
+const props = defineProps({
+  count: {
+    required: true,
+    type: Number
+  }
+})
 </script>

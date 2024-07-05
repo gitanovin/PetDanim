@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full">
+    <div class="w-full" v-if="postDetail != null">
         <div
             class="border border-gray-200 dark:border-dark-700/20 rounded-lg card  dark:bg-dark-800">
             <div
@@ -7,11 +7,11 @@
                 <h6
                     class="flex items-center gap-1 dark:text-gray-300 antialiased font-semibold leading-normal text-gray-600 font-fa">
 
-                    افزودن نوشته
+                    بروزرسانی نوشته
                 </h6>
                 <p
                     class="flex items-center gap-1 pt-2 text-xs antialiased font-normal leading-normal dark:text-white text-gray-600 font-fa">
-                    از این بخش می توانید نوشته را اضافه کنید
+                    از این بخش می توانید نوشته را بروزرسانی کنید
                 </p>
             </div>
 
@@ -121,9 +121,9 @@
                                                     class="w-full">افزودن نوشته</span></span>
                                         </button> -->
                                         <AuthButton 
-                                            text="افزودن نوشته"
+                                            text="بروزرسانی نوشته"
                                             :isLoading="postIsLoading"
-                                            @doClick="doAddPost()"
+                                            @doClick="doEditPost()"
                                         />
                                     </div>
                                 </div>
@@ -134,6 +134,9 @@
             </div>
         </div>
     </div>
+    <div v-else>
+        post Not Found
+    </div>
 </template>
 
 <script setup>
@@ -141,6 +144,19 @@ import AuthButton from '@/components/Buttons/AuthButton.vue'
 import TagInput from "./TagInput.vue";
 import ImageIcon from "@/components/icons/ImageIcon.vue";
 import { usePetdanimStore } from '~/store/petdanimStore';
+
+const props = defineProps({
+    postDetail: {
+        required: true,
+        type: [Array , Object]
+    },
+    postTags: {
+        required: true,
+        type: [Array , Object]
+    }
+})
+
+const {appBaseUrl} = useRuntimeConfig().public
 
 const tagInputRef = ref(null)
 const petdanimStore = usePetdanimStore()
@@ -152,11 +168,12 @@ const indexPicLocalSrc = ref("")
 const postIsLoading = ref(false)
 
 const data = reactive({
+    id: props.postDetail.id,
     title: "",
     date: "",
     descriptionContent: "",
     indexPic: "",
-    tags: []
+    tags: props.postTags
 })
 
 
@@ -164,22 +181,27 @@ const customEditor = ref(null)
 
 
 onMounted(() => {
-    data.date = useNuxtApp().$moment().locale('fa').format('YYYY-MM-DD')
     customEditor.value = $ckeditor.customEditor
+
+    if(props.postDetail != null) {
+        data.title = props.postDetail.title
+        data.date = props.postDetail.date
+        data.descriptionContent = props.postDetail.content
+        indexPicLocalSrc.value = `${appBaseUrl}/storage/posts/${props.postDetail.image}`
+    }
 })
 
-const doAddPost = async () => {
+const doEditPost = async () => {
     const resultValidate = validatePostData();
     if(resultValidate == true) {
         postIsLoading.value = true
-        const result = await petdanimStore.userAddPost(data)
+        const result = await petdanimStore.userEditPost(data)
         if(result.status == 200) {
             postIsLoading.value = false
             $toast(result.message , {
                 "theme": "colored",
                 "type": "success"
             });
-            clearData()
         }else {
             postIsLoading.value = false
             $toast(result.message , {
@@ -204,8 +226,6 @@ const validatePostData = () => {
         return "توضیحات نوشته را وارد کنید"
     }else if(data.descriptionContent.length < 200) {
         return "توضیحات نوشته باید حداقل 200 کاراکتر باشد"
-    }else if(data.indexPic == "") {
-        return "تصویر شاخص را انتخاب کنید"
     }else if(data.tags.length == 0) {
         return "تگ های نوشته را وارد کنید"
     }else if(data.tags.length < 5) {
@@ -255,13 +275,6 @@ const removeIndexPic = () => {
     indexPicLocalSrc.value = '';
 }
 
-const clearData = () => {
-    data.title = ""
-    data.descriptionContent = ""
-    removeIndexPic()
-    data.tags = []
-    tagInputRef.value.clearInput()
-}
 
 </script>
 <style>

@@ -8,4 +8,5 @@
 
 <script setup>
 import Bookmark from "@/components/icons/Bookmark.vue";
+
 </script>
