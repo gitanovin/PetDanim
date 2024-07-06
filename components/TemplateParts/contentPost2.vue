@@ -61,7 +61,7 @@
 
 <script setup>
 import PostCover from "@/components/TemplateParts/Media/Cover.vue";
-import PostCategory from "@/components/TemplateParts/Badge/PostCategory.vue";
+import PostCategory from "~/components/TemplateParts/Badge/index.vue";
 import Author from "@/components/TemplateParts/MetaAction/Author/Author.vue";
 import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.vue";
 import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImage.vue";

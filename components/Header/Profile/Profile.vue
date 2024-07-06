@@ -121,7 +121,7 @@
               </MenuItem>
             </div>
 
-            <div @click="doSignOut()" class="border-t dark:!border-dark-700/20 px-2">
+            <div @click="openModalPrompt()" class="border-t dark:!border-dark-700/20 px-2">
               <MenuItem>
                 <button
                   :class="[
@@ -139,10 +139,13 @@
         </MenuItems>
       </transition>
     </Menu>
+
   </div>
+  
 </template>
 
 <script setup>
+
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import UserIcon from "@/components/icons/UserIcon.vue";
 import LogoutIcon from "@/components/icons/Logout.vue";
@@ -152,51 +155,18 @@ import Bookmark from "@/components/icons/Bookmark.vue";
 import BookmarkIcon from "@/components/icons/BookmarkIcon.vue";
 import Heart from "@/components/icons/Heart.vue";
 import HeartIcon from "@/components/icons/HeartIcon.vue";
-const { $swal } = useNuxtApp()
-const { $toast } = useNuxtApp()
-
 import { usePetdanimStore } from '~/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 
+
+const emit = defineEmits(['openPrompt']);
 const petdanimStore = usePetdanimStore()
 const {authUser} = storeToRefs(petdanimStore)
 
-const doSignOut = async () => {
-    $swal.fire({
-        title: "هشدار",
-        text: "آیا از خروج حساب کاربری خود مطمعنید؟",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#9d2c48",
-        cancelButtonColor: "#555",
-        cancelButtonText: "خیر",
-        confirmButtonText: "بله",
-    }).then(async (result) => {
-        if (result.isConfirmed) {
-            const result = await petdanimStore.logoutUser()
-            if(result.status == 200){
-              $toast(result.message , {
-                "theme": "colored",
-                "type": "success"
-              });
-              location.replace("http://localhost:3000");
-            }else{
-                $toast(result.message , {
-                  "theme": "colored",
-                  "type": "error"
-                });
-            }
-        }
-    });
+
+const openModalPrompt = () => {
+  emit("openPrompt")
 }
 
-
-const showSwal = (title , text , icon) => {
-  $swal.fire({
-      title: title,
-      text: text,
-      icon: icon
-  });
-}
 
 </script>

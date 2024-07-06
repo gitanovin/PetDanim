@@ -54,7 +54,7 @@
 <script setup>
 import Gallery from "@/components/TemplateParts/Content/Single/header/FeaturedImage/HeaderGallery.vue";
 import ReadTime from "@/components/TemplateParts/Content/Single/header/ReadTime/read.vue";
-import PostCategory from "@/components/TemplateParts/Badge/PostCategory.vue";
+import PostCategory from "~/components/TemplateParts/Badge/index.vue";
 import LikeButton from "@/components/TemplateParts/MetaAction/Like.vue";
 import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";

@@ -138,26 +138,18 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import ImageIcon from "@/components/icons/ImageIcon.vue";
+import Badge from '@/components/TemplateParts/Badge/index.vue'
 import password from "./Password.vue";
-export default {
-    components: {
-        password, ImageIcon
-    },
-    data() {
-        return {
-            useRealInput: false,
-            value: "",
-        };
-    },
 
-    mounted: function () {
-        if (this.auto == "true" || this.auto == 1) {
-            this.generate();
-        }
-    },
+const useRealInput = ref(false)
+const value = ref("")
 
+onMounted(() => {
+    if(auto.value == "true" || auto.value == 1) {
+        generate()
+    }
+})
 
-};
 </script>

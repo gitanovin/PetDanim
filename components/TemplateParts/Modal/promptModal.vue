@@ -1,5 +1,5 @@
 <template>
-    <div v-if="show" @click.stop="cancel" class="px-2 fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div v-if="show" @click.stop="cancel" class="px-2 fixed inset-0 !z-[1000] flex items-center justify-center bg-black bg-opacity-50">
       <div class="bg-white p-5 rounded shadow-lg max-w-lg w-full animate-modal-slide-in" @click.stop>
         <h2 class="text-xl font-bold mb-4">{{ title }}</h2>
         <p>{{ message }}</p>

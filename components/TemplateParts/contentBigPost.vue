@@ -37,7 +37,7 @@
 
 <script setup>
 import PostBigCover from "@/components/TemplateParts/Media/PostBigCover.vue";
-import PostCategory from "@/components/TemplateParts/Badge/PostCategory.vue";
+import PostCategory from "~/components/TemplateParts/Badge/index.vue";
 import Author from "@/components/TemplateParts/MetaAction/Author/Author.vue";
 import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.vue";
 import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImage.vue";

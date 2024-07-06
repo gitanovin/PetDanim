@@ -93,7 +93,7 @@
       </li>
 
       <li class="border-t border-neutral-200 dark:border-dark-700/20 my-4"></li>
-      <li @click="doSignOut()">
+      <li @click="openModalPrompt()">
         <a href="javascript:void(0)" class="flex items-center px-6 py-3 font-medium text-red-500" 
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-right-from-bracket"></i></span
@@ -101,55 +101,52 @@
         >
       </li>
     </ul>
+
+
+    <promptModal :show="showPromptLikeModal" title="هشدار" message="آیا میخواهید از حساب کاربری خود خارج شوید؟"
+      @confirm="handleConfirm" @cancel="handleCancel" :isLoading="isLoading" />
   </div>
 </template>
 
 <script setup>
+import promptModal from '@/components/TemplateParts/Modal/promptModal.vue'
 import { usePetdanimStore } from '~/store/petdanimStore.js'
 import {useRouter , useRoute} from 'vue-router'
-const { $swal } = useNuxtApp()
+
+const isLoading = ref(false)
+const showPromptLikeModal = ref(false)
 const { $toast } = useNuxtApp()
 const petdanimStore = usePetdanimStore()
 const router = useRouter()
-const route = useRoute()
-const doSignOut = async () => {
-    $swal.fire({
-        title: "هشدار",
-        text: "آیا از خروج حساب کاربری خود مطمعنید؟",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#9d2c48",
-        cancelButtonColor: "#555",
-        cancelButtonText: "خیر",
-        confirmButtonText: "بله",
-    }).then(async (result) => {
-        if (result.isConfirmed) {
-            const result = await petdanimStore.logoutUser()
-            if(result.status == 200){
-              $toast(result.message , {
-                "theme": "colored",
-                "type": "success"
-              });
-              
-              location.replace("http://localhost:3000");
-            }else{
-                $toast(result.message , {
-                  "theme": "colored",
-                  "type": "error"
-                });
-            }
-        }
-    });
+
+const openModalPrompt = () => {
+  showPromptLikeModal.value = true
 }
 
+const handleConfirm = async () => {
+  isLoading.value = true
 
+  const result = await petdanimStore.logoutUser()
+  if (result.status == 200) {
+    isLoading.value = false
+    showPromptLikeModal.value = false
+    $toast(result.message, {
+      "theme": "colored",
+      "type": "success"
+    });
+    router.push("/")
+  } else {
+    isLoading.value = false
+    showPromptLikeModal.value = false
+    $toast(result.message, {
+      "theme": "colored",
+      "type": "error"
+    });
+  }
+}
 
-const showSwal = (title , text , icon) => {
-  $swal.fire({
-      title: title,
-      text: text,
-      icon: icon
-  });
+const handleCancel = () => {
+  showPromptLikeModal.value = false
 }
 
 </script>

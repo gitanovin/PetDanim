@@ -21,27 +21,9 @@
 </template>
 
 <script>
+const 
 export default {
-  props: {
-    type: {
-      type: String,
-      default: "text",
-    },
-    size: {
-      type: String,
-      default: "32",
-    },
-    characters: {
-      type: String,
-      default: "a-z,A-Z,0-9,#",
-    },
-    placeholder: {
-      type: String,
-      default: "رمز عبور",
-    },
-    auto: [String, Boolean],
-    value: "",
-  },
+  props: ,
   data: function () {
     return {
       password: this.value,
