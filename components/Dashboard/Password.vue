@@ -9,7 +9,7 @@
         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"></div>
         <input :type="type"
           class="font-en block w-full rounded-none rounded-r-lg ltr text-left border-0 border-gray-300 pr-4 py-4 focus:ring-0 focus:border-indigo-500 focus:ring-indigo-500 outline-none sm:text-sm dark:border-dark-700/20 focus:border-gray-500 focus:ring-gray-500 sm:text-sm dark:bg-dark-900 dark:border-dark-700/20 dark:text-gray-300"
-          :placeholder="placeholder" :value="password" />
+          :placeholder="placeholder" :value="passwordInput" />
       </div>
       <button @click="generate()" type="button"
         class="relative -mr-px inline-flex items-center space-x-2 rounded-l-lg border-0 border-gray-300 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:border-indigo-500 focus:outline-none focus:ring-0 focus:ring-indigo-500 dark:border-dark-700/20 dark:bg-dark-700/50 dark:text-gray-300">
@@ -20,9 +20,8 @@
 
 </template>
 
-<script>
-export default {
-  props: {
+<script setup>
+const props = defineProps({
     type: {
       type: String,
       default: "text",
@@ -41,20 +40,19 @@ export default {
     },
     auto: [String, Boolean],
     value: "",
-  },
-  data: function () {
-    return {
-      password: this.value,
-    };
-  },
-  mounted: function () {
-    if (this.auto == "true" || this.auto == 1) {
-      this.generate();
+  })
+
+  const passwordInput = ref(props.value)
+
+  onMounted(() => {
+    console.log("test")
+    if (props.auto == "true" || props.auto == 1) {
+      generate();
     }
-  },
-  methods: {
-    generate() {
-      let charactersArray = this.characters.split(",");
+  })
+
+  const generate = () => {
+      let charactersArray = props.characters.split(",");
       let CharacterSet = "";
       let password = "";
 
@@ -71,13 +69,12 @@ export default {
         CharacterSet += "![]{}()%&*$#^<>~@|";
       }
 
-      for (let i = 0; i < this.size; i++) {
+      for (let i = 0; i < props.size; i++) {
         password += CharacterSet.charAt(
           Math.floor(Math.random() * CharacterSet.length)
         );
       }
-      this.password = password;
-    },
-  },
-};
+      passwordInput.value = password;
+    }
+
 </script>

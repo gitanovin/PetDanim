@@ -146,10 +146,5 @@ import password from "./Password.vue";
 const useRealInput = ref(false)
 const value = ref("")
 
-onMounted(() => {
-    if(auto.value == "true" || auto.value == 1) {
-        generate()
-    }
-})
 
 </script>
