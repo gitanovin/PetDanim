@@ -3,14 +3,14 @@
         type="button"
         v-if="isLoading == false"
         @click="doClickEvent()"
-        class="mt-3 flex w-full justify-center rounded-md border border-transparent bg-orange-500 py-4 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-0 focus:ring-orange-500 focus:ring-offset-2 "
+        :class="`mt-3 flex w-full justify-center rounded-md border border-transparent bg-${bg}-500 py-4 px-4 text-sm font-medium text-white shadow-sm hover:bg-${bg}-700 focus:outline-none focus:ring-0 focus:ring-${bg}-500 focus:ring-offset-2`"
     >
         {{ text }}
     </button>
     <button
         type="button"
         v-if="isLoading == true"
-        class="mt-3 flex w-full justify-center rounded-md border border-transparent bg-orange-500 py-4 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-0 focus:ring-orange-500 focus:ring-offset-2 "
+        :class="`mt-3 flex w-full justify-center rounded-md border border-transparent bg-${bg}-500 py-4 px-4 text-sm font-medium text-white shadow-sm hover:bg-${bg}-700 focus:outline-none focus:ring-0 focus:ring-${bg}-500 focus:ring-offset-2`"
     >
         <div class="loader"></div>
     </button>
@@ -28,6 +28,11 @@ const props = defineProps({
     isLoading: {
         required: true,
         type: Boolean
+    },
+    bg: {
+        required: false,
+        type: String,
+        default: "orange"
     }
 })
 

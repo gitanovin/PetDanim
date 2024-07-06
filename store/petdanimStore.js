@@ -450,6 +450,78 @@ const actions = {
         }else {
             return false
         }
+    },
+
+    async editUserProfile(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            let formData = new FormData();
+            formData.append("profile_image" , data.profile_image)
+
+            try {
+                const result = await api.post("/mag/users/profile/edit" , formData , config)
+                if(result.status == 200) {
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
+
+    async sendOtpVerifyEmailOrPhone(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+        
+            try {
+                const result = await api.post("/mag/users/profile/send-otp" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                if(err.response.status == 429) {
+                    return {
+                        status: 429,
+                        message: "تعداد درخواست شما بیش از حد مجاز است"
+                    }
+                }else {
+                    return false
+                }
+            }
+        }
+    },
+
+    async verifyUserEmailOrPhone(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/users/profile/verify" , data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }
     }
 
     // profile Section
