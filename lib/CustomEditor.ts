@@ -1,3 +1,7 @@
+
+import { useCookies } from "vue3-cookies";
+const cookies = process.client == true ? useCookies().cookies : null;
+
 import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
@@ -36,6 +40,8 @@ import { Undo } from '@ckeditor/ckeditor5-undo';
 import { Base64UploadAdapter } from '@ckeditor/ckeditor5-upload';
 import FullScreen from '@pikulinpw/ckeditor5-fullscreen';
 import {Font} from '@ckeditor/ckeditor5-font'
+import {CKFinder} from '@ckeditor/ckeditor5-ckfinder'
+import {CKFinderUploadAdapter} from '@ckeditor/ckeditor5-adapter-ckfinder'
 
 
 // You can read more about extending the build with additional plugins in the "Installing plugins" guide.
@@ -74,7 +80,9 @@ class Editor extends ClassicEditor {
         TableToolbar,
         TextTransformation,
         Undo,
-        Font
+        Font,
+        CKFinder,
+        CKFinderUploadAdapter
     ];
 
     public static override defaultConfig: EditorConfig = {
@@ -94,12 +102,16 @@ class Editor extends ClassicEditor {
                 'fontColor',
                 'fontBackgroundColor',
                 '|',
-                'imageUpload',
+                'uploadImage',
                 'insertTable',
                 'blockQuote',
                 'undo',
                 'redo'
             ]
+        },
+        ckfinder: {
+            // Upload the images to the server using the CKFinder QuickUpload command.
+            uploadUrl: 'https://apiblog.petoman.com/api/mag/ckeditor/upload',
         },
         language: 'fa',
         placeholder: "نوشتن را شروع کنید  ...",
@@ -121,8 +133,12 @@ class Editor extends ClassicEditor {
                 'tableCellProperties',
                 'tableProperties'
             ]
-        }
+        },
+
     };
 }
+
+
+
 
 export default Editor;

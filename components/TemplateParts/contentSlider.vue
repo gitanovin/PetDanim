@@ -15,7 +15,11 @@
 
       <div class="h-full w-full">
         <div class="relative w-full h-full">
-          <PostCover />
+          <img
+            :alt="post.title"
+            class="object-cover rounded-t-3xl h-full w-full"
+            :src="`${appBaseUrl}/storage/${post.image}`"
+          />
           <div
             class="nc-ButtonPlayMusicPlayer select-none absolute inset-0 bg-neutral-900/30 flex items-center justify-center">
             <div class="nc-PostTypeFeaturedIcon z-20 hover:scale-105 transform cursor-pointer transition-transform">
@@ -38,7 +42,8 @@
         <div class="inline-flex items-center text-xs text-neutral-300">
           <div class="block">
             <h2 class="block text-base sm:text-lg font-semibold text-white">
-              <span class="line-clamp-2" title="Microsoft announces ">برترین نژادهای سگ
+              <span class="line-clamp-2" title="Microsoft announces ">  
+                {{ post.title }}
               </span>
             </h2>
             <div class="flex mt-2.5 relative items-center">
@@ -70,4 +75,13 @@ import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
+
+const props = defineProps({
+  post: {
+    required: true,
+    type: Object,
+  }
+})
+
+const {appBaseUrl} = useRuntimeConfig().public
 </script>

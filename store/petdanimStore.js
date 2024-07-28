@@ -462,7 +462,14 @@ const actions = {
             };
 
             let formData = new FormData();
-            formData.append("profile_image" , data.profile_image)
+            if(data.profile_image != "") {
+                formData.append("profile_image" , data.profile_image)
+            }
+            if(data.password != "") {
+                formData.append("password" , data.password)
+            }
+            formData.append("name" , data.name)
+            formData.append("username" , data.username)
 
             try {
                 const result = await api.post("/mag/users/profile/edit" , formData , config)
@@ -522,9 +529,19 @@ const actions = {
                 return false
             }
         }
-    }
+    },
 
-    // profile Section
+    // home api
+    async getTemplatesData() {
+        try {
+            const result = await api.get("/mag/home/get-template-data")
+            if(result.status == 200){
+                return result.data
+            }
+        }catch(err) {
+            return false
+        }
+    }
 }
 
 const getters = {}

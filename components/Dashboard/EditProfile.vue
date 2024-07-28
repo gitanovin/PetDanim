@@ -282,6 +282,7 @@ const loadingVerifyMobileButton = ref(false)
 const validateOtpLoading = ref(false)
 const resendLoading = ref(false)
 const resendended = ref(false)
+const {appBaseUrl} = useRuntimeConfig().public
 
 const userData = reactive({
   inputType: "",
@@ -298,6 +299,9 @@ onMounted(() => {
   userData.username = authUser.value.username;
   userData.email = authUser.value.email ? authUser.value.email : "";
   userData.mobile = authUser.value.mobile;
+  if(authUser.value.profile != null) {
+    localProfileSrc.value = `${appBaseUrl}/storage/avatars/${authUser.value.profile}`
+  }
 });
 
 const isEmail = (input) => {
@@ -424,8 +428,14 @@ const doEditProfile = async () => {
       loading.value = false;
       $toast(result.message, {
         theme: "colored",
-        type: "error",
+        type: "success",
       });
+    }else {
+        loading.value = false;
+        $toast(result.message, {
+            theme: "colored",
+            type: "error",
+        });
     }
   }
 };
@@ -495,6 +505,8 @@ const validatData = () => {
     return "ابتدا ایمیل خود را به تایید برسانید";
   } else if (userData.password != "" && userData.password.length < 8) {
     return "گذرواژه حداقل باید 8 کاراکتر باشد";
+  }  else if (userData.password != "" && userData.password.length > 60) {
+    return "گذرواژه حداکثر میتواند 60 کاراکتر باشد";
   } else {
     return true;
   }

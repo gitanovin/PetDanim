@@ -8,10 +8,10 @@
           <h2
             class="text-xl md:text-3xl lg:text-xl font-bold flex items-center"
           >
-            <MostanadIcon
-              class="w-12 rounded-lg ml-2 p-2 bg-primary fill-white dark:!bg-dark-700/20 bg-orange-500"
-            />
-            <span> مستندات پت ها </span>
+            <div class="w-12 rounded-lg ml-2 p-2 bg-primary text-white dark:!bg-dark-700/20 bg-orange-500 flex items-center justify-center">
+              <i :class="`fa fa-${icon}`"></i>
+            </div>
+            <span> {{ title }}</span>
           </h2>
           <div
             class="bg-orange-500 w-4 h-4 rounded-full dark:!bg-dark-700"
@@ -26,4 +26,15 @@
 
 <script setup>
 import MostanadIcon from "@/components/icons/Mostanad.vue";
+
+const props = defineProps({
+  title: {
+    required: true,
+    type: String
+  },
+  icon: {
+    required: true,
+    type: String
+  }
+})
 </script>

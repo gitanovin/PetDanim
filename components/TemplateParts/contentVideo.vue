@@ -6,7 +6,11 @@
         <div>
           <div class="relative w-full h-full">
             <a class="block absolute inset-0" href="/single-video/this-is-single-slug">
-              <PostCover />
+              <img
+                :alt="post.title"
+                class="object-cover rounded-t-3xl h-full w-full"
+                :src="`${appBaseUrl}/storage/${post.image}`"
+              />
             </a>
             <PostTypeIcon />
 
@@ -27,7 +31,8 @@
 
             <div>
               <h2 class="block font-semibold text-base text-gray-900 dark:!text-neutral-50">
-                <a class="line-clamp-1" href="/single-video/this-is-single-slug">سگ ها حیوانات باهوشی هستند
+                <a class="line-clamp-1" href="/single-video/this-is-single-slug">
+                  {{ post.title }}    
                 </a>
               </h2>
               <div class="flex mt-1.5 items-center">
@@ -53,5 +58,15 @@ import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.
 import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImage.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
-import PostTypeIcon from "@/components/TemplateParts/PostType/Video.vue";
+import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
+
+
+const props = defineProps({
+  post: {
+    required: true,
+    type: Object,
+  }
+})
+
+const {appBaseUrl} = useRuntimeConfig().public
 </script>
