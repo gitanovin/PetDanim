@@ -25,7 +25,9 @@
             <div class="nc-PostTypeFeaturedIcon z-20 hover:scale-105 transform cursor-pointer transition-transform">
               <span
                 class="bg-neutral-900/-60 rounded-full flex items-center justify-center text-xl text-white border border-white w-11 h-11">
-                <PostTypeIcon />
+                <PostTypeIcon v-if="post.post_type == 'text'" />
+                <VideoIcon v-if="post.post_type == 'video'" />
+                <GalleryIcon v-if="post.post_type == 'gallery'" />
               </span>
             </div>
           </div>
@@ -37,7 +39,7 @@
       <div class="absolute bottom-0 inset-x-0 p-4 flex flex-col flex-grow">
         <a class="absolute inset-0" href="/single-audio/this-is-single-slug"></a>
         <div class="mb-3">
-          <PostCategory/>
+          <PostCategory :text="post.category.title"/>
         </div>
         <div class="inline-flex items-center text-xs text-neutral-300">
           <div class="block">
@@ -75,6 +77,8 @@ import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
+import VideoIcon from "@/components/TemplateParts/PostType/Video.vue";
+import GalleryIcon from "@/components/TemplateParts/PostType/Mostanad.vue";
 
 const props = defineProps({
   post: {

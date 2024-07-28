@@ -121,14 +121,22 @@
       <!-- <=======START BLOG SECTION POST-V-1==========> -->
       <BlogSection v-if="template.type == 'sectionFour'" class="dark:!bg-dark-800 bg-white py-16 lg:py-16">
         <Header-Section :icon="template.icon" :title="template.title">
-          <TabsSection class="mb-8" />
+          <TabsSection 
+          @activeCat="(index) => activeCategoryTab(index)"
+          :categories="template.categories" class="mb-8"
+          :activeCatIndex="activeCatIndex" />
         </Header-Section>
 
-        <Grid class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4">
-          <contentBigPost />
-          <Content-List-Slot>
-            <content-List />
-          </Content-List-Slot>
+        <Grid v-if="template.categories.length != 0" class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4">
+          <contentBigPost 
+            v-if="template.categories[activeCatIndex].posts.length != 0"
+            :post="template.categories[activeCatIndex].posts[0]"
+          />
+          <div class="ContentList">
+            <div class="grid gap-6 md:gap-4">
+              <content-List :posts="template.categories[activeCatIndex].posts" />
+            </div>
+          </div>
         </Grid>
       </BlogSection>
       <!-- <=======END BLOG SECTION POST-V-1==========> -->
@@ -195,7 +203,6 @@
 import sliderConfig from "@/configs/sliderConfig";
 import BlogSection from "@/components/TemplateParts/Section/BlogSection.vue";
 import TopSliderSection from "@/components/TemplateParts/Section/TopSliderSection.vue";
-import ContentListSlot from "@/components/TemplateParts/Content/ContentListSlot.vue";
 import ContentPost from "~/components/TemplateParts/Content/ContentPostSlot.vue";
 import HeaderSection from "@/components/TemplateParts/Header/header.vue";
 import TabsSection from "@/components/TemplateParts/Header/Tabs/tabs.vue";
@@ -213,19 +220,29 @@ import BannerAds from "@/components/Banner/banner.vue";
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 
 
+const activeCatIndex = ref(0)
 const petdanimStore = usePetdanimStore()
 const postSliderOptions = ref(sliderConfig[0]);
 
 const postSliderNews = ref(sliderConfig[1]);
 const templateData = ref([])
 
+const {appBaseUrl} = useRuntimeConfig().public
 
-onMounted(async () => {
-  const result = await petdanimStore.getTemplatesData()
-  if(result.status == 200) {
-    templateData.value = result.result
+const getTemplatesData = async () => {
+  const { data } = await useFetch(`${appBaseUrl}/api/mag/home/get-template-data`)
+  const dataJson = data.value
+
+  if(dataJson.status == 200) {
+    templateData.value = dataJson.result
   }
-})
+}
+
+const activeCategoryTab = (index) => {
+  activeCatIndex.value = index
+}
+
+getTemplatesData()
 </script>
 
 

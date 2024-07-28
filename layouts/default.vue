@@ -1,6 +1,6 @@
 <template>
   <div>
-  <AdvertisingBanner />
+  <!-- <AdvertisingBanner /> -->
   <Header />
   <TrackTitle />
     <slot />

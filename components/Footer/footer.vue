@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative z-0 dark:!text-dark-700 dark:!bg-dark-800">
+  <footer v-if="footerData != null" class="relative z-0 dark:!text-dark-700 dark:!bg-dark-800">
     <div class="footer lg:px-0 px-8  mx-auto w-full max-w-7xl">
       <div class="content pb-10 pt-10">
         <div class="mb-12 relative">
@@ -90,15 +90,11 @@
                 <p
                   class="text-base mb-2 md:w-10/12 w-full  leading-7 dark:text-gray-920 text-biscay-650 text-justify"
                 >
-                  پت دانیم یکی از پرتلاش&zwnj;ترین و بروزترین وبسایت های آموزشی در
-                  سطح ایران است که همیشه تلاش کرده تا بتواند جدیدترین و بروزترین
-                  مقالات و دوره&zwnj;های آموزشی را در اختیار علاقه&zwnj;مندان
-                  ایرانی قرار دهد. تبدیل کردن برنامه نویسان ایرانی به بهترین
-                  برنامه نویسان جهان هدف ماست.
+                  {{ footerData.aboutus }}
                 </p>
 
                 <a
-                  href="/skills"
+                  href="/aboutus"
                   class="inline-flex items-center group dark:hover:text-orange-60 dark:!text-dark-700 text-orange-700 text-13 font-medium transition transform duration dark:hover:text-gray-210-20 hover:text-dark-700 md:mx-0 mx-auto"
                 >
                   مشاهده بیشتر
@@ -141,56 +137,17 @@
                 class="z-0 w-4 h-4 flex absolute bg-orange-700 opacity-20 top-0 rounded-full -right-2 dark:!bg-dark-700 dark:!bg-dark-700"
               ></span>
             </div>
-            <ul class="flex flex-col md:items-start items-center">
-              <li class="mb-3 last:mb-0 flex items-center">
+            <ul v-if="linkduni != null" class="flex flex-col md:items-start items-center">
+              <li v-for="(link , index) in linkduni" :key="index" class="mb-3 last:mb-0 flex items-center">
                 <span
                   class="md:flex hidden w-1 h-1 ml-2 mb-1 dark:text-gray-940 bg-orange-700 opacity-30 rounded-full"
                 ></span>
                 <a
                   class="text-base text-biscay-650 dark:text-gray-920 transition transform dark:hover:text-orange-450 hover:text-dark-700 duration-200 ease-linear"
                   href="/terms"
-                  >حامیان پت
+                  >
+                  {{link.title}} 
                 </a>
-              </li>
-              <li class="mb-3 last:mb-0 flex items-center">
-                <span
-                  class="md:flex hidden w-1 h-1 ml-2 mb-1 bg-orange-700 opacity-30 rounded-full"
-                ></span>
-                <a
-                  class="text-base text-biscay-650 dark:text-gray-920 transition transform dark:hover:text-orange-450 hover:text-dark-700 duration-200 ease-linear"
-                  href="/masters"
-                  >پت مارکت
-                </a>
-              </li>
-              <li class="mb-3 last:mb-0 flex items-center">
-                <span
-                  class="md:flex hidden w-1 h-1 ml-2 mb-1 dark:text-gray-940 bg-orange-700 opacity-30 rounded-full"
-                ></span>
-                <a
-                  class="text-base text-biscay-650 dark:text-gray-920 transition transform dark:hover:text-orange-450 hover:text-dark-700 duration-200 ease-linear"
-                  href="/about-us"
-                  >دامپزشکی
-                </a>
-              </li>
-              <li class="mb-3 last:mb-0 flex items-center">
-                <span
-                  class="md:flex hidden w-1 h-1 ml-2 mb-1 dark:text-gray-940 bg-orange-700 opacity-30 rounded-full"
-                ></span>
-                <a
-                  class="text-base text-biscay-650 dark:text-gray-920 transition transform dark:hover:text-orange-450 hover:text-dark-700 duration-200 ease-linear"
-                  href="/contact-us"
-                  >پت چت</a
-                >
-              </li>
-                 <li class="mb-3 last:mb-0 flex items-center">
-                <span
-                  class="md:flex hidden w-1 h-1 ml-2 mb-1 dark:text-gray-940 bg-orange-700 opacity-30 rounded-full"
-                ></span>
-                <a
-                  class="text-base text-biscay-650 dark:text-gray-920 transition transform dark:hover:text-orange-450 hover:text-dark-700 duration-200 ease-linear"
-                  href="/contact-us"
-                  >پت فیلم</a
-                >
               </li>
             </ul>
           </div>
@@ -247,7 +204,7 @@
                 <a
                   class="dark:text-white text-biscay-650 dark:hover:text-orange-450 font-medium text-sm transition transform hover:text-dark-700 duration-200 ease-linear"
                   href="mailto:info@petoman.com"
-                  >info@petoman.com</a
+                  >{{ footerData.email }}</a
                 >
               </li>
               <li class="flex items-center justify-between mb-7 last:mb-0">
@@ -277,13 +234,13 @@
                   <span
                     class="text-sm font-medium text-dark-550 dark:text-gray-920"
                   >
-                    آی دی تلگرام:
+                    تلفن :
                   </span>
                 </span>
                 <a
                   class="dark:text-white text-biscay-650 dark:hover:text-orange-450 font-medium text-sm transition ltr transform hover:text-dark-700 duration-200 ease-linear"
-                  href="https://t.me/"
-                  >@petoman_support</a
+                  href="javascript:void(0)"
+                  >{{footerData.telphone}}</a
                 >
               </li>
             </ul>
@@ -323,4 +280,19 @@ import TelegramIcon from "@/components/icons/social/telegram.vue";
 import FacebookIcon from "@/components/icons/social/facebook.vue";
 import YoutubeIcon from "@/components/icons/social/youtube.vue";
 import TwitterIcon from "@/components/icons/social/twitter.vue";
+
+const footerData = ref(null)
+const linkduni = ref(null)
+const {appBaseUrl} = useRuntimeConfig().public
+
+const getHeaderMenu = async () => {
+  const { data } = await useFetch(`${appBaseUrl}/api/mag/home/get-footer`)
+  const dataJson = data.value
+  if(dataJson.status == 200) {
+    footerData.value = dataJson.result.footer
+    linkduni.value = dataJson.result.linkduni
+  }
+}
+
+getHeaderMenu()
 </script>

@@ -4,7 +4,7 @@
       class="bg-white/75 backdrop-blur border-b -mb-px sticky top-0 z-50 lg:mb-0 border-gray-100 text-neutral-900 dark:!border-gray-700/20 dark:!bg-dark-800 dark:!text-dark-700">
       <div class="mx-auto px-4 lg:px-0 w-full max-w-7xl flex items-center justify-between gap-3 h-[4rem]">
         <LogoHeader />
-        <MenuHeader />
+        <MenuHeader :headerData="headerData" />
 
         <div class="flex items-center justify-end lg:flex-1 gap-3">
           <SearchIcon />
@@ -49,6 +49,18 @@ const petdanimStore = usePetdanimStore()
 const isLoading = ref(false)
 const showPromptLikeModal = ref(false)
 const { $toast } = useNuxtApp()
+const headerData = ref([])
+const {appBaseUrl} = useRuntimeConfig().public
+
+const getHeaderMenu = async () => {
+  const { data } = await useFetch(`${appBaseUrl}/api/mag/home/get-header-menu`)
+  const dataJson = data.value
+  if(dataJson.status == 200) {
+    headerData.value = dataJson.result
+  }
+}
+
+getHeaderMenu()
 
 const openModalPrompt = () => {
   showPromptLikeModal.value = true
@@ -80,4 +92,6 @@ const handleConfirm = async () => {
 const handleCancel = () => {
   showPromptLikeModal.value = false
 }
+
+
 </script>

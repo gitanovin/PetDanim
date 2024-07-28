@@ -12,15 +12,19 @@
                 :src="`${appBaseUrl}/storage/${post.image}`"
               />
             </a>
-            <PostTypeIcon />
 
+            
+                <PostTypeIcon  />
+                <!-- <VideoIcon  /> -->
+                <!-- <GalleryIcon v-if="post.post_type == 'gallery'" /> -->
+             
           </div>
         </div>
         <a class="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 transition-opacity"
           href="/single-video/this-is-single-slug"></a>
       </div>
       <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse">
-        <PostCategory />
+        <PostCategory :text="post.category.title" />
         <div class="PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300">
           <BookmarkButton />
         </div>
@@ -36,12 +40,12 @@
                 </a>
               </h2>
               <div class="flex mt-1.5 items-center">
-                <Author>
-                  <AuthorImage/>
-                  <AuthorName/>
+                  <Author>
+                    <AuthorImage />
+                    <AuthorName />
                   </Author>
-                <span class="text-gray-100 dark:text-neutral-400 mx-[6px] font-medium">·</span>
-                <Data />
+                  <span class="text-gray-100 dark:text-neutral-400 mx-[6px] font-medium">·</span>
+                  <Data />
               </div>
             </div>
           </div>
@@ -59,6 +63,8 @@ import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImag
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
+import VideoIcon from "@/components/TemplateParts/PostType/Video.vue";
+import GalleryIcon from "@/components/TemplateParts/PostType/Mostanad.vue";
 
 
 const props = defineProps({
@@ -68,5 +74,5 @@ const props = defineProps({
   }
 })
 
-const {appBaseUrl} = useRuntimeConfig().public
+const { appBaseUrl } = useRuntimeConfig().public
 </script>

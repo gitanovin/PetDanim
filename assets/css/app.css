@@ -2609,8 +2609,16 @@ h6 {
   height: 2.25rem;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
 .h-\[10px\] {
   height: 10px;
+}
+
+.h-\[120px\] {
+  height: 120px;
 }
 
 .h-\[18px\] {
@@ -2627,6 +2635,10 @@ h6 {
 
 .h-\[30px\] {
   height: 30px;
+}
+
+.h-\[400px\] {
+  height: 400px;
 }
 
 .h-\[45px\] {
@@ -5743,11 +5755,6 @@ h6 {
   background-color: rgb(121 128 150 / 0.3) !important;
 }
 
-.dark\:hover\:\!bg-dark-800:hover:is(.dark *) {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(45 48 63 / var(--tw-bg-opacity)) !important;
-}
-
 .dark\:hover\:\!bg-dark-900:hover:is(.dark *) {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(38 40 52 / var(--tw-bg-opacity)) !important;
@@ -5818,11 +5825,6 @@ h6 {
 .dark\:hover\:bg-teal-100:hover:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(204 251 241 / var(--tw-bg-opacity));
-}
-
-.dark\:hover\:\!text-neutral-100:hover:is(.dark *) {
-  --tw-text-opacity: 1 !important;
-  color: rgba(var(--c-neutral-100), var(--tw-text-opacity)) !important;
 }
 
 .dark\:hover\:\!text-rose-500:hover:is(.dark *) {

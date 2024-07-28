@@ -19,7 +19,7 @@
     text: {
       required: true,
       type: String,
-      defaukt: "تایید شده"
+      default: "تایید شده"
     },
   })
 </script>
