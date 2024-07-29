@@ -1,5 +1,5 @@
 <template>
-  <artivle>
+  <article>
     <div class="relative flex flex-col h-full">
       <div
         class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-16 aspect-h-12 sm:aspect-h-9 overflow-hidden z-0">
@@ -42,17 +42,18 @@
               <div class="flex mt-1.5 items-center">
                   <Author>
                     <AuthorImage />
-                    <AuthorName />
+                    <AuthorName :authorname="`${post.author.name} ${post.author.family}`" />
                   </Author>
                   <span class="text-gray-100 dark:text-neutral-400 mx-[6px] font-medium">·</span>
-                  <Data />
+                  <Data :date="post.created_at" />
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </artivle>
+  </article>
 </template>
 <script setup>
 import PostCover from "@/components/TemplateParts/Media/Cover.vue";

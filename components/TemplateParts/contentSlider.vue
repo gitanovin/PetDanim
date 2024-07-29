@@ -51,12 +51,13 @@
             <div class="flex mt-2.5 relative items-center">
               <Author>
                 <AuthorImage />
-                <AuthorName class="text-white"/>
+                <AuthorName :authorname="`${post.author.name} ${post.author.family}`" class="text-white"/>
               </Author>
 
 
               <span class="mx-[6px] font-medium">·</span>
-              <Data class="text-white"/>
+              <Data class="text-white" :date="post.created_at" />
+
             </div>
 
           </div>

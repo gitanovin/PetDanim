@@ -17,7 +17,7 @@
           <UserLogeded @openPrompt="openModalPrompt" />
           <!-- BAfter User Login -->
 
-          <MenuMobile />
+          <MenuMobile :headerData="headerData" />
 
           <DataHeader />
         </div>

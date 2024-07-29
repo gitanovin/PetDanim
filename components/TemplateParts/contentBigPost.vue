@@ -22,13 +22,12 @@
           >
             <Author>
               <AuthorImage />
-              <AuthorName />
+              <AuthorName :authorname="`${post.author.name} ${post.author.family}`" />
             </Author>
             <span
               class="text-neutral-500 dark:!text-neutral-400 mx-[6px] font-medium"
-              >·</span
-            >
-            <Data />
+            >·</span>
+            <Data :date="post.created_at" />
           </div>
           <h2
             class="px-4 block font-semibold text-neutral-900 dark:!text-neutral-100 text-base sm:text-lg md:text-xl"

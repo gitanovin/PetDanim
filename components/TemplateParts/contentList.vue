@@ -24,13 +24,13 @@
           >
             <Author>
               <AuthorImage />
-              <AuthorName />
+              <AuthorName :authorname="`${post.author.name} ${post.author.family}`" />
             </Author>
             <span
               class="text-neutral-500 dark:!text-dark-700 mx-[6px] font-medium"
               >·</span
             >
-            <Data />
+            <Data :date="post.created_at" />
           </div>
         </div>
         <div class="flex items-center flex-wrap justify-between mt-auto">

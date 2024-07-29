@@ -24,6 +24,7 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
+          key="123"
           class="absolute right-0 mt-6 p-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700 dark:!divide-dark-700 dark:!border dark:!border-dark-700/20"
         >
           <div class="px-1 py-1">
@@ -52,10 +53,6 @@ const props = defineProps({
     required: true,
     type: [Array , Object]
   }
-})
-
-onMounted(() => {
-  
 })
 
 </script>

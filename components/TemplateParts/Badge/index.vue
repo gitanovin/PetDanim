@@ -12,12 +12,12 @@
 <script setup>
   const props = defineProps({
     status: {
-      required: true,
+      required: false,
       type: String,
       defaukt: "success"
     },
     text: {
-      required: true,
+      required: false,
       type: String,
       default: "تایید شده"
     },
