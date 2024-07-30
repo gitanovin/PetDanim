@@ -14,8 +14,9 @@ import Comment from "@/components/icons/Comment.vue";
 
 const props = defineProps({
   count: {
-    required: true,
-    type: Number
+    required: false,
+    type: Number,
+    default: 0
   }
 })
 </script>

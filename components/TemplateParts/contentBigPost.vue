@@ -21,7 +21,7 @@
             class="inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 relative text-sm p-3"
           >
             <Author>
-              <AuthorImage />
+              <AuthorImage :authorImage="post.author.profile == null ? '/2.webp' : post.author.profile" />
               <AuthorName :authorname="`${post.author.name} ${post.author.family}`" />
             </Author>
             <span

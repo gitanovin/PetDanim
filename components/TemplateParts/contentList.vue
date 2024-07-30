@@ -23,7 +23,7 @@
             class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 leading-none text-xs"
           >
             <Author>
-              <AuthorImage />
+              <AuthorImage :authorImage="post.author.profile == null ? '/2.webp' : post.author.profile" />
               <AuthorName :authorname="`${post.author.name} ${post.author.family}`" />
             </Author>
             <span

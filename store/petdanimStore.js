@@ -532,16 +532,49 @@ const actions = {
     },
 
     // home api
-    async getTemplatesData() {
-        try {
-            const result = await api.get("/mag/home/get-template-data")
-            if(result.status == 200){
-                return result.data
+    async saveToBookmark(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/home/add-bookmark", data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
             }
-        }catch(err) {
+        }else {
             return false
         }
-    }
+    },
+
+    async removeFromBookmark() {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/home/remove-bookmark", data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    },
 }
 
 const getters = {}

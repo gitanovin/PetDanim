@@ -50,7 +50,7 @@
             </h2>
             <div class="flex mt-2.5 relative items-center">
               <Author>
-                <AuthorImage/>
+                <AuthorImage :authorImage="post.author.profile == null ? '/2.webp' : post.author.profile" />
                 <AuthorName :authorname="`${post.author.name} ${post.author.family}`" class="text-white"/>
               </Author>
 

@@ -147,7 +147,7 @@
         <ContentPost>
           <Splide :options="postSliderNews">
             <SplideSlide v-for="(post , index) in template.categories[0].posts" :key="index"  class="splide__slide rounded-lg">
-              <contentVideo :post="post" />
+              <contentVideo @showPrompt="(data) => openPrompt(data)" :post="post" />
             </SplideSlide>
           </Splide>
         </ContentPost>
@@ -196,10 +196,20 @@
     </BlogSection> -->
 
     <!-- <=======START BLOG SECTION POST-V-1==========> -->
+
+    <promptModal
+        :show="showPromptModal"
+        :title="promptTitle"
+        :message="promptText"
+        @confirm="handleConfirm('bookmark')"
+        @cancel="handleCancel"
+        :isLoading="isLoadingPrompt"
+    />
   </main>
 </template>
 
 <script setup>
+import promptModal from '@/components/TemplateParts/Modal/promptModal.vue'
 import sliderConfig from "@/configs/sliderConfig";
 import BlogSection from "@/components/TemplateParts/Section/BlogSection.vue";
 import TopSliderSection from "@/components/TemplateParts/Section/TopSliderSection.vue";
@@ -218,15 +228,25 @@ import contentGallerySlide from "@/components/TemplateParts/contentGallerySlide.
 import contentCategory from "@/components/TemplateParts/contentCategory.vue";
 import BannerAds from "@/components/Banner/banner.vue";
 import {usePetdanimStore} from '@/store/petdanimStore.js'
+import {useRouter} from 'vue-router'
+import {storeToRefs} from 'pinia'
 
-
-const activeCatIndex = ref(0)
 const petdanimStore = usePetdanimStore()
+const {authUser} = storeToRefs(petdanimStore)
+const router = useRouter()
+const activeCatIndex = ref(0)
 const postSliderOptions = ref(sliderConfig[0]);
+const isLoadingPrompt = ref(false)
+
+const promptTitle = ref("")
+const promptText = ref("")
+const promptPostId = ref(null)
+const bookmarkState = ref(false)
 
 const postSliderNews = ref(sliderConfig[1]);
 const templateData = ref([])
 
+const showPromptModal = ref(false)
 const {appBaseUrl} = useRuntimeConfig().public
 
 const getTemplatesData = async () => {
@@ -235,6 +255,7 @@ const getTemplatesData = async () => {
 
   if(dataJson.status == 200) {
     templateData.value = dataJson.result
+    // console.log(templateData.value)
   }
 }
 
@@ -243,6 +264,63 @@ const activeCategoryTab = (index) => {
 }
 
 getTemplatesData()
+
+const openPrompt = (data) => {
+  showPromptModal.value = true
+  if(authUser.value == null) {
+    promptTitle.value = "ورود به حساب"
+    promptText.value = "جهت ذخیره پست ابتدا باید وارد حساب کاربری شوید ، آیا میخواهید وارد شوید؟"
+    promptPostId.value = data.post_id
+    bookmarkState.value = data.bookmarkState
+  }else {  
+    promptTitle.value = data.bookmarkState == true ? "حذف از لیست ذخیره ها" : "ذخیره نوشته"
+    promptText.value  =  data.bookmarkState == true ? "آیا میخواهید این نوشته از لیست ذخیره های شما حذف شود؟" : "آیا میخواهید این نوشته به لیست ذخیره های شما اضافه شود؟" 
+    promptPostId.value = data.post_id
+    bookmarkState.value = data.bookmarkState
+  }
+}
+
+const handleConfirm = (type) => {
+  if(type == "bookmark") {
+    if(authUser.value == null) {
+      router.push("/auth/login")
+    }else {
+      isLoadingPrompt.value = true
+      if(bookmarkState.value == false) {
+        saveToBookmark(promptPostId.value)
+      }else {
+        removeFromBookmark(promptPostId.value)
+      }
+    }
+  }
+}
+
+const handleCancel = () => {
+  showPromptModal.value = false
+}
+
+const saveToBookmark = async (postId) => {
+  const result = await petdanimStore.saveToBookmark({postId: postId})
+  if(result.status == 200) {
+    isLoadingPrompt.value = false
+    showPromptModal.value = false
+    authUser.value.bookmarks = result.result
+    // console.log(result.result)
+  }else {
+    isLoadingPrompt.value = false
+  }
+}
+
+const removeFromBookmark = async (postId) => {
+  const result = await petdanimStore.removeFromBookmark({postId: postId})
+  if(result.status == 200) {
+    isLoadingPrompt.value = false
+    showPromptModal.value = false
+    console.log(result.result)
+  }else {
+    isLoadingPrompt.value = false
+  }
+}
 </script>
 
 

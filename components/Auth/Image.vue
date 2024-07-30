@@ -6,7 +6,9 @@
     <section class="splash-inner lg:h-screen xl:py-8 lg:py-16">
       <div class="splash-header lg:py-0 py-6">
         <div class="splash--logo lg:w-80 lg:max-w-full max-w-36 w-full mx-auto">
-          <a href="/" title=""><img src="@/assets/images/login-pet.svg" /></a>
+          <a href="/" title="">
+            <LoginPetSvg />
+          </a>
         </div>
         <h1 class="lg:text-3xl lg:font-extrabold text-white lg:mt-16 text-2xl font-bold lg:text-right text-center mt-6">
           اینجا هر کسی می&zwnj;تونه بنویسه!
@@ -71,6 +73,7 @@
 </template>
 
 <script setup>
+import LoginPetSvg from '@/assets/images/login-pet.svg'
 import CheckIcon from "@/components/Icons/CheckIcon.vue";
 import InstagramIcon from "@/components/Icons/social/instagram.vue";
 import TwitterIcon from "@/components/Icons/social/twitter.vue";
