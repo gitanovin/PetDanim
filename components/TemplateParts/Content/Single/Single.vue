@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="postData.post != null">
         <div class="Headers">
             <HeaderGlobal />
         </div>
@@ -12,9 +12,16 @@
                 class="SingleContent space-y-10 dark:!text-gray-300">
                 <div :class="'w-full lg:col-span-8 col-span-12'"
                     class="relative rounded-lg lg:bg-white lg:dark:bg-dark-800 lg:border lg:dark:border-dark-700/20 lg:p-4">
-                    <ContentArticle />
-                    <Tags />
-                    <AuthorBiography />
+                    <ContentArticle :content="postData.post.content" />
+                    <Tags class="hidden" />
+                    <AuthorBiography
+                        :authorName="`${postData.post.author.name} ${postData.post.author.family}`"
+                        :authorImage="postData.post.author.profile == null ? '' : postData.post.author.profile"
+                        :authorRegisterDate="postData.post.author.created_at"
+                        :showFollowButton="false"
+                        :showBiography="false"
+                        :showRegisterDate="true"
+                    />
                     <AddComment />
                     <CommentList class="mt-10" />
                 </div>
@@ -27,10 +34,16 @@
         </div>
         <div
             class="top-cat py-16  dark:border-dark-700/20 dark:bg-dark-700/20 border w-full max-w-7xl mx-auto my-8 p-8 rounded-2xl">
-            <TopCategories />
+            <TopCategories 
+                v-if="postData.topCategories.length != 0"
+                :topCategories="postData.topCategories"
+            />
         </div>
 
-        <TopUsers />
+        <TopUsers
+            v-if="postData.topUsers.length != 0"
+            :topUsers="postData.topUsers"
+        />
 
     </div>
 </template>
@@ -48,4 +61,10 @@ import TopCategories from "@/components/TemplateParts/Sections/CategoryList/TopC
 import TopUsers from "@/components/TemplateParts/Sections/UserList/TopUsers.vue";
 const GridMode = ref(false)
 const Sidebar = ref(false)
+
+import {usePetdanimStore} from '@/store/petdanimStore.js'
+import {storeToRefs} from 'pinia'
+
+const petdanimStore = usePetdanimStore()
+const {postData} = storeToRefs(petdanimStore)
 </script>

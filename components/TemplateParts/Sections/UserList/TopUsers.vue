@@ -47,15 +47,15 @@
                                     },
                                 },
                             }">
-                                <SplideSlide class="splide__slide rounded-lg">
+                                <SplideSlide v-for="(author , index) in topUsers" :key="author.id" class="splide__slide rounded-lg">
                                     <div class="relative inline-block whitespace-normal w-full">
                                         <a class="nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-dark-800 rounded-3xl"
-                                            href="/author/the-demo-author-slug">
+                                            href="javascript:void(0)">
                                             <div class="relative flex-shrink-0">
                                                 <div>
                                                     <div class="flex aspect-w-7 aspect-h-5 w-full h-0">
                                                         <img alt="author" class="object-cover w-full h-full"
-                                                            src="@/assets/images/1.jpg" />
+                                                        :src="author.profile == null ? '/2.webp' : `${appBaseUrl}/storage/avatars/${author.profile}`" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,15 +64,14 @@
                                                     class="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-16 h-16 text-2xl ring-2 ring-white">
                                                     <img alt="Truelock Alric"
                                                         class="absolute inset-0 w-full h-full object-cover"
-                                                        src="@/assets/images/7.jpg" /><span
-                                                        class="wil-avatar__name">T</span>
+                                                        :src="author.profile == null ? '/2.webp' : `${appBaseUrl}/storage/avatars/${author.profile}`" />
                                                 </div>
                                                 <div class="mt-3">
                                                     <h2 class="text-base font-medium">
-                                                        <span class="line-clamp-1">حدیث شادی</span>
+                                                        <span class="line-clamp-1">{{ author.name }} {{ author.family }} </span>
                                                     </h2>
                                                     <span
-                                                        class="block mt-1 text-sm text-orange-500 dark:text-neutral-400 ltr">@hadisshadi</span>
+                                                        class="block mt-1 text-sm text-orange-500 dark:text-neutral-400 ltr">@{{ author.username }}</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -90,4 +89,15 @@
 <script setup>
 import IconsLeftArrow from "@/components/icons/LeftArrow.vue";
 import UserIcon from "@/components/icons/UserIcon.vue";
+
+
+const props = defineProps({
+    topUsers: {
+        required: true,
+        type: [Array , Object]
+    }
+})
+
+const {appBaseUrl} = useRuntimeConfig().public
+
 </script>

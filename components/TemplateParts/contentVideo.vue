@@ -6,13 +6,13 @@
         class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-16 aspect-h-12 sm:aspect-h-9 overflow-hidden z-0">
         <div>
           <div class="relative w-full h-full">
-            <a class="block absolute inset-0" href="/single-video/this-is-single-slug">
+            <nuxt-link class="block absolute inset-0" :to="`/${post.slug}`">
               <img
                 :alt="post.title"
                 class="object-cover rounded-t-3xl h-full w-full"
                 :src="`${appBaseUrl}/storage/${post.image}`"
               />
-            </a>
+            </nuxt-link>
 
             
                 <PostTypeIcon  />
@@ -21,8 +21,8 @@
              
           </div>
         </div>
-        <a class="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 transition-opacity"
-          href="/single-video/this-is-single-slug"></a>
+        <nuxt-link class="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 transition-opacity"
+        :to="`/${post.slug}`"></nuxt-link>
       </div>
       <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse">
         <PostCategory :text="post.category.title" />
@@ -38,9 +38,9 @@
 
             <div>
               <h2 class="block font-semibold text-base text-gray-900 dark:!text-neutral-50">
-                <a class="line-clamp-1" href="/single-video/this-is-single-slug">
+                <nuxt-link class="line-clamp-1" :to="`/${post.slug}`">
                   {{ post.title }}    
-                </a>
+                </nuxt-link>
               </h2>
               <div class="flex mt-1.5 items-center">
                   <Author>

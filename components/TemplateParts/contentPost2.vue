@@ -31,13 +31,13 @@
               </span>
             </div>
           </div>
-          <a class="block absolute inset-0" href="/single-audio/this-is-single-slug"></a>
+          <nuxt-link class="block absolute inset-0" :to="`/${post.slug}`"></nuxt-link>
         </div>
       </div>
-      <a class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black opacity-50"
-        href="/single-audio/this-is-single-slug"></a>
+      <nuxt-link class="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black opacity-50"
+      :to="`/${post.slug}`"></nuxt-link>
       <div class="absolute bottom-0 inset-x-0 p-4 flex flex-col flex-grow">
-        <a class="absolute inset-0" href="/single-audio/this-is-single-slug"></a>
+        <nuxt-link class="absolute inset-0" :to="`/${post.slug}`"></nuxt-link>
         <div class="mb-3">
           <PostCategory :text="post.category.title"/>
         </div>

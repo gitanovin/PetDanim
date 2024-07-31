@@ -14,7 +14,7 @@
     status: {
       required: false,
       type: String,
-      defaukt: "success"
+      default: "success"
     },
     text: {
       required: false,

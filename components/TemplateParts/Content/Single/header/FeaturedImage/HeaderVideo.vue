@@ -6,7 +6,7 @@
                     <div class="lg:absolute inset-0 w-full">
                         <div class="w-full lg:h-full">
                             <video class="w-full object-cover h-full" controls>
-                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                <source :src="`${appBaseUrl}/storage/${postData.post.video.video_path}`">
                                 <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
                                 Your browser does not support HTML video.
                             </video>
@@ -16,3 +16,12 @@
             </div>
         </div>
 </template>
+
+<script setup>
+import {usePetdanimStore} from '@/store/petdanimStore.js'
+import {storeToRefs} from 'pinia'
+
+const {appBaseUrl} = useRuntimeConfig().public
+const petdanimStore = usePetdanimStore()
+const {postData} = storeToRefs(petdanimStore)
+</script>

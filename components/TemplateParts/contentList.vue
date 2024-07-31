@@ -5,19 +5,19 @@
       :key="index"
       class="relative flex group mb-3 flex-row items-center p-4 rounded-3xl sm:bg-white sm:dark:!bg-dark-800 border border-neutral-200 dark:!border-dark-700/20 h-auto"
     >
-      <a class="absolute inset-0 z-0" href="/single"></a>
+      <nuxt-link class="absolute inset-0 z-0" :to="`/${post.slug}`"></nuxt-link>
       <div class="flex flex-col flex-grow">
         <div class="space-y-3 mb-4">
           <PostCategory status="danger" :text="post.category.title" />
           <h2
             class="block font-semibold text-sm sm:text-base dark:!text-dark-700"
           >
-            <a
+            <nuxt-link
               class="line-clamp-2 dark:!text-gray-300"
               title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean"
-              href="//single"
+              :to="`/${post.slug}`"
               >{{ post.title }}
-            </a>
+            </nuxt-link>
           </h2>
           <div
             class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 leading-none text-xs"
@@ -45,15 +45,15 @@
           </div>
         </div>
       </div>
-      <a
+      <nuxt-link
         class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ms-3 sm:ms-5 rounded-2xl overflow-hidden z-0"
-        href="javascript:void(0)"
+        :to="`/${post.slug}`"
         ><img
           :alt="post.title"
           class="object-cover w-full h-[120px]"
           :src="`${appBaseUrl}/storage/${post.image}`" /><span class="absolute bottom-1 start-1"
           ><div class="nc-PostTypeFeaturedIcon"></div></span
-      ></a>
+      ></nuxt-link>
     </div>
   </article>
 </template>

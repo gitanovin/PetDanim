@@ -7,9 +7,9 @@
       <div class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
         <div class="post-cover">
           <div class="PostFeaturedMedia relative w-full h-full">
-            <a class="block absolute inset-0" href="/single-video/this-is-single-slug">
+            <nuxt-link class="block absolute inset-0" :to="`/${post.slug}`">
               <img alt="featured" class="object-cover h-full" :src="`${$config.public.appBaseUrl}/storage/posts/${postItem.post.image}`" />
-            </a>
+            </nuxt-link>
             <PostTypeIcon />
           </div>
         </div>
@@ -19,9 +19,9 @@
         <div
           class="PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 leading-none text-xs"
         >
-            <a
+            <nuxt-link
               class="relative flex items-center space-x-2 rtl:space-x-reverse"
-              href="/author/the-demo-author-slug"
+              :to="`/${post.slug}`"
             >
               <div
                   class="hidden wil-avatar relative flex-shrink-0  items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full h-7 w-7 text-sm ring-1 ring-white dark:ring-dark-900">
@@ -32,7 +32,7 @@
               <span v-if="postItem.user != null" class="block text-neutral-700 hover:text-black dark:!text-neutral-300 dark:hover:text-white font-medium">
                 {{postItem.user.name}}
               </span>
-            </a>
+            </nuxt-link>
           <span
             class="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium"
             >·</span

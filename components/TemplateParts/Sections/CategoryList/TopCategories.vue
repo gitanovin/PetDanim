@@ -11,21 +11,20 @@
                         </h2>
                         <button
                             class="flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent text-sm sm:text-base font-medium !hidden md:!flex">
-                            <span>مشاهده همه </span>
+                            <span class="ml-2">مشاهده همه </span>
                             <IconsLeftArrow class="w-4" />
                         </button>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-4 md:gap-4">
-                    <a class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-gray-50 dark:bg-dark-800 rounded-lg transition-colors"
-                        href="/archive/the-demo-archive-slug"><span
-                            class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute -top-2 sm:top-3 left-3 text-indigo-800 bg-indigo-100">#1</span>
+                    <a v-for="(category , index) in topCategories" :key="category.id" class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-gray-50 dark:bg-dark-800 rounded-lg transition-colors"
+                        href="javascript:void(0)">
                         <div class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0">
-                            <img alt="categories" class="object-cover w-full h-full" src="@/assets/images/3.jpg" />
+                            <img :alt="category.title" class="object-cover w-full h-full" :src="`${appBaseUrl}/storage/categories/${category.cat_image}`" />
                         </div>
                         <div class="mt-3">
-                            <h2 class="text-base font-semibold">پرندگان</h2>
-                            <span class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd">13
+                            <h2 class="text-base font-semibold">{{ category.title }}</h2>
+                            <span class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd">{{ category.posts_count }}
                                 مقاله</span>
                         </div>
                     </a>
@@ -38,4 +37,14 @@
 <script setup>
 import CategoryIcon from "@/components/icons/CategoryIcon.vue";
 import IconsLeftArrow from "@/components/icons/LeftArrow.vue";
+
+const props = defineProps({
+    topCategories: {
+     required: true,
+     type: [Array, Object],
+   },
+ });
+ 
+ const { appBaseUrl } = useRuntimeConfig().public;
 </script>
+

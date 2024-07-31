@@ -255,7 +255,6 @@ const getTemplatesData = async () => {
 
   if(dataJson.status == 200) {
     templateData.value = dataJson.result
-    // console.log(templateData.value)
   }
 }
 

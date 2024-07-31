@@ -2,13 +2,13 @@
   <article>
     <div class="group relative flex flex-col h-full">
       <div class="block flex-shrink-0 flex-grow relative w-full z-0">
-        <a class="relative" href="/single">
+        <nuxt-link class="relative" :to="`/${post.slug}`">
           <img
             :alt="post.title"
             class="object-cover rounded-t-3xl h-[400px] w-full"
             :src="`${appBaseUrl}/storage/${post.image}`"
           />
-        </a>
+        </nuxt-link>
         <span class="absolute top-3 left-3 z-50">
           <PostCategory :text="post.category.title" />
         </span>
@@ -32,13 +32,13 @@
           <h2
             class="px-4 block font-semibold text-neutral-900 dark:!text-neutral-100 text-base sm:text-lg md:text-xl"
           >
-            <a
+            <nuxt-link
               class="line-clamp-2"
               title="Microsoft announces a five-year commitment to create bigger opportunities for people with disabilities"
-              href="/single"
+              :to="`/${post.slug}`"
             >
               {{ post.title }}
-            </a>
+            </nuxt-link>
           </h2>
           <div
             class="block text-neutral-500 dark:!text-neutral-300 text-[15px] leading-6 px-4 text-justify h-[100px] overflow-hidden"

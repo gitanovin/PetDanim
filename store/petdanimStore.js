@@ -5,7 +5,8 @@ const cookies = process.client == true ? useCookies().cookies : null;
 
 const state = () => ({
     authUser: null,
-    globalLoading: false
+    globalLoading: false,
+    postData: null
 })
 
 const actions = {
