@@ -2128,6 +2128,10 @@ h6 {
   z-index: 99;
 }
 
+.z-\[100\] {
+  z-index: 100;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -2665,6 +2669,10 @@ h6 {
   height: 100vh;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .max-h-60 {
   max-height: 15rem;
 }
@@ -2779,6 +2787,10 @@ h6 {
 
 .w-\[18px\] {
   width: 18px;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[20px\] {
@@ -3347,10 +3359,6 @@ h6 {
 
 .break-words {
   overflow-wrap: break-word;
-}
-
-.\!rounded-2xl {
-  border-radius: 1rem !important;
 }
 
 .rounded {
@@ -4578,14 +4586,6 @@ h6 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-white\/50 {
-  color: rgb(255 255 255 / 0.5);
-}
-
-.text-white\/60 {
-  color: rgb(255 255 255 / 0.6);
 }
 
 .text-yellow-600 {

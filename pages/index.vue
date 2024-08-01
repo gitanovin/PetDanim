@@ -1,4 +1,5 @@
 <template>
+  <!-- <Loading :isShow="globalLoading" /> -->
   <main class="dark:bg-dark-900" v-if="templateData.length != 0">
     <div class="w-full" v-for="(template , index) in templateData" :key="index">
       <TopSliderSection v-if="template.type == 'sectionOne'" class="dark:!bg-dark-900/30 bg-gray-50 py-4 lg:py-16">
@@ -219,6 +220,7 @@
 </template>
 
 <script setup>
+import Loading from '@/components/Loading/index.vue'
 import promptModal from '@/components/TemplateParts/Modal/promptModal.vue'
 import sliderConfig from "@/configs/sliderConfig";
 import BlogSection from "@/components/TemplateParts/Section/BlogSection.vue";
@@ -242,7 +244,7 @@ import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 
 const petdanimStore = usePetdanimStore()
-const {authUser} = storeToRefs(petdanimStore)
+const {authUser , globalLoading} = storeToRefs(petdanimStore)
 const router = useRouter()
 const activeCatIndex = ref(0)
 const postSliderOptions = ref(sliderConfig[0]);
@@ -260,10 +262,12 @@ const showPromptModal = ref(false)
 const {appBaseUrl} = useRuntimeConfig().public
 
 const getTemplatesData = async () => {
+  globalLoading.value = true
   const { data } = await useFetch(`${appBaseUrl}/api/mag/home/get-template-data`)
   const dataJson = data.value
 
   if(dataJson.status == 200) {
+    globalLoading.value = false
     templateData.value = dataJson.result
   }
 }
@@ -330,6 +334,7 @@ const removeFromBookmark = async (postId) => {
     isLoadingPrompt.value = false
   }
 }
+
 </script>
 
 

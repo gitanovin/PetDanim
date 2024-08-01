@@ -1,4 +1,5 @@
 <template>
+    <!-- <Loading :isShow="globalLoading" /> -->
     <single
         v-if="postData != null"
     />
@@ -11,16 +12,14 @@ import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 
 const petdanimStore = usePetdanimStore()
-const {postData} = storeToRefs(petdanimStore)
+const {postData , globalLoading} = storeToRefs(petdanimStore)
 
 
 const {appBaseUrl} = useRuntimeConfig().public
 const route = useRoute()
 const router = useRouter()
 const singlePostData = ref(null)
-const pageMeataData = reactive({
-    title: ""
-})
+
 
 
 onMounted(() => {
@@ -31,20 +30,24 @@ onMounted(() => {
 
 
 const getPostDetail = async () => {
+    globalLoading.value = true
     const { data } = await useFetch(`${appBaseUrl}/api/mag/single/get-post` , {
         params: { slug: route.params.slug }
     })
     const dataJson = data.value
     if(dataJson.status == 200) {
+        globalLoading.value = false
         postData.value = dataJson.result
-        console.log(dataJson.result)
+        console.log(postData.value)
     }
 }
+
+getPostDetail()
 
 useHead({
     title: route.params.slug.split('-').join(' ')
 })
 
-getPostDetail()
+
 
 </script>

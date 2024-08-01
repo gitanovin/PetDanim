@@ -4,7 +4,7 @@
         v-if="postItem && postItem.post != null"
         class="relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:!bg-dark-700/10 h-full"
       >
-        <nuxt-link :to="`/${postItem.post.slug}`" class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
+        <nuxt-link :to="`/post/${postItem.post.slug}`" class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
           <div class="post-cover">
             <div class="PostFeaturedMedia relative w-full h-full">
               <div class="block absolute inset-0">

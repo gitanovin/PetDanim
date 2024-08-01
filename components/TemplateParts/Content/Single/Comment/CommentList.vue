@@ -116,11 +116,11 @@
                         <button
                             class="min-w-[68px] flex items-center rounded-full leading-none px-3 h-8 text-xs focus:outline-none text-neutral-700 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 hover:bg-rose-50 hover:text-rose-600 dark:hover:text-rose-500"
                             title="Liked">
-                            <Like /><span class="text-neutral-900 dark:text-neutral-200">96</span>
+                            <span class="text-neutral-900 dark:text-neutral-200">96</span>
                         </button><button
                             class="flex items-center min-w-[68px] rounded-full text-neutral-6000 bg-neutral-100 dark:text-neutral-200 dark:bg-neutral-800 px-3 h-8 hover:bg-teal-50 hover:text-teal-600 dark:hover:text-teal-500 focus:outline-none"
                             title="Reply">
-                            <ReplayIcon /><span
+                            <span
                                 class="text-xs leading-none text-neutral-900 dark:text-neutral-200">پاسخ</span>
                         </button>
                     </div>

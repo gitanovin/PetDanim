@@ -35,6 +35,7 @@ const getPostDetail = async () => {
         params: { slug: route.params.slug }
     })
     const dataJson = data.value
+    console.log(dataJson)
     if(dataJson.status == 200) {
         postData.value = dataJson.result
     }

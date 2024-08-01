@@ -15,7 +15,7 @@
                     <ContentArticle :content="postData.post.content" />
                     <Tags class="hidden" />
                     <AuthorBiography
-                        :authorName="`${postData.post.user.name} ${postData.post.user.family}`"
+                        :authorName="`${postData.post.user.name}`"
                         :authorImage="postData.post.user.profile == null ? '' : postData.post.user.profile"
                         :authorRegisterDate="postData.post.user.created_at"
                         :showFollowButton="true"
@@ -52,11 +52,11 @@
 import HeaderGlobal from "@/components/TemplateParts/Content/UserPost/Single/header/HeaderGlobal.vue";
 import ContentArticle from "~/components/TemplateParts/Content/Single/TheContent/ContentArticle.vue";
 import Tags from "@/components/TemplateParts/Content/Single/Tags/singleTags.vue";
-import AuthorBiography from "@/components/TemplateParts/Content/Single/Biography/AuthorBiography.vue";
+import AuthorBiography from "@/components/TemplateParts/Content/UserPost/Single/Biography/AuthorBiography.vue";
 import AddComment from "@/components/TemplateParts/Content/Single/Comment/AddComment.vue";
 import CommentList from "@/components/TemplateParts/Content/Single/Comment/CommentList.vue";
 import Sticky from "@/components/TemplateParts/Content/Single/Sticky/sticky.vue";
-import SidebarLeft from "@/components/TemplateParts/Content/Single/Sidebar/Sidebar.vue"
+import SidebarLeft from "@/components/TemplateParts/Content/UserPost/Single/Sidebar/Sidebar.vue"
 import TopCategories from "@/components/TemplateParts/Sections/CategoryList/TopCategories.vue";
 import TopUsers from "@/components/TemplateParts/Sections/UserList/TopUsers.vue";
 const GridMode = ref(false)
