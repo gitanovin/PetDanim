@@ -44,30 +44,31 @@
             <div
               class="grid gap-6 sm:grid-cols-2 sm:py-2 md:gap-8 md:grid-cols-3 lg:grid-cols-4 xl:md:grid-cols-5"
             >
-              <a
+              <nuxt-link
+                v-for="(category , index) in categoriesList" :key="category.id"
                 class="nc-CardCategory1 flex items-center"
-                href="/archive/the-demo-archive-slug"
+                :to="`/archive/category/${category.slug}-${category.id}`"
                 ><div
                   class="relative flex-shrink-0 w-12 h-12 rounded-lg me-4 overflow-hidden"
                 >
                   <img
-                    alt=""
+                    :alt="category.title"
                     class="object-cover absolute inset-0 h-full"
-                    src="@/assets/images/7.jpg"
+                    :src="`${appBaseUrl}/storage/categories/${category.cat_image}`"
                   />
                 </div>
                 <div>
                   <h2
                     class="nc-card-title text-neutral-900 dark:!text-neutral-100 text-sm sm:text-base font-medium sm:font-semibold"
                   >
-                    سگ ها
+                    {{ category.title }}
                   </h2>
                   <span
                     class="text-xs block mt-[2px] text-neutral-500 dark:!text-dar-400 font-fd"
-                    >13 پست</span
+                    >{{ category.posts.length }} پست</span
                   >
-                </div></a
-              >
+                </div>
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -78,6 +79,20 @@
 <script setup>
 const emit = defineEmits(["closeModal"]);
 // const props = defineProps(["CatModal"]);
+
+
+const {appBaseUrl} = useRuntimeConfig().public
+const categoriesList = ref([])
+
+const getCategories = async () => {
+    const {data} = await useFetch(`${appBaseUrl}/api/mag/categories/get-all`)
+    if(data.value.status == 200) {
+        console.log(data.value.result)
+        categoriesList.value = data.value.result
+    }
+}
+
+getCategories()
 
 const closeModal = () => {
   emit("closeModal");

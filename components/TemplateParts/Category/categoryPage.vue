@@ -1,15 +1,15 @@
 <template>
   <div class="PageArchive py-8 lg:px-0 px-4 mx-auto  w-full xl:max-w-7xl">
-    <HeaderCategories />
+    <HeaderCategories :category="categoryData" />
     <div class="">
       <div class="bg-white dark:bg-dark-800 p-4 rounded-t-lg mt-8">
-        <ButtonCategories />
+        <ButtonCategories  />
       </div>
       <div class="bg-white/30 dark:bg-dark-700/20 p-4">
-        <CategoriesPosts />
+        <CategoriesPosts :category="categoryData" />
       </div>
 
-      <Pagination />
+      <!-- <Pagination /> -->
     </div>
   </div>
 </template>
@@ -19,4 +19,11 @@ import HeaderCategories from "@/components/TemplateParts/Category/HeaderCategori
 import ButtonCategories from "@/components/TemplateParts/Category/ButtonCategories.vue";
 import CategoriesPosts from "@/components/TemplateParts/Category/CategoriesPosts.vue";
 import Pagination from "@/components/TemplateParts/Pagination/pageination.vue";
+
+const props = defineProps({
+  categoryData: {
+    required: true,
+    type: [Array , Object]
+  }
+})
 </script>

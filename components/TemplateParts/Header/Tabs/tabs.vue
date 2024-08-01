@@ -21,7 +21,7 @@
     <button
       class="flex-shrink-0 relative h-auto items-center justify-center rounded-full transition-colors border-transparent text-neutral-900 dark:!text-neutral-200 text-sm sm:text-base font-medium !hidden md:!flex"
     >
-      <span>مشاهده همه </span>
+      <nuxt-link :to="`/archive/category/${categories[activeCatIndex].slug}-${categories[activeCatIndex].id}`">مشاهده همه </nuxt-link>
       <IconsLeftArrow class="w-6 pr-1" />
     </button>
   </div>

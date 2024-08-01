@@ -4,35 +4,34 @@
       v-if="postItem && postItem.post != null"
       class="relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:!bg-dark-700/10 h-full"
     >
-      <div class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
+      <nuxt-link :to="`/${postItem.post.slug}`" class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
         <div class="post-cover">
           <div class="PostFeaturedMedia relative w-full h-full">
-            <nuxt-link class="block absolute inset-0" :to="`/${post.slug}`">
-              <img alt="featured" class="object-cover h-full" :src="`${$config.public.appBaseUrl}/storage/posts/${postItem.post.image}`" />
-            </nuxt-link>
+            <div class="block absolute inset-0">
+              <img :alt="postItem.post.title" class="object-cover w-full h-[200px]" :src="`${$config.public.appBaseUrl}/storage/${postItem.post.image}`" />
+            </div>
             <PostTypeIcon />
           </div>
         </div>
-      </div>
+      </nuxt-link>
 
-      <div class="p-4 flex flex-col space-y-3">
+      <nuxt-link :to="`/${postItem.post.slug}`" class="p-4 flex flex-col space-y-3">
         <div
           class="PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 leading-none text-xs"
         >
-            <nuxt-link
+            <div
               class="relative flex items-center space-x-2 rtl:space-x-reverse"
-              :to="`/${post.slug}`"
             >
               <div
                   class="hidden wil-avatar relative flex-shrink-0  items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full h-7 w-7 text-sm ring-1 ring-white dark:ring-dark-900">
                   <img alt="Falconar Agnes" class="absolute inset-0 w-full h-full object-cover"
-                      src="@/assets/images/4.jpg" /><span class="wil-avatar__name">F</span>
+                      :src="postItem.post.author.profile == null ? '/2.webp' :`${appBaseUrl}/storage/admin/${postItem.post.author.profile}`" />
               </div>
 
-              <span v-if="postItem.user != null" class="block text-neutral-700 hover:text-black dark:!text-neutral-300 dark:hover:text-white font-medium">
-                {{postItem.user.name}}
+              <span v-if="postItem.post.author != null" class="block text-neutral-700 hover:text-black dark:!text-neutral-300 dark:hover:text-white font-medium">
+                {{postItem.post.author.name}} {{postItem.post.author.family}}
               </span>
-            </nuxt-link>
+            </div>
           <span
             class="text-neutral-500 dark:text-neutral-400 mx-[6px] font-medium"
             >·</span
@@ -45,19 +44,19 @@
           class="card-title block text-base font-semibold text-neutral-900 dark:!text-neutral-100"
         >
           <span
-            class="line-clamp-2"
-            title="Meta text seo"
+            class="line-clamp-2 truncate"
+            :title="postItem.post.title"
             >  {{postItem.post.title}} 
           </span>
         </h3>
 
         <div class="flex items-end justify-between mt-auto">
           <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
-            <LikeButton @click="showPromptLikeModal = true" :isRed="true" :count="postItem.post.likes_count" />
-            <CommentButton :count="postItem.post.comments.length" />
+            <LikeButton @click="showPromptLikeModal = true" :isRed="true" :count="0" />
+            <CommentButton :count="0" />
           </div>
         </div>
-      </div>
+      </nuxt-link>
     </div>
 
     <promptModal
@@ -81,6 +80,7 @@ import {usePetdanimStore} from '@/store/petdanimStore.js'
 const {$toast} = useNuxtApp()
 
 const petdanimStore = usePetdanimStore()
+const {appBaseUrl} = useRuntimeConfig().public
 
 const isLoading = ref(false)
 const showPromptLikeModal = ref(false)

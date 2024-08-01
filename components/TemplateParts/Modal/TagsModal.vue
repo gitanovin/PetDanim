@@ -38,20 +38,17 @@
             id="headlessui-dialog-title-:r68:"
             data-headlessui-state="open"
           >
-          مشاهده برچسب ها
+            مشاهده برچسب ها
           </h3>
         </div>
         <div class="py-4 px-6 md:py-5">
-          <div class="flex flex-wrap dark:text-neutral-200">
-            <a
+          <div v-if="tagsList.length != 0" class="flex flex-wrap dark:text-neutral-200">
+            <nuxt-link :to="`/archive/tags/${tag.name}-${tag.id}`"
+              v-for="tag in tagsList" :key="tag.id"
               class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
               href="/archive/the-demo-archive-slug"
-              >سگ ها<span class="text-xs font-normal font-fd"> (13)</span></a
-            ><a
-              class="nc-Tag inline-block bg-white hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 me-2 mb-2"
-              href="/archive/the-demo-archive-slug"
-              >خزندگان<span class="text-xs font-normal font-fd"> (16)</span></a
-            >
+              >{{ tag.name }}<span class="text-xs font-normal font-fd"> ({{ tag.posts.length }})</span>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -65,6 +62,18 @@ const emit = defineEmits(["closeTagsModal"]);
 const closeTagsModal = () => {
   emit("closeTagsModal");
 };
+
+const { appBaseUrl } = useRuntimeConfig().public;
+const tagsList = ref([]);
+
+const getTags = async () => {
+  const { data } = await useFetch(`${appBaseUrl}/api/mag/tags/get-all`);
+  if (data.value.status == 200) {
+    tagsList.value = data.value.result;
+  }
+};
+
+getTags();
 </script>
 
 <style>

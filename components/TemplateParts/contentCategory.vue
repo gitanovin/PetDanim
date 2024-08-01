@@ -1,6 +1,6 @@
 <template>
-  <div class="relative inline-block whitespace-normal" v-for="(category , index) in categories" :key="index">
-    <a class="relative block group" href="/archive/the-demo-archive-slug"
+  <div  class="relative inline-block whitespace-normal" v-for="(category , index) in categories" :key="index">
+    <nuxt-link class="relative block group" :to="`/archive/category/${category.slug}-${category.id}`"
       ><div
         class="flex-shrink-0 relative w-full aspect-w-8 aspect-h-5 h-0 rounded-lg overflow-hidden z-0 group"
       >
@@ -24,8 +24,8 @@
         >
           {{ category.title }}
         </h2>
-      </div></a
-    >
+      </div>
+    </nuxt-link>
   </div>
 </template>
 

@@ -13,9 +13,12 @@
             </div>
             <span> {{ title }}</span>
           </h2>
-          <div
-            class="bg-orange-500 w-4 h-4 rounded-full dark:!bg-dark-700"
-          ></div>
+          <div class="flex items-center justify-start">
+            <nuxt-link :to="moreLink" v-if="isShowMore == true" class="ml-2">مشاهده همه</nuxt-link>
+            <div
+              class="bg-orange-500 w-4 h-4 rounded-full dark:!bg-dark-700"
+            ></div>
+          </div>
         </div>
       </div>
 
@@ -35,6 +38,16 @@ const props = defineProps({
   icon: {
     required: true,
     type: String
+  },
+  isShowMore: {
+    required: false,
+    type: Boolean,
+    default: false
+  },
+  moreLink: {
+    required: false,
+    type: String,
+    default: "/"
   }
 })
 </script>

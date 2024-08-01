@@ -60,7 +60,12 @@
       </TopSliderSection>
 
       <BlogSection v-if="template.type == 'sectionTwo'" class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-        <HeaderSection :icon="template.icon" :title="template.title" />
+        <HeaderSection 
+          :isShowMore="true" 
+          :icon="template.icon" 
+          :title="template.title"
+          moreLink="/archive/category/"
+        />
         <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <contentCategory :categories="template.categories" />
         </Grid>
@@ -155,7 +160,12 @@
       <!-- <=======END BLOG SECTION POST-V-1==========> -->
 
       <BlogSection v-if="template.type == 'sectionSix'" class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-        <HeaderSection :icon="template.icon" :title="template.title"></HeaderSection>
+        <HeaderSection 
+          :isShowMore="true" 
+          :icon="template.icon" 
+          :title="template.title"
+          moreLink="/archive/tags/"
+        ></HeaderSection>
         <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           <contentTag :tags="template.tags" />
         </Grid>

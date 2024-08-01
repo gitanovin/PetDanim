@@ -3,7 +3,7 @@
         <div class="flex flex-col sm:justify-between sm:flex-row">
             <div class="flex space-x-2.5 rtl:space-x-reverse">
                 <div class="nc-ModalCategories">
-                    <div class="nc-NcModal">
+                    <!-- <div class="nc-NcModal">
                         <button @click="OpenCategoryModal = true"
                             class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-white dark:bg-dark-900 ring-1 ring-neutral-300 hover:ring-neutral-400 dark:ring-dark-700/20 dark:hover:ring-dark-700/30 text-sm font-medium py-3 px-4 sm:py-3.5 sm:px-6">
                             <div>
@@ -11,7 +11,7 @@
                             </div>
                             <ChevronDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="nc-ModalTags">
                     <div class="nc-NcModal">

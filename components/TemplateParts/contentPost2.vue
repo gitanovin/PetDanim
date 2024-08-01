@@ -45,7 +45,7 @@
           <div class="block">
             <h2 class="block text-base sm:text-lg font-semibold text-white">
               <span class="line-clamp-2" title="Microsoft announces ">
-              {{ post.title }} 
+                {{ post.title }} 
               </span>
             </h2>
             <div class="flex mt-2.5 relative items-center">
