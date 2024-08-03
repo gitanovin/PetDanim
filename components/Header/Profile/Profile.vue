@@ -32,6 +32,7 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
+          key="1"
           class="absolute ml-0 pl-0 left-0 mt-6 w-56 origin-top-left divide-y divide-gray-100 rounded-md bg-white ring-1 ring-black/5 focus:outline-none dark:!bg-dark-800 dark:!text-dark-700"
         >
           <div class="pb-1 space-y-2">

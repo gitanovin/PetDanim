@@ -576,6 +576,29 @@ const actions = {
             return false
         }
     },
+
+    // send comment
+    async submitComment(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                }
+            };
+
+            try {
+                const result = await api.post("/mag/single/add-comment", data , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
+    }
 }
 
 const getters = {}

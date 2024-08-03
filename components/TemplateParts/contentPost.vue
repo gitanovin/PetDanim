@@ -53,7 +53,7 @@
         <div class="flex items-end justify-between mt-auto">
           <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
             <LikeButton @click="showPromptLikeModal = true" :isRed="true" :count="0" />
-            <CommentButton :count="0" />
+            <CommentButton :count="postItem.post.comments.length" />
           </div>
         </div>
       </nuxt-link>

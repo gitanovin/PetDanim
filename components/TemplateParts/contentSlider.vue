@@ -5,7 +5,7 @@
         class="absolute inset-x-0 top-0 p-3 flex items-center justify-between transition-all opacity-0 z-[-1] group-hover:opacity-100 group-hover:z-10 duration-300">
         <div class="PostCardLikeAndComment flex items-center space-x-2 rtl:space-x-reverse relative">
           <LikeButton />
-          <CommentButton />
+          <CommentButton :count="post.comments.length" />
         </div>
         <div
           class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300 relative">

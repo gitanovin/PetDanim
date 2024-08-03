@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-4 md:gap-4">
-                    <a v-for="(category , index) in topCategories" :key="category.id" class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-gray-50 dark:bg-dark-800 rounded-lg transition-colors"
+                    <nuxt-link :to="`/archive/category/${category.slug}-${category.id}`" v-for="(category , index) in topCategories" :key="category.id" class="relative flex flex-col items-center justify-center text-center px-3 py-5 sm:p-6 bg-gray-50 dark:bg-dark-800 rounded-lg transition-colors"
                         href="javascript:void(0)">
                         <div class="relative flex-shrink-0 w-20 h-20 rounded-full overflow-hidden z-0">
                             <img :alt="category.title" class="object-cover w-full h-full" :src="`${appBaseUrl}/storage/categories/${category.cat_image}`" />
@@ -27,7 +27,7 @@
                             <span class="block mt-1 text-sm text-neutral-500 dark:text-neutral-400 font-fd">{{ category.posts_count }}
                                 مقاله</span>
                         </div>
-                    </a>
+                    </nuxt-link>
                 </div>
             </div>
         </div>

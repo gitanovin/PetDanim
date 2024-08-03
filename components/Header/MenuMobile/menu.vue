@@ -13,6 +13,7 @@
     <aside class="mobile-side lg:hidden">
       <TransitionGroup name="fade-animation">
         <div
+           key="2"
           :class="menuState == false ? 'opacity-0 duration-300 invisible' : 'opacity-500 duration-300 visible'"
           class="h-screen w-full fixed top-0 z-50 transition-all duration-200 right-0"
         >
@@ -32,7 +33,9 @@
             class="bg-white dark:bg-dark-800 transition-all duration-300 absolute z-50 w-64 top-0 h-screen"
           >
             <ul class="flex flex-col space-y-6 p-4 font-normal text-sm dark:text-gray-400 text-gray-700" v-if="headerData.length != 0">
-              <li v-for="(item, index) in headerData" :key="item.id">{{ item.title }}</li>
+              <li @click="closeMenu()" v-for="(item, index) in headerData" :key="item.id">
+                <nuxt-link class="w-full block py-2" :to="`/archive/category/${item.slug}-${item.id}`">{{ item.title }}</nuxt-link>
+              </li>
             </ul>
             <ul
               class="flex flex-col space-y-6 p-4 font-normal text-sm dark:text-gray-400 text-gray-700"

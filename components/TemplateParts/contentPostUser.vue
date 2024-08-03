@@ -4,7 +4,7 @@
         v-if="postItem && postItem.post != null"
         class="relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:!bg-dark-700/10 h-full"
       >
-        <nuxt-link :to="`/post/${postItem.post.slug}`" class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
+        <nuxt-link :to="`/post/${postItem.post.slug}-${postItem.post.id}`" class="block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 aspect-w-5 aspect-h-3">
           <div class="post-cover">
             <div class="PostFeaturedMedia relative w-full h-full">
               <div class="block absolute inset-0">
@@ -15,7 +15,7 @@
           </div>
         </nuxt-link>
   
-        <nuxt-link :to="`/${postItem.post.slug}`" class="p-4 flex flex-col space-y-3">
+        <nuxt-link :to="`/post/${postItem.post.slug}-${postItem.post.id}`" class="p-4 flex flex-col space-y-3">
           <div
             class="PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 leading-none text-xs"
           >
@@ -53,7 +53,7 @@
           <div class="flex items-end justify-between mt-auto">
             <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
               <LikeButton @click="showPromptLikeModal = true" :isRed="true" :count="0" />
-              <CommentButton :count="0" />
+              <CommentButton :count="postItem.post.comments.length" />
             </div>
           </div>
         </nuxt-link>

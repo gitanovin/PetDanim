@@ -74,7 +74,7 @@ export default defineNuxtConfig({
         class: 'font-fa bg-white text-gray-900 dark:!text-dark-700 dark:!bg-dark-900'
       },
     },
-    pageTransition: { name: 'page', mode: 'out-in' }
+    // pageTransition: { name: 'page', mode: 'out-in' }
   },
   pinia: {
     autoImports: [

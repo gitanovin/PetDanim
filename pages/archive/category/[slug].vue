@@ -1,7 +1,8 @@
 <template>
   <div class="bg-slate-100 dark:bg-dark-900">
+    <Loading :isShow="showLoading" />
     <Category 
-      v-if="categoryData != null"
+      v-if="categoryData != null && showLoading == false"
       :categoryData="categoryData"
     />
     <!-- <CategoryVideo /> -->
@@ -9,6 +10,7 @@
 </template>
 
 <script setup>
+import Loading from '@/components/Loading/index.vue'
 import Category from "@/components/TemplateParts/Category/categoryPage.vue";
 // import CategoryVideo from "@/components/TemplateParts/Category/categoryVideo.vue";
 import {useRoute , useRouter} from 'vue-router'
@@ -17,6 +19,7 @@ const route = useRoute()
 const router = useRouter()
 const {appBaseUrl} = useRuntimeConfig().public
 const categoryData = ref(null)
+const showLoading = ref(true)
 
 onMounted(() => {
   if(!route.params.slug) {
@@ -30,8 +33,10 @@ const getCategoryDetail = async () => {
         slug: route.params.slug
       }
     })
-    console.log(data.value)
     if(data.value.status == 200) {
+        setTimeout(() => {
+            showLoading.value = false
+        }, 500);
         categoryData.value = data.value.result
     }
 }

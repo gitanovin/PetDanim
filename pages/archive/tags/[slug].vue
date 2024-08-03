@@ -1,13 +1,15 @@
 <template>
   <div class="bg-slate-100 dark:bg-dark-900">
+    <Loading :isShow="showLoading" />
     <TagPage 
-      v-if="tagData != null"
+      v-if="showLoading == false && tagData != null"
       :tagData="tagData"
     />
   </div>
 </template>
 
 <script setup>
+import Loading from '@/components/Loading/index.vue'
 import TagPage from "@/components/TemplateParts/Tags/tagPage.vue";
 
 import {useRoute , useRouter} from 'vue-router'
@@ -16,6 +18,7 @@ const route = useRoute()
 const router = useRouter()
 const {appBaseUrl} = useRuntimeConfig().public
 const tagData = ref(null)
+const showLoading = ref(true)
 
 onMounted(() => {
   if(!route.params.slug) {
@@ -29,8 +32,11 @@ const getTagDetail = async () => {
         slug: route.params.slug
       }
     })
-    console.log(data.value)
+
     if(data.value.status == 200) {
+      setTimeout(() => {
+        showLoading.value = false
+      }, 500);
       tagData.value = data.value.result
     }
 }

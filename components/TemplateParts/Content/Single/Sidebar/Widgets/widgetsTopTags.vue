@@ -12,12 +12,12 @@
       </h2>
     </div>
     <div class="flex flex-wrap p-4 xl:p-5">
-      <a
+      <nuxt-link
         v-for="(tag , index) in topTags" :key="tag.id"
         class="nc-Tag inline-block bg-gray-50 hover:bg-neutral-50 text-sm text-neutral-600 dark:text-neutral-300 py-2 px-3 rounded-lg md:py-2.5 md:px-4 dark:bg-neutral-900 mr-2 mb-2"
-        href="javascript:void(0)"
-        >{{ tag.name }}<span class="text-xs font-normal"> ({{ tag.posts_count }})</span></a
-      >
+        :to="`/archive/tags/${tag.name}-${tag.id}`"
+        >{{ tag.name }}<span class="text-xs font-normal"> ({{ tag.posts_count }})</span>
+        </nuxt-link>
     </div>
   </div>
 </template>

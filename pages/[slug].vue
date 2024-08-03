@@ -1,24 +1,27 @@
 <template>
-    <!-- <Loading :isShow="globalLoading" /> -->
-    <single
-        v-if="postData != null"
-    />
+    <div>
+        <Loading :isShow="showLoading" />
+        <single
+            v-if="postData != null"
+        />
+    </div>
 </template>
 
 <script setup>
+import Loading from '@/components/Loading/index.vue'
 import single from "@/components/TemplateParts/Content/Single/Single.vue";
 import {useRoute , useRouter} from 'vue-router'
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 
 const petdanimStore = usePetdanimStore()
-const {postData , globalLoading} = storeToRefs(petdanimStore)
+const {postData} = storeToRefs(petdanimStore)
 
 
 const {appBaseUrl} = useRuntimeConfig().public
 const route = useRoute()
 const router = useRouter()
-const singlePostData = ref(null)
+const showLoading = ref(true)
 
 
 
@@ -30,15 +33,16 @@ onMounted(() => {
 
 
 const getPostDetail = async () => {
-    globalLoading.value = true
     const { data } = await useFetch(`${appBaseUrl}/api/mag/single/get-post` , {
         params: { slug: route.params.slug }
     })
     const dataJson = data.value
     if(dataJson.status == 200) {
-        globalLoading.value = false
+        setTimeout(() => {
+            showLoading.value = false
+        }, 500);
+
         postData.value = dataJson.result
-        console.log(postData.value)
     }
 }
 

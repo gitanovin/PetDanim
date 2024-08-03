@@ -1,86 +1,22 @@
 <template>
-  <!-- <Loading :isShow="globalLoading" /> -->
-  <main class="dark:bg-dark-900" v-if="templateData.length != 0">
-    <div class="w-full" v-for="(template , index) in templateData" :key="index">
-      <TopSliderSection v-if="template.type == 'sectionOne'" class="dark:!bg-dark-900/30 bg-gray-50 py-4 lg:py-16">
-        <Splide :options="{
-            perPage: 3,
-            perMove: 1,
-            direction: 'rtl',
-            type: 'loop',
-            gap: '20px',
-            padding: '4rem',
-            pagination: false,
-            autoplay: true,
-            interval: 300000,
-            arrows: true,
-            focus: 'center',
-
-            breakpoints: {
-              400: {
-                perPage: 1,
-                padding: '4rem',
-                gap: '1rem',
-              },
-              640: {
-                perPage: 1,
-                padding: '2rem',
-                gap: '1rem',
-              },
-              768: {
-                perPage: 1,
-                padding: '2rem',
-                gap: '1rem',
-              },
-              1080: {
-                perPage: 2,
-                padding: '4rem',
-                gap: '1rem',
-              },
-              1920: {
-                perPage: 3,
-                padding: '4rem',
-                gap: '1rem',
-              },
-              3000: {
-                perPage: 3,
-                padding: '4rem',
-                gap: '1rem',
-              },
-              4000: {
-                perPage: 3,
-                padding: '4rem',
-                gap: '1rem',
-              },
-            },
-          }">
-          <SplideSlide v-for="(post , index) in template.categories[0].posts" :key="index" class="splide__slide rounded-lg">
-            <contentSlider :post="post" />
-          </SplideSlide>
-        </Splide>
-      </TopSliderSection>
-
-      <BlogSection v-if="template.type == 'sectionTwo'" class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-        <HeaderSection 
-          :isShowMore="true" 
-          :icon="template.icon" 
-          :title="template.title"
-          moreLink="/archive/category/"
-        />
-        <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <contentCategory :categories="template.categories" />
-        </Grid>
-      </BlogSection>
-
-      <!-- <=======START BLOG SECTION POST-V-2==========> -->
-      <BlogSection v-if="template.type == 'sectionThree'" class="dark:!bg-dark-700/25 bg-gray-50 py-16 lg:py-16">
-        <HeaderSection :icon="template.icon" :title="template.title" />
-        <ContentPost>
+  <div>
+    <Loading :isShow="showLoading" />
+    <main class="dark:bg-dark-900" v-if="showLoading == false && templateData.length != 0">
+      <div class="w-full" v-for="(template , index) in templateData" :key="index">
+        <TopSliderSection v-if="template.type == 'sectionOne'" class="dark:!bg-dark-900/30 bg-gray-50 py-4 lg:py-16">
           <Splide :options="{
-              perPage: 4,
-              type: 'loop',
+              perPage: 3,
+              perMove: 1,
               direction: 'rtl',
+              type: 'loop',
               gap: '20px',
+              padding: '4rem',
+              pagination: false,
+              autoplay: true,
+              interval: 300000,
+              arrows: true,
+              focus: 'center',
+
               breakpoints: {
                 400: {
                   perPage: 1,
@@ -89,27 +25,30 @@
                 },
                 640: {
                   perPage: 1,
-                  padding: '4rem',
+                  padding: '2rem',
                   gap: '1rem',
                 },
                 768: {
-                  perPage: 2,
-                  padding: '4rem',
+                  perPage: 1,
+                  padding: '2rem',
                   gap: '1rem',
                 },
-
-                819: {
-                  perPage: 2,
-                  padding: '4rem',
-                  gap: '1rem',
-                },
-
                 1080: {
+                  perPage: 2,
+                  padding: '4rem',
+                  gap: '1rem',
+                },
+                1920: {
                   perPage: 3,
                   padding: '4rem',
                   gap: '1rem',
                 },
-                1280: {
+                3000: {
+                  perPage: 3,
+                  padding: '4rem',
+                  gap: '1rem',
+                },
+                4000: {
                   perPage: 3,
                   padding: '4rem',
                   gap: '1rem',
@@ -117,106 +56,169 @@
               },
             }">
             <SplideSlide v-for="(post , index) in template.categories[0].posts" :key="index" class="splide__slide rounded-lg">
-              <content2 :post="post" />
+              <contentSlider :post="post" />
             </SplideSlide>
           </Splide>
-        </ContentPost>
-      </BlogSection>
-      <!-- <=======END BLOG SECTION POST-V-2==========> -->
+        </TopSliderSection>
+
+        <BlogSection v-if="template.type == 'sectionTwo'" class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
+          <HeaderSection 
+            :isShowMore="true" 
+            :icon="template.icon" 
+            :title="template.title"
+            moreLink="/archive/category/"
+          />
+          <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <contentCategory :categories="template.categories" />
+          </Grid>
+        </BlogSection>
+
+        <!-- <=======START BLOG SECTION POST-V-2==========> -->
+        <BlogSection v-if="template.type == 'sectionThree'" class="dark:!bg-dark-700/25 bg-gray-50 py-16 lg:py-16">
+          <HeaderSection :icon="template.icon" :title="template.title" />
+          <ContentPost>
+            <Splide :options="{
+                perPage: 4,
+                type: 'loop',
+                direction: 'rtl',
+                gap: '20px',
+                breakpoints: {
+                  400: {
+                    perPage: 1,
+                    padding: '4rem',
+                    gap: '1rem',
+                  },
+                  640: {
+                    perPage: 1,
+                    padding: '4rem',
+                    gap: '1rem',
+                  },
+                  768: {
+                    perPage: 2,
+                    padding: '4rem',
+                    gap: '1rem',
+                  },
+
+                  819: {
+                    perPage: 2,
+                    padding: '4rem',
+                    gap: '1rem',
+                  },
+
+                  1080: {
+                    perPage: 3,
+                    padding: '4rem',
+                    gap: '1rem',
+                  },
+                  1280: {
+                    perPage: 3,
+                    padding: '4rem',
+                    gap: '1rem',
+                  },
+                },
+              }">
+              <SplideSlide v-for="(post , index) in template.categories[0].posts" :key="index" class="splide__slide rounded-lg">
+                <content2 :post="post" />
+              </SplideSlide>
+            </Splide>
+          </ContentPost>
+        </BlogSection>
+        <!-- <=======END BLOG SECTION POST-V-2==========> -->
+
+        <!-- <=======START BLOG SECTION POST-V-1==========> -->
+        <BlogSection v-if="template.type == 'sectionFour'" class="dark:!bg-dark-800 bg-white py-16 lg:py-16">
+          <Header-Section :icon="template.icon" :title="template.title">
+            <TabsSection 
+            @activeCat="(index) => activeCategoryTab(index)"
+            :categories="template.categories" class="mb-8"
+            :activeCatIndex="activeCatIndex" />
+          </Header-Section>
+
+          <Grid v-if="template.categories.length != 0" class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4">
+            <contentBigPost 
+              v-if="template.categories[activeCatIndex].posts.length != 0"
+              :post="template.categories[activeCatIndex].posts[0]"
+            />
+            <div class="ContentList">
+              <div class="grid gap-6 md:gap-4">
+                <content-List :posts="template.categories[activeCatIndex].posts" />
+              </div>
+            </div>
+          </Grid>
+        </BlogSection>
+        <!-- <=======END BLOG SECTION POST-V-1==========> -->
+
+        <BlogSection v-if="template.type == 'sectionFive'" class="dark:!bg-dark-800/70 py-16 lg:py-16">
+          <HeaderSection :icon="template.icon" :title="template.title"> </HeaderSection>
+
+          <ContentPost>
+            <Splide :options="postSliderNews">
+              <SplideSlide v-for="(post , index) in template.categories[0].posts" :key="index"  class="splide__slide rounded-lg">
+                <contentVideo @showPrompt="(data) => openPrompt(data)" :post="post" />
+              </SplideSlide>
+            </Splide>
+          </ContentPost>
+        </BlogSection>
+        <!-- <=======END BLOG SECTION POST-V-1==========> -->
+
+        <BlogSection v-if="template.type == 'sectionSix'" class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
+          <HeaderSection 
+            :isShowMore="true" 
+            :icon="template.icon" 
+            :title="template.title"
+            moreLink="/archive/tags/"
+          ></HeaderSection>
+          <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <contentTag :tags="template.tags" />
+          </Grid>
+        </BlogSection>
+      </div>
 
       <!-- <=======START BLOG SECTION POST-V-1==========> -->
-      <BlogSection v-if="template.type == 'sectionFour'" class="dark:!bg-dark-800 bg-white py-16 lg:py-16">
-        <Header-Section :icon="template.icon" :title="template.title">
-          <TabsSection 
-          @activeCat="(index) => activeCategoryTab(index)"
-          :categories="template.categories" class="mb-8"
-          :activeCatIndex="activeCatIndex" />
-        </Header-Section>
+      <!-- <BlogSection class="dark:!bg-dark-800 bg-white py-16 lg:py-16">
+        <HeaderSection>
+          <TabsSection class="mb-8" />
+        </HeaderSection>
 
-        <Grid v-if="template.categories.length != 0" class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-4">
-          <contentBigPost 
-            v-if="template.categories[activeCatIndex].posts.length != 0"
-            :post="template.categories[activeCatIndex].posts[0]"
-          />
-          <div class="ContentList">
-            <div class="grid gap-6 md:gap-4">
-              <content-List :posts="template.categories[activeCatIndex].posts" />
-            </div>
-          </div>
-        </Grid>
-      </BlogSection>
+        <ContentPost
+          class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 lg:px-0">
+          <content />
+
+          <contentGallerySlide />
+        </ContentPost>
+      </BlogSection> -->
       <!-- <=======END BLOG SECTION POST-V-1==========> -->
 
-      <BlogSection v-if="template.type == 'sectionFive'" class="dark:!bg-dark-800/70 py-16 lg:py-16">
-        <HeaderSection :icon="template.icon" :title="template.title"> </HeaderSection>
+      <!-- <=======START BLOG SECTION POST-V-1==========> -->
+      <!-- <BlogSection class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
+        <HeaderSection/>
 
         <ContentPost>
-          <Splide :options="postSliderNews">
-            <SplideSlide v-for="(post , index) in template.categories[0].posts" :key="index"  class="splide__slide rounded-lg">
-              <contentVideo @showPrompt="(data) => openPrompt(data)" :post="post" />
+          <Splide :options="postSliderOptions">
+            <SplideSlide class="splide__slide rounded-lg">
+              <content />
             </SplideSlide>
           </Splide>
         </ContentPost>
-      </BlogSection>
+      </BlogSection> -->
       <!-- <=======END BLOG SECTION POST-V-1==========> -->
 
-      <BlogSection v-if="template.type == 'sectionSix'" class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-        <HeaderSection 
-          :isShowMore="true" 
-          :icon="template.icon" 
-          :title="template.title"
-          moreLink="/archive/tags/"
-        ></HeaderSection>
-        <Grid class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          <contentTag :tags="template.tags" />
-        </Grid>
-      </BlogSection>
-    </div>
+      <!-- <BlogSection class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
+        <BannerAds class="px-6 lg:px-0" />
+      </BlogSection> -->
 
-    <!-- <=======START BLOG SECTION POST-V-1==========> -->
-    <!-- <BlogSection class="dark:!bg-dark-800 bg-white py-16 lg:py-16">
-      <HeaderSection>
-        <TabsSection class="mb-8" />
-      </HeaderSection>
+      <!-- <=======START BLOG SECTION POST-V-1==========> -->
 
-      <ContentPost
-        class="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-6 lg:px-0">
-        <content />
-
-        <contentGallerySlide />
-      </ContentPost>
-    </BlogSection> -->
-    <!-- <=======END BLOG SECTION POST-V-1==========> -->
-
-    <!-- <=======START BLOG SECTION POST-V-1==========> -->
-    <!-- <BlogSection class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-      <HeaderSection/>
-
-      <ContentPost>
-        <Splide :options="postSliderOptions">
-          <SplideSlide class="splide__slide rounded-lg">
-            <content />
-          </SplideSlide>
-        </Splide>
-      </ContentPost>
-    </BlogSection> -->
-    <!-- <=======END BLOG SECTION POST-V-1==========> -->
-
-    <!-- <BlogSection class="dark:!bg-dark-900/30 bg-gray-50 py-16 lg:py-16">
-      <BannerAds class="px-6 lg:px-0" />
-    </BlogSection> -->
-
-    <!-- <=======START BLOG SECTION POST-V-1==========> -->
-
-    <promptModal
-        :show="showPromptModal"
-        :title="promptTitle"
-        :message="promptText"
-        @confirm="handleConfirm('bookmark')"
-        @cancel="handleCancel"
-        :isLoading="isLoadingPrompt"
-    />
-  </main>
+      <promptModal
+          :show="showPromptModal"
+          :title="promptTitle"
+          :message="promptText"
+          @confirm="handleConfirm('bookmark')"
+          @cancel="handleCancel"
+          :isLoading="isLoadingPrompt"
+      />
+    </main>
+  </div>
 </template>
 
 <script setup>
@@ -249,6 +251,7 @@ const router = useRouter()
 const activeCatIndex = ref(0)
 const postSliderOptions = ref(sliderConfig[0]);
 const isLoadingPrompt = ref(false)
+const showLoading = ref(true)
 
 const promptTitle = ref("")
 const promptText = ref("")
@@ -262,12 +265,13 @@ const showPromptModal = ref(false)
 const {appBaseUrl} = useRuntimeConfig().public
 
 const getTemplatesData = async () => {
-  globalLoading.value = true
   const { data } = await useFetch(`${appBaseUrl}/api/mag/home/get-template-data`)
   const dataJson = data.value
 
   if(dataJson.status == 200) {
-    globalLoading.value = false
+    setTimeout(() => {
+      showLoading.value = false
+    }, 500);
     templateData.value = dataJson.result
   }
 }

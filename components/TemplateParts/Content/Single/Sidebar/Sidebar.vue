@@ -3,10 +3,10 @@
         <div class="w-full lg:col-span-4 col-span-12">
             <div class="SingleSidebar space-y-6 ">
                 <div class="relative  z-20">
-                    <!-- <widgetTopPosts 
+                    <widgetTopPosts 
                         v-if="postData.topPosts.length != 0"
                         :topsPosts="postData.topPosts"
-                    /> -->
+                    />
                 </div>
 
                 <widgetsTopTags

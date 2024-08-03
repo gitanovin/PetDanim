@@ -36,7 +36,7 @@
         <div class="flex items-center flex-wrap justify-between mt-auto">
           <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
             <LikeButton />
-            <CommentButton />
+            <CommentButton :count="post.comments.length" />
           </div>
           <div
             class="flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"

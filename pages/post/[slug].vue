@@ -1,10 +1,14 @@
 <template>
-    <single
-        v-if="postData != null"
-    />
+    <div>
+        <Loading :isShow="showLoading" />
+        <single
+            v-if="postData != null"
+        />
+    </div>
 </template>
 
 <script setup>
+import Loading from '@/components/Loading/index.vue'
 import single from "@/components/TemplateParts/Content/UserPost/Single/Single.vue";
 import {useRoute , useRouter} from 'vue-router'
 import {usePetdanimStore} from '@/store/petdanimStore.js'
@@ -17,10 +21,7 @@ const {postData} = storeToRefs(petdanimStore)
 const {appBaseUrl} = useRuntimeConfig().public
 const route = useRoute()
 const router = useRouter()
-const singlePostData = ref(null)
-const pageMeataData = reactive({
-    title: ""
-})
+const showLoading = ref(true)
 
 
 onMounted(() => {
@@ -35,9 +36,12 @@ const getPostDetail = async () => {
         params: { slug: route.params.slug }
     })
     const dataJson = data.value
-    console.log(dataJson)
     if(dataJson.status == 200) {
+        setTimeout(() => {
+            showLoading.value = false
+        }, 500)
         postData.value = dataJson.result
+        console.log(postData.value)
     }
 }
 

@@ -22,8 +22,15 @@
                         :showBiography="false"
                         :showRegisterDate="true"
                     />
-                    <AddComment />
-                    <CommentList class="mt-10" />
+                    <AddComment 
+                        v-if="authUser != null"
+                        @submitComment="(data) => submitComment(data)"
+                        :commentLoading="commentLoading"
+                    />
+                    <CommentList
+                     v-if="postData.comments.length != 0"
+                     :comments="postData.comments"
+                     class="mt-10" />
                 </div>
                 <div :class="GridMode == false ? '' : 'hidden'" class="w-full lg:col-span-4 col-span-12">
                     <SidebarLeft />
@@ -64,7 +71,34 @@ const Sidebar = ref(false)
 
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
-
+const {$toast} = useNuxtApp()
 const petdanimStore = usePetdanimStore()
-const {postData} = storeToRefs(petdanimStore)
+const {postData , authUser} = storeToRefs(petdanimStore)
+
+const commentLoading = ref(false)
+
+const submitComment = async (data) => {
+    commentLoading.value = true
+    const result = await petdanimStore.submitComment({
+        ...data,
+        post_id: postData.value.post.id,
+        type: "user",
+    })
+
+    if(result.status == 200) {
+        commentLoading.value = false
+
+        postData.value.comments = result.result
+        $toast(result.message , {
+            "theme": "colored",
+            "type": "success"
+        });
+    }else {
+        commentLoading.value = false
+        $toast(result.message , {
+            "theme": "colored",
+            "type": "error"
+        });
+    }
+}
 </script>
