@@ -35,13 +35,13 @@
         </div>
         <div class="flex items-center flex-wrap justify-between mt-auto">
           <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
-            <LikeButton />
+            <LikeButton @click="doLikePost(post)" :count="post.likes.length" :isRed="authUser != null ? authUser.likes.some(item => item.favoritable_id === post.id && item.favoritable_type === 'App\\Models\\AdminPost') : false" />
             <CommentButton :count="post.comments.length" />
           </div>
           <div
             class="flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
           >
-            <BookmarkButton />
+            <BookmarkButton @click="doBookmarkPost(post)" :isFill="authUser != null ? authUser.bookmarks.some(item => item.bookmarkable_id === post.id && item.bookmarkable_type === 'App\\Models\\AdminPost') : false" />
           </div>
         </div>
       </div>
@@ -59,7 +59,6 @@
 </template>
 
 <script setup>
-import PostListCover from "@/components/TemplateParts/Media/PostListCover.vue";
 import PostCategory from "~/components/TemplateParts/Badge/index.vue";
 import Author from "@/components/TemplateParts/MetaAction/Author/Author.vue";
 import AuthorName from "@/components/TemplateParts/MetaAction/Author/AuthorName.vue";
@@ -68,7 +67,14 @@ import LikeButton from "@/components/TemplateParts/MetaAction/Like.vue";
 import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
-import PostListTitle from "@/components/TemplateParts/Title/PostListTitle.vue";
+
+import {usePetdanimStore} from '@/store/petdanimStore'
+import {storeToRefs} from 'pinia'
+
+const {$toast} = useNuxtApp()
+
+const petdanimStore = usePetdanimStore()
+const {authUser} = storeToRefs(petdanimStore)
 
 
 const {appBaseUrl} = useRuntimeConfig().public
@@ -78,4 +84,41 @@ const props = defineProps({
     type: [Array, Object],
   },
 });
+
+
+const doLikePost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petdanimStore.doLikePost({
+      post_id: post.id,
+      type: "admin"
+    })
+    if(result.status == 200) {
+      post.likes = result.result.post_likes
+      authUser.value.likes = result.result.user_likes
+    }
+  } else {
+    $toast("جهت پسندیدن این پست ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
+  }
+}
+
+const doBookmarkPost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petdanimStore.doBookmarkPost({
+      post_id: post.id,
+      type: "admin"
+    })
+    if(result.status == 200) {
+      post.bookmarks = result.result.post_bookmarks
+      authUser.value.bookmarks = result.result.user_bookmarks
+    }
+  } else {
+    $toast("جهت افزودن این پست به ذخیره ها ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
+  }
+}
 </script>

@@ -14,10 +14,11 @@
                     leave-active-class="transition duration-75 ease-in"
                     leave-from-class="transform scale-100 opacity-100" leave-to-class="transform scale-95 opacity-0">
                     <MenuItems
+                        key="emzedam2"
                         class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 dark:divide-slate-700 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-dark-800">
                         <div class="px-2 py-4 space-y-2">
                             <MenuItem v-slot="{ active }">
-                            <button :class="[
+                            <button @click="copyUrl()" :class="[
                                 active
                                     ? 'bg-gray-50 text-gray-700'
                                     : ' fill-gray-500',
@@ -29,7 +30,7 @@
                             </MenuItem>
 
                             <MenuItem v-slot="{ active }">
-                            <button :class="[
+                            <nuxt-link to="#comments" :class="[
                                 active
                                     ? 'bg-gray-50 text-gray-700'
                                     : ' fill-gray-500',
@@ -37,9 +38,9 @@
                             ]">
                                 <CommentIcon :active="active" class="ml-2 h-5 w-5 fill-gray-800" aria-hidden="true" />
                                 افزودن نظر به این مقاله
-                            </button>
+                            </nuxt-link>
                             </MenuItem>
-                            <MenuItem v-slot="{ active }">
+                            <!-- <MenuItem v-slot="{ active }">
                             <button :class="[
                                 active
                                     ? 'bg-gray-50 text-gray-700'
@@ -49,7 +50,7 @@
                                 <ReportIcon :active="active" class="ml-2 h-5 w-5 fill-gray-800" aria-hidden="true" />
                                 گزارش این مقاله
                             </button>
-                            </MenuItem>
+                            </MenuItem> -->
                         </div>
                     </MenuItems>
                 </transition>
@@ -65,4 +66,25 @@ import ReportIcon from "@/components/icons/ReportIcon.vue";
 import CopyIcon from "@/components/icons/Copy.vue";
 import CommentIcon from "@/components/icons/Cm.vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+const {$toast} = useNuxtApp()
+const message = ref('')
+
+const copyUrl = async () => {
+  try {
+    const url = window.location.href
+    await navigator.clipboard.writeText(url)
+    message.value = 'آدرس نوشته در کلیپبورد کپی شد'
+    
+    $toast(message.value , {
+        "theme": "colored",
+        "type": "success"
+    });
+  } catch (err) {
+    message.value = 'خطا در کپی آدرس نوشته !'
+    $toast(message.value , {
+        "theme": "colored",
+        "type": "error"
+    });
+  }
+}
 </script>

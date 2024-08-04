@@ -15,8 +15,8 @@
           </div>
         </nuxt-link>
   
-        <nuxt-link :to="`/post/${postItem.post.slug}-${postItem.post.id}`" class="p-4 flex flex-col space-y-3">
-          <div
+        <div  class="p-4 flex flex-col space-y-3">
+          <nuxt-link :to="`/post/${postItem.post.slug}-${postItem.post.id}`" 
             class="PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:!text-neutral-200 leading-none text-xs"
           >
               <div
@@ -37,10 +37,10 @@
               >·</span
             >
               <span class="text-neutral-500 dark:!text-neutral-400 font-normal font-fd"> {{postItem.post.date}} </span>
-          </div>
+          </nuxt-link>
           
   
-          <h3
+          <nuxt-link :to="`/post/${postItem.post.slug}-${postItem.post.id}`" 
             class="card-title block text-base font-semibold text-neutral-900 dark:!text-neutral-100"
           >
             <span
@@ -48,25 +48,17 @@
               :title="postItem.post.title"
               >  {{postItem.post.title}} 
             </span>
-          </h3>
+          </nuxt-link>
   
           <div class="flex items-end justify-between mt-auto">
             <div class="flex items-center space-x-2 rtl:space-x-reverse relative">
-              <LikeButton @click="showPromptLikeModal = true" :isRed="true" :count="0" />
+              <LikeButton  @click="doLikePost(postItem.post)" :count="postItem.post.likes.length" :isRed="authUser != null ? authUser.likes.some(item => item.favoritable_id === postItem.post.id && item.favoritable_type === 'App\\Models\\Post') : false" />
               <CommentButton :count="postItem.post.comments.length" />
+              <BookmarkButton @click="doBookmarkPost(postItem.post)" :isFill="authUser != null ? authUser.bookmarks.some(item => item.bookmarkable_id === postItem.post.id && item.bookmarkable_type === 'App\\Models\\Post') : false" />
             </div>
           </div>
-        </nuxt-link>
+        </div>
       </div>
-  
-      <promptModal
-        :show="showPromptLikeModal"
-        title="هشدار"
-        message="آیا میخواهید این پست را از لیست علاقه مندیها پاک کنید ؟"
-        @confirm="handleConfirm"
-        @cancel="handleCancel"
-        :isLoading="isLoading"
-      />
     </article>
 </template>
   
@@ -75,56 +67,58 @@
   import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
   import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
   import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
-  import promptModal from '@/components/TemplateParts/Modal/promptModal.vue'
   import {usePetdanimStore} from '@/store/petdanimStore.js'
+  import {storeToRefs} from 'pinia'
   const  {$toast} = useNuxtApp()
   
   const petdanimStore = usePetdanimStore()
+  const {authUser} = storeToRefs(petdanimStore)
   const {appBaseUrl} = useRuntimeConfig().public
-  
-  const isLoading = ref(false)
-  const showPromptLikeModal = ref(false)
+
   const props = defineProps({
     postItem: {
       required: true,
       type: [Array , Object]
     }
   })
-  const emit = defineEmits([
-    'updatePostsContent'
-  ])
-  
-  const handleConfirm = async () => {
-    isLoading.value = true
-  
-    const result = await petdanimStore.removeFavoritePost({post_id: props.postItem.post_id})
+
+
+  const doLikePost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petdanimStore.doLikePost({
+      post_id: post.id,
+      type: "user"
+    })
     if(result.status == 200) {
-      isLoading.value = false
-      showPromptLikeModal.value = false
-  
-      emit('updatePostsContent' , result.result)
-      
-      $toast(result.message , {
-          "theme": "colored",
-          "type": "success"
-      });
-    }else {
-      isLoading.value = false
-      showPromptLikeModal.value = false
-  
-      $toast(result.message , {
-          "theme": "colored",
-          "type": "error"
-      });
+      post.likes = result.result.post_likes
+      authUser.value.likes = result.result.user_likes
     }
+  } else {
+    $toast("جهت پسندیدن این پست ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
   }
-  
-  const handleCancel = () => {
-    showPromptLikeModal.value = false
+}
+
+const doBookmarkPost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petdanimStore.doBookmarkPost({
+      post_id: post.id,
+      type: "user"
+    })
+    if(result.status == 200) {
+      post.bookmarks = result.result.post_bookmarks
+      authUser.value.bookmarks = result.result.user_bookmarks
+    }
+  } else {
+    $toast("جهت افزودن این پست به ذخیره ها ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
   }
+}
   
-  // onMounted(() => {
-  //   console.log(props.postItem)
-  // })
+
  </script>
   

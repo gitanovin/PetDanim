@@ -27,9 +27,7 @@
       <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse">
         <PostCategory :text="post.category.title" />
         <div class="PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-300">
-          <BookmarkButton 
-          :isFill="true"
-          @click="addToBookmark(post.id)" />
+          <BookmarkButton @click="doBookmarkPost(post)" :isFill="authUser != null ? authUser.bookmarks.some(item => item.bookmarkable_id === post.id && item.bookmarkable_type === 'App\\Models\\AdminPost') : false" />
         </div>
       </div>
       <div class="space-y-2.5 mt-4 px-4">
@@ -92,22 +90,24 @@ const { appBaseUrl } = useRuntimeConfig().public
 
 
 
-const addToBookmark = (post_id) => {
-  let bookmarkState = false
-  if(authUser.value.bookmarks.length != 0) {
-    const foundPost = authUser.value.bookmarks.find(item => item.post_id === post_id);
-    if(foundPost) {
-      bookmarkState = true
-    }else {
-      bookmarkState = false
+
+
+const doBookmarkPost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petStore.doBookmarkPost({
+      post_id: post.id,
+      type: "admin"
+    })
+    if(result.status == 200) {
+      post.bookmarks = result.result.post_bookmarks
+      authUser.value.bookmarks = result.result.user_bookmarks
     }
+  } else {
+    $toast("جهت افزودن این پست به ذخیره ها ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
   }
-  
-  emit("showPrompt" , {
-    post_id: post_id,
-    bookmarkState: bookmarkState
-  })
-  
 }
 
 
