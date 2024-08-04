@@ -227,6 +227,16 @@
                   characters="a-z,A-Z,0-9,#"
                 ></password>
               </div>
+
+              <div class="relative mt-4">
+                <label
+                  for="biography"
+                  class="flex pb-2 pr-1 text-sm font-medium text-gray-700 dark:text-gray-300"
+                >
+                  <span>بیوگرافی </span>
+                </label>
+                <textarea class="block w-full pl-10 py-4 border-gray-300 rounded-md focus:border-gray-500 focus:ring-gray-500 sm:text-sm dark:bg-dark-900 dark:border-dark-700/20 dark:text-gray-300" id="biography" v-model="userData.biography" placeholder="متن درباره شما ..."></textarea>
+              </div>
             </div>
           </div>
         </div>
@@ -237,7 +247,7 @@
           text="بروزرسانی اطلاعات"
           :isLoading="loading"
           @doClick="doEditProfile()"
-          bg="green"
+          bg="bg-green-500 hover:bg-green-700 focus:ring-green-500"
         />
       </div>
     </div>
@@ -292,6 +302,7 @@ const userData = reactive({
   email: "",
   password: "",
   profile_image: "",
+  biography: ""
 });
 
 onMounted(() => {
@@ -299,6 +310,7 @@ onMounted(() => {
   userData.username = authUser.value.username;
   userData.email = authUser.value.email ? authUser.value.email : "";
   userData.mobile = authUser.value.mobile;
+  userData.biography = authUser.value.biography == null ? "" : authUser.value.biography;
   if(authUser.value.profile != null) {
     localProfileSrc.value = `${appBaseUrl}/storage/avatars/${authUser.value.profile}`
   }

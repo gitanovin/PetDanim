@@ -471,6 +471,7 @@ const actions = {
             }
             formData.append("name" , data.name)
             formData.append("username" , data.username)
+            formData.append("biography" , data.biography)
 
             try {
                 const result = await api.post("/mag/users/profile/edit" , formData , config)
