@@ -1,7 +1,7 @@
 <template>
   <div class="PageAuthor bg-gray-50/10 dark:!bg-dark-900 ">
     <div class="w-full mx-auto xl:max-w-7xl  lg:pt-16">
-      <AuthorHeader />
+      <AuthorHeader :authorData="authorData" />
     </div>
     <div class="w-full mx-auto  xl:max-w-7xl lg:pb-28 ">
       <AuthorTabs />
@@ -18,4 +18,11 @@ import AuthorHeader from "./AuthorHeader.vue";
 import AuthorTabs from "./AuthorTabs.vue";
 import AuthorBookmark from "./AuthorBookmark.vue";
 import Pagination from "@/components/TemplateParts/Pagination/pageination.vue";
+
+const props = defineProps({
+  authorData: {
+    required: true,
+    type: [Array , Object]
+  }
+})
 </script>

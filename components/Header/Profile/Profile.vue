@@ -106,20 +106,6 @@
                   ذخیره شده ها
                 </nuxt-link>
               </MenuItem>
-
-              <MenuItem v-slot="{ active }">
-                <nuxt-link
-                  to="/profile/favorites"
-                  :class="[
-                    'group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-dark-700/10',
-                  ]"
-                >
-                  <HeartIcon
-                    class="w-6 ml-2 dark:!stroke-dark-700 stroke-gray-800"
-                  />
-                  پست های مورد علاقه
-                </nuxt-link>
-              </MenuItem>
             </div>
 
             <div @click="openModalPrompt()" class="border-t dark:!border-dark-700/20 px-2">

@@ -5,7 +5,7 @@
             <div class="overflow-hidden">
                 <div class="gap-4 lg:grid lg:grid-cols-12">
                     <dataset v-slot="{ ds }" :ds-data="bookmarksList" :ds-sortby="sortBy" :ds-sort-as="{}"
-                        :ds-search-in="['id']" :ds-search-as="{}">
+                        :ds-search-in="['title']" :ds-search-as="{}">
                         <div class="col-span-12 font-fa">
                             <div
                                 class="mt-2 mb-6 bg-white border border-gray-200 blog-info rounded-xl dark:text-gray-300 dark:bg-dark-800 dark:border-dark-700/20">
@@ -14,11 +14,11 @@
                                     <h6
                                         class="flex items-center gap-1 text-xs antialiased font-semibold leading-normal text-gray-600 font-fa dark:text-gray-300">
                                         <i class="fa-solid fa-bookmark text-[20px] !w-5 !h-5 text-hamian ml-1"></i>
-                                        لیست علاقه مندی ها
+                                        لیست ذخیره شده ها
                                     </h6>
                                     <p
                                         class="flex items-center gap-1 pt-2 text-xs antialiased font-normal leading-normal text-gray-600 font-fa dark:text-gray-300">
-                                        از این بخش می توانید علاقه مندی ها را مدیریت یا حذف نمایید
+                                        از این بخش می توانید ذخیره شده ها را مدیریت یا حذف نمایید
                                     </p>
                                 </div>
 
@@ -58,12 +58,19 @@
                                                                     class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 p-4 border-t bg-gray-50 divide-gray-200 last:border-b  dark:bg-dark-900 dark:border-dark-700/20 dark:text-gray-300  dark:divide-dark-700/20"
                                                                     name="fade" is="transition-group">
                                                                     <template #default="{ row, rowIndex }">
-                                                                        <li>
+                                                                        <li >
 
-                                                                            <content 
+                                                                            <contentUserPost 
+                                                                                v-if="row.type == 'user'"
                                                                                 :postItem="row" 
                                                                                 @updatePostsContent="(posts) => updatePostsContent(posts)" 
                                                                             />
+                                                                            <contentAdminPost 
+                                                                                v-if="row.type == 'admin'"
+                                                                                :postItem="row" 
+                                                                                @updatePostsContent="(posts) => updatePostsContent(posts)" 
+                                                                            />
+                                                                            <!-- <p>{{row.type}}</p> -->
 
 
 
@@ -98,7 +105,8 @@
 </template>
 
 <script>
-import content from "@/components/TemplateParts/contentPostBookmark.vue";
+import contentUserPost from "@/components/TemplateParts/contentUserPostBookmark.vue";
+import contentAdminPost from "@/components/TemplateParts/contentAdminPostBookmark.vue";
 import CollapseTransition from "@/components/DataTable/CollapseTransition.vue";
 import blogs from "@/assets/blogs.json";
 import Dataset from "@/components/DataTable/Dataset.vue";
@@ -120,7 +128,8 @@ export default {
         DatasetStatus,
         DataAction,
         CollapseTransition,
-        content
+        contentUserPost,
+        contentAdminPost
     },
 
     data() {

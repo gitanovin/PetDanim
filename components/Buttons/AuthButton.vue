@@ -34,7 +34,7 @@ const props = defineProps({
     bg: {
         required: false,
         type: String,
-        default: "orange"
+        default: "bg-orange-500 hover:bg-orange-700 focus:ring-orange-500"
     }
 })
 

@@ -37,21 +37,9 @@
       </li>
       <li>
         <nuxt-link
-          to="/profile/favorites"
-          :class="$route.path == '/profile/favorites' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
-          class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          
-          ><span class="w-8 me-2 text-lg"
-            ><i class="fa-solid fa-heart"></i></span
-          ><span> پست های مورد علاقه </span></nuxt-link
-        >
-      </li>
-      <li>
-        <nuxt-link
           to="/profile/bookmarks"
           :class="$route.path == '/profile/bookmarks' ? 'text-neutral-800 bg-neutral-100 dark:bg-dark-900 dark:text-neutral-100' : ''"
           class="px-6 py-3 font-medium rounded-lg flex items-center hover:text-neutral-800 hover:bg-neutral-100 dark:hover:bg-dark-900 dark:hover:text-neutral-100"
-          
           ><span class="w-8 me-2 text-lg"
             ><i class="fa-solid fa-bookmark"></i></span
           ><span> ذخیره شده ها </span></nuxt-link

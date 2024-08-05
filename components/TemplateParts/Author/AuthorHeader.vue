@@ -12,16 +12,16 @@
                 class="flex 
                 text-center p-2 text-gray-600 dark:!text-gray-400 leading-snug text-sm font-fd w-full gap-6 items-center pr-6 lg:hidden justify-center">
                 <li>
-                    <span class="font-bold text-black dark:!text-white block">136</span>
+                    <span class="font-bold text-black dark:!text-white block">{{  authorData.posts.length  }}</span>
                     پست
                 </li>
 
                 <li>
-                    <span class="font-bold text-black block dark:!text-white">40.5k</span>
+                    <span class="font-bold text-black block dark:!text-white">{{  authorData.followers.length  }}</span>
                     دنبال کننده
                 </li>
                 <li>
-                    <span class="font-bold text-black block dark:!text-white">302</span>
+                    <span class="font-bold text-black block dark:!text-white">{{  authorData.followings.length  }}</span>
                     دنبال شونده
                 </li>
             </ul>
@@ -31,18 +31,16 @@
             <div class="max-w-full space-y-4">
                 <div class="flex justify-between items-center px-4 lg:pt-6 pt-3">
                     <h2 class="inline-flex items-center text-xl sm:text-3xl lg:text-4xl font-semibold dark:!text-white">
-                        <span>محبوب حسین زاده</span><span class="mr-2">
+                        <span>{{authorData.name}}</span><span class="mr-2">
                             <Verify />
                         </span>
                     </h2>
 
                 </div>
 
-                <span class="block text-sm text-neutral-500 dark:!text-neutral-400 text-justify px-4">محبوب حسین زاده
-                    (زاده ۲۸ اردیبهشت ۱۳۶۹ در خوی) نوازنده، توسعه
-                    دهنده ، سفیر صلح و دوستی ، و طراح ایرانی است. وی کارشناس حقوق و
-                    کارشناس ارشد کسب و کار الکترونیک از دانشگاه بین المللی کیش
-                    است.</span>
+                <span class="block text-sm text-neutral-500 dark:!text-neutral-400 text-justify px-4">{{ authorData.name }} 
+                   {{authorData.biography}}
+                </span>
 
 
                 <div class="flex  justify-start px-4 pb-4">
@@ -213,5 +211,11 @@ import WebIcon from "@/components/icons/WebIcon.vue";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 
 
+const props = defineProps({
+    authorData: {
+        required: true,
+        type: [Array , Object]
+    }
+})
 
 </script>
