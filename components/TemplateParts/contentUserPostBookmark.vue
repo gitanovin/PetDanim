@@ -55,7 +55,8 @@
               <CommentButton :count="postItem.comments.length" />
             </div>
 
-            <div
+            <div 
+                v-if="authUser != null"
                 @click="showPromptLikeModal = true"
                 class="flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
             >
@@ -83,9 +84,11 @@
   import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
   import promptModal from '@/components/TemplateParts/Modal/promptModal.vue'
   import {usePetdanimStore} from '@/store/petdanimStore.js'
+  import {storeToRefs} from 'pinia'
   const {$toast} = useNuxtApp()
   
   const petdanimStore = usePetdanimStore()
+  const {authUser} = storeToRefs(petdanimStore)
   
   const isLoading = ref(false)
   const showPromptLikeModal = ref(false)

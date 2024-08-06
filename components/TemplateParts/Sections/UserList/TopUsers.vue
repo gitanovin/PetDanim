@@ -49,8 +49,8 @@
                             }">
                                 <SplideSlide v-for="(author , index) in topUsers" :key="author.id" class="splide__slide rounded-lg">
                                     <div class="relative inline-block whitespace-normal w-full">
-                                        <a class="nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-dark-800 rounded-3xl"
-                                            href="javascript:void(0)">
+                                        <nuxt-link :to="`/archive/author/${author.username}`" class="nc-CardAuthorBox2 flex flex-col overflow-hidden bg-white dark:bg-dark-800 rounded-3xl"
+                                            >
                                             <div class="relative flex-shrink-0">
                                                 <div>
                                                     <div class="flex aspect-w-7 aspect-h-5 w-full h-0">
@@ -74,7 +74,7 @@
                                                         class="block mt-1 text-sm text-orange-500 dark:text-neutral-400 ltr">@{{ author.username }}</span>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </nuxt-link>
                                     </div>
                                 </SplideSlide>
                             </Splide>

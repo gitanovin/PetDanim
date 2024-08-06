@@ -5,8 +5,17 @@
     </div>
     <div class="w-full mx-auto  xl:max-w-7xl lg:pb-28 ">
       <AuthorTabs />
-      <AuthorBookmark />
-      <Pagination />
+      <AuthorPosts 
+        v-if="authorData.posts.length != 0" 
+        :postsList="authorData.posts"
+        :authorData="authorData"
+       />
+
+       <div v-else class="posts flex items-center justify-center border border-gray-200 dark:border-dark-700/20 rounded-lg card dark:bg-dark-800 p-4"
+       >
+        <p class="py-5">هنوز هیچ مقاله ای توسط این کاربر نوشته نشده </p>
+       </div>
+      <!-- <Pagination /> -->
 
       <!-- Related--------------- -->
     </div>
@@ -16,7 +25,7 @@
 <script setup>
 import AuthorHeader from "./AuthorHeader.vue";
 import AuthorTabs from "./AuthorTabs.vue";
-import AuthorBookmark from "./AuthorBookmark.vue";
+import AuthorPosts from "./AuthorPosts.vue";
 import Pagination from "@/components/TemplateParts/Pagination/pageination.vue";
 
 const props = defineProps({

@@ -42,6 +42,7 @@
           </div>
           <div class="py-4 px-6 md:py-5">
             <div
+              v-if="categoriesList.length != 0"
               class="grid gap-6 sm:grid-cols-2 sm:py-2 md:gap-8 md:grid-cols-3 lg:grid-cols-4 xl:md:grid-cols-5"
             >
               <nuxt-link
@@ -70,6 +71,10 @@
                 </div>
               </nuxt-link>
             </div>
+            <div class="flex items-center justify-center"  v-else>
+              <div class="loader"></div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -99,7 +104,30 @@ const closeModal = () => {
 };
 </script>
 
-<style>
-  .modal-enter-active, .modal-leave-active { transition: opacity .5s; }
-  .modal-enter, .modal-leave-to { opacity: 0; }
+<style scoped>
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.5s;
+}
+.modal-enter,
+.modal-leave-to {
+  opacity: 0;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: orange;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
 </style>
