@@ -71,6 +71,8 @@ import OptionButton from "@/components/TemplateParts/Content/Single/MetaButton/O
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 
+const {$toast} = useNuxtApp()
+
 const {appBaseUrl} = useRuntimeConfig().public
 const petdanimStore = usePetdanimStore()
 const {postData , authUser} = storeToRefs(petdanimStore)

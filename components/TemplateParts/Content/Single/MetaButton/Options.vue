@@ -15,7 +15,7 @@
                     leave-from-class="transform scale-100 opacity-100" leave-to-class="transform scale-95 opacity-0">
                     <MenuItems
                         key="emzedam2"
-                        class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 dark:divide-slate-700 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-dark-800">
+                        class="absolute right-[-80px] !z-[1000] mt-2 w-56 origin-top-right divide-y divide-gray-100 dark:divide-slate-700 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-dark-800">
                         <div class="px-2 py-4 space-y-2">
                             <MenuItem v-slot="{ active }">
                             <button @click="copyUrl()" :class="[

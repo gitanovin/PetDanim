@@ -7,7 +7,7 @@
         <MenuHeader :headerData="headerData" />
 
         <div class="flex items-center justify-end lg:flex-1 gap-3">
-          <SearchIcon />
+          <!-- <SearchIcon /> -->
           <ThemeToggle />
           <!-- Before User Login -->
           <UserLogin class="hidden" />

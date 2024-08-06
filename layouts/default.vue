@@ -14,7 +14,7 @@ import AdvertisingBanner from "@/components/Advertising/ads.vue";
 import Header from "@/components/Header/Header.vue";
 import TrackTitle from "@/components/Header/TrackTitle.vue";
 import Footer from "@/components/Footer/footer.vue";
-definePageMeta({
-  colorMode: "light",
-});
+// definePageMeta({
+//   colorMode: "light",
+// });
 </script>

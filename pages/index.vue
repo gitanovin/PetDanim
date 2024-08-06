@@ -339,6 +339,10 @@ const removeFromBookmark = async (postId) => {
   }
 }
 
+useHead({
+    title: "پت دانیم | پت و من"
+})
+
 </script>
 
 

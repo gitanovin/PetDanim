@@ -32,13 +32,13 @@
           <div class="SingleMetaAction">
             <div class="flex flex-row space-x-2.5 rtl:space-x-reverse items-center">
               <div class="PostCardLikeAndComment flex items-center  !space-x-2.5 rtl:!space-x-reverse">
-                <LikeButton class="dark:hover:!bg-neutral-700 dark:!bg-dark-800" />
-                <CommentButton />
+                <LikeButton class="dark:hover:!bg-neutral-700 dark:!bg-dark-800" v-if="authUser != null"  @click="doLikePost(postData.post)" :count="postData.post.likes.length" :isRed="authUser != null ? authUser.likes.some(item => item.favoritable_id === postData.post.id && item.favoritable_type === 'App\\Models\\AdminPost') : false" />
+                <CommentButton :count="postData.post.comments.length" />
               </div>
               <div class="px-1">
                 <div class="border-s border-neutral-200 dark:border-neutral-700 h-6"></div>
               </div>
-              <BookmarkButton class="h-9 w-9 dark:hover:!bg-neutral-700 dark:bg-dark-900" />
+              <BookmarkButton v-if="authUser != null" @click="doBookmarkPost(postData.post)" :isFill="authUser != null ? authUser.bookmarks.some(item => item.bookmarkable_id === postData.post.id && item.bookmarkable_type === 'App\\Models\\AdminPost') : false"  class="h-9 w-9 dark:hover:!bg-neutral-700 dark:bg-dark-900" />
               <ShareButton/>
               <OptionButton/>
             </div>
@@ -65,7 +65,44 @@ import GridIcon from "@/components/icons/GridIcon.vue";
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 
+const {$toast} = useNuxtApp()
 const {appBaseUrl} = useRuntimeConfig().public
 const petdanimStore = usePetdanimStore()
-const {postData} = storeToRefs(petdanimStore)
+const {postData , authUser} = storeToRefs(petdanimStore)
+
+const doLikePost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petdanimStore.doLikePost({
+      post_id: post.id,
+      type: "admin"
+    })
+    if(result.status == 200) {
+      post.likes = result.result.post_likes
+      authUser.value.likes = result.result.user_likes
+    }
+  } else {
+    $toast("جهت پسندیدن این پست ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
+  }
+}
+
+const doBookmarkPost = async (post) => {
+  if(authUser.value != null) {
+    const result = await petdanimStore.doBookmarkPost({
+      post_id: post.id,
+      type: "admin"
+    })
+    if(result.status == 200) {
+      post.bookmarks = result.result.post_bookmarks
+      authUser.value.bookmarks = result.result.user_bookmarks
+    }
+  } else {
+    $toast("جهت افزودن این پست به ذخیره ها ابتدا باید وارد حساب کاربری خود شوید" , {
+      "theme": "colored",
+      "type": "error"
+    });
+  }
+}
 </script>

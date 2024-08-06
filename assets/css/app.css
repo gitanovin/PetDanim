@@ -2072,6 +2072,22 @@ h6 {
   top: -5px;
 }
 
+.right-\[-30px\] {
+  right: -30px;
+}
+
+.right-\[-40px\] {
+  right: -40px;
+}
+
+.right-\[-60px\] {
+  right: -60px;
+}
+
+.right-\[-80px\] {
+  right: -80px;
+}
+
 .isolate {
   isolation: isolate;
 }

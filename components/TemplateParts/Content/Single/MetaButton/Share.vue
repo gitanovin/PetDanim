@@ -14,7 +14,7 @@
                 leave-to-class="transform scale-95 opacity-0">
                 <MenuItems
                     key="emzedam"
-                    class="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                    class="absolute right-[-30px] mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none !z-[1000]">
                     <div class="px-1 py-1">
                         <MenuItem v-slot="{ active }">
                         <a target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=https://petdanim.petoman.com${$route.fullPath}`" :class="[
