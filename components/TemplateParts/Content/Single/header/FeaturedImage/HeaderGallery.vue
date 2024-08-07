@@ -17,8 +17,6 @@
     </div>
 </template>
 <script setup>
-import GridIcon from "@/components/icons/GridIcon.vue";
-
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 

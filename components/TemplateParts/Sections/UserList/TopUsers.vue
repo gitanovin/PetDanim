@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gray-50 py-16 dark:bg-dark-700/20">
+    <section class="bg-gray-50 py-16 px-5 dark:bg-dark-700/20">
         <div class="mx-auto  w-full xl:max-w-7xl">
             <div
                 class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50">

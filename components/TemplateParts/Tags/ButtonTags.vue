@@ -32,7 +32,7 @@
                         <div class="relative mt-1">
                             <ListboxButton
                                 class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-lg transition-colors border-transparent bg-white dark:bg-dark-900 ring-1 ring-neutral-300 hover:ring-neutral-400 dark:ring-dark-700/20 dark:hover:ring-dark-700/20 text-sm font-medium py-3 px-4 sm:py-3.5 sm:px-6">
-                                <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-2">
+                                <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pr-2">
                                     <ChevronDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
                                 </span>
 

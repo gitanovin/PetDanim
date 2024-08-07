@@ -25,6 +25,7 @@ import contentCategory from "@/components/TemplateParts/contentCategory.vue";
 
 const {appBaseUrl} = useRuntimeConfig().public
 const categoriesList = ref([])
+const showLoading = ref(false)
 
 const getCategories = async () => {
     const {data} = await useFetch(`${appBaseUrl}/api/mag/categories/get-all`)

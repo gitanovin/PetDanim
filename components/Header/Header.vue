@@ -39,7 +39,7 @@ import UserLogin from "~/components/Header/LoginORegister/Button.vue";
 import ThemeToggle from "~/components/Header/ColorMode/ThemeToggle.vue";
 import SearchIcon from "~/components/Header/Search/Search.vue";
 import DataHeader from "~/components/Header/Data/Data.vue";
-import MenuMobile from "~/components/Header/MenuMobile/Menu.vue";
+import MenuMobile from "~/components/Header/MenuMobile/menu.vue";
 import { usePetdanimStore } from '~/store/petdanimStore.js'
 import { useRouter } from 'vue-router'
 

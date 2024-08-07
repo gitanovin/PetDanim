@@ -35282,41 +35282,6 @@
 }
 
 @font-face {
-    font-family: "Font Awesome 5 Brands";
-    font-display: block;
-    font-weight: 400;
-    src: url(v5/fa-brands-400.woff2) format("woff2"), url(fa-brands-400.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Pro";
-    font-display: block;
-    font-weight: 900;
-    src: url(v5/fa-solid-900.woff2) format("woff2"), url(fa-solid-900.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Pro";
-    font-display: block;
-    font-weight: 400;
-    src: url(v5/fa-regular-400.woff2) format("woff2"), url(fa-regular-400.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Pro";
-    font-display: block;
-    font-weight: 300;
-    src: url(v5/fa-light-300.woff2) format("woff2"), url(fa-light-300.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: "Font Awesome 5 Duotone";
-    font-display: block;
-    font-weight: 900;
-    src: url(v5/fa-duotone-900.woff2) format("woff2"), url(fa-duotone-900.ttf) format("truetype")
-}
-
-@font-face {
     font-family: "FontAwesome";
     font-display: block;
     src: url(fa-solid-900.woff2) format("woff2"), url(fa-solid-900.ttf) format("truetype")

@@ -3,11 +3,11 @@
         <div class="Headers">
             <HeaderGlobal />
         </div>
-        <div class="test py-4 max-w-7xl mx-auto w-full flex gap-6">
+        <div class="test py-4 max-w-7xl mx-auto w-full gap-6 hidden lg:flex">
             <button @click="GridMode = !GridMode" class="bg-red-500 p-4 text-white">نمایش بدون ستون کناری</button>
         </div>
 
-        <div class="mt-10 px-6 mx-auto w-full max-w-7xl my-8 lg:px-0">
+        <div class="lg:mt-10 px-6 mx-auto w-full max-w-7xl my-8 lg:px-0">
             <div :class="GridMode == false ? 'grid grid-cols-12 gap-4 !space-y-0' : ' '"
                 class="SingleContent space-y-10 dark:!text-gray-300">
                 <div :class="'w-full lg:col-span-8 col-span-12'"

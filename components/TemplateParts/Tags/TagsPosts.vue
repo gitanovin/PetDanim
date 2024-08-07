@@ -1,5 +1,5 @@
 <template>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
         <div v-for="(post , index) in tag.posts" :key="post.id">
             <ContentPost :postItem="{post: post}" />
         </div>

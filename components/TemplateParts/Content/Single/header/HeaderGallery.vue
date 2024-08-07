@@ -1,5 +1,5 @@
 <template>
-  <header class="rounded-xl">
+  <header class="rounded-xl px-5 my-4">
     <div class="SingleHeader">
       <div class="space-y-5">
         <PostCategory :text="postData.post.category.title" />
@@ -60,7 +60,7 @@ import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
 import ShareButton from "@/components/TemplateParts/Content/Single/MetaButton/Share.vue";
 import OptionButton from "@/components/TemplateParts/Content/Single/MetaButton/Options.vue";
-import GridIcon from "@/components/icons/GridIcon.vue";
+
 
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'

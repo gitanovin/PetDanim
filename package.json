@@ -1,11 +1,10 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt nerate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

@@ -8,7 +8,7 @@
         <div class="post-cover">
           <div class="PostFeaturedMedia relative w-full h-full">
             <div class="block absolute inset-0">
-              <img :alt="postItem.post.title" class="object-cover w-full h-[200px]" :src="`${$config.public.appBaseUrl}/storage/${postItem.post.image}`" />
+              <img :alt="postItem.post.title" class="object-cover w-full h-full" :src="`${$config.public.appBaseUrl}/storage/${postItem.post.image}`" />
             </div>
             <PostTypeIcon />
           </div>
@@ -43,11 +43,11 @@
         <nuxt-link :to="`/${postItem.post.slug}`"
           class="card-title block text-base font-semibold text-neutral-900 dark:!text-neutral-100"
         >
-          <span
+          <p
             class="line-clamp-2 truncate"
             :title="postItem.post.title"
             >  {{postItem.post.title}} 
-          </span>
+          </p>
         </nuxt-link>
 
         <div class="flex items-end justify-between mt-auto">

@@ -74,8 +74,8 @@
 
 <script setup>
 import LoginPetSvg from '@/assets/images/login-pet.svg'
-import CheckIcon from "@/components/Icons/CheckIcon.vue";
-import InstagramIcon from "@/components/Icons/social/instagram.vue";
-import TwitterIcon from "@/components/Icons/social/twitter.vue";
+import CheckIcon from "@/components/icons/CheckIcon.vue";
+import InstagramIcon from "@/components/icons/social/instagram.vue";
+import TwitterIcon from "@/components/icons/social/twitter.vue";
 
 </script>
