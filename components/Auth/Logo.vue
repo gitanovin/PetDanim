@@ -9,5 +9,5 @@
 
 
 <script setup>
-import BackIcon from "@/components/Icons/BackIcon.vue";
+import BackIcon from "@/components/icons/BackIcon.vue";
 </script>

@@ -34,6 +34,7 @@ const getBookmarks = async () => {
   const result = await petdanimStore.getUserSaveds();
   if (result.status == 200) {
     bookmarksList.value = result.result;
+    console.log(bookmarksList.value)
   }
 };
 

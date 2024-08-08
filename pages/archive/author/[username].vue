@@ -32,13 +32,12 @@ const getAuthorDetail = async () => {
       username: route.params.username
     }
   })
-  // console.log(data)
+
   if(data.value.status == 200) {
       setTimeout(() => {
         showLoading.value = false
       }, 500);
       authorData.value = data.value.result
-      console.log(authorData.value)
   }
 }
 

@@ -79,14 +79,6 @@
             <i class="fa fa-minus bg-gray-700 text-white rounded-full p-1 text-xs"></i>
             <span class="ms-2">حذف کردن</span>
           </button>
-          <button
-            v-else
-            class="nc-Button flex-shrink-0 relative inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-orange-500 hover:bg-orange-600 text-orange-50 text-sm md:text-base font-medium px-4 py-1 md:py-2.5 h-8 md:!h-10 sm:px-6 lg:px-8"
-            @click="followUser(authorData.id)"
-          >
-            <PlusIcon />
-            <span class="ms-2">دنبال کردن</span>
-          </button>
           <div class="mx-2">
             <div class="relative inline-block">
               <Menu as="div" class="relative inline-block">
@@ -281,9 +273,9 @@ const props = defineProps({
 const { $toast } = useNuxtApp();
 const message = ref("");
 
-// onMounted(() => {
-//     console.log(authUser.followings)
-// })
+onMounted(() => {
+    console.log(authUser.value)
+})
 
 const copyUrl = async () => {
   try {
