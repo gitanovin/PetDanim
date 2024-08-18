@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 import ckeditor5 from "@ckeditor/vite-plugin-ckeditor5";
 import svgLoader from "vite-svg-loader";
 import { createRequire } from "node:module";
-import api from './axios/index.js'
+import api from './axios'
 const require = createRequire(import.meta.url);
 
 const larkTheme = require.resolve("@ckeditor/ckeditor5-theme-lark");
@@ -84,34 +84,14 @@ export default defineNuxtConfig({
     ],
   },
   sitemap: {
-    hostname: 'https://petdanim.petoman.com',
-    routes: async () => {
-      const adminposts = await api.get("/sitemap/admin-posts")
-      const userposts = await api.get("/sitemap/user-posts") 
-      const categories = await api.get("/sitemap/categories") 
-      const tags = await api.get("/sitemap/tags") 
-      const users = await api.get("/sitemap/users") 
-
-      let routes: string[] = []
-
-      // اضافه کردن مسیرهای پست‌ها
-      routes.push(...adminposts.data.map((post: any) => `/${post.slug}`))
-      
-      // اضافه کردن مسیرهای بدون prefix
-      routes.push(...userposts.data.map((post: any) => `/post/${post.slug}-${post.id}`))
-
-      // اضافه کردن مسیرهای دسته‌بندی
-      routes.push(...categories.data.map((category: any) => `/archive/category/${category.slug}-${category.id}`))
-
-      // اضافه کردن لیست کاربران و نویسندگان
-      routes.push(...users.data.map((user: any) => `/archive/author/${user.username}`))
-
-      // اضافه کردن لیست تگ ها
-      routes.push(...tags.data.map((tag: any) => `/archive/tag/${tag.name}`))
-
-      return routes
-    }
-  }
-
+    hostname: "https://blog.petoman.com",
+    sources: ['/api/sitemap'],
+    exclude: [
+      "/archive/category",
+      "/archive/tags",
+      "/archive/search",
+      "/profile/**"
+    ]
+  },
 
 })

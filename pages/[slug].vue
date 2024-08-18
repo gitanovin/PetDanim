@@ -29,6 +29,12 @@ onMounted(() => {
     if(!route.params.slug) {
         router.push("/")
     }
+
+    useHead({
+      title: route.params.slug.split('-').join(' ')
+    })
+    
+    console.log(postData.value)
 })
 
 
@@ -48,9 +54,7 @@ const getPostDetail = async () => {
 
 getPostDetail()
 
-useHead({
-    title: route.params.slug.split('-').join(' ')
-})
+
 
 
 
