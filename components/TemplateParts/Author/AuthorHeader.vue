@@ -274,7 +274,7 @@ const { $toast } = useNuxtApp();
 const message = ref("");
 
 onMounted(() => {
-    console.log(authUser.value)
+    // console.log(authUser.value)
 })
 
 const copyUrl = async () => {

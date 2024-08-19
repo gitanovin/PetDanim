@@ -3,7 +3,7 @@
         <div class="Headers">
             <HeaderGlobal />
         </div>
-        <div class="test py-4 max-w-7xl mx-auto w-full gap-6 hidden lg:flex">
+        <div class="test py-4 max-w-7xl mx-auto w-full gap-6 hidden">
             <button @click="GridMode = !GridMode" class="bg-red-500 p-4 text-white">نمایش بدون ستون کناری</button>
         </div>
 

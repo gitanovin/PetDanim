@@ -1,11 +1,11 @@
 <template>
     <div :class="isShow == true ? 'loading show' : 'loading hide'">
-        <a aria-current="page" href="/" class="router-link-active router-link-exact-active flex gap-2 items-end text-3xl font-extrabold text-orange-500"> پت دانیم </a>
+        <PetomanLogo class="flex gap-2 items-end w-[200px]" />
     </div>
 </template>
 
 <script setup>
-
+import PetomanLogo from '@/assets/images/petoman-logo.svg'
 const props = defineProps({
     isShow: {
         required: true,
