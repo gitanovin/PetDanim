@@ -41,7 +41,7 @@ watch(authorData, (newValue) => {
         { property: 'og:title', content: `پروفایل نویسنده: ${newValue.name}` },
         { property: 'og:description', content: newValue.biography },
         { property: 'og:image', content: newValue.profile == null ? `/2.webp` : `${appBaseUrl}/storage/avatars/${newValue.profile}` },
-        { property: 'og:url', content: `http://localhost:3000/archive/author/${newValue.username}` },
+        { property: 'og:url', content: `https://blog.petoman.com/archive/author/${newValue.username}` },
         { property: 'og:type', content: 'profile' },
         { property: 'og:locale', content: 'fa_IR' },
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -51,7 +51,7 @@ watch(authorData, (newValue) => {
         { name: 'twitter:site', content: '@YourTwitterHandle' },
       ],
       link: [
-        { rel: 'canonical', href: `http://localhost:3000/archive/author/${newValue.username}` }
+        { rel: 'canonical', href: `https://blog.petoman.com/archive/author/${newValue.username}` }
       ],
       script: [
         {
@@ -61,7 +61,7 @@ watch(authorData, (newValue) => {
             "@type": "Person",
             "name": newValue.name,
             "description": newValue.biography,
-            "url": `http://localhost:3000/archive/author/${newValue.username}`,
+            "url": `https://blog.petoman.com/archive/author/${newValue.username}`,
             "image": newValue.profile == null ? `/2.webp` : `${appBaseUrl}/storage/avatars/${newValue.profile}`,
           })
         }

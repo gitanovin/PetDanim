@@ -43,7 +43,7 @@ onMounted(() => {
             { property: 'og:title', content: postData.value.post.meta_title },
             { property: 'og:description', content: postData.value.post.meta_description },
             { property: 'og:image', content: `${appBaseUrl}/storage/${postData.value.post.image}` },
-            { property: 'og:url', content: `http://locahost:3000/${postData.value.post.slug}` },
+            { property: 'og:url', content: `https://blog.petoman.com/${postData.value.post.slug}` },
             { property: 'og:type', content: 'article' },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:title', content: postData.value.post.meta_title },
@@ -52,7 +52,7 @@ onMounted(() => {
             { name: 'twitter:site', content: '@YourTwitterHandle' },
         ],  
         link: [
-            { rel: 'canonical', href: `http://locahost:3000/${postData.value.post.slug}` }
+            { rel: 'canonical', href: `https://blog.petoman.com/${postData.value.post.slug}` }
         ],
         script: [
             {
@@ -63,7 +63,7 @@ onMounted(() => {
                     "headline": postData.value.post.meta_title,
                     "description": postData.value.post.meta_description,
                     "image": `${appBaseUrl}/storage/${postData.value.post.image}`,
-                    "url": `http://locahost:3000/${postData.value.post.slug}`,
+                    "url": `https://blog.petoman.com/${postData.value.post.slug}`,
                     "datePublished": postData.value.post.date,
                     "author": {
                         "@type": "Person",

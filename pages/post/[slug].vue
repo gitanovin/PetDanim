@@ -44,7 +44,7 @@ onMounted(() => {
             { property: 'og:title', content: route.params.slug.split('-').join(' ') },
             { property: 'og:description', content: postData.value.post.summary_description },
             { property: 'og:image', content: `${appBaseUrl}/storage/${postData.value.post.image}` },
-            { property: 'og:url', content: `http://locahost:3000/post/${postData.value.post.slug}-${postData.value.post.id}` },
+            { property: 'og:url', content: `https://blog.petoman.com/post/${postData.value.post.slug}-${postData.value.post.id}` },
             { property: 'og:type', content: 'article' },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:title', content: route.params.slug.split('-').join(' ') },
@@ -53,7 +53,7 @@ onMounted(() => {
             { name: 'twitter:site', content: '@YourTwitterHandle' },
         ],  
         link: [
-            { rel: 'canonical', href: `http://locahost:3000/post/${postData.value.post.slug}-${postData.value.post.id}` }
+            { rel: 'canonical', href: `https://blog.petoman.com/post/${postData.value.post.slug}-${postData.value.post.id}` }
         ],
         script: [
             {
@@ -64,7 +64,7 @@ onMounted(() => {
                     "headline": route.params.slug.split('-').join(' '),
                     "description": postData.value.post.summary_description,
                     "image": `${appBaseUrl}/storage/${postData.value.post.image}`,
-                    "url": `http://locahost:3000/post/${postData.value.post.slug}-${postData.value.post.id}`,
+                    "url": `https://blog.petoman.com/post/${postData.value.post.slug}-${postData.value.post.id}`,
                     "datePublished": postData.value.post.date,
                     "author": {
                     "@type": "Person",

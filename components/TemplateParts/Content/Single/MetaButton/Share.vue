@@ -17,7 +17,7 @@
                     class="absolute right-[-30px] mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none !z-[1000]">
                     <div class="px-1 py-1">
                         <MenuItem v-slot="{ active }">
-                        <a target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=https://petdanim.petoman.com${$route.fullPath}`" :class="[
+                        <a target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=https://blog.petoman.com${$route.fullPath}`" :class="[
                             active
                                 ? 'bg-gray-50 text-gray-700'
                                 : ' fill-gray-500',
@@ -28,7 +28,7 @@
                         </a>
                         </MenuItem>
                         <MenuItem v-slot="{ active }">
-                        <a target="_blank" :href="`https://twitter.com/intent/tweet?url=https://petdanim.petoman.com${$route.fullPath}`" :class="[
+                        <a target="_blank" :href="`https://twitter.com/intent/tweet?url=https://blog.petoman.com${$route.fullPath}`" :class="[
                             active
                                 ? 'bg-gray-50 text-gray-700'
                                 : 'text-gray-500',
@@ -40,7 +40,7 @@
                         </MenuItem>
 
                         <MenuItem v-slot="{ active }">
-                        <a target="_blank" :href="`https://www.linkedin.com/sharing/share-offsite/?url=https://petdanim.petoman.com${$route.fullPath}`" :class="[
+                        <a target="_blank" :href="`https://www.linkedin.com/sharing/share-offsite/?url=https://blog.petoman.com${$route.fullPath}`" :class="[
                             active
                                 ? 'bg-gray-50 text-gray-700'
                                 : ' fill-gray-500',
@@ -51,7 +51,7 @@
                         </a>
                         </MenuItem>
                         <MenuItem v-slot="{ active }">
-                            <a target="_blank" :href="`https://t.me/share/url?url=https://petdanim.petoman.com${$route.fullPath}`"  :class="[
+                            <a target="_blank" :href="`https://t.me/share/url?url=https://blog.petoman.com${$route.fullPath}`"  :class="[
                             active
                                 ? 'bg-gray-50 text-gray-700'
                                 : ' fill-gray-500',

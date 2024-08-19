@@ -40,7 +40,7 @@ watch(categoryData, (newValue) => {
         { property: 'og:title', content: `دسته‌بندی: ${newValue.title}` },
         { property: 'og:description', content: newValue.title },
         { property: 'og:image', content: `${appBaseUrl}/storage/categories/${newValue.cat_image}` },
-        { property: 'og:url', content: `http://locahost:3000/archive/category/${newValue.title}-${newValue.id}` },
+        { property: 'og:url', content: `https://blog.petoman.com/archive/category/${newValue.title}-${newValue.id}` },
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'fa_IR' },
         { name: 'twitter:card', content: 'summary_large_image' },
@@ -50,7 +50,7 @@ watch(categoryData, (newValue) => {
         { name: 'twitter:site', content: '@YourTwitterHandle' },
       ],
       link: [
-        { rel: 'canonical', href: `http://locahost:3000/archive/category/${newValue.title}-${newValue.id}` }
+        { rel: 'canonical', href: `https://blog.petoman.com/archive/category/${newValue.title}-${newValue.id}` }
       ],
       script: [
         {
@@ -60,7 +60,7 @@ watch(categoryData, (newValue) => {
             "@type": "Category",
             "name": newValue.title,
             "description": newValue.title,
-            "url": `http://locahost:3000/archive/category/${newValue.title}-${newValue.id}`,
+            "url": `https://blog.petoman.com/archive/category/${newValue.title}-${newValue.id}`,
             "image": `${appBaseUrl}/storage/categories/${newValue.cat_image}`
           })
         }
