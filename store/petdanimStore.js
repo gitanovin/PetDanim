@@ -676,6 +676,31 @@ const actions = {
         }catch(err) {
             return false
         }
+    },
+
+    async get_search_result(data) {
+        let token = cookies.get("_uToken") || "";
+        if(token != ""){
+            let config = {
+                headers: {
+                    Authorization:`Bearer ${token}`
+                },
+                params: {
+                    queryString: data.queryString
+                }
+            };
+
+            try {
+                const result = await api.get("/mag/home/search" , config)
+                if(result.status == 200){
+                    return result.data
+                }
+            }catch(err) {
+                return false
+            }
+        }else {
+            return false
+        }
     }
 }
 

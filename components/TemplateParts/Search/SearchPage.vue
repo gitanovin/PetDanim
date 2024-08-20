@@ -23,4 +23,7 @@ import SearchHeader from "./SearchHeader.vue";
 import SearchTabs from "./SearchTabs.vue";
 import SearchPosts from "./SearchPosts.vue";
 import Pagination from "@/components/TemplateParts/Pagination/pageination.vue";
+
+
+
 </script>
