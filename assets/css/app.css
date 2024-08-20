@@ -2769,8 +2769,8 @@ h6 {
   width: 10px;
 }
 
-.w-\[160px\] {
-  width: 160px;
+.w-\[120px\] {
+  width: 120px;
 }
 
 .w-\[18px\] {
@@ -6479,6 +6479,10 @@ h6 {
     height: 9rem;
   }
 
+  .lg\:h-5 {
+    height: 1.25rem;
+  }
+
   .lg\:h-\[300px\] {
     height: 300px;
   }
@@ -6537,6 +6541,10 @@ h6 {
 
   .lg\:w-96 {
     width: 24rem;
+  }
+
+  .lg\:w-\[160px\] {
+    width: 160px;
   }
 
   .lg\:w-\[calc\(100vw\/2\)\] {

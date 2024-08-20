@@ -28,32 +28,36 @@ onMounted(() => {
     if(!route.params.slug) {
         router.push("/")
     }
+})
 
-    const keywords = postData.value.post.tags.map(tag => tag.name).join(', ');
+
+watch(postData, async (newValue) => {
+  if (newValue) {
+    const keywords = newValue.post.tags.map(tag => tag.name).join(', ');
 
     useHead({
         title: route.params.slug.split('-').join(' '),
         meta: [
             { name: 'title', content: route.params.slug.split('-').join(' ') },
-            { name: 'description', content: postData.value.post.summary_description },
+            { name: 'description', content: newValue.post.summary_description },
             { name: 'keywords', content: keywords },
-            { name: 'author', content: postData.value.post.user.name },
-            { name: 'date', content: postData.value.post.date , scheme: 'YYYY-MM-DD' },
+            { name: 'author', content: newValue.post.user.name },
+            { name: 'date', content: newValue.post.date , scheme: 'YYYY-MM-DD' },
             { name: 'robots', content: 'index, follow' },
-            { name: 'description', content: postData.value.post.summary_description },
+            { name: 'description', content: newValue.post.summary_description },
             { property: 'og:title', content: route.params.slug.split('-').join(' ') },
-            { property: 'og:description', content: postData.value.post.summary_description },
-            { property: 'og:image', content: `${appBaseUrl}/storage/${postData.value.post.image}` },
-            { property: 'og:url', content: `https://blog.petoman.com/post/${postData.value.post.slug}-${postData.value.post.id}` },
+            { property: 'og:description', content: newValue.post.summary_description },
+            { property: 'og:image', content: `${appBaseUrl}/storage/${newValue.post.image}` },
+            { property: 'og:url', content: `https://blog.petoman.com/post/${newValue.post.slug}-${newValue.post.id}` },
             { property: 'og:type', content: 'article' },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:title', content: route.params.slug.split('-').join(' ') },
-            { name: 'twitter:description', content: postData.value.post.summary_description },
-            { name: 'twitter:image', content: `${appBaseUrl}/storage/${postData.value.post.image}` },
+            { name: 'twitter:description', content: newValue.post.summary_description },
+            { name: 'twitter:image', content: `${appBaseUrl}/storage/${newValue.post.image}` },
             { name: 'twitter:site', content: '@YourTwitterHandle' },
         ],  
         link: [
-            { rel: 'canonical', href: `https://blog.petoman.com/post/${postData.value.post.slug}-${postData.value.post.id}` }
+            { rel: 'canonical', href: `https://blog.petoman.com/post/${newValue.post.slug}-${newValue.post.id}` }
         ],
         script: [
             {
@@ -62,22 +66,26 @@ onMounted(() => {
                     "@context": "https://schema.org",
                     "@type": "Article",
                     "headline": route.params.slug.split('-').join(' '),
-                    "description": postData.value.post.summary_description,
-                    "image": `${appBaseUrl}/storage/${postData.value.post.image}`,
-                    "url": `https://blog.petoman.com/post/${postData.value.post.slug}-${postData.value.post.id}`,
-                    "datePublished": postData.value.post.date,
+                    "description": newValue.post.summary_description,
+                    "image": `${appBaseUrl}/storage/${newValue.post.image}`,
+                    "url": `https://blog.petoman.com/post/${newValue.post.slug}-${newValue.post.id}`,
+                    "datePublished": newValue.post.date,
                     "author": {
-                    "@type": "Person",
-                    "name": postData.value.post.user.name
+                        "@type": "Person",
+                        "name": newValue.post.user.name
                     }
                 })
             }
         ]
     })
-})
+
+    await addToVisitCount()
+  }
+});
 
 
 const getPostDetail = async () => {
+    postData.value = null
     const { data } = await useFetch(`${appBaseUrl}/api/mag/userpost/get-post` , {
         params: { slug: route.params.slug }
     })
@@ -87,7 +95,6 @@ const getPostDetail = async () => {
             showLoading.value = false
         }, 500)
         postData.value = dataJson.result
-        console.log(postData.value)
     }
 }
 
@@ -95,4 +102,11 @@ const getPostDetail = async () => {
 
 getPostDetail()
 
+
+const addToVisitCount = async () => {
+    await petdanimStore.add_to_visit_count({
+        type: "userpost",
+        item_id: postData.value.post.id
+    })
+}
 </script>

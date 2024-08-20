@@ -3,6 +3,9 @@
         <Posts
          @removePost="(postIndex) => removePost(postIndex)"
          :postsList="postsList"
+         :postVisitCount="postVisitCount"
+         :postVerifiedCount="postVerifiedCount"
+         :waitingVerifiedPostCount="waitingVerifiedPostCount"
         />
     </section>
 </template>
@@ -20,6 +23,9 @@ definePageMeta({
 })
 
 const postsList = ref([])
+const postVisitCount = ref(0)
+const postVerifiedCount = ref(0)
+const waitingVerifiedPostCount = ref(0)
 
 onMounted(() => {
   getPosts()
@@ -28,7 +34,10 @@ onMounted(() => {
 const getPosts = async () => {
   const result = await petdanimStore.getUserPosts()
   if(result.status == 200) {
-    postsList.value = result.result
+    postsList.value = result.result.posts
+    postVisitCount.value = result.result.postVisitCount
+    postVerifiedCount.value = result.result.postVerifiedCount
+    waitingVerifiedPostCount.value = result.result.waitingVerifiedPostCount
   }
 }
 

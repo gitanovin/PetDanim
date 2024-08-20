@@ -6,20 +6,20 @@
       v-if="authUser == null"
       class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center dark:!text-dark-700 transition-all duration-300 border-0 px-4"
     >
-      <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
+      <span class="flex-shrink-0 h-6 w-5 lg:h-5" aria-hidden="true">
         <UserIcon />
       </span>
-      ورود / ثبت نام
+     <span class="hidden lg:block"> ورود / ثبت نام</span>
     </nuxt-link>
     <Menu as="div" class="relative inline-block text-right" v-else>
       <a href="javascript:void(0)">
         <MenuButton
-          class="w-[160px] focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center dark:!text-dark-700 transition-all duration-300 border-0 px-4"
+          class="lg:w-[160px] focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 inline-flex items-center dark:!text-dark-700 transition-all duration-300 border-0 px-4"
         >
           <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
             <UserIcon />
           </span>
-          <span class="w-full break-words truncate">{{ authUser.name }}</span>
+          <span class="w-full break-words truncate hidden lg:block">{{ authUser.name }}</span>
         </MenuButton>
       </a>
 

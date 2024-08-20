@@ -666,6 +666,17 @@ const actions = {
             return false
         }
     },
+
+    async add_to_visit_count(data) {
+        try {
+            const result = await api.post("/mag/home/add-visit", data)
+            if(result.status == 200){
+                return result.data
+            }
+        }catch(err) {
+            return false
+        }
+    }
 }
 
 const getters = {}

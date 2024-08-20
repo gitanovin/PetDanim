@@ -9,7 +9,7 @@
       <span class="flex-shrink-0 h-5 w-5" aria-hidden="true">
         <UserIcon />
       </span>
-      ورود یا ثبت نام
+     <span class="hidden lg:block"> ورود یا ثبت نام</span>
     </nuxt-link>
   </div>
 </template>

@@ -1,11 +1,10 @@
 <template>
   <div
     class="relative z-[99] "
-   @click="closeModal()"
   >
-    <div class="fixed inset-0 bg-black/40 transition-opacity opacity-100  h-screen w-screen"></div>
+    <div @click="closeModal()" class="fixed inset-0 bg-black/40 transition-opacity opacity-100  h-screen w-screen"></div>
     <div class="fixed inset-0 z-50  scrollbar-track-mahak p-4 sm:p-6 md:p-20 ">
-      <form
+      <div
         class="block mx-auto max-w-2xl transform overflow-hidden rounded-xl bg-white dark:!bg-dark-800 shadow-2xl ring-1 ring-black ring-opacity-5 transition-all opacity-100 scale-100"
       >
         <div class="relative border-b dark:!border-dark-700/20">
@@ -13,6 +12,7 @@
           <input
             class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
             placeholder="جستجو..."
+            @keyup.enter="(e) => doSearchAction(e)"
             role="combobox"
             type="text"
           />
@@ -27,73 +27,11 @@
               <li
                 class="flex select-none items-center px-4 py-2"
               >
-               <HistoryIcon/>
+               <HistoryIcon />
                 <span class="ms-3 flex-auto truncate"
                   >سگها حیوانات باهوشی هستند
                 </span>
               </li>
-
-                <li
-                class="flex select-none items-center px-4 py-2"
-              >
-               <HistoryIcon/>
-                <span class="ms-3 flex-auto truncate"
-                  >پلنگ پیروز پیروز شد
-                </span>
-              </li>
-
-                  <li
-                class="flex select-none items-center px-4 py-2"
-              >
-               <HistoryIcon/>
-                <span class="ms-3 flex-auto truncate"
-                  >زیباترین سگ جهان در تهران به دام افتاد   
-                </span>
-              </li>
-              
-
-
-            </ul>
-          </li>
-          <li>
-            <h2 class="text-sm font-semibold text-gray-900 dark:!text-dark-700">برچسب ها</h2>
-            <ul class="-mx-4 mt-2 text-sm text-gray-700 dark:!text-dark-700">
-              <li
-                class="flex select-none items-center px-4 py-2"
-              >
-                 <HashtagIcon class="h-6 w-6 flex-none text-gray-400" />
-                <span class="ms-3 flex-auto truncate">سگ ها</span>
-              </li>
-
-                <li
-                class="flex select-none items-center px-4 py-2"
-              >
-                 <HashtagIcon class="h-6 w-6 flex-none text-gray-400" />
-                <span class="ms-3 flex-auto truncate">گربه ها</span>
-              </li>
-
-                 <li
-                class="flex select-none items-center px-4 py-2"
-              >
-                 <HashtagIcon class="h-6 w-6 flex-none text-gray-400" />
-                <span class="ms-3 flex-auto truncate"> حیوانات خانگی</span>
-              </li>
-
-            </ul>
-          </li>
-          <li>
-            <h2 class="text-sm font-semibold text-gray-900 dark:!text-dark-700">نویسندگان</h2>
-            <ul class="-mx-4 mt-2 text-sm text-gray-700 dark:!text-dark-700">
-              <li
-                class="flex select-none items-center px-4 py-2"
-              >
-                <img
-                  alt="author"
-                  class="h-6 w-6 flex-none rounded-full"
-                  src="@/assets/images/7.jpg"
-                /><span class="ms-3 flex-auto truncate">علی آزادمند</span>
-              </li>
-
             </ul>
           </li>
         </ul>
@@ -102,12 +40,12 @@
         >
           
  
-          <nuxt-link to="/archive/search"
+          <nuxt-link @click="closeModal()" to="/archive/search"
             class="mx-1 flex  py-2 px-3 items-center justify-center rounded border bg-white sm:mx-2 border-primary-6000 text-neutral-900 dark:!bg-dark-800 dark:!text-dark-700 dark:!border-dark-700/20"
-            >جستجوی پیشرفته</nuxt-link
+            >نمایش  نتایج بیشتر</nuxt-link
           >
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </template>
@@ -116,12 +54,19 @@
   import SearchIcon from "@/components/icons/SearchIcon.vue";
   import HistoryIcon from "@/components/icons/HistoryIcon.vue";
   import HashtagIcon from "@/components/icons/HashtagIcon.vue";
+  import { useRouter } from "vue-router";
 const emit = defineEmits(["closeModal"]);
+const router = useRouter()
 
 
 const closeModal = () => {
   emit("closeModal");
 };
+
+const doSearchAction = (e) => {
+  closeModal()
+  router.push(`/archive/search?query=${e.target.value.split(" ").join("-")}`)
+}
 </script>
 
 <style>

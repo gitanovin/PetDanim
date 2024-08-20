@@ -14,6 +14,9 @@ import Loading from '@/components/Loading/index.vue'
 import Category from "@/components/TemplateParts/Category/categoryPage.vue";
 // import CategoryVideo from "@/components/TemplateParts/Category/categoryVideo.vue";
 import {useRoute , useRouter} from 'vue-router'
+import {usePetdanimStore} from '@/store/petdanimStore.js'
+
+const petdanimStore = usePetdanimStore()
 
 const route = useRoute()
 const router = useRouter()
@@ -21,10 +24,12 @@ const {appBaseUrl} = useRuntimeConfig().public
 const categoryData = ref(null)
 const showLoading = ref(true)
 
-onMounted(() => {
+onMounted(async () => {
   if(!route.params.slug) {
     router.push("/")
   }
+
+  
 })
 
 
@@ -66,6 +71,8 @@ watch(categoryData, (newValue) => {
         }
       ]
     });
+
+    addToVisitCount()
   }
 });
 
@@ -84,6 +91,14 @@ const getCategoryDetail = async () => {
 }
 
 getCategoryDetail()
+
+
+const addToVisitCount = async () => {
+    await petdanimStore.add_to_visit_count({
+        type: "category",
+        item_id: categoryData.value.id
+    })
+}
 
 
 </script>

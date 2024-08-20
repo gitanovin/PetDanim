@@ -14,7 +14,7 @@
                 >تعداد نوشته ها</span
               >
               <div class="flex items-center my-1">
-                <h4 class="mb-0 ml-2 font-bold">215</h4>
+                <h4 class="mb-0 ml-2 font-bold">{{ postVerifiedCount }}</h4>
               </div>
               <span class="text-xs text-gray-500">مجموع نوشته منتشر شده</span>
             </div>
@@ -31,12 +31,12 @@
           <div class="flex items-start content-between justify-between">
             <div class="content-left">
               <span class="text-sm text-gray-500 dark:text-gray-300"
-                >تعداد پیش نویس</span
+                >تعداد رد شده ها</span
               >
               <div class="flex items-center my-1">
-                <h4 class="mb-0 ml-2 font-bold">15</h4>
+                <h4 class="mb-0 ml-2 font-bold">{{ waitingVerifiedPostCount }}</h4>
               </div>
-              <span class="text-xs text-gray-500"> مجموع پیش نویس ها </span>
+              <span class="text-xs text-gray-500">مجموع نوشته ی رد شده</span>
             </div>
             <span
               class="flex items-center justify-center w-8 h-8 p-2 text-green-500 bg-green-100 rounded badge"
@@ -50,9 +50,9 @@
         >
           <div class="flex items-start content-between justify-between">
             <div class="content-left">
-              <span class="text-sm text-gray-500 dark:text-gray-300">آمار</span>
+              <span class="text-sm text-gray-500 dark:text-gray-300">بازدید های پست</span>
               <div class="flex items-center my-1">
-                <h4 class="mb-0 ml-2 font-bold">78</h4>
+                <h4 class="mb-0 ml-2 font-bold">{{ postVisitCount }}</h4>
               </div>
               <span class="text-xs text-gray-500"
                 >مجموع بازدیدها از پست های شما</span
@@ -607,6 +607,18 @@
       postsList: {
         required: true,
         type: [Array, Object],
+      },
+      postVisitCount: {
+        required: true,
+        type: Number,
+      },
+      postVerifiedCount: {
+        required: true,
+        type: Number,
+      },
+      waitingVerifiedPostCount: {
+        required: true,
+        type: Number,
       },
     },
     data() {
