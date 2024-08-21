@@ -313,7 +313,7 @@ const actions = {
                 if(result.status == 200){
                     return result.data
                 }
-            }catch(err) {
+            } catch(err) {
                 return false
             }
         }else {

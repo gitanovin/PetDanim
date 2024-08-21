@@ -58,8 +58,7 @@
                                                                     class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 p-4 border-t bg-gray-50 divide-gray-200 last:border-b  dark:bg-dark-900 dark:border-dark-700/20 dark:text-gray-300  dark:divide-dark-700/20"
                                                                     name="fade" is="transition-group">
                                                                     <template #default="{ row, rowIndex }">
-                                                                        <li >
-
+                                                                        <li>
                                                                             <contentUserPost 
                                                                                 v-if="row.type == 'user'"
                                                                                 :postItem="row" 
@@ -71,11 +70,7 @@
                                                                                 @updatePostsContent="(posts) => updatePostsContent(posts)" 
                                                                             />
                                                                             <!-- <p>{{row.type}}</p> -->
-
-
-
                                                                         </li>
-
                                                                     </template>
                                                                 </dataset-item>
                                                             </div>
