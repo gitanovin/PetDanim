@@ -28,8 +28,6 @@ onMounted(async () => {
   if(!route.params.slug) {
     router.push("/")
   }
-
-  
 })
 
 
