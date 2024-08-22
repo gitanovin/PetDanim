@@ -3,7 +3,7 @@
         <div class="w-full pb-6">
             <div class="overflow-hidden">
                 <div class="gap-4 lg:grid lg:grid-cols-12">
-                    <dataset v-slot="{ ds }" :ds-data="bookmarksList" :ds-sortby="sortBy" :ds-sort-as="{}"
+                    <dataset v-slot="{ ds }" :ds-data="postsResult" :ds-sortby="sortBy" :ds-sort-as="{}"
                         :ds-search-in="['title']" :ds-search-as="{}">
                         <div class="col-span-12 font-fa">
                             <div
@@ -12,21 +12,17 @@
                                     class="relative px-6 py-6 pb-4 m-0 overflow-hidden text-gray-700 bg-transparent border-b shadow-none bg-clip-border border-b-gray-200 dark:border-dark-700/20">
                                     <h6
                                         class="flex items-center gap-1 text-xs antialiased font-semibold leading-normal text-gray-600 font-fa dark:text-gray-300">
-                                        <i class="fa-solid fa-bookmark text-[20px] !w-5 !h-5 text-hamian ml-1"></i>
-                                        لیست ذخیره شده ها
+                                        <i class="fa-solid fa-list text-[20px] !w-5 !h-5 text-hamian ml-1"></i>
+                                        لیست نوشته ها
                                     </h6>
                                     <p
                                         class="flex items-center gap-1 pt-2 text-xs antialiased font-normal leading-normal text-gray-600 font-fa dark:text-gray-300">
-                                        از این بخش می توانید ذخیره شده ها را مدیریت یا حذف نمایید
+                                       لیست نتایج جستجوی مقاله ها
                                     </p>
                                 </div>
 
                                 <div class="py-8 border-b px-7 card-header dark:border-dark-700/20">
                                     <div class="grid lg:grid-cols-1 gap-4 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1">
-
-
-
-
                                         <div class="w-full">
                                             <div class="flex rounded-md hover:shadow-sm">
                                                 <div class="relative flex items-stretch flex-grow focus-within:z-10">
@@ -62,11 +58,13 @@
                                                                                 v-if="row.type == 'user'"
                                                                                 :postItem="row" 
                                                                                 @updatePostsContent="(posts) => updatePostsContent(posts)" 
+                                                                                :showBookmark="false"
                                                                             />
                                                                             <contentAdminPost 
                                                                                 v-if="row.type == 'admin'"
                                                                                 :postItem="row" 
                                                                                 @updatePostsContent="(posts) => updatePostsContent(posts)" 
+                                                                                :showBookmark="false"
                                                                             />
                                                                             <!-- <p>{{row.type}}</p> -->
                                                                         </li>
@@ -96,7 +94,6 @@
         </div>
     </div>
 </template>
-
 <script>
 import contentUserPost from "@/components/TemplateParts/contentUserPostBookmark.vue";
 import contentAdminPost from "@/components/TemplateParts/contentAdminPostBookmark.vue";
@@ -194,7 +191,7 @@ export default {
     },
     emit: ['updatePostsContent'],
     props: {
-        bookmarksList: {
+        postsResult: {
             required: true,
             type: [Array , Object]
         }
@@ -206,29 +203,6 @@ export default {
         openSubMobileTable(stateId) {
             if (stateId == this.mobileSubmenuIndex) this.mobileSubmenuIndex = null;
             else this.mobileSubmenuIndex = stateId;
-        },
-
-        click(event, i) {
-            let toset;
-            const sortEl = this.cols[i];
-
-            if (!event.shiftKey) {
-                this.cols.forEach((o) => {
-                    if (o.field !== sortEl.field) {
-                        o.sort = "";
-                    }
-                });
-            }
-            if (!sortEl.sort) {
-                toset = "asc";
-            }
-            if (sortEl.sort === "desc") {
-                toset = event.shiftKey ? "" : "asc";
-            }
-            if (sortEl.sort === "asc") {
-                toset = "desc";
-            }
-            sortEl.sort = toset;
         },
     },
     computed: {

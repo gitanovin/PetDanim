@@ -6,6 +6,10 @@
         :searchQuery="searchQuery"
         :searchResultCount="searchResultCount"
         @doSearch="(queryString) => doSearch(queryString)"
+        :postsResult="postsResult"
+        :categoryResult="categoryResult"
+        :tagsResult="tagsResult"
+        :authorResult="authorResult"
     />
 </div>
 </template>
@@ -22,6 +26,10 @@ const router = useRouter()
 const searchQuery = ref("")
 const searchResultCount = ref(0)
 const showLoading = ref(true)
+const postsResult = ref([])
+const categoryResult = ref([])
+const tagsResult = ref([])
+const authorResult = ref([])
 
 onMounted(async () => {
     if(!route.query.query) {
@@ -47,6 +55,11 @@ const getSearchResult = async () => {
 
     if(result.status == 200) {
         console.log(result)
+        postsResult.value = result.result.admin_posts.concat(result.result.userPostsResult)
+        categoryResult.value = result.result.categoryResult
+        tagsResult.value = result.result.tagsResult
+        authorResult.value = result.result.authorResult
+
         showLoading.value = false
         searchResultCount.value = result.result.resultCount
     }
@@ -61,6 +74,11 @@ const doSearch = async (text) => {
 
     if(result.status == 200) {
         console.log(result)
+        postsResult.value = result.result.admin_posts.concat(result.result.userPostsResult)
+        categoryResult.value = result.result.categoryResult
+        tagsResult.value = result.result.tagsResult
+        authorResult.value = result.result.authorResult
+        
         showLoading.value = false
         searchResultCount.value = result.result.resultCount
     }

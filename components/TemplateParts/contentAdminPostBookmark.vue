@@ -59,7 +59,7 @@
                 @click="showPromptLikeModal = true"
                 class="flex items-center space-x-2 text-xs text-neutral-700 dark:!text-neutral-300 relative"
             >
-                <BookmarkButton :isFill="true" />
+                <BookmarkButton :isFill="true" v-if="showBookmark == true" />
             </div>
           </div>
         </div>
@@ -93,6 +93,11 @@
     postItem: {
       required: true,
       type: [Array , Object]
+    },
+    showBookmark: {
+      required: false,
+      type: Boolean,
+      default: true
     }
   })
   const emit = defineEmits([

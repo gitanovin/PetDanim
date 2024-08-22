@@ -2,6 +2,7 @@
     <section class="bg-gray-50 py-16 px-5 dark:bg-dark-700/20">
         <div class="mx-auto  w-full xl:max-w-7xl">
             <div
+                v-if="isShowHeader == true"
                 class="nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-10 md:mb-12 text-neutral-900 dark:text-neutral-50">
                 <div class="w-full flex items-center justify-between">
                     <h2 class="text-2xl md:text-3xl lg:text-2xl font-bold flex items-center">
@@ -95,6 +96,11 @@ const props = defineProps({
     topUsers: {
         required: true,
         type: [Array , Object]
+    },
+    isShowHeader: {
+        required: false,
+        type: Boolean,
+        default: true
     }
 })
 

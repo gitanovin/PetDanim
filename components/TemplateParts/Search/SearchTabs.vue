@@ -4,35 +4,55 @@
             <ul class="flex sm:space-x-2 rtl:space-x-reverse">
                 <li class="nc-NavItem relative flex-shrink-0">
                     <button
-                        class="flex items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full bg-neutral-900 text-neutral-50 dark:bg-neutral-100 dark:text-black">
+                        :class="activeTabIndex == 0 ? 'bg-neutral-900 text-neutral-50' : ''"
+                        @click="activeTab(0)"
+                        class="flex dark:bg-neutral-100 dark:text-black items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full">
                         مقالات
                     </button>
                 </li>
                 <li class="nc-NavItem relative flex-shrink-0">
                     <button
-                        class="flex items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                        @click="activeTab(1)"
+                        :class="activeTabIndex == 1 ? 'bg-neutral-900 text-neutral-50' : ''"
+                        class="flex dark:bg-neutral-100 dark:text-black items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full">
                         دسته بندی ها
                     </button>
                 </li>
                 <li class="nc-NavItem relative flex-shrink-0">
                     <button
-                        class="flex items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                        @click="activeTab(2)"
+                        :class="activeTabIndex == 2 ? 'bg-neutral-900 text-neutral-50' : ''"
+                        class="flex dark:bg-neutral-100 dark:text-black items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full">
                         برچسب ها
                     </button>
                 </li>
                 <li class="nc-NavItem relative flex-shrink-0">
                     <button
-                        class="flex items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full text-neutral-500 dark:text-neutral-400 dark:hover:text-neutral-100 hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                        @click="activeTab(3)"
+                        :class="activeTabIndex == 3 ? 'bg-neutral-900 text-neutral-50' : ''"
+                        class="flex dark:bg-neutral-100 dark:text-black items-center justify-center font-medium px-3 py-2.5 text-sm sm:text-base sm:px-6 sm:py-3 capitalize rounded-full">
                         نویسنده ها
                     </button>
                 </li>
             </ul>
         </nav>
-
     </div>
 </template>
 
 <script setup>
 
+const props = defineProps({
+    activeTabIndex: {
+        required: true,
+        type: Number
+    }
+})
 
+const emit = defineEmits([
+    "activeTab"
+])
+
+const activeTab = (index) => {
+    emit("activeTab" , index)
+}
 </script>

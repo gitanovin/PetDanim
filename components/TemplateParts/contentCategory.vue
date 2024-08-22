@@ -12,10 +12,6 @@
           class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-colors"
         ></span>
       </div>
-      <span
-        class="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs absolute top-3 end-3 text-indigo-800 bg-indigo-100"
-        ><div class="flex items-center font-fd">{{ category.posts.length }}</div></span
-      >
       <div
         class="absolute inset-0 flex items-center justify-center w-full h-full"
       >

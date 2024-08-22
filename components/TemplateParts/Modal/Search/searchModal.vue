@@ -43,7 +43,7 @@
           </li>
         </ul>
         <div
-          class="flex flex-wrap items-center bg-gray-50 py-2.5 px-4 text-xs text-gray-700 dark:!bg-dark-900"
+          class="hidden flex-wrap items-center bg-gray-50 py-2.5 px-4 text-xs text-gray-700 dark:!bg-dark-900"
         >
           <nuxt-link @click="closeModal()" to="/archive/search"
             class="mx-1 flex  py-2 px-3 items-center justify-center rounded border bg-white sm:mx-2 border-primary-6000 text-neutral-900 dark:!bg-dark-800 dark:!text-dark-700 dark:!border-dark-700/20"
