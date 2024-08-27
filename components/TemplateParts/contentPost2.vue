@@ -77,8 +77,8 @@ import CommentButton from "@/components/TemplateParts/MetaAction/Comment.vue";
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
-import VideoIcon from "@/components/TemplateParts/PostType/Video.vue";
-import GalleryIcon from "@/components/TemplateParts/PostType/Mostanad.vue";
+import VideoIcon from "@/components/icons/Video.vue";
+import GalleryIcon from "@/components/icons/gallery.vue";
 import {usePetdanimStore} from '@/store/petdanimStore'
 import {storeToRefs} from 'pinia'
 

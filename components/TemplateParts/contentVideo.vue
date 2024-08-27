@@ -15,9 +15,9 @@
             </nuxt-link>
 
             
-                <PostTypeIcon  />
-                <!-- <VideoIcon  /> -->
-                <!-- <GalleryIcon v-if="post.post_type == 'gallery'" /> -->
+            <PostTypeIcon v-if="post.post_type == 'text'"  />
+            <VideoIcon v-if="post.post_type == 'video'"  /> 
+            <GalleryIcon v-if="post.post_type == 'gallery'" />
              
           </div>
         </div>
@@ -67,8 +67,8 @@ import AuthorImage from "@/components/TemplateParts/MetaAction/Author/AuthorImag
 import BookmarkButton from "@/components/TemplateParts/MetaAction/Bookmark.vue";
 import Data from "@/components/TemplateParts/MetaAction/Data.vue";
 import PostTypeIcon from "@/components/TemplateParts/PostType/PostCard.vue";
-import VideoIcon from "@/components/TemplateParts/PostType/Video.vue";
-import GalleryIcon from "@/components/TemplateParts/PostType/Mostanad.vue";
+import VideoIcon from "@/components/icons/Video.vue";
+import GalleryIcon from "@/components/icons/gallery.vue";
 import {usePetdanimStore} from '@/store/petdanimStore.js'
 import {storeToRefs} from 'pinia'
 
