@@ -6,6 +6,7 @@
          :postVisitCount="postVisitCount"
          :postVerifiedCount="postVerifiedCount"
          :waitingVerifiedPostCount="waitingVerifiedPostCount"
+         :rejectPostCount="rejectedPostCount"
         />
     </section>
 </template>
@@ -26,6 +27,7 @@ const postsList = ref([])
 const postVisitCount = ref(0)
 const postVerifiedCount = ref(0)
 const waitingVerifiedPostCount = ref(0)
+const rejectedPostCount = ref(0)
 
 onMounted(() => {
   getPosts()
@@ -38,6 +40,7 @@ const getPosts = async () => {
     postVisitCount.value = result.result.postVisitCount
     postVerifiedCount.value = result.result.postVerifiedCount
     waitingVerifiedPostCount.value = result.result.waitingVerifiedPostCount
+    rejectedPostCount.value = result.result.rejectedPostCount
   }
 }
 

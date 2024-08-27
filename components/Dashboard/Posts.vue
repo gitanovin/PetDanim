@@ -3,7 +3,7 @@
       class="posts border border-gray-200 dark:border-dark-700/20 rounded-lg card dark:bg-dark-800 p-4"
     >
       <div
-        class="grid gap-4 mt-4 mb-4 font-medium lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 font-fa"
+        class="grid gap-4 mt-4 mb-4 font-medium lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 font-fa"
       >
         <div
           class="col-span-1 row-span-1 p-6 border rounded-lg dark:border-dark-700/20"
@@ -11,17 +11,18 @@
           <div class="flex items-start content-between justify-between">
             <div class="content-left">
               <span class="text-sm text-gray-500 dark:text-gray-300"
-                >تعداد نوشته ها</span
+                >تعداد منتشر شده ها</span
               >
               <div class="flex items-center my-1">
                 <h4 class="mb-0 ml-2 font-bold">{{ postVerifiedCount }}</h4>
               </div>
               <span class="text-xs text-gray-500">مجموع نوشته منتشر شده</span>
             </div>
+            
             <span
-              class="flex items-center justify-center w-8 h-8 p-2 bg-orange-100 text-orange-500 rounded badge"
+              class="flex items-center justify-center w-8 h-8 p-2 text-green-500 bg-green-100 rounded badge"
             >
-              <i class="fa fa-edit"></i>
+              <i class="fa-light fa-save"></i>
             </span>
           </div>
         </div>
@@ -31,15 +32,15 @@
           <div class="flex items-start content-between justify-between">
             <div class="content-left">
               <span class="text-sm text-gray-500 dark:text-gray-300"
-                >تعداد رد شده ها</span
+                >تعداد در انتظار تایید</span
               >
               <div class="flex items-center my-1">
                 <h4 class="mb-0 ml-2 font-bold">{{ waitingVerifiedPostCount }}</h4>
               </div>
-              <span class="text-xs text-gray-500">مجموع نوشته ی رد شده</span>
+              <span class="text-xs text-gray-500">مجموع نوشته های در انتظار تایید</span>
             </div>
             <span
-              class="flex items-center justify-center w-8 h-8 p-2 text-green-500 bg-green-100 rounded badge"
+              class="flex items-center justify-center w-8 h-8 p-2 bg-orange-100 text-orange-500 rounded badge"
             >
               <i class="fa-light fa-save"></i>
             </span>
@@ -59,9 +60,29 @@
               >
             </div>
             <span
+              class="flex items-center justify-center w-8 h-8 p-2 text-blue-500 bg-blue-100 rounded badge"
+            >
+              <i class="fa-light fa-eye"></i>
+            </span>
+          </div>
+        </div>
+        <div
+          class="col-span-1 row-span-1 p-6 border rounded-lg dark:border-dark-700/20"
+        >
+          <div class="flex items-start content-between justify-between">
+            <div class="content-left">
+              <span class="text-sm text-gray-500 dark:text-gray-300"> تعداد رد شده ها </span>
+              <div class="flex items-center my-1">
+                <h4 class="mb-0 ml-2 font-bold">{{ rejectPostCount }}</h4>
+              </div>
+              <span class="text-xs text-gray-500"
+                >تعداد نوشته های رد شده</span
+              >
+            </div>
+            <span
               class="flex items-center justify-center w-8 h-8 p-2 text-red-500 bg-red-100 rounded badge"
             >
-              <i class="fa-light fa-list"></i>
+              <i class="fa-light fa-close"></i>
             </span>
           </div>
         </div>
@@ -197,7 +218,7 @@
                                             />
   
                                             <p
-                                              class="text-sm font-regular text-gray-700 break-words dark:text-gray-300"
+                                              class="text-xs font-regular text-gray-700 break-words dark:text-gray-300"
                                             >
                                               {{ row.title }}
                                             </p>
@@ -281,7 +302,7 @@
                                                         <div
                                                           class="flex items-center text-base font-semibold"
                                                         >
-                                                          دسته :
+                                                          تگ ها :
                                                           <span
                                                             class="mr-1 font-medium"
                                                           >
@@ -324,6 +345,18 @@
                                                                 "
                                                                 >در انتظار تایید
                                                               </span>
+                                                              <span
+                                                                class="font-semibold text-red-500"
+                                                                v-if="
+                                                                  row.status == 2
+                                                                "
+                                                                > 
+                                                                <i
+                                                                  @click="openRejectPopup(row.rejection)"
+                                                                  class="fa-light text-lg fa-info-circle cursor-pointer text-red-600"
+                                                                ></i> 
+                                                                رد شده
+                                                              </span>
                                                             </div>
                                                           </span>
                                                         </div>
@@ -348,7 +381,7 @@
                                                                 ></i>
                                                               </div>
                                                               <RouterLink
-                                                                to="/edit-news"
+                                                                :to="`/profile/posts/${row.id}`"
                                                               >
                                                                 <div
                                                                   class="w-4 ml-4 transform cursor-pointer hover:text-gray-500 hover:scale-110"
@@ -359,8 +392,9 @@
                                                                 </div>
                                                               </RouterLink>
   
-                                                              <RouterLink
-                                                                to="/view-blog"
+                                                              <a
+                                                                v-if="row.status == 1"
+                                                                :href="`/post/${row.slug}-${row.id}`"
                                                               >
                                                                 <button
                                                                   class="w-4 ml-4 transform cursor-pointer hover:text-gray-500 hover:scale-110"
@@ -369,7 +403,7 @@
                                                                     class="fa-solid fa-eye text-[18px] !w-5 !h-5 font-normal"
                                                                   ></i>
                                                                 </button>
-                                                              </RouterLink>
+                                                              </a>
                                                             </div>
                                                           </span>
                                                         </div>
@@ -470,7 +504,7 @@
                                   <td class="p-2 text-right mx-auto">
                                     <img
                                       :src="`${$config.public.appBaseUrl}/storage/posts/${row.image}`"
-                                      class="w-10 h-10 rounded-lg mx-auto"
+                                      class="w-10 h-10 rounded-lg mx-auto object-cover"
                                     />
                                   </td>
   
@@ -488,9 +522,19 @@
                                         >در انتظار تایید</span
                                       >
                                       <span
-                                        class="font-semibold text-success-500 dark:text-success-500"
+                                        class="font-semibold text-green-600 dark:text-success-500"
                                         v-if="row.status == 1"
-                                        >منتشر شده</span
+                                      >منتشر شده</span>
+                                      <span
+                                        class="font-semibold text-red-500 dark:text-red-500"
+                                        v-if="row.status == 2"
+                                        >
+                                        <i
+                                          @click="openRejectPopup(row.rejection)"
+                                          class="fa-light text-lg fa-info-circle cursor-pointer text-red-600"
+                                        ></i>
+                                        رد شده
+                                      </span
                                       >
                                     </div>
                                   </td>
@@ -534,7 +578,7 @@
                                         </div>
                                       </RouterLink>
   
-                                      <RouterLink to="/" v-if="row.status == 1">
+                                      <a target="_blank":href="`/post/${row.slug}-${row.id}`" v-if="row.status == 1">
                                         <div
                                           class="w-4 transform cursor-pointer hover:text-gray-500 hover:scale-110"
                                         >
@@ -542,7 +586,7 @@
                                             class="fa-light fa-eye text-[18px] !w-5 !h-5"
                                           ></i>
                                         </div>
-                                      </RouterLink>
+                                      </a>
                                     </div>
                                   </td>
                                 </tr>
@@ -572,6 +616,14 @@
         @closeModal="showTagModal = false"
         :tagsList="tagsList"
       />
+
+
+      <RejectionModal
+        v-if="rejectionModalState"
+        @closeModal="rejectionModalState = false"
+        :rejection="rejection"
+      />
+      
     </div>
 </template>
   
@@ -589,6 +641,7 @@
   import DataAction from "@/components/DataTable/DataAction.vue";
   import DatasetStatus from "@/components/DataTable/DatasetStatus.vue";
   import TagsModal from "./TagModal.vue";
+  import RejectionModal from "./RejectionModal.vue";
   export default {
     components: {
       Dataset,
@@ -601,6 +654,7 @@
       DataAction,
       CollapseTransition,
       TagsModal,
+      RejectionModal
     },
     emits: ['removePost'],
     props: {
@@ -610,16 +664,20 @@
       },
       postVisitCount: {
         required: true,
-        type: Number,
+        type: [Number , String],
       },
       postVerifiedCount: {
         required: true,
-        type: Number,
+        type: [Number , String],
       },
       waitingVerifiedPostCount: {
         required: true,
-        type: Number,
+        type: [Number , String],
       },
+      rejectPostCount: {
+        required: true,
+        type: [Number , String],
+      }
     },
     data() {
       return {
@@ -687,7 +745,9 @@
             center: "justify-center",
           },
         ],
-        selectedIds: []
+        selectedIds: [],
+        rejectionModalState: false,
+        rejection: ""
       };
     },
     methods: {
@@ -698,28 +758,6 @@
       openSubMobileTable(stateId) {
         if (stateId == this.mobileSubmenuIndex) this.mobileSubmenuIndex = null;
         else this.mobileSubmenuIndex = stateId;
-      },
-      click(event, i) {
-        let toset;
-        const sortEl = this.cols[i];
-  
-        if (!event.shiftKey) {
-          this.cols.forEach((o) => {
-            if (o.field !== sortEl.field) {
-              o.sort = "";
-            }
-          });
-        }
-        if (!sortEl.sort) {
-          toset = "asc";
-        }
-        if (sortEl.sort === "desc") {
-          toset = event.shiftKey ? "" : "asc";
-        }
-        if (sortEl.sort === "asc") {
-          toset = "desc";
-        }
-        sortEl.sort = toset;
       },
       async deletePost(postId , postIndex){
           this.$swal.fire({
@@ -787,6 +825,10 @@
                   "type": "error"
               });
           }
+      },
+      openRejectPopup(text) {
+        this.rejectionModalState = true
+        this.rejection = text
       }   
     },
     computed: {

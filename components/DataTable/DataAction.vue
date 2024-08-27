@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown">
-    <select :name="name" :id="id" ref="input" v-model="value" class="hidden">
+    <select ref="input" v-model="value" class="hidden">
       <option value="" :disabled="true">{{ placeholder }}</option>
       <option v-for="category in categories" :value="category.value">
         {{ category.text }}
