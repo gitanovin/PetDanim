@@ -70,6 +70,7 @@ export default defineNuxtConfig({
         // { hid: 'icon', rel: 'icon', type: 'image/png', href: '/logo192.png' },
         // { hid: 'apple-touch-icon', rel: 'apple-touch-icon', href: '/logo192.png' },
         // { rel: 'manifest', href: '/site.webmanifest' }
+        { rel: 'icon', type: 'image/x-icon', href: '/petomanfavicon.png' }
       ],
 
       bodyAttrs: {
